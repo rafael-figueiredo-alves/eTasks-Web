@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/eTasks-Web/static/css/main.a617e044.chunk.css",
-    "main.js": "/eTasks-Web/static/js/main.fe89227a.chunk.js",
-    "main.js.map": "/eTasks-Web/static/js/main.fe89227a.chunk.js.map",
+    "main.js": "/eTasks-Web/static/js/main.4cb603bf.chunk.js",
+    "main.js.map": "/eTasks-Web/static/js/main.4cb603bf.chunk.js.map",
     "runtime-main.js": "/eTasks-Web/static/js/runtime-main.a254d6d4.js",
     "runtime-main.js.map": "/eTasks-Web/static/js/runtime-main.a254d6d4.js.map",
     "static/js/2.11d23a77.chunk.js": "/eTasks-Web/static/js/2.11d23a77.chunk.js",
@@ -11,13 +11,12 @@
     "static/js/3.0ffa6bca.chunk.js.map": "/eTasks-Web/static/js/3.0ffa6bca.chunk.js.map",
     "index.html": "/eTasks-Web/index.html",
     "static/css/main.a617e044.chunk.css.map": "/eTasks-Web/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.11d23a77.chunk.js.LICENSE.txt": "/eTasks-Web/static/js/2.11d23a77.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/eTasks-Web/static/media/logo.6ce24c58.svg"
+    "static/js/2.11d23a77.chunk.js.LICENSE.txt": "/eTasks-Web/static/js/2.11d23a77.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a254d6d4.js",
     "static/js/2.11d23a77.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.fe89227a.chunk.js"
+    "static/js/main.4cb603bf.chunk.js"
   ]
 }
