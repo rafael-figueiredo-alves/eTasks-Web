@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/eTasks_web/static/css/main.a617e044.chunk.css",
-    "main.js": "/eTasks_web/static/js/main.fe89227a.chunk.js",
-    "main.js.map": "/eTasks_web/static/js/main.fe89227a.chunk.js.map",
-    "runtime-main.js": "/eTasks_web/static/js/runtime-main.cad72753.js",
-    "runtime-main.js.map": "/eTasks_web/static/js/runtime-main.cad72753.js.map",
-    "static/js/2.11d23a77.chunk.js": "/eTasks_web/static/js/2.11d23a77.chunk.js",
-    "static/js/2.11d23a77.chunk.js.map": "/eTasks_web/static/js/2.11d23a77.chunk.js.map",
-    "static/js/3.0ffa6bca.chunk.js": "/eTasks_web/static/js/3.0ffa6bca.chunk.js",
-    "static/js/3.0ffa6bca.chunk.js.map": "/eTasks_web/static/js/3.0ffa6bca.chunk.js.map",
-    "index.html": "/eTasks_web/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/eTasks_web/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.11d23a77.chunk.js.LICENSE.txt": "/eTasks_web/static/js/2.11d23a77.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/eTasks_web/static/media/logo.6ce24c58.svg"
+    "main.css": "/eTasks-Web/static/css/main.a617e044.chunk.css",
+    "main.js": "/eTasks-Web/static/js/main.fe89227a.chunk.js",
+    "main.js.map": "/eTasks-Web/static/js/main.fe89227a.chunk.js.map",
+    "runtime-main.js": "/eTasks-Web/static/js/runtime-main.a254d6d4.js",
+    "runtime-main.js.map": "/eTasks-Web/static/js/runtime-main.a254d6d4.js.map",
+    "static/js/2.11d23a77.chunk.js": "/eTasks-Web/static/js/2.11d23a77.chunk.js",
+    "static/js/2.11d23a77.chunk.js.map": "/eTasks-Web/static/js/2.11d23a77.chunk.js.map",
+    "static/js/3.0ffa6bca.chunk.js": "/eTasks-Web/static/js/3.0ffa6bca.chunk.js",
+    "static/js/3.0ffa6bca.chunk.js.map": "/eTasks-Web/static/js/3.0ffa6bca.chunk.js.map",
+    "index.html": "/eTasks-Web/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/eTasks-Web/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.11d23a77.chunk.js.LICENSE.txt": "/eTasks-Web/static/js/2.11d23a77.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/eTasks-Web/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.cad72753.js",
+    "static/js/runtime-main.a254d6d4.js",
     "static/js/2.11d23a77.chunk.js",
     "static/css/main.a617e044.chunk.css",
     "static/js/main.fe89227a.chunk.js"
