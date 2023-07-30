@@ -1,5 +1,5 @@
 ﻿@page "/"
-@inject IeFirebase eFirebase
+@inject IeFirebase teste
 
 <PageTitle>eTasks</PageTitle>
 
@@ -14,6 +14,6 @@
 
     protected override void OnInitialized()
     {
-        version = eFirebase.GetVersion();
+        version = teste.GetVersion();
     }
 }
