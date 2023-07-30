@@ -11,4 +11,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.9" PrivateAssets="all" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="eFirebase4CSharp">
+      <HintPath>..\eFirebase4CSharp\bin\Debug\net7.0\eFirebase4CSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

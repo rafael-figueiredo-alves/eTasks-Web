@@ -1,10 +1,19 @@
 ﻿@page "/"
+@inject IeFirebase eFirebase
 
 <PageTitle>eTasks</PageTitle>
 
 <h1>Seja bem vindo</h1>
 
-<p>Este app ainda não está pronto, está em fase de desenvolvimento.</p>
+<p>Este app ainda não está pronto, está em fase de desenvolvimento. @version</p>
 
 <p>Verifique o repositório oficial em <a href="https://github.com/rafael-figueiredo-alves/eTasks-Web">https://github.com/rafael-figueiredo-alves/eTasks-Web</a></p>
 
+@code{
+    public string? version;
+
+    protected override void OnInitialized()
+    {
+        version = eFirebase.GetVersion();
+    }
+}

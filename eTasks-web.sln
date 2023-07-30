@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTasks-web", "eTasks-web.csproj", "{F015BFEC-B7BE-4FFD-89A7-EF0D7C6EF760}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eTasks-web", "eTasks-web.csproj", "{F015BFEC-B7BE-4FFD-89A7-EF0D7C6EF760}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
