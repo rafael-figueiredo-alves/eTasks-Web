@@ -36,6 +36,17 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "Kestrel": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "https://localhost:29802",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://*:29801;https://*:29802"
+      },
+      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+      "applicationUrl": "https://*:29802"
     }
   }
 }
