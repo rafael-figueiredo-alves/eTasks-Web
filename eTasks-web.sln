@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTasks", "eTasks\eTasks.csproj", "{93D1ED0A-8B5A-47F3-A2B4-89F218B7DC4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTasks.Shared", "eTasks.Shared\eTasks.Shared.csproj", "{A9DD4CF0-39DD-4BBA-B68D-0EB4818C8E8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{93D1ED0A-8B5A-47F3-A2B4-89F218B7DC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93D1ED0A-8B5A-47F3-A2B4-89F218B7DC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93D1ED0A-8B5A-47F3-A2B4-89F218B7DC4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9DD4CF0-39DD-4BBA-B68D-0EB4818C8E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9DD4CF0-39DD-4BBA-B68D-0EB4818C8E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9DD4CF0-39DD-4BBA-B68D-0EB4818C8E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9DD4CF0-39DD-4BBA-B68D-0EB4818C8E8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
