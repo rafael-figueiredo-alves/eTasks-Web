@@ -1,26 +1,17 @@
 ﻿@page "/"
-@using eTasks.Shared
+@using eTasks.Components
 
 <PageTitle>eTasks</PageTitle>
 
 <h1>Seja bem vindo ao eTasks!</h1>
 <h1>Welcome to eTasks!</h1>
 
-<h1>@teste</h1>
-
 <img src="assets/icon-192.png" />
+
+<Component1 />
 
 <p>Este app está em fase de desenvolvimento...</p>
 <p>This app is still under development...</p>
 
 <p>Verifique o repositório oficial em <a href="https://github.com/rafael-figueiredo-alves/eTasks-Web" target="_blank">https://github.com/rafael-figueiredo-alves/eTasks-Web</a> </p>
 <p>Check out the official repository at <a href="https://github.com/rafael-figueiredo-alves/eTasks-Web" target="_blank">https://github.com/rafael-figueiredo-alves/eTasks-Web</a> </p>
-
-@code{
-    public string teste { get; set; }
-
-    protected override void OnInitialized()
-    {
-        teste = Class1.helloWorld;
-    }
-}
