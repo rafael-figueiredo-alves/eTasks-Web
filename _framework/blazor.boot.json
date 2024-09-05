@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "eTasks",
   "resources": {
-    "hash": "sha256-Dta/IDeO7NltF/QCritX0fk6VEeMLjT/s2t0QcMPI6Y=",
+    "hash": "sha256-eI9MkFjMW7QN4wU/vg6Aks893rz0uqFcFh5Zj7Cj7dY=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.746giovk6l.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -17,7 +17,8 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "eTasks.wasm": "sha256-FLVlTTQr91W8XyWbBgIoOCjfQXOBdo/ooapLT6BJP88=",
+      "eTasks.Shared.wasm": "sha256-GFAq6BaFy6MQFnhzuiHY+A0m5dG+X2LoyZdmMItdWcw=",
+      "eTasks.wasm": "sha256-R5/l5M3cOa7FaSjc/DLFeFWOln4GV1T4WAjgjZMa6ig=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-8MlBtxG9huyP025L/YftEhxhsecbi6cQWoOO+dSWKGU=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-nbNEoOWGWA9eGfEFt/KxzT+QvjtGy/EM8l3Ay9b78D4=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-Q4gQS+wAI/o1p0ABACPX+vUj06GrNg33CWKIBqv9S0w=",
