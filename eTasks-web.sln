@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.8.34408.163
+VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTasks-web", "eTasks-web.csproj", "{35C802C7-D02A-4EB5-B89C-98550284F0AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTasks", "eTasks\eTasks.csproj", "{93D1ED0A-8B5A-47F3-A2B4-89F218B7DC4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{35C802C7-D02A-4EB5-B89C-98550284F0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35C802C7-D02A-4EB5-B89C-98550284F0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35C802C7-D02A-4EB5-B89C-98550284F0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35C802C7-D02A-4EB5-B89C-98550284F0AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93D1ED0A-8B5A-47F3-A2B4-89F218B7DC4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D1ED0A-8B5A-47F3-A2B4-89F218B7DC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D1ED0A-8B5A-47F3-A2B4-89F218B7DC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D1ED0A-8B5A-47F3-A2B4-89F218B7DC4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {36E11181-1C5F-4C9B-BCA4-49DDC1F1CBA4}
+		SolutionGuid = {A6B02C02-8A53-4E1F-954A-F120C5402149}
 	EndGlobalSection
 EndGlobal

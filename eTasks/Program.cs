@@ -1,4 +1,4 @@
-using eTasks_web;
+using eTasks;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
