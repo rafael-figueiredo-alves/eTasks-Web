@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-MlJDK8CylLh2ocOlcoNeOT1zyM9s5ATHxIP\/LEAstRc=",
+      "hash": "sha256-tTHMaed3ZjhEKocU\/IvKONABAhbMmlv3HaPgtb4H\/to=",
       "url": "eTasks.styles.css"
     },
     {
@@ -29,7 +29,7 @@
       "url": "css\/bootstrap\/bootstrap.min.css.map"
     },
     {
-      "hash": "sha256-cxFaeTz4RyELNhzbTqRrkxPCloKyR0Q+lsWYb34yg8U=",
+      "hash": "sha256-jo1u3o+XZQyPeiZYgGCcpQiCz70FM0RoEyX2DvwvuoU=",
       "url": "index.html"
     },
     {
@@ -69,19 +69,23 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-ASDR1Z\/lnYHktSYnzeuhxPBeQWcf9r0oAWQpjQMz7rM=",
+      "hash": "sha256-lxnyp2DbpFR++gOzHi0xgjo8+vmFR3N+asD2zIylPpY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-veWhhOXNUaBgbuJPfTNbJAjrPYOaJGn81+svOg7bUDE=",
+      "hash": "sha256-Qss+ZejdgbZmSSwK2D2TsWg3r3cnlisQxJf1x\/VtmBo=",
       "url": "_framework\/eTasks.Components.wasm"
     },
     {
-      "hash": "sha256-uu6YIW8tcijJ7nEwh0AVTXQ4ubhQEfMlYe2pVkQIse8=",
+      "hash": "sha256-Gvb+kjz\/SGjqc3rN4Q+mi9NDAjXXbo5cl\/UXjHKyeD8=",
       "url": "_framework\/eTasks.Shared.wasm"
     },
     {
-      "hash": "sha256-AavPin\/j0yLSrIqdTDTcFpxEQmglILdF\/7XqsCThAfQ=",
+      "hash": "sha256-ZZMJIG6AFaLOp+XOcsIgmK0BpQjjnGCbTCG\/o5rWmmU=",
+      "url": "_framework\/eTasks.View.wasm"
+    },
+    {
+      "hash": "sha256-Bli0arJXT0SKM0viaPJBKDyVY4r0s7LD898WUWSv2Mg=",
       "url": "_framework\/eTasks.wasm"
     },
     {
@@ -173,7 +177,7 @@
       "url": "_framework\/System.Net.Primitives.wasm"
     },
     {
-      "hash": "sha256-yQI5E9qdBXUBT+s8fEqvXNHpvDxFVsfOX99n8eNHqy0=",
+      "hash": "sha256-hjswVoYueOmzOQQ6h8rk+4NLmR4RNj8xwqrih+Os2Ww=",
       "url": "_framework\/System.Private.CoreLib.wasm"
     },
     {
@@ -185,7 +189,7 @@
       "url": "_framework\/System.Runtime.InteropServices.JavaScript.wasm"
     },
     {
-      "hash": "sha256-SWvO3EPkCXUm4A8yrKAxaMW7jOgY5KdxI3yWbrDMBtU=",
+      "hash": "sha256-QMS\/wTYLzWGN6r+MpLvkxshehMO69y20eSxDqqjb\/EI=",
       "url": "_framework\/System.Runtime.wasm"
     },
     {
@@ -205,6 +209,10 @@
       "url": "_content\/eTasks.Components\/eTasks.Components.bundle.scp.css"
     },
     {
+      "hash": "sha256-3wU19EX4affnWKr1Bm1A8HiT3THWoUEZK9mV9bEB1uI=",
+      "url": "_content\/eTasks.View\/eTasks.View.bundle.scp.css"
+    },
+    {
       "hash": "sha256-WeOKCkI7IdJHs2kCqsKgLfiWX4\/sNPbaRUspOLefkCY=",
       "url": "_content\/eTasks.Components\/background.png"
     },
@@ -213,5 +221,5 @@
       "url": "_content\/eTasks.Components\/exampleJsInterop.js"
     }
   ],
-  "version": "A0ZR0oRr"
+  "version": "RZQbG8oE"
 };
