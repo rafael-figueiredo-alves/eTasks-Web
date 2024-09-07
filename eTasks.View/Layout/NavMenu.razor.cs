@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace eTasks.Layout
+namespace eTasks.View.Layout
 {
     public class NavMenuBase : ComponentBase
     {

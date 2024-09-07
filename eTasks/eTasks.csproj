@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\eTasks.Components\eTasks.Components.csproj" />
     <ProjectReference Include="..\eTasks.Shared\eTasks.Shared.csproj" />
+    <ProjectReference Include="..\eTasks.View\eTasks.View.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,11 +1,11 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿<Router AppAssembly="@typeof(eTasks.View.Layout.MainLayout).Assembly">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(eTasks.View.Layout.MainLayout)" />
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
         <PageTitle>Página não encontrada</PageTitle>
-        <LayoutView Layout="@typeof(MainLayout)">
+        <LayoutView Layout="@typeof(eTasks.View.Layout.MainLayout)">
             <p role="alert">Sentimos muito, mas não há nada para exibir aqui.</p>
         </LayoutView>
     </NotFound>
