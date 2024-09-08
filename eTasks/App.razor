@@ -4,9 +4,8 @@
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
-        <PageTitle>Página não encontrada</PageTitle>
         <LayoutView Layout="@typeof(eTasks.View.Layout.MainLayout)">
-            <p role="alert">Sentimos muito, mas não há nada para exibir aqui.</p>
+            <PageNotFound />
         </LayoutView>
     </NotFound>
 </Router>

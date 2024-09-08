@@ -1,0 +1,13 @@
+﻿@inject NavigationManager Nav
+
+<PageTitle>Página não encontrada</PageTitle>
+
+<p role="alert">Sentimos muito, mas não há nada para exibir aqui.</p>
+<p>Volte para a página principal <a style="cursor: pointer" @onclick=GoHome>clicando aqui</a></p>
+
+@code {
+    protected void GoHome()
+    {
+        Nav.NavigateTo("/");
+    }
+}
