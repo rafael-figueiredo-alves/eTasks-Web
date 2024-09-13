@@ -8,10 +8,6 @@
 @code {
     protected void GoHome()
     {
-        #if DEBUG
-            Nav.NavigateTo("/");
-        #else
-            Nav.NavigateTo("/eTasks-Web");
-        #endif
+        Nav.NavigateTo((new Uri(Nav.BaseUri)).ToString());
     }
 }
