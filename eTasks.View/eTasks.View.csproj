@@ -20,6 +20,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Pages\Account\" />
+    <Folder Include="Pages\Goals\" />
+    <Folder Include="Pages\Finances\" />
+    <Folder Include="Pages\Notes\" />
+    <Folder Include="Pages\Shopping\" />
+    <Folder Include="Pages\Readings\" />
+    <Folder Include="Pages\Tasks\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
