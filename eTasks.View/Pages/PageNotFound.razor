@@ -8,6 +8,10 @@
 @code {
     protected void GoHome()
     {
-        Nav.NavigateTo("/");
+        #if DEBUG
+            Nav.NavigateTo("/");
+        #else
+            Nav.NavigateTo("eTasks-Web");
+        #endif
     }
 }
