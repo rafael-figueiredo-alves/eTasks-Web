@@ -31,6 +31,18 @@ namespace eTasks.View.Pages
         /// Cor do texto da página
         /// </summary>
         protected string TextColor { get; set; } = "black";
+        /// <summary>
+        /// Define o título a exibir
+        /// </summary>
+        protected string Titulo { get; set; } = "UH OH! Você se perdeu.";
+        /// <summary>
+        /// Define o texto explicativo a mostrar.
+        /// </summary>
+        protected string TextoExplicativo { get; set; } = "Sentimos muito, mas a página que está buscando não existe. Como você chegou aqui é um mistério. Mas para voltar basta apertar o botão abaixo.";
+        /// <summary>
+        /// Texto do botão para voltar a página inicial
+        /// </summary>
+        protected string TextoBotao { get; set; } = "VOLTAR PARA PÁGINA INICIAL";
         #endregion
 
         #region Métodos e Eventos
