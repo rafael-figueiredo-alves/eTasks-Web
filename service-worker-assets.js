@@ -37,7 +37,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-Tj1lEsm6j\/On\/Z8GMif5hqAUuKIKBy8y\/sLInZdJrAg=",
+      "hash": "sha256-EoJoRb7YnhTjCzkr1WI3p8dS4EppfADjHQ9Y3NKFQEM=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -45,19 +45,19 @@
       "url": "_framework\/eFirebase4CSharp.wasm"
     },
     {
-      "hash": "sha256-3J6N6chk6vrOItqwtxTOHSF9o2gv6ex14dss18rqAJI=",
+      "hash": "sha256-5HG326Gd0Qbz2yETX35xAT5cf\/vqwqxjIxoWmV49weo=",
       "url": "_framework\/eTasks.Components.wasm"
     },
     {
-      "hash": "sha256-eZeOScD9a7nTqivZbQNto9EvVtzdqjFGcmL\/fgZ5+IY=",
+      "hash": "sha256-1Uz9uiYZQsgJGEvOydcuaaGE3A0SDVQXwKWuYYogJtU=",
       "url": "_framework\/eTasks.Shared.wasm"
     },
     {
-      "hash": "sha256-\/qoiAUq6r7e\/\/xCA6hXtCgLU2PjDILBuqTlr+NFRat0=",
+      "hash": "sha256-Be+DoEDR6k9eiXtqKfX\/uWyrN8Bc9NMWviWG4n1cOUE=",
       "url": "_framework\/eTasks.View.wasm"
     },
     {
-      "hash": "sha256-dttzaQW7QVPnjfyeaHwdKtocHNqZtCDFLwn8I83k2Tk=",
+      "hash": "sha256-YNWNQy9cPkccNKb+HrZIVx3rDWQDidwqHmE9WmwpBA0=",
       "url": "_framework\/eTasks.wasm"
     },
     {
@@ -205,6 +205,26 @@
       "url": "assets\/icon-512.png"
     },
     {
+      "hash": "sha256-JnYcWtAhN0D3irblvHEfJH9IIRjZs8zWa5yJpZPdcKo=",
+      "url": "assets\/UI\/Avatar.png"
+    },
+    {
+      "hash": "sha256-UNfl3Ms488dtblXubcHMAW4AuYXMBLwlRMb4O6mloHs=",
+      "url": "assets\/UI\/dark\/MainMenu.png"
+    },
+    {
+      "hash": "sha256-py\/Gcxij9OOQKCrBLpjOHBMfoGeNx\/q7ZnmBrzZDLQU=",
+      "url": "assets\/UI\/dark\/ThemeChanger.png"
+    },
+    {
+      "hash": "sha256-jhoXCQcTA9VquzeATA4jTPpgUtNYdvfY\/dkXwdnIfJY=",
+      "url": "assets\/UI\/light\/MainMenu.png"
+    },
+    {
+      "hash": "sha256-OmxBBsRWRVN5ws0jlNSku06IB9IJEvCc7uW5U\/wg\/og=",
+      "url": "assets\/UI\/light\/ThemeChanger.png"
+    },
+    {
       "hash": "sha256-yis2dNdJ6e9R472mcuwUOsxBPCQX3snSMmHAL3zu2D8=",
       "url": "css\/app.css"
     },
@@ -233,5 +253,5 @@
       "url": "_content\/eTasks.Components\/eTasks.Components.bundle.scp.css"
     }
   ],
-  "version": "RBXStD3a"
+  "version": "nxlsDLvW"
 };
