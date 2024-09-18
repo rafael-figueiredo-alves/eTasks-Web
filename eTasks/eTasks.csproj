@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\assets\NewFolder\**" />
+    <Content Remove="wwwroot\assets\NewFolder\**" />
+    <EmbeddedResource Remove="wwwroot\assets\NewFolder\**" />
+    <None Remove="wwwroot\assets\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.8" PrivateAssets="all" />
   </ItemGroup>
