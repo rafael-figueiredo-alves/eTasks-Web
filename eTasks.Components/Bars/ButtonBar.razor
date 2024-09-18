@@ -1,3 +1,13 @@
-﻿@* <div class="d-flex col-2 justify-content-end text-end"> *@
-    <img src="/assets/UI/Avatar.png" height="40" width="40" style="margin-top: 2px;margin-left: 10px" />
-@* </div> *@
+﻿<div class="d-flex col-2 justify-content-end text-end" style="height: 60px;">
+    <img src="@Imagem" height="40" width="40" style="margin-top: 2px;margin-right: 10px" />
+</div>
+
+@code {
+    [Inject] protected NavigationManager? Nav { get; set; }
+
+    public string Imagem { get
+        {
+            return Nav?.BaseUri.TrimEnd('/') + "/assets/UI/Avatar.png";
+        }
+    }
+}
