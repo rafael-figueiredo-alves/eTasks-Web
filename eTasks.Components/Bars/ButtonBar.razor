@@ -1,13 +1,10 @@
-﻿<div class="d-flex col-2 justify-content-end text-end" style="height: 60px;">
-    <img src="@Imagem" height="40" width="40" style="margin-top: 2px;margin-right: 10px" />
-</div>
+﻿@inherits ButtonBarBase
 
-@code {
-    [Inject] protected NavigationManager? Nav { get; set; }
-
-    public string Imagem { get
+<div class="d-flex col-2 justify-content-end text-end" style="height: 60px;">
+    @if((Botoes != null) && (Botoes.Count > 0))
+        @foreach(BarButton Botao in Botoes)
         {
-            return Nav?.BaseUri.TrimEnd('/') + "/assets/UI/Avatar.png";
+            <img src="@Botao.Imagem" height="40" width="40" style="margin-top: 2px;margin-right: 10px;cursor:pointer;" title="@Botao.DicaTela" @onclick=Botao.OnClick />
         }
-    }
-}
+        <Avatar AvatarPath="@ImagemAvatar" />
+</div>

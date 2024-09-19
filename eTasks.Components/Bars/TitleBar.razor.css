@@ -1,0 +1,5 @@
+﻿@media screen and (max-width: 768px) {
+    .OcultaComponente {
+        display: none !important;
+    }
+}
