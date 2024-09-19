@@ -37,7 +37,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-HFmA+iuueUd3jsj\/QKtVovxGES8En0tXiM0SYrBHJEA=",
+      "hash": "sha256-wIPwrENnUEElJuF+lisdJCeRmfkUcvqo\/NZTJLrg6HE=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -45,19 +45,19 @@
       "url": "_framework\/eFirebase4CSharp.wasm"
     },
     {
-      "hash": "sha256-AXVsvEjV+w9dYBSUcrLkEFgq6fPr+SVah78QkvqfOsY=",
+      "hash": "sha256-Y6UT7Wdw6vJWY9bjPSfO\/ARCpCUgcjo7gnswXbOyN8A=",
       "url": "_framework\/eTasks.Components.wasm"
     },
     {
-      "hash": "sha256-TckzXVtnWAdvBUx5vurPRLGFx1HOc8DlFCoJByEnXTI=",
+      "hash": "sha256-65BVHGKTGOuURTSQP23onNx6deP5NhvtxHQ16e3kGe4=",
       "url": "_framework\/eTasks.Shared.wasm"
     },
     {
-      "hash": "sha256-jdy4GaxJXgYA\/Ag1xG8AUNyqmPZeSmX3a+ni8vV4TxY=",
+      "hash": "sha256-iqL67R2jXGp0hI2Q6TkMS3y86LW9WUSM4R1RQer73hs=",
       "url": "_framework\/eTasks.View.wasm"
     },
     {
-      "hash": "sha256-fj4bGHRXTRG5BdH1zVb3S56Wxl7ARHiTq8jFG3kF4gg=",
+      "hash": "sha256-OWN8GEZOqsk8Mfn9qoreIk3uVkvt4kETlG4I4qURfpQ=",
       "url": "_framework\/eTasks.wasm"
     },
     {
@@ -65,7 +65,7 @@
       "url": "_framework\/eTranslate.wasm"
     },
     {
-      "hash": "sha256-8MlBtxG9huyP025L\/YftEhxhsecbi6cQWoOO+dSWKGU=",
+      "hash": "sha256-Oh07H+pOLqUcxwyyEKiST+2DIvRVy1fubdvz6rhV8m0=",
       "url": "_framework\/Microsoft.AspNetCore.Components.wasm"
     },
     {
@@ -125,7 +125,7 @@
       "url": "_framework\/System.Collections.Concurrent.wasm"
     },
     {
-      "hash": "sha256-0HYUvi7HdSn5myx6\/20cmLRzutYpwTl9xmPPmT27R+0=",
+      "hash": "sha256-bvBd7UuVMdNGwvDjnnWS\/xCyFuLiPMWMDQpHHEe55is=",
       "url": "_framework\/System.Collections.wasm"
     },
     {
@@ -249,9 +249,9 @@
       "url": "translate.json"
     },
     {
-      "hash": "sha256-S7Kzu6TpFRvBq3qn8XbYWzztU5VK8hSFmM7lhRU3AZM=",
+      "hash": "sha256-8jPSMkoMoz96LZb2zlcCey4OkpTq6VWAEefFC1HydUk=",
       "url": "_content\/eTasks.Components\/eTasks.Components.bundle.scp.css"
     }
   ],
-  "version": "OyJL3BUd"
+  "version": "qn3abtPX"
 };

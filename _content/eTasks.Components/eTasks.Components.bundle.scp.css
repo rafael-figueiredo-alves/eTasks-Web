@@ -1,3 +1,15 @@
+/* _content/eTasks.Components/Bars/PageTitleBar.razor.rz.scp.css */
+@media screen and (min-width: 768px) {
+    .MostraComponente[b-e6h3fvlqql] {
+        display: none;
+    }
+}
+/* _content/eTasks.Components/Bars/TitleBar.razor.rz.scp.css */
+@media screen and (max-width: 768px) {
+    .OcultaComponente[b-tcoybpbd4a] {
+        display: none !important;
+    }
+}
 /* _content/eTasks.Components/Layouts/MainLayout.razor.rz.scp.css */
 .page[b-fcvwkdk4bn] {
     position: relative;
