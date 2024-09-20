@@ -20,7 +20,7 @@ jobs:
 
     # cleans build before publishes
     - name: Cleans build before publishes
-      run: dotnet publish clean
+      run: dotnet clean eTasks/
 
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
