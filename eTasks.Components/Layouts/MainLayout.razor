@@ -5,8 +5,11 @@
         <TopBar>
             <Brand />
             <TitleBar />
-            <ButtonBar Botoes="Botoes" />
+            <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" />
         </TopBar>
+
+        <Offcanvas OffcanvasID="TesteMenu" />
+        <Offcanvas OffcanvasID="AvatarMenu" position="offcanvas-end" />
 
         <PageTitleBar />
 
@@ -27,10 +30,17 @@
         var button1 = new BarButton();
         button1.Imagem = $"{URL}/assets/UI/light/ThemeChanger.png";
         button1.DicaTela = "Tema Escuro";
+        button1.OnClick = TesteClick;
         Botoes.Add(button1);
         var button = new BarButton();
         button.Imagem = $"{URL}/assets/UI/light/MainMenu.png";
         button.DicaTela = "Menu";
+        button.OffcanvasMenuID = "#TesteMenu";
         Botoes.Add(button);
+    }
+
+    private void TesteClick()
+    {
+        Console.WriteLine("Teste");
     }
 }

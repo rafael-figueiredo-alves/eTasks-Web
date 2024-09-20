@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 
 namespace eTasks.Components.Bars
 {
@@ -7,31 +8,18 @@ namespace eTasks.Components.Bars
         [Inject] protected NavigationManager? navigationManager { get; set; }
 
         #region Parâmetros
-        [Parameter] public string AvatarPath { get; set; } = "/assets/UI/Avatar.png";
+        [Parameter] public string AvatarPath { get; set; } = "/assets/UI/Avatar2.png";
         [Parameter] public List<BarButton>? Botoes { get; set; } = null;
+        [Parameter] public string AvatarOffcanvasMenuID { get; set; } = string.Empty;
+        [Parameter] public EventCallback AvatarOnClick { get; set; }
         #endregion
-
-        public string ImagemAvatar
-        {
-            get
-            {
-                var path = "";
-                if (AvatarPath.StartsWith("/"))
-                    path = navigationManager?.BaseUri.TrimEnd('/') + AvatarPath;
-                else
-                    if (navigationManager!.BaseUri.EndsWith('/'))
-                    path = navigationManager?.BaseUri + AvatarPath;
-                else
-                    path = navigationManager?.BaseUri + "/" + AvatarPath;
-                return path;
-            }
-        }
     }
 
     public class BarButton
     {
         public string Imagem {  get; set; } = string.Empty;
         public string DicaTela { get; set; } = string.Empty;
-        public EventCallback OnClick { get; set; }
+        public Action? OnClick { get; set; }
+        public string OffcanvasMenuID { get; set; } = string.Empty;
     }
 }

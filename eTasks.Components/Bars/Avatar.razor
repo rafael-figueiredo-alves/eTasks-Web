@@ -1,3 +1,10 @@
 ﻿@inherits AvatarBase
 
-<img src="@AvatarPath" height="40" width="40" style="margin-top: 2px;margin-right: 10px; cursor: pointer;" />
+@if(!string.IsNullOrEmpty(OffcanvasMenuID))
+{
+    <img src="@AvatarPath" height="40" width="40" style="margin-top: 2px;margin-right: 10px; cursor: pointer;border-radius: 50%;" data-bs-toggle="offcanvas" href="@OffcanvasMenuID" role="button" />
+}
+else
+{
+    <img src="@AvatarPath" height="40" width="40" style="margin-top: 2px;margin-right: 10px; cursor: pointer;border-radius: 50%;" @onclick=OnClick />
+}
