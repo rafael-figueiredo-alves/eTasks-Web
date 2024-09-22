@@ -5,7 +5,7 @@
         <TopBar>
             <Brand />
             <TitleBar />
-            <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" AvatarPath="@Avatarpath" />
+            <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" AvatarPath="assets/UI/Avatar2.png" />
         </TopBar>
 
         <Offcanvas OffcanvasID="TesteMenu" />
@@ -23,19 +23,16 @@
     [Inject] protected NavigationManager? navigationManager { get; set; }
 
     protected List<BarButton> Botoes { get; set; } = new();
-    protected string Avatarpath { get; set; } = string.Empty;
 
     protected override void OnInitialized()
     {        
-        var URL = navigationManager?.BaseUri.TrimEnd('/');
-        Avatarpath = $"{URL}/assets/UI/Avatar2.png";
         var button1 = new BarButton();
-        button1.Imagem = $"{URL}/assets/UI/light/ThemeChanger.png";
+        button1.Imagem = "assets/UI/light/ThemeChanger.png";
         button1.DicaTela = "Tema Escuro";
         button1.OnClick = TesteClick;
         Botoes.Add(button1);
         var button = new BarButton();
-        button.Imagem = $"{URL}/assets/UI/light/MainMenu.png";
+        button.Imagem = "assets/UI/light/MainMenu.png";
         button.DicaTela = "Menu";
         button.OffcanvasMenuID = "#TesteMenu";
         Botoes.Add(button);

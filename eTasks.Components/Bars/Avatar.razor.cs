@@ -7,7 +7,7 @@ namespace eTasks.Components.Bars
         [Inject] protected NavigationManager? navigationManager { get; set; }
 
         #region Parâmetros
-        [Parameter] public string AvatarPath { get; set; } = "/assets/UI/Avatar2.png";
+        [Parameter] public string AvatarPath { get; set; } = "assets/UI/Avatar2.png";
         [Parameter] public string OffcanvasMenuID {  get; set; } = string.Empty;
         [Parameter] public EventCallback OnClick { get; set; }
         #endregion
