@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "eTasks",
   "resources": {
-    "hash": "sha256-zqyEBz2ynxM+SdS6TFLVBFOcJ3P2pgGv7nGP24GrF6w=",
+    "hash": "sha256-X2KAwzLZVLV827o0/XzJX2o/wp99zB614F0V73gZPDs=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.746giovk6l.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -18,10 +18,10 @@
     },
     "assembly": {
       "eFirebase4CSharp.wasm": "sha256-i6VkYA8dL5JnzJZy7zT7pR+w3+fpRjDSkiVhBpXiVrU=",
-      "eTasks.Components.wasm": "sha256-qBdm8ZutQ7HZ11FNZlH0VRw+lEPslY2viDDEJ37CoHc=",
-      "eTasks.Shared.wasm": "sha256-Nw76YJosISHTds5gPJrjzh8sUVk2/5BRG72kHwaoOJY=",
-      "eTasks.View.wasm": "sha256-UGQ1J1IkUycdPsdWSbMZoyGJEM7TUYrkWZLam+t5DrA=",
-      "eTasks.wasm": "sha256-aL3weSX6iHhQ77dH3wfL0Fmvt798RN1jeLOF1DWpHzQ=",
+      "eTasks.Components.wasm": "sha256-c+zRCBKBmLWIIove615pu/PzwxuSoP9wjwkS4egwKH4=",
+      "eTasks.Shared.wasm": "sha256-LgiuA/jIg9ICjXZBqhSZdmZEAA2NcqBbaXWew/HDy5U=",
+      "eTasks.View.wasm": "sha256-m4/h9tlNcU1DNuoPIZZf36j+4pa/qbhLkFsji9XatpU=",
+      "eTasks.wasm": "sha256-RGQ5Nh7+qjZkK7U7c40jj7NYMH2J7tJ7hzPXI1gW+ok=",
       "eTranslate.wasm": "sha256-b92TqmflNPQ8z4Gmjzubtkj4KOCh4KmQTlumC7jFeaU=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-XMB5U9KTgYlU2UblTUYjdbW1uBTZJPgpLpDbZaxiqKM=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-spyk6aOlBqGuXrgkag654fMJljJemLYToKEcwC5Nvgo=",
@@ -47,7 +47,7 @@
       "System.Net.Http.Json.wasm": "sha256-/qpjCeaDfMwfr5Q1d8WIK6icD5eWds0Gqv5Dhj9Vz7o=",
       "System.Net.Http.wasm": "sha256-F0gp6N0IPtzC2LFCblXng76MCNoRaAmZRGv2LgkBdB0=",
       "System.Net.Primitives.wasm": "sha256-j3A7SN1Wpd95yFTPPq1YD+PxIDYicARL6W3t8sMPhFI=",
-      "System.Private.CoreLib.wasm": "sha256-lb44jgtcWrjjL6v87ioaX0Zl7Hv/TVpAMyAMywVfXis=",
+      "System.Private.CoreLib.wasm": "sha256-ApQaVtGY5RKWuGd4o5OPb7xvixv1R6EPYGn1GO4wl6w=",
       "System.Private.Uri.wasm": "sha256-K9ko6ynQCp7Cffw7/K/YtpA0z9BtDgrGpPiA2ZwP4g4=",
       "System.Runtime.InteropServices.JavaScript.wasm": "sha256-rXNWJxdH8tME4a+ZYwP7wellel8Xp4lVPsbIQmC+ImE=",
       "System.Runtime.wasm": "sha256-ZWMd6INlThEr063DhjvW2okyGo7cheMEXfI+6u38rOQ=",
