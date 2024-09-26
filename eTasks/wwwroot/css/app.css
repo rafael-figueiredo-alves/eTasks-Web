@@ -101,3 +101,8 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
+
+.user-select-none {
+    -webkit-user-select: none;
+    user-select: none;
+}

@@ -1,4 +1,4 @@
-﻿<div class="offcanvas @position" tabindex="-1" id="@OffcanvasID" data-bs-backdrop="true" aria-labelledby="offcanvasExampleLabel" data-bs-theme="light" style="border-radius: 0px 25px 25px 0px;width: 350px">
+﻿<div class="offcanvas @position" tabindex="-1" id="@OffcanvasID" data-bs-backdrop="true" aria-labelledby="offcanvasExampleLabel" data-bs-theme="light" style="border-radius: @(borderRadius);width: @(Width)">
 @*     <div class="offcanvas-header" style="background: RoyalBlue">
         <div class="offcanvas-title" style="color: white" id="offcanvasExampleLabel">
             <div class="row"> *@
@@ -54,8 +54,79 @@
 </div>
 
 @code {
-    [Parameter]
-    public string position { get; set; } = "offcanvas-start";
+    public enum DirecaoOffCanvas
+    {
+        Esquerda, direita
+    }
+
+    public enum PosicaoOffCanvas
+    {
+        Esquerda,
+        Direita,
+        Topo,
+        Inferior
+    }
+
+
+
+    [Parameter] public PosicaoOffCanvas Posicao { get; set; } = PosicaoOffCanvas.Esquerda;
 
     [Parameter] public string OffcanvasID { get; set; } = string.Empty;
+
+    [Parameter] public DirecaoOffCanvas direcaoOffCanvas { get; set; } = Offcanvas.DirecaoOffCanvas.Esquerda;
+
+    [Parameter] public bool EOffcanvasPerfil { get; set; } = false;
+
+    private string borderRadius = "0px 25px 25px 0px";
+    private string position { get; set; } = "offcanvas-start";
+    private string Width { get; set; } = "350px";
+
+    protected override void OnParametersSet()
+    {
+        if(direcaoOffCanvas == DirecaoOffCanvas.Esquerda)
+        {
+            if(EOffcanvasPerfil)
+            {
+                borderRadius = "0px 60px 0px 0px";
+            }
+            else
+            {
+                borderRadius = "0px 25px 25px 0px";
+            }
+        }
+        else
+        {
+            if(EOffcanvasPerfil)
+            {
+                borderRadius = "60px 0px 0px 0px";
+            }
+            else
+            {
+                borderRadius = "25px 0px 0px 25px";
+            }
+        }
+
+        switch(Posicao)
+        {
+            case PosicaoOffCanvas.Esquerda:
+                position = "offcanvas-start";
+                Width = "350px";
+                break;
+            case PosicaoOffCanvas.Direita:
+                position = "offcanvas-end";
+                Width = "350px";
+                break;
+            case PosicaoOffCanvas.Topo:
+                position = "offcanvas-top";
+                Width = "100%";
+                break;
+            case PosicaoOffCanvas.Inferior:
+                position = "offcanvas-bottom";
+                Width = "100%";
+                break;
+            default:
+                position = "offcanvas-start";
+                break;
+        }
+    }
 }
