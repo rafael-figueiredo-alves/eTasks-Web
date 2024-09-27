@@ -2,10 +2,10 @@
 
 <div class="page">
     <main>
-        <TopBar>
+        <TopBar isDarkMode="@ThemeChange">
             <Brand />
             <TitleBar />
-            <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" AvatarPath="assets/UI/Avatar2.png" />
+            <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" AvatarPath="assets/UI/Avatar2.png" isDarkMode="@ThemeChange" />
         </TopBar>
 
         <Offcanvas OffcanvasID="TesteMenu" />
@@ -26,15 +26,17 @@
 
     protected List<BarButton> Botoes { get; set; } = new();
 
+    protected bool ThemeChange { get; set; } = false;
+
     protected override void OnInitialized()
     {        
         var button1 = new BarButton();
-        button1.Imagem = "assets/UI/light/ThemeChanger.png";
+        button1.Imagem = "ThemeChanger.png";
         button1.DicaTela = "Tema Escuro";
         button1.OnClick = TesteClick;
         Botoes.Add(button1);
         var button = new BarButton();
-        button.Imagem = "assets/UI/light/MainMenu.png";
+        button.Imagem = "MainMenu.png";
         button.DicaTela = "Menu";
         button.OffcanvasMenuID = "#TesteMenu";
         Botoes.Add(button);
@@ -42,6 +44,7 @@
 
     private void TesteClick()
     {
+        ThemeChange = !ThemeChange;
         Console.WriteLine("Teste");
     }
 }

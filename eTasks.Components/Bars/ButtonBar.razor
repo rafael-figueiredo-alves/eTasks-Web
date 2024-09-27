@@ -6,11 +6,11 @@
         {
             @if(!string.IsNullOrEmpty(Botao.OffcanvasMenuID))
             {
-                <img src="@Botao.Imagem" height="40" width="40" style="margin-top: 2px;margin-right: 10px;cursor:pointer;" title="@Botao.DicaTela" data-bs-toggle="offcanvas" href="@Botao.OffcanvasMenuID" role="button" />
+                <img src="@(basePath + Botao.Imagem)" height="40" width="40" style="margin-top: 2px;margin-right: 10px;cursor:pointer;" title="@Botao.DicaTela" data-bs-toggle="offcanvas" href="@Botao.OffcanvasMenuID" role="button" />
             }
             else
             {
-                <img src="@Botao.Imagem" height="40" width="40" style="margin-top: 2px;margin-right: 10px;cursor:pointer;" title="@Botao.DicaTela" @onclick=Botao.OnClick />
+                <img src="@(basePath + Botao.Imagem)" height="40" width="40" style="margin-top: 2px;margin-right: 10px;cursor:pointer;" title="@Botao.DicaTela" @onclick=@Botao.OnClick />
             }
         }
         <Avatar AvatarPath="@AvatarPath" OffcanvasMenuID="@AvatarOffcanvasMenuID" OnClick="@AvatarOnClick" />
