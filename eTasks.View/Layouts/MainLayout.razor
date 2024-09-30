@@ -1,6 +1,6 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
+<div class="page" style="background-color: @(CorFundo)">
     <main>
         <TopBar isDarkMode="@ThemeChange">
             <Brand />
@@ -27,6 +27,7 @@
     protected List<BarButton> Botoes { get; set; } = new();
 
     protected bool ThemeChange { get; set; } = false;
+    protected string CorFundo { get; set; } = string.Empty;
 
     protected override void OnInitialized()
     {        
@@ -40,11 +41,13 @@
         button.DicaTela = "Menu";
         button.OffcanvasMenuID = "#TesteMenu";
         Botoes.Add(button);
+        CorFundo = Components.ColorPallete.GetColor(Components.Cor.Background, ThemeChange);
     }
 
     private void TesteClick()
     {
         ThemeChange = !ThemeChange;
+        CorFundo = Components.ColorPallete.GetColor(Components.Cor.Background, ThemeChange);
         Console.WriteLine("Teste");
     }
 }

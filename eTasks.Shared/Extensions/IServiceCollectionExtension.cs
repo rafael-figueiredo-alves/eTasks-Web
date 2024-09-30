@@ -24,7 +24,7 @@ namespace eTasks.Shared.Extensions
 
         private static void AddSingletonServices(this IServiceCollection Services)
         {
-            Services.AddeTranslateSingletonService(TranslationFileFullPath: _baseURL + "translation.json");
+            Services.AddeTranslateSingletonService(TranslationFileFullPath: _baseURL + "translate.json");
         }
     }
 }
