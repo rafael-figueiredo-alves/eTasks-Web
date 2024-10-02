@@ -1,21 +1,28 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page" style="background-color: @(CorFundo)">
-    <main>
+<style>
+    html{
+        background-color: @CorFundo;
+        color: @CorTexto;
+    }
+</style>
+
+<div class="page" style="background-color: @CorFundo; color: @CorTexto; height: 100vh; display: flex; flex-direction: column;">
+    <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
         <TopBar isDarkMode="@ThemeChange">
-            <Brand />
-            <TitleBar />
-            <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" AvatarPath="assets/UI/Avatar2.png" isDarkMode="@ThemeChange" />
+            <Brand ColorAppName="@Components.ColorPallete.GetColor(Components.Cor.Primary, ThemeChange)" />
+            <TitleBar isDarkMode="@ThemeChange" />
+            <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" AvatarPath="" isDarkMode="@ThemeChange" />
         </TopBar>
 
         <Offcanvas OffcanvasID="TesteMenu" />
         <Offcanvas OffcanvasID="AvatarMenu" Posicao="Offcanvas.PosicaoOffCanvas.Direita" direcaoOffCanvas="Offcanvas.DirecaoOffCanvas.direita" EOffcanvasPerfil="true" />
 
-        <PageTitleBar />
+        <PageTitleBar isDarkMode="@ThemeChange" />
 
         
 
-        <article class="content px-4 user-select-none">
+        <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">
             @Body
         </article>
     </main>
@@ -28,6 +35,7 @@
 
     protected bool ThemeChange { get; set; } = false;
     protected string CorFundo { get; set; } = string.Empty;
+    protected string CorTexto { get; set; } = string.Empty;
 
     protected override void OnInitialized()
     {        
@@ -42,12 +50,14 @@
         button.OffcanvasMenuID = "#TesteMenu";
         Botoes.Add(button);
         CorFundo = Components.ColorPallete.GetColor(Components.Cor.Background, ThemeChange);
+        CorTexto = Components.ColorPallete.GetColor(Components.Cor.Text, ThemeChange);
     }
 
     private void TesteClick()
     {
         ThemeChange = !ThemeChange;
         CorFundo = Components.ColorPallete.GetColor(Components.Cor.Background, ThemeChange);
+        CorTexto = Components.ColorPallete.GetColor(Components.Cor.Text, ThemeChange);
         Console.WriteLine("Teste");
     }
 }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace eTasks.Components.Bars
 {
-    public class TitleBarBase : ComponentBase
+    public class PageTitleBarBase : ComponentBase
     {
-        [Parameter] public bool isDarkMode {  get; set; }
+        [Parameter] public bool isDarkMode { get; set; }
 
         protected string BackgroudColor { get; set; } = "#336699";
         protected string TextColor { get; set; } = "#FFFFFF";

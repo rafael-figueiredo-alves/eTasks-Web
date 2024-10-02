@@ -26,6 +26,8 @@ namespace eTasks.Components
                     return isDarkMode ? "#EE5351" : "#EE5351";
                 case Cor.Shadow:
                     return isDarkMode ? "0px 2px 4px rgba(100,100,100,0.5)" : "0 4px 8px rgba(0, 0, 0, 0.2)";
+                case Cor.Text:
+                    return isDarkMode ? "#FFFFFF" : "#000000";
                 default:
                     return isDarkMode ? "#FFFFFF" : "#336699";
             }
@@ -40,6 +42,7 @@ namespace eTasks.Components
         FabButton,
         OkButton,
         CancelButton,
-        Shadow
+        Shadow,
+        Text
     }
 }
