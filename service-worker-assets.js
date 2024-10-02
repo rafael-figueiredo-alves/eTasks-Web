@@ -37,7 +37,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-DTTdRAYQfbqy\/gVM5tiqKi6ey7fe7GvftjTxpzanoaM=",
+      "hash": "sha256-hKYv1euO8CPLD+1i6YzIKIxddea3tdRAjJSgg4bgltM=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -45,19 +45,19 @@
       "url": "_framework\/eFirebase4CSharp.wasm"
     },
     {
-      "hash": "sha256-DdPBPCAD4vvzIWsTtrwBgorDXqm+XJ4qcOWR4KLCnSw=",
+      "hash": "sha256-Hfvoru1Dq1KOhPN34GG9hyI6ro1yCVzHnM1V0oAZOsY=",
       "url": "_framework\/eTasks.Components.wasm"
     },
     {
-      "hash": "sha256-1vYOQvVojyleXF5sSGhvLLr6YJEEkOXp\/EaC2+AXers=",
+      "hash": "sha256-0nARIUP19DTBJ1eHmCUCK61AH09x4+kSntXFVKfv\/Po=",
       "url": "_framework\/eTasks.Shared.wasm"
     },
     {
-      "hash": "sha256-\/bGaZYHWb7To0lw4n5KNz1srbcnmE22DWQzwN4KkQdk=",
+      "hash": "sha256-hiUxmrjwELGx9BxKMtYrEex4U2GNwxoGeFyJenSGJXc=",
       "url": "_framework\/eTasks.View.wasm"
     },
     {
-      "hash": "sha256-IU4uHFZXmIRO+me6wg4ror5q4YP4m7p4hMXbt9Pye3E=",
+      "hash": "sha256-JWPfwqMUlNfHo4qO8jwwbV46EphfKc8eIGeOFl3sMaU=",
       "url": "_framework\/eTasks.wasm"
     },
     {
@@ -65,7 +65,7 @@
       "url": "_framework\/eTranslate.wasm"
     },
     {
-      "hash": "sha256-XMB5U9KTgYlU2UblTUYjdbW1uBTZJPgpLpDbZaxiqKM=",
+      "hash": "sha256-TwxMV+9c0yqIRbNdzOgwQZjjSabfmGNB7B10216wUZQ=",
       "url": "_framework\/Microsoft.AspNetCore.Components.wasm"
     },
     {
@@ -277,5 +277,5 @@
       "url": "_content\/eTasks.View\/eTasks.View.bundle.scp.css"
     }
   ],
-  "version": "yifxeVY1"
+  "version": "G1bjd4bp"
 };
