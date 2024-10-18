@@ -9,21 +9,12 @@
 
 <div class="page" style="background-color: @CorFundo; color: @CorTexto; height: 100vh; display: flex; flex-direction: column;">
     <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
-        <TopBar isDarkMode="@ThemeChange">
-            <Brand ColorAppName="@Components.ColorPallete.GetColor(Components.Cor.Primary, ThemeChange)" />
-            <TitleBar isDarkMode="@ThemeChange" />
-            <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" AvatarPath="" isDarkMode="@ThemeChange" />
-        </TopBar>
+        <AppBar isDarkMode="@ThemeChange" OnChangeThemeButtonClick="TesteClick" AppName="eTasks" PageTitle="@Title" ChangeThemeButtonTip="@Dica" />
 
-        <Offcanvas OffcanvasID="TesteMenu" />
-        <Offcanvas OffcanvasID="AvatarMenu" Posicao="Offcanvas.PosicaoOffCanvas.Direita" direcaoOffCanvas="Offcanvas.DirecaoOffCanvas.direita" EOffcanvasPerfil="true" />
-
-        <PageTitleBar isDarkMode="@ThemeChange" />
-
-        
 
         <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">
             @Body
+            <button @onclick=Trocar>Trocar</button>
         </article>
     </main>
 </div>
@@ -31,33 +22,32 @@
 @code {
     [Inject] protected NavigationManager? navigationManager { get; set; }
 
-    protected List<BarButton> Botoes { get; set; } = new();
-
     protected bool ThemeChange { get; set; } = false;
     protected string CorFundo { get; set; } = string.Empty;
     protected string CorTexto { get; set; } = string.Empty;
+    protected string Title { get; set; } = "Minhas Tarefas";
+    protected string Dica { get; set; } = "Tema escuro";
 
     protected override void OnInitialized()
-    {        
-        var button1 = new BarButton();
-        button1.Imagem = "ThemeChanger.png";
-        button1.DicaTela = "Tema Escuro";
-        button1.OnClick = TesteClick;
-        Botoes.Add(button1);
-        var button = new BarButton();
-        button.Imagem = "MainMenu.png";
-        button.DicaTela = "Menu";
-        button.OffcanvasMenuID = "#TesteMenu";
-        Botoes.Add(button);
-        CorFundo = Components.ColorPallete.GetColor(Components.Cor.Background, ThemeChange);
-        CorTexto = Components.ColorPallete.GetColor(Components.Cor.Text, ThemeChange);
+    {
+        ChangeTheme();
+    }
+
+    protected void Trocar()
+    {
+        Dica = "Change Theme";
+        StateHasChanged();
     }
 
     private void TesteClick()
     {
         ThemeChange = !ThemeChange;
+        ChangeTheme();
+    }
+
+    private void ChangeTheme()
+    {
         CorFundo = Components.ColorPallete.GetColor(Components.Cor.Background, ThemeChange);
         CorTexto = Components.ColorPallete.GetColor(Components.Cor.Text, ThemeChange);
-        Console.WriteLine("Teste");
     }
 }
