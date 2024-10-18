@@ -37,7 +37,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-bcN64vpFTr+WzCdHGXcfaEVAEpffsM+GywYVYrhD3ko=",
+      "hash": "sha256-6I1slV5LcX1u\/DMSewFmz0qMprb\/vX5wyGl7\/wvUZ4c=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -45,19 +45,19 @@
       "url": "_framework\/eFirebase4CSharp.wasm"
     },
     {
-      "hash": "sha256-6m7xzOTRtLejG1R87JQsIfL\/N0dgW6pHfLySVj+K2Sk=",
+      "hash": "sha256-rcE5os1KDET6gEPeQWC\/QPimpNvHSvP45jckykHOuOE=",
       "url": "_framework\/eTasks.Components.wasm"
     },
     {
-      "hash": "sha256-R3BfpwVyJ2eyxhx8+scBhVWbJ0qMXUdmxHJCMIIGrNE=",
+      "hash": "sha256-Y\/++uKEl3ByXMyitenLy3KVq5v6ZOA4foSkMRcvX7Eo=",
       "url": "_framework\/eTasks.Shared.wasm"
     },
     {
-      "hash": "sha256-raiNKwlRkrbFOaFfhETuiR31l5tOP5aVubHdKJwpFZw=",
+      "hash": "sha256-LVaSjlqEMXe35rAPobvu9znHPUMs00HpPlMH3AkSOQs=",
       "url": "_framework\/eTasks.View.wasm"
     },
     {
-      "hash": "sha256-ev40FJ6amMaa+XXy8A4p83QVxnoCb67pvc31c6R1+NI=",
+      "hash": "sha256-9OGOip7M4sRDvqAwR\/n3p7nCXZwnsrSveYmVMsmIy4c=",
       "url": "_framework\/eTasks.wasm"
     },
     {
@@ -133,7 +133,7 @@
       "url": "_framework\/System.ComponentModel.wasm"
     },
     {
-      "hash": "sha256-G9ggupmVM31HmPm6iL\/wrkIPZGs+f8gl\/UjZXSfx5rU=",
+      "hash": "sha256-H0oLZv\/16VAt5jbmBxbsWHXee2ZiD66tRAvPRRhsEXw=",
       "url": "_framework\/System.Console.wasm"
     },
     {
@@ -209,8 +209,32 @@
       "url": "assets\/UI\/avatar\/dark\/Avatar.png"
     },
     {
+      "hash": "sha256-IHK\/OZzrHu\/4rlUn5njWUc6OBM3WUn+ljmGz2Nviv+c=",
+      "url": "assets\/UI\/avatar\/dark\/ChangePassword.png"
+    },
+    {
+      "hash": "sha256-8k1jyLLHQI8w7dhuNUBJVXyoyXE2NjLLjfH1Q+X\/ST8=",
+      "url": "assets\/UI\/avatar\/dark\/EditProfile.png"
+    },
+    {
+      "hash": "sha256-bAXOlQJvtvl3POcT59sD4Ms0sRg+M8HHK\/dh8CthiOo=",
+      "url": "assets\/UI\/avatar\/dark\/Logout.png"
+    },
+    {
       "hash": "sha256-VMErV7SKCP0+98uIPzAD9kSVoamLbu20L\/vvnyJvBaQ=",
       "url": "assets\/UI\/avatar\/light\/Avatar.png"
+    },
+    {
+      "hash": "sha256-XALEsBJzGq0LG81fI6itxN650FLS2DAia1LkeNwCtkI=",
+      "url": "assets\/UI\/avatar\/light\/ChangePassword.png"
+    },
+    {
+      "hash": "sha256-gwTyMSjWxBdfQlBpnYMfVGhEHw9AESkXnQ89jwl5OEQ=",
+      "url": "assets\/UI\/avatar\/light\/EditProfile.png"
+    },
+    {
+      "hash": "sha256-F9\/m5mhG+4U5FAuDEaBMaA2DAU0s2OaLiPQGU6outho=",
+      "url": "assets\/UI\/avatar\/light\/Logout.png"
     },
     {
       "hash": "sha256-2Go9Cdf6w5sym57hBt7ipc3vAsJ6DGx8WRFB0CI9mUA=",
@@ -293,5 +317,5 @@
       "url": "_content\/eTasks.View\/eTasks.View.bundle.scp.css"
     }
   ],
-  "version": "2IaPlpRz"
+  "version": "TgKQPAG1"
 };
