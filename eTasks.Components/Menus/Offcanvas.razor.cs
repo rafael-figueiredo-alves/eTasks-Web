@@ -78,7 +78,14 @@ namespace eTasks.Components.Menus
                     break;
             }
 
-            Shadow = isDarkMode ? "-4px 2px 4px rgba(50,50,50,0.5)" : "-4px 2px 4px rgba(0, 0, 0, 0.2)";
+            if (direcaoOffCanvas == DirecaoOffCanvas.Esquerda)
+            {
+                Shadow = isDarkMode ? "4px 2px 4px rgba(100,100,100,0.1)" : "4px 2px 4px rgba(0, 0, 0, 0.2)";
+            }
+            else
+            {
+                Shadow = isDarkMode ? "-4px 2px 4px rgba(100,100,100,0.1)" : "-4px 2px 4px rgba(0, 0, 0, 0.2)";
+            }
         }
     }
 }

@@ -14,7 +14,6 @@
 
         <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">
             @Body
-            <button @onclick=Trocar>Trocar</button>
         </article>
     </main>
 </div>
@@ -31,14 +30,6 @@
     protected override void OnInitialized()
     {
         ChangeTheme();
-    }
-
-    protected void Trocar()
-    {
-        if (Dica == "Tema escuro")
-            Dica = "Change Theme";
-        else
-            Dica = "Tema escuro";
     }
 
     private void TesteClick()
