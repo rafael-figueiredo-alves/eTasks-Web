@@ -1,12 +1,12 @@
 ﻿@inherits AppBarBase
 
-<TopBar isDarkMode="@isDarkMode">
-    <Brand ColorAppName="@Components.ColorPallete.GetColor(Components.Cor.Primary, isDarkMode)" AppName="@AppName" />
-    <TitleBar isDarkMode="@isDarkMode" Title="@PageTitle" />
-    <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" AvatarPath="" isDarkMode="@isDarkMode" />
+<TopBar isDarkMode="@IsDarkMode">
+    <Brand ColorAppName="@Components.ColorPallete.GetColor(Components.Cor.Primary, IsDarkMode)" AppName="@AppName" />
+    <TitleBar isDarkMode="@IsDarkMode" Title="@PageTitle" />
+    <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" AvatarPath="" isDarkMode="@IsDarkMode" />
 </TopBar>
 
-<Offcanvas OffcanvasID="TesteMenu" />
-<Offcanvas OffcanvasID="AvatarMenu" Posicao="Offcanvas.PosicaoOffCanvas.Direita" direcaoOffCanvas="Offcanvas.DirecaoOffCanvas.direita" EOffcanvasPerfil="true" />
+<MainMenu IsDarkMode="@IsDarkMode" />
+<AvatarMenu IsDarkMode="@IsDarkMode" />
 
-<PageTitleBar isDarkMode="@isDarkMode" Title="@PageTitle" />
+<PageTitleBar isDarkMode="@IsDarkMode" Title="@PageTitle" />

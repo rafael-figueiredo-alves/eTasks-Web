@@ -1,0 +1,56 @@
+﻿<Offcanvas OffcanvasID="TesteMenu" isDarkMode="@IsDarkMode">
+    <div class="offcanvas-header">
+        <div class="offcanvas-title" id="offcanvasExampleLabel">
+            <div class="row">
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <div class="col-8 text-center" style="padding-top: 9px">
+                    <h3 style="margin-bottom: 0px">Menu</h3>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+   @*  <div class="offcanvas-body @Theme!.ColorClass" style="color: @Theme!.ColorFontStyle" data-bs-theme="@Theme.DataBsTheme">
+        <ul class="list-unstyled ps-0">
+            <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#cadastros-collapse" aria-expanded="false">
+                    Cadastros
+                </button>
+                <div class="collapse" id="cadastros-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="CadastrarClientes">Clientes</a></li>
+                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="CadastrarVendedores">Vendedores</a></li>
+                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="CadastrarProdutos">Produtos</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#pedidos-collapse" aria-expanded="false">
+                    Pedidos
+                </button>
+                <div class="collapse" id="pedidos-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="CriarNovoPedido">Novo Pedido</a></li>
+                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="VerificarPedidos">Verificar Pedidos</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#ajuda-collapse" aria-expanded="false">
+                    Ajuda
+                </button>
+                <div class="collapse" id="ajuda-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="ConsultarManual">Manual do Usuário</a></li>
+                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="VerPagina404">Página 404</a></li>
+                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="VerSobre">Sobre</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div> *@
+</Offcanvas>
+
+@code {
+    [Parameter] public bool IsDarkMode { get; set; }= false;
+}

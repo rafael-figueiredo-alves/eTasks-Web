@@ -35,8 +35,10 @@
 
     protected void Trocar()
     {
-        Dica = "Change Theme";
-        StateHasChanged();
+        if (Dica == "Tema escuro")
+            Dica = "Change Theme";
+        else
+            Dica = "Tema escuro";
     }
 
     private void TesteClick()
