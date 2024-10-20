@@ -1,4 +1,6 @@
-﻿<Offcanvas OffcanvasID="AvatarMenu" EOffcanvasPerfil="true" isDarkMode="@IsDarkMode">
+﻿@inherits AvatarMenuBase
+
+<Offcanvas OffcanvasID="AvatarMenu" EOffcanvasPerfil="true" isDarkMode="@IsDarkMode">
 @*     <div class="offcanvas-header" style="background: RoyalBlue; border-radius: 60px 0px 0px 0px; height: 450px">
         <div class="offcanvas-title" style="color: white" id="offcanvasExampleLabel">
             <div class="row">
@@ -52,8 +54,3 @@
         </ul>
     </div> *@
 </Offcanvas>
-
-
-@code {
-    [Parameter] public bool IsDarkMode { get; set; }= false;
-}

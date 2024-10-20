@@ -1,15 +1,16 @@
-﻿<Offcanvas OffcanvasID="TesteMenu" isDarkMode="@IsDarkMode">
-@*     <div class="offcanvas-header">
+﻿@inherits MainMenuBase
+
+<Offcanvas OffcanvasID="TesteMenu" isDarkMode="@IsDarkMode">
+    <div class="offcanvas-header">
         <div class="offcanvas-title" id="offcanvasExampleLabel">
             <div class="row">
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 <div class="col-8 text-center" style="padding-top: 9px">
                     <h3 style="margin-bottom: 0px">Menu</h3>
                 </div>
             </div>
         </div>
         
-    </div> *@
+    </div>
    @*  <div class="offcanvas-body @Theme!.ColorClass" style="color: @Theme!.ColorFontStyle" data-bs-theme="@Theme.DataBsTheme">
         <ul class="list-unstyled ps-0">
             <li class="mb-1">
@@ -50,7 +51,3 @@
         </ul>
     </div> *@
 </Offcanvas>
-
-@code {
-    [Parameter] public bool IsDarkMode { get; set; }= false;
-}

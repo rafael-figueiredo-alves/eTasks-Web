@@ -1,4 +1,6 @@
-﻿<Offcanvas OffcanvasID="TesteMenu" isDarkMode="@IsDarkMode" direcaoOffCanvas="Offcanvas.DirecaoOffCanvas.Esquerda" Posicao="Offcanvas.PosicaoOffCanvas.Esquerda">
+﻿@inherits LanguageMenuBase
+
+<Offcanvas OffcanvasID="TesteMenu" isDarkMode="@IsDarkMode" direcaoOffCanvas="Offcanvas.DirecaoOffCanvas.Esquerda" Posicao="Offcanvas.PosicaoOffCanvas.Esquerda">
 @*     <div class="offcanvas-header" style="background: RoyalBlue">
         <div class="offcanvas-title" style="color: white" id="offcanvasExampleLabel">
             <div class="row">
@@ -52,7 +54,3 @@
         </ul>
     </div> *@
 </Offcanvas>
-
-@code {
-    [Parameter] public bool IsDarkMode { get; set; }= false;
-}
