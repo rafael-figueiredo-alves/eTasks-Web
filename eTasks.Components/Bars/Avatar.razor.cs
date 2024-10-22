@@ -4,8 +4,6 @@ namespace eTasks.Components.Bars
 {
     public class AvatarBase : ComponentBase
     {
-        [Inject] protected NavigationManager? navigationManager { get; set; }
-
         #region Parâmetros
         [Parameter] public string AvatarPath { get; set; } = string.Empty;
         [Parameter] public string OffcanvasMenuID {  get; set; } = string.Empty;
@@ -18,8 +16,11 @@ namespace eTasks.Components.Bars
         [Parameter] public bool IsAbleToClick { get; set; } = true;
         #endregion
 
+        #region Variáveis
         protected string AvatarImagePath { get; set; } = string.Empty;
+        #endregion
 
+        #region Métodos
         protected override void OnParametersSet()
         {
             if(AvatarPath != string.Empty)
@@ -34,5 +35,6 @@ namespace eTasks.Components.Bars
                     AvatarImagePath = "assets/UI/avatar/light/Avatar.png";
             }
         }
+        #endregion
     }
 }

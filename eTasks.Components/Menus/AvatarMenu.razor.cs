@@ -4,14 +4,19 @@ namespace eTasks.Components.Menus
 {
     public class AvatarMenuBase : ComponentBase
     {
+        #region Parametros
         [Parameter] public bool IsDarkMode { get; set; } = false;
         [Parameter] public string? AvatarPath { get; set; } = string.Empty;
+        #endregion
 
+        #region Variáveis
         protected string CloseButton { get; set; } = "assets/UI/offcanvas/light/Close.png";
         protected string ProfileButton { get; set; } = "assets/UI/avatar/light/EditProfile.png";
         protected string ChangePasswordButton { get; set; } = "assets/UI/avatar/light/ChangePassword.png";
         protected string LogoutButton { get; set; } = "assets/UI/avatar/light/Logout.png";
+        #endregion
 
+        #region Métodos
         protected override void OnParametersSet()
         {
             if (IsDarkMode)
@@ -29,5 +34,6 @@ namespace eTasks.Components.Menus
                 LogoutButton         = "assets/UI/avatar/light/Logout.png";
             }
         }
+        #endregion
     }
 }
