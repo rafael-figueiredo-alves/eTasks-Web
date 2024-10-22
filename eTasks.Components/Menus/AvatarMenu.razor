@@ -1,6 +1,25 @@
 ﻿@inherits AvatarMenuBase
 
 <Offcanvas OffcanvasID="AvatarMenu" EOffcanvasPerfil="true" isDarkMode="@IsDarkMode">
+    <div class="offcanvas-header" style="margin-top: 5px; height: 97px;">
+        <Avatar AvatarPath="@AvatarPath" AvatarHeight=97 AvatarWidth=97 AvatarMarginStyles="margin: 0;" isDarkMode=@IsDarkMode IsAbleToClick=false />
+        <div class="user-select-none" style="width: 100%; height: 97px">
+            <div class="user-select-none" style="text-align: end; height: 40px; width: 100%;">
+                <img class="user-select-none" src="@CloseButton" height="20" width="20" style="margin: 10px; margin-left: 5px; cursor: pointer;" data-bs-dismiss="offcanvas" />
+            </div>
+           <div class="user-select-none" style="text-align: center; height: 27">
+                <h3 class="user-select-none" style="font-size: 16px; color: @Components.ColorPallete.GetColor(Components.Cor.Primary, IsDarkMode); margin: 0px;">Rafael de Figueiredo Alves</h3>
+           </div>
+           <div class="user-select-none" style="height: 30px; text-align: center; margin-top: 10px;">
+                <img class="user-select-none" src="@ProfileButton" height="30" width="30" style="margin-right: 20px; cursor: pointer;" title="Editar Perfil" />
+                <img class="user-select-none" src="@ChangePasswordButton" height="30" width="30" style="margin-right: 20px; cursor: pointer;" title="Trocar senha" />
+                <img class="user-select-none" src="@LogoutButton" height="30" width="30" style="margin-right: 20px; cursor: pointer;" title="Sair" />
+           </div>
+        </div>
+    </div>
+    <div style="@($"border: 2px solid {Components.ColorPallete.GetColor(Components.Cor.Primary, IsDarkMode)}; box-shadow: 2px 4px 4px rgba(100,100,100,0.5); height: 1px; margin-left: 5%; margin-right: 5%; margin-top: 5px;")" />
+
+
 @*     <div class="offcanvas-header" style="background: RoyalBlue; border-radius: 60px 0px 0px 0px; height: 450px">
         <div class="offcanvas-title" style="color: white" id="offcanvasExampleLabel">
             <div class="row">
