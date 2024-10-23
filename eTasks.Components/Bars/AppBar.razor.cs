@@ -27,7 +27,7 @@ namespace eTasks.Components.Bars
         {
             Botoes.Clear();
             Botoes.Add(new BarButton() { DicaTela = ChangeThemeButtonTip, Imagem = "ThemeChanger.png", OnClick = OnChangeThemeButtonClick });
-            Botoes.Add(new BarButton() { DicaTela = MenuButtonTip, Imagem = "MainMenu.png", OffcanvasMenuID = "#TesteMenu" });
+            Botoes.Add(new BarButton() { DicaTela = MenuButtonTip, Imagem = "MainMenu.png", OffcanvasMenuID = "#MainMenu" });
         }
     }
 }
