@@ -16,7 +16,7 @@
             @Body
         </article>
 
-        <ActionButton />
+        <ActionButton IsDarkMode="@ThemeChange" OnClick="GoGoogle" />
     </main>
 </div>
 
@@ -44,5 +44,10 @@
     {
         CorFundo = Components.ColorPallete.GetColor(Components.Cor.Background, ThemeChange);
         CorTexto = Components.ColorPallete.GetColor(Components.Cor.Text, ThemeChange);
+    }
+
+    protected void GoGoogle()
+    {
+        navigationManager.NavigateTo("https://github.com/rafael-figueiredo-alves");
     }
 }
