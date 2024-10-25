@@ -1,8 +1,8 @@
 ﻿@inherits ActionButtonBase
 
 <div class="fab-container">
-    <div class="button iconbutton" style="@($"background-color: {ColorPallete.GetColor(Cor.FabButton, IsDarkMode)}")" @onclick="OnClick">
-        <img src="assets/UI/common/Add.png" />
+    <div class="button iconbutton" style="background-color: @ColorPallete.GetColor(Cor.FabButton, IsDarkMode)" @onclick="OnClick">
+        <img class="user-select-none" src="assets/UI/common/Add.png" />
     </div>
 </div>
 
