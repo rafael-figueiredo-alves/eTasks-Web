@@ -1,6 +1,8 @@
-﻿<Router AppAssembly="@typeof(eTasks.View.Pages.Home).Assembly">
+﻿@inherits AppBase
+
+<Router AppAssembly="@typeof(eTasks.View.Pages.Home).Assembly">
     <Found Context="routeData">
-         <RouteView RouteData="@routeData" DefaultLayout="@typeof(eTasks.View.Layouts.MainLayoutDesktop)" />
+        <RouteView RouteData="@routeData" /> @* DefaultLayout="@typeof(eTasks.View.Layouts.MainLayoutDesktop)" /> *@
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
