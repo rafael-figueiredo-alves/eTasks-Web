@@ -37,7 +37,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-CWjem5bq1F7kjyp66hy9yewlHktd990Ji8d\/VBP69Jw=",
+      "hash": "sha256-SG8UznGdcdEnt+E\/2yHl2c+Hb9k3tPK91FUQJ1y9EQI=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -45,19 +45,19 @@
       "url": "_framework\/eFirebase4CSharp.wasm"
     },
     {
-      "hash": "sha256-hp1pUA2rJJC8xDNzOW+I\/o+NPkxDD1eHg5bppTIgmRg=",
+      "hash": "sha256-MiVle0Q\/etxFdd6WnLHeB4zYiqk4NTnO5xqrbVT\/+YM=",
       "url": "_framework\/eTasks.Components.wasm"
     },
     {
-      "hash": "sha256-5AeDUQzeRAjT50502alOWmVeDvtZGwyH+EKY+Gfw6No=",
+      "hash": "sha256-wHaLRve2TJid3gQktobq81GJFz1dYyfkLdgzHOGmc4A=",
       "url": "_framework\/eTasks.Shared.wasm"
     },
     {
-      "hash": "sha256-jjzIt+1A3\/aykInvhPsBL6yqDZFfK4yKox2xjm2RyeQ=",
+      "hash": "sha256-qJfyeptEUnhBT8JOa7jTTn3lvrYaM2+nQFXBP\/wFhts=",
       "url": "_framework\/eTasks.View.wasm"
     },
     {
-      "hash": "sha256-xMIs8DKZCLc5z0uXK+k9VGiTiKk\/qSaug7RFmIWYQKQ=",
+      "hash": "sha256-WW3kLU+OmZf2cc\/dxkjpIZV411kbAR4RYV\/vDCcn9uM=",
       "url": "_framework\/eTasks.wasm"
     },
     {
@@ -173,7 +173,7 @@
       "url": "_framework\/System.Runtime.InteropServices.JavaScript.wasm"
     },
     {
-      "hash": "sha256-9iQuRL\/eMTKiPl60PRe3PyVy9gpWb1Wpu5n\/eK2kkrY=",
+      "hash": "sha256-P5BDorp9+W87MULmYMoUi4oD\/8kWNevE3Stsr812XCw=",
       "url": "_framework\/System.Runtime.wasm"
     },
     {
@@ -289,7 +289,7 @@
       "url": "css\/bootstrap\/bootstrap.min.css.map"
     },
     {
-      "hash": "sha256-IIf++4sxi8R4QS02MHeAXOhOMSmWHn5I41VOJNSyduk=",
+      "hash": "sha256-1NY6dFm3zrqpGOX5ZeyzH9wiDXk6IPoUDo4Y\/BPdsqQ=",
       "url": "index.html"
     },
     {
@@ -303,6 +303,10 @@
     {
       "hash": "sha256-GaWwuI0k1rFUxEYolsljHAsxfXHyLuu\/C55AXbQ1H9E=",
       "url": "js\/bootstrap.bundle.min.js.map"
+    },
+    {
+      "hash": "sha256-SWymZFkT0BQM8ZU8SRDm0of7nkDOoBK2JiycBhTGeik=",
+      "url": "js\/ResizeCore.js"
     },
     {
       "hash": "sha256-fjUoYYaEBY+\/zOQfkJNlzDrtbi8xuK0gZlF8vsyx9Ws=",
@@ -321,5 +325,5 @@
       "url": "_content\/eTasks.View\/eTasks.View.bundle.scp.css"
     }
   ],
-  "version": "zfsmPqKE"
+  "version": "aMKGJd3x"
 };
