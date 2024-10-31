@@ -1,0 +1,38 @@
+﻿@page "/about"
+
+<LayoutView Layout="@TipoLayout">
+<h3>About</h3>
+<Teste2></Teste2>
+</LayoutView>
+
+@code {
+    [Inject] protected LayoutService? LayoutService { get; set; }
+
+    protected Type TipoLayout { get; set; } = typeof(eTasks.View.Layouts.MainLayout);
+    private bool isMobile;
+
+    protected override void OnInitialized()
+    {
+        // Define o layout inicial
+        isMobile = LayoutService?.IsMobileLayout ?? false;
+
+        if (isMobile)
+            TipoLayout = typeof(eTasks.View.Layouts.PageLayout);
+        else
+            TipoLayout = typeof(eTasks.View.Layouts.MainLayout);
+
+        // Inscreve-se para ouvir mudanças no layout
+        if (LayoutService != null)
+            LayoutService.OnLayoutChanged += HandleLayoutChanged;
+    }
+
+    private void HandleLayoutChanged(bool isMobileLayout)
+    {
+        isMobile = isMobileLayout;
+        if (isMobileLayout)
+            TipoLayout = typeof(eTasks.View.Layouts.PageLayout);
+        else
+            TipoLayout = typeof(eTasks.View.Layouts.MainLayout);
+        InvokeAsync(StateHasChanged);
+    }
+}

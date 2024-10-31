@@ -13,7 +13,25 @@
 
 
         <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">
-            @Body
+            @if(!isMobile)
+            {
+                <div class="row">
+                    <div class="col-6">
+                        <button @onclick="GoAbout">About</button>
+                    </div>
+                    <div class="col-6">
+                        @Body
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="row">
+                    <div class="col-12">
+                        <button @onclick="GoAbout">About</button>
+                    </div>
+                </div>
+            }
         </article>
 
         <ActionButton IsDarkMode="@ThemeChange" OnClick="GoGoogle" />
@@ -22,16 +40,30 @@
 
 @code {
     [Inject] protected NavigationManager? navigationManager { get; set; }
+    [Inject] protected LayoutService? LayoutService { get; set; }
 
     protected bool ThemeChange { get; set; } = false;
     protected string CorFundo { get; set; } = string.Empty;
     protected string CorTexto { get; set; } = string.Empty;
     protected string Title { get; set; } = "Minhas Tarefas";
     protected string Dica { get; set; } = "Tema escuro";
+    private bool isMobile;
 
     protected override void OnInitialized()
     {
+        // Define o layout inicial
+        isMobile = LayoutService?.IsMobileLayout ?? false;
+
+        // Inscreve-se para ouvir mudanças no layout
+        if(LayoutService != null)
+            LayoutService.OnLayoutChanged += HandleLayoutChanged;
+
         ChangeTheme();
+    }
+
+    protected void GoAbout()
+    {
+        navigationManager?.NavigateTo("/about");
     }
 
     private void TesteClick()
@@ -48,6 +80,18 @@
 
     protected void GoGoogle()
     {
-        navigationManager.NavigateTo("https://github.com/rafael-figueiredo-alves");
+        navigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
+    }
+
+    private void HandleLayoutChanged(bool isMobileLayout)
+    {
+        isMobile = isMobileLayout;
+        InvokeAsync(StateHasChanged);
+    }
+
+    protected void Dispose()
+    {
+        if(LayoutService != null)
+            LayoutService.OnLayoutChanged -= HandleLayoutChanged;
     }
 }

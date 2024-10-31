@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using eTasks.Shared.Services;
+using Microsoft.AspNetCore.Components;
 
 namespace eTasks
 {

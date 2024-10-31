@@ -1,42 +1,40 @@
 ﻿using Microsoft.JSInterop;
 
-public class LayoutService : IAsyncDisposable
+namespace eTasks.Shared.Services
 {
-    private readonly IJSRuntime _jsRuntime;
-    private DotNetObjectReference<LayoutService>? _objRef;
-    public event Action<bool>? OnLayoutChanged;
-    public bool IsMobileLayout { get; private set; }
-
-    public LayoutService(IJSRuntime jsRuntime)
+    public class LayoutService(IJSRuntime jsRuntime) : IAsyncDisposable
     {
-        _jsRuntime = jsRuntime;
-    }
+        private readonly IJSRuntime _jsRuntime = jsRuntime;
+        private DotNetObjectReference<LayoutService>? _objRef;
+        public event Action<bool>? OnLayoutChanged;
+        public bool IsMobileLayout { get; private set; }
 
-    public async Task InitializeAsync()
-    {
-        _objRef = DotNetObjectReference.Create(this);
-        IsMobileLayout = await _jsRuntime.InvokeAsync<bool>("isMobileResolution");
-
-        // Subscribing to window resize events
-        await _jsRuntime.InvokeVoidAsync("subscribeToResize", _objRef);
-    }
-
-    [JSInvokable]
-    public void UpdateLayout(bool isMobile)
-    {
-        if (IsMobileLayout != isMobile)
+        public async Task InitializeAsync()
         {
-            IsMobileLayout = isMobile;
-            OnLayoutChanged?.Invoke(isMobile); // Notifica as páginas do layout atualizado
+            _objRef = DotNetObjectReference.Create(this);
+            IsMobileLayout = await _jsRuntime.InvokeAsync<bool>("isMobileResolution");
+
+            // Subscribing to window resize events
+            await _jsRuntime.InvokeVoidAsync("subscribeToResize", _objRef);
         }
-    }
 
-    public async ValueTask DisposeAsync()
-    {
-        if (_objRef != null)
+        [JSInvokable]
+        public void UpdateLayout(bool isMobile)
         {
-            await _jsRuntime.InvokeVoidAsync("unsubscribeFromResize", _objRef);
-            _objRef.Dispose();
+            if (IsMobileLayout != isMobile)
+            {
+                IsMobileLayout = isMobile;
+                OnLayoutChanged?.Invoke(isMobile); // Notifica as páginas do layout atualizado
+            }
+        }
+
+        async ValueTask IAsyncDisposable.DisposeAsync()
+        {
+            if (_objRef != null)
+            {
+                await _jsRuntime.InvokeVoidAsync("unsubscribeFromResize", _objRef);
+                _objRef.Dispose();
+            }
         }
     }
 }

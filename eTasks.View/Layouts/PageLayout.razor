@@ -1,0 +1,63 @@
+﻿@inherits LayoutComponentBase
+
+<h3>PageLayout</h3>
+<button @onclick="Voltar">Voltar</button>
+@Body
+
+@code {
+    [Inject] protected NavigationManager? navigationManager { get; set; }
+    [Inject] protected LayoutService? LayoutService { get; set; }
+
+    protected bool ThemeChange { get; set; } = false;
+    protected string CorFundo { get; set; } = string.Empty;
+    protected string CorTexto { get; set; } = string.Empty;
+    protected string Title { get; set; } = "Minhas Tarefas";
+    protected string Dica { get; set; } = "Tema escuro";
+    private bool isMobile;
+
+    protected override void OnInitialized()
+    {
+        // Define o layout inicial
+        isMobile = LayoutService?.IsMobileLayout ?? false;
+
+        // Inscreve-se para ouvir mudanças no layout
+        if (LayoutService != null)
+            LayoutService.OnLayoutChanged += HandleLayoutChanged;
+
+        ChangeTheme();
+    }
+
+    protected void Voltar()
+    {
+        navigationManager?.NavigateTo("/");
+    }
+
+    private void TesteClick()
+    {
+        ThemeChange = !ThemeChange;
+        ChangeTheme();
+    }
+
+    private void ChangeTheme()
+    {
+        CorFundo = Components.ColorPallete.GetColor(Components.Cor.Background, ThemeChange);
+        CorTexto = Components.ColorPallete.GetColor(Components.Cor.Text, ThemeChange);
+    }
+
+    protected void GoGoogle()
+    {
+        navigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
+    }
+
+    private void HandleLayoutChanged(bool isMobileLayout)
+    {
+        isMobile = isMobileLayout;
+        InvokeAsync(StateHasChanged);
+    }
+
+    protected void Dispose()
+    {
+        if (LayoutService != null)
+            LayoutService.OnLayoutChanged -= HandleLayoutChanged;
+    }
+}
