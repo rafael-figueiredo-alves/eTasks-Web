@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "eTasks",
   "resources": {
-    "hash": "sha256-bt5ez+GEePnf6Ba31TdfxNrCC8/jjLrSZwUj3HcRjBg=",
+    "hash": "sha256-DKcGY/ZmZrbsDUzcujoAY6dOAIOBCAko5FL1T3V8GP8=",
     "jsModuleNative": {
       "dotnet.native.8.0.10.4xsnm8lwn6.js": "sha256-QVxMlY7ohmjgde/bZMA0dlWDAeuUP+tEfkiSdg4DFcE="
     },
@@ -18,10 +18,10 @@
     },
     "assembly": {
       "eFirebase4CSharp.wasm": "sha256-i6VkYA8dL5JnzJZy7zT7pR+w3+fpRjDSkiVhBpXiVrU=",
-      "eTasks.Components.wasm": "sha256-Fd19OGKA8SU96dfPforHohJOyh91l5KRnh7sI6c3BZ8=",
-      "eTasks.Shared.wasm": "sha256-echyjsh+LeiPqySOE/sM6xGZF/XsT9tLXHfbYMwHi0w=",
-      "eTasks.View.wasm": "sha256-7IKb3QiPhS5PoJx6Cbd9l0z4eEYyZNlrL0p0qe97dtg=",
-      "eTasks.wasm": "sha256-oiO15M4k6LPy+L5uc+pSxw/B15159FR5uAN6Gs7/PSk=",
+      "eTasks.Components.wasm": "sha256-e83rycarxcfIPZLcrbTub3R0jXvvUWi4qmIP8me4Wos=",
+      "eTasks.Shared.wasm": "sha256-Yrsfuw9TQewGJ3PkpVPJeEiTx5++5jI8irVJOXLbucQ=",
+      "eTasks.View.wasm": "sha256-UNIc5jvMmuiMNYEjpea2KdKeX/CffVDbjfnuq/hLjHY=",
+      "eTasks.wasm": "sha256-ig/4M2OQlArpAUxqhQr6Enp3Qyvlk/dtf4t8LIpZSV8=",
       "eTranslate.wasm": "sha256-b92TqmflNPQ8z4Gmjzubtkj4KOCh4KmQTlumC7jFeaU=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-Tu4LTCycQF9v/Zn50dpyTGCxpfOmrl8Zr724EJKX9VM=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-spyk6aOlBqGuXrgkag654fMJljJemLYToKEcwC5Nvgo=",
@@ -47,7 +47,7 @@
       "System.Net.Http.Json.wasm": "sha256-/2VfsZV96qkRTzc/MZYWzM4PKH8k5TzLZC176M7ErGY=",
       "System.Net.Http.wasm": "sha256-3uriMC8wfTuEPpCcyXlSbKbClyaiyGwO38Spy5ufpiQ=",
       "System.Net.Primitives.wasm": "sha256-6drddFRuqk4iC658pgQT83Kw62TGXYLyaQUOQwdN4JQ=",
-      "System.Private.CoreLib.wasm": "sha256-WogOMTlB8qC2uNufGFg7alYN9tJ0mrAmXzHSoZkE4H4=",
+      "System.Private.CoreLib.wasm": "sha256-o5EXyeY5vvXJlyqoZKPhCvCKFhlwGIhtrlUVVffSFfE=",
       "System.Private.Uri.wasm": "sha256-wN3xQtbkToLng0yLxzO08mu2EnAOdCGpXD3HB1vfhaQ=",
       "System.Runtime.InteropServices.JavaScript.wasm": "sha256-8A/NP/Q7A5Hj0L5Fwkp7Gtg+IwvMz8SIezCtWEALUfw=",
       "System.Runtime.wasm": "sha256-P5BDorp9+W87MULmYMoUi4oD/8kWNevE3Stsr812XCw=",
