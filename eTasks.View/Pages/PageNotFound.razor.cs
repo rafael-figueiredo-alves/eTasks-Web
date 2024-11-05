@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using eTasks.Shared.Extensions;
+using Microsoft.AspNetCore.Components;
 
 namespace eTasks.View.Pages
 {
@@ -51,7 +52,9 @@ namespace eTasks.View.Pages
         /// </summary>
         protected void GoHome()
         {
-            navigationManager?.NavigateTo((new Uri(navigationManager.BaseUri)).ToString());
+            //navigationManager?.NavigateTo((new Uri(navigationManager.BaseUri)).ToString());
+            //navigationManager?.NavigateTo(Constants.BaseURL());
+            navigationManager?.GoHome();
         }
         #endregion
     }

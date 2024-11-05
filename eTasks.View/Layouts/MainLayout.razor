@@ -1,4 +1,4 @@
-﻿@inherits LayoutComponentBase
+﻿@inherits LayoutsBase
 
 <style>
     html{
@@ -39,31 +39,13 @@
 </div>
 
 @code {
-    [Inject] protected NavigationManager? navigationManager { get; set; }
-    [Inject] protected LayoutService? LayoutService { get; set; }
 
-    protected bool ThemeChange { get; set; } = false;
-    protected string CorFundo { get; set; } = string.Empty;
-    protected string CorTexto { get; set; } = string.Empty;
     protected string Title { get; set; } = "Minhas Tarefas";
     protected string Dica { get; set; } = "Tema escuro";
-    private bool isMobile;
-
-    protected override void OnInitialized()
-    {
-        // Define o layout inicial
-        isMobile = LayoutService?.IsMobileLayout ?? false;
-
-        // Inscreve-se para ouvir mudanças no layout
-        if(LayoutService != null)
-            LayoutService.OnLayoutChanged += HandleLayoutChanged;
-
-        ChangeTheme();
-    }
 
     protected void GoAbout()
     {
-        navigationManager?.NavigateTo("about");
+        navigationManager?.GoTo("about");
     }
 
     private void TesteClick()
@@ -72,26 +54,8 @@
         ChangeTheme();
     }
 
-    private void ChangeTheme()
-    {
-        CorFundo = Components.ColorPallete.GetColor(Components.Cor.Background, ThemeChange);
-        CorTexto = Components.ColorPallete.GetColor(Components.Cor.Text, ThemeChange);
-    }
-
     protected void GoGoogle()
     {
         navigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
-    }
-
-    private void HandleLayoutChanged(bool isMobileLayout)
-    {
-        isMobile = isMobileLayout;
-        InvokeAsync(StateHasChanged);
-    }
-
-    protected void Dispose()
-    {
-        if(LayoutService != null)
-            LayoutService.OnLayoutChanged -= HandleLayoutChanged;
     }
 }
