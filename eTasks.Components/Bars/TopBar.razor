@@ -1,6 +1,6 @@
 ﻿@inherits TopBarBase
 
-<div class="navbar fixed-top user-select-none" style="background-color: @CorFundo; height: @Height; box-shadow: @Sombra;">
+<div class="@($"navbar {BarPosition} user-select-none")" style="@($"background-color: {CorFundo}; height: {Height}; box-shadow: {Sombra};")">
     @ChildContent
 </div>
 <div style="height: @Height">

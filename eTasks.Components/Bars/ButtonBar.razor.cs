@@ -13,6 +13,7 @@ namespace eTasks.Components.Bars
         [Parameter] public string AvatarOffcanvasMenuID { get; set; } = string.Empty;
         [Parameter] public EventCallback AvatarOnClick { get; set; }
         [Parameter] public bool isDarkMode { get; set; } = false;
+        [Parameter] public bool ShowAvatar { get; set; } = true;
         #endregion
 
         protected string basePath { get; set; } = "assets/UI/toolbar/light/";
