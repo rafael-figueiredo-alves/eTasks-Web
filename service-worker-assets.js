@@ -37,7 +37,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-L+LgM1IwOH7OrHGsQHYZiGVsKqAZkTvKnSXooY7z9H4=",
+      "hash": "sha256-WT0hiL\/EzdapZe7c6dm+2v6OpSJNSZuB4grzbdsaA\/g=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -45,19 +45,19 @@
       "url": "_framework\/eFirebase4CSharp.wasm"
     },
     {
-      "hash": "sha256-Y65T9f4Z47oLJNq6r+odnjb8HQSf3PS97f3oqr7Q\/dY=",
+      "hash": "sha256-LveEVpysX3ihKYeczLlt1dsgEuS2QwWn5GIjYN7Mq4w=",
       "url": "_framework\/eTasks.Components.wasm"
     },
     {
-      "hash": "sha256-851EV+Tx45y734TTmssMjkIzJbpYykBIZqDBxwFHwpo=",
+      "hash": "sha256-vHYA3OHpoYaUz\/HC2VwWOtg1nT9PS4I9Wdnw76D02RI=",
       "url": "_framework\/eTasks.Shared.wasm"
     },
     {
-      "hash": "sha256-quBvqMNvJdux0TFtkuPip+hfcwQcHqFFNOlstrAwiqE=",
+      "hash": "sha256-8MntibyeAuTxlchtSmnXWYirAPdhIRDsmkpTYuvWv48=",
       "url": "_framework\/eTasks.View.wasm"
     },
     {
-      "hash": "sha256-giupKudpvOtgN8nS6cKdwW4CbuS5MUb66ZcP2zqhUUI=",
+      "hash": "sha256-Xal1Kv5wdEPOvEK8oAo3plPpFPymDdSrp6btewuCR+0=",
       "url": "_framework\/eTasks.wasm"
     },
     {
@@ -65,7 +65,7 @@
       "url": "_framework\/eTranslate.wasm"
     },
     {
-      "hash": "sha256-Tu4LTCycQF9v\/Zn50dpyTGCxpfOmrl8Zr724EJKX9VM=",
+      "hash": "sha256-dPLigqSgIOQQl+oaduaFllFRuBJQ4mzlh+dpkcr+neg=",
       "url": "_framework\/Microsoft.AspNetCore.Components.wasm"
     },
     {
@@ -173,7 +173,7 @@
       "url": "_framework\/System.Runtime.InteropServices.JavaScript.wasm"
     },
     {
-      "hash": "sha256-P5BDorp9+W87MULmYMoUi4oD\/8kWNevE3Stsr812XCw=",
+      "hash": "sha256-hg8rtsowY7oMsEqAf6mEljOA2iIsCe43TraRMvya6eg=",
       "url": "_framework\/System.Runtime.wasm"
     },
     {
@@ -277,12 +277,20 @@
       "url": "assets\/UI\/toolbar\/dark\/Delete.png"
     },
     {
+      "hash": "sha256-y7SC48mGCf3HUBBFRt7l1Pw9nOpDzrPiVh73gE3JRWI=",
+      "url": "assets\/UI\/toolbar\/dark\/Help.png"
+    },
+    {
       "hash": "sha256-UNfl3Ms488dtblXubcHMAW4AuYXMBLwlRMb4O6mloHs=",
       "url": "assets\/UI\/toolbar\/dark\/MainMenu.png"
     },
     {
       "hash": "sha256-TzFaG29Qu9BLApnzEO5ir2+KuOqJiSlIO8AmqwFVD2U=",
       "url": "assets\/UI\/toolbar\/dark\/ThemeChanger.png"
+    },
+    {
+      "hash": "sha256-mXjLpCAAAasmeCfqxc0rS3q450GIDzCu6PehidXI0MY=",
+      "url": "assets\/UI\/toolbar\/dark\/Update.png"
     },
     {
       "hash": "sha256-ZeJ5C2l8nLBEX7+frY8JJTtR+BE36H5ERwrgAkP9Jck=",
@@ -301,12 +309,20 @@
       "url": "assets\/UI\/toolbar\/light\/Delete.png"
     },
     {
+      "hash": "sha256-chZdrFpFFroSWfXJzgRK\/ODYgho6vjnQOl76ipW2MRc=",
+      "url": "assets\/UI\/toolbar\/light\/Help.png"
+    },
+    {
       "hash": "sha256-jhoXCQcTA9VquzeATA4jTPpgUtNYdvfY\/dkXwdnIfJY=",
       "url": "assets\/UI\/toolbar\/light\/MainMenu.png"
     },
     {
       "hash": "sha256-OmxBBsRWRVN5ws0jlNSku06IB9IJEvCc7uW5U\/wg\/og=",
       "url": "assets\/UI\/toolbar\/light\/ThemeChanger.png"
+    },
+    {
+      "hash": "sha256-4zomsMTmvuF95hCU4tYfAv4ZKJN8WAUckcb3HfFU294=",
+      "url": "assets\/UI\/toolbar\/light\/Update.png"
     },
     {
       "hash": "sha256-TzAcW7VZd5i0GOdaLtU7CMFbDoAqKbDGzRiyKawN+Cc=",
@@ -357,5 +373,5 @@
       "url": "_content\/eTasks.View\/eTasks.View.bundle.scp.css"
     }
   ],
-  "version": "qGTFFkf8"
+  "version": "S1EVS7X9"
 };
