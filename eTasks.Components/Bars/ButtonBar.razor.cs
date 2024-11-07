@@ -1,13 +1,14 @@
 ﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 
 namespace eTasks.Components.Bars
 {
     public class ButtonBarBase : ComponentBase
     {
+        #region Dependency injections
         [Inject] protected NavigationManager? navigationManager { get; set; }
+        #endregion
 
-        #region Parâmetros
+        #region Parameters
         [Parameter] public string AvatarPath { get; set; } = string.Empty;
         [Parameter] public List<BarButton>? Botoes { get; set; } = null;
         [Parameter] public string AvatarOffcanvasMenuID { get; set; } = string.Empty;
@@ -16,8 +17,11 @@ namespace eTasks.Components.Bars
         [Parameter] public bool ShowAvatar { get; set; } = true;
         #endregion
 
+        #region Variables
         protected string basePath { get; set; } = "assets/UI/toolbar/light/";
+        #endregion
 
+        #region Methods
         protected override void OnParametersSet()
         {
             if (isDarkMode)
@@ -26,6 +30,7 @@ namespace eTasks.Components.Bars
                 basePath = "assets/UI/toolbar/light/";
 
         }
+        #endregion
     }
 
     public class BarButton
@@ -34,5 +39,6 @@ namespace eTasks.Components.Bars
         public string DicaTela { get; set; } = string.Empty;
         public Action? OnClick { get; set; }
         public string OffcanvasMenuID { get; set; } = string.Empty;
+        public bool Visible { get; set; } = true;
     }
 }

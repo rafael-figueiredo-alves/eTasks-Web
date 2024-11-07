@@ -1,4 +1,6 @@
-﻿namespace eTasks.View.Pages
+﻿using eTasks.Shared.Extensions;
+
+namespace eTasks.View.Pages
 {
     public class AboutBase : PageBase
     {
@@ -9,6 +11,11 @@
             base.OnInitialized();
 
             Versao = "2.0.0";
+        }
+
+        protected void Voltar()
+        {
+            NavigationManager?.GoHome();
         }
     }
 }

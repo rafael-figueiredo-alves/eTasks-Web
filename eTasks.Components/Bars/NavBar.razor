@@ -1,16 +1,16 @@
 ﻿@inherits NavBarBase
 
-<TopBar isDarkMode="@IsDarkMode" Position="@BarPosition" Height="@Height">
+<TopBar isDarkMode="@IsDarkMode" Position="@BarPosition" Height="@Height" AuxDivHeight="@DivHeight">
     @if(IsMobile)
     {
         <div class="d-flex col-1 justify-content-start text-start ms-1" style="height: 60px;">
-            <img src="@(basePath + "BackBtn.png")" height="40" width="40" style="margin-top: 2px;cursor:pointer;" title="Voltar" role="button" />
+            <img src="@(basePath + "BackBtn.png")" height="40" width="40" style="margin-top: 2px;cursor:pointer;" title="Voltar" role="button" @onclick=@OnBackButtonClick />
         </div>
     }
 
     <div class="@($"d-flex col-8 {(IsMobile ? "justify-content-center align-items-center" : "justify-content-start align-items-start")}")" style="height: 60px;">
-        <div class="justify-content-center align-items-center text-center" style="height: 30px;border-radius: 17px;margin-bottom: 15px;color: @TextColor; font-family: Roboto;font-size: 24px;font-weight: 400;">
-            Nova tarefa
+        <div class="justify-content-center align-items-center text-center" style="@($"height: 30px;border-radius: 17px; margin-bottom: {(IsMobile ? 15 : 0)}px; margin-top: {(IsMobile ? 0 : 5)}px;color: {TextColor}; font-family: Roboto;font-size: 24px;font-weight: 400;")">
+            @Title
         </div>
     </div>
 

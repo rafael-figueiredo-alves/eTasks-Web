@@ -6,16 +6,23 @@ namespace eTasks.Components.Bars
     {
         [Parameter] public bool IsDarkMode { get; set; } = false;
         [Parameter] public bool IsMobile { get; set; } = false;
+        [Parameter] public NavBarButtonsKind NavBarButtonsKind { get; set; } = NavBarButtonsKind.DeleteCheck;
+        [Parameter] public string Title { get; set; } = string.Empty;
+        [Parameter] public EventCallback OnBackButtonClick { get; set; }
+        [Parameter] public EventCallback<Task> OnHelpButtonClick { get; set; }
+        [Parameter] public EventCallback<Task> OnDeleteButtonClick { get; set; }
+        [Parameter] public EventCallback<Task> OnCheckButtonClick { get; set; }
 
         protected TopBarPosition BarPosition { get; set; } = TopBarPosition.FixedTop;
         protected List<BarButton> Botoes { get; set; } = new();
         protected string basePath { get; set; } = "assets/UI/toolbar/light/";
         protected string TextColor { get; set; } = "#336699";
         protected string Height { get; set; } = "60px";
+        protected string DivHeight { get; set; } = "0px";
 
         protected override void OnParametersSet()
         {
-            Height = IsMobile ? "70px" : "40px";
+            DivHeight = IsMobile ? "70px" : "0px";
 
             TextColor = ColorPallete.GetColor(Cor.Primary, IsDarkMode);
 
@@ -40,8 +47,16 @@ namespace eTasks.Components.Bars
         private void RebuildNavBar()
         {
             Botoes.Clear();
-            Botoes.Add(new BarButton() { DicaTela = "Apagar", Imagem = "Delete.png" });
-            Botoes.Add(new BarButton() { DicaTela = "Salvar", Imagem = "Accept.png" });
+            Botoes.Add(new BarButton() { DicaTela = "Ajuda", Imagem = "Help.png", Visible = NavBarButtonsKind == NavBarButtonsKind.OnlyHelp ? true : false, OnClick = async () => await OnHelpButtonClick.InvokeAsync() });
+            Botoes.Add(new BarButton() { DicaTela = "Apagar", Imagem = "Delete.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck ? true : false, OnClick = async () => await OnDeleteButtonClick.InvokeAsync() });
+            Botoes.Add(new BarButton() { DicaTela = "Salvar", Imagem = "Accept.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck || NavBarButtonsKind == NavBarButtonsKind.OnlyCheck ? true : false, OnClick = async () => await OnCheckButtonClick.InvokeAsync() });
         }
+    }
+
+    public enum NavBarButtonsKind
+    {
+        OnlyCheck,
+        OnlyHelp,
+        DeleteCheck
     }
 }

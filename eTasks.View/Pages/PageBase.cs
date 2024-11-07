@@ -6,6 +6,7 @@ namespace eTasks.View.Pages
     public class PageBase : ComponentBase
     {
         [Inject] public LayoutService? LayoutService { get; set; }
+        [Inject] protected NavigationManager? NavigationManager { get; set; }
 
         public Type TipoLayout { get; set; } = typeof(eTasks.View.Layouts.MainLayout);
         public bool isMobile { get; set; } = false;

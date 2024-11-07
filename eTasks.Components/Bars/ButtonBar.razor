@@ -4,13 +4,16 @@
     @if((Botoes != null) && (Botoes.Count > 0))
         @foreach(BarButton Botao in Botoes)
         {
-            @if(!string.IsNullOrEmpty(Botao.OffcanvasMenuID))
+            @if(Botao.Visible)
             {
-                <img src="@(basePath + Botao.Imagem)" height="40" width="40" style="margin-top: 2px;margin-right: 10px;cursor:pointer;" title="@Botao.DicaTela" data-bs-toggle="offcanvas" href="@Botao.OffcanvasMenuID" role="button" />
-            }
-            else
-            {
-                <img src="@(basePath + Botao.Imagem)" height="40" width="40" style="margin-top: 2px;margin-right: 10px;cursor:pointer;" title="@Botao.DicaTela" @onclick=@Botao.OnClick />
+                @if (!string.IsNullOrEmpty(Botao.OffcanvasMenuID))
+                {
+                    <img src="@(basePath + Botao.Imagem)" height="40" width="40" style="margin-top: 2px;margin-right: 10px;cursor:pointer;" title="@Botao.DicaTela" data-bs-toggle="offcanvas" href="@Botao.OffcanvasMenuID" role="button" />
+                }
+                else
+                {
+                    <img src="@(basePath + Botao.Imagem)" height="40" width="40" style="margin-top: 2px;margin-right: 10px;cursor:pointer;" title="@Botao.DicaTela" @onclick=@Botao.OnClick />
+                }
             }
         }
         @if(ShowAvatar)
