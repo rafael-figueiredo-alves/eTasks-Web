@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "eTasks",
   "resources": {
-    "hash": "sha256-QrTSEJ0RBDmxhfwiOsUfKGC/xewIPFYwj5onpo14H/I=",
+    "hash": "sha256-GiwdDaNbCjrX5hdt1NSO6cLsBVTXZpYub0vQo66qHXI=",
     "jsModuleNative": {
       "dotnet.native.8.0.10.4xsnm8lwn6.js": "sha256-QVxMlY7ohmjgde/bZMA0dlWDAeuUP+tEfkiSdg4DFcE="
     },
@@ -18,10 +18,10 @@
     },
     "assembly": {
       "eFirebase4CSharp.wasm": "sha256-i6VkYA8dL5JnzJZy7zT7pR+w3+fpRjDSkiVhBpXiVrU=",
-      "eTasks.Components.wasm": "sha256-LveEVpysX3ihKYeczLlt1dsgEuS2QwWn5GIjYN7Mq4w=",
-      "eTasks.Shared.wasm": "sha256-vHYA3OHpoYaUz/HC2VwWOtg1nT9PS4I9Wdnw76D02RI=",
-      "eTasks.View.wasm": "sha256-8MntibyeAuTxlchtSmnXWYirAPdhIRDsmkpTYuvWv48=",
-      "eTasks.wasm": "sha256-Xal1Kv5wdEPOvEK8oAo3plPpFPymDdSrp6btewuCR+0=",
+      "eTasks.Components.wasm": "sha256-6InxkAuNvZHQhqqY4Xb/6W2586SQRnuHVmZVfG2KXfI=",
+      "eTasks.Shared.wasm": "sha256-21gYD5wEPINJsFR5l8+fCJLMMhIMR6zUr7MufdLoQYI=",
+      "eTasks.View.wasm": "sha256-ejuPmBOqMgnqR7SYiPJ+ti5FIpNEpWLMfVNS2K4CRyI=",
+      "eTasks.wasm": "sha256-aGaNN/3wuxgdk9Xk2OzLDPMHcvemNys/cXb0VIWo0Yk=",
       "eTranslate.wasm": "sha256-b92TqmflNPQ8z4Gmjzubtkj4KOCh4KmQTlumC7jFeaU=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-dPLigqSgIOQQl+oaduaFllFRuBJQ4mzlh+dpkcr+neg=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-spyk6aOlBqGuXrgkag654fMJljJemLYToKEcwC5Nvgo=",
