@@ -6,14 +6,19 @@ namespace eTasks.View.Layouts
 {
     public class LayoutsBase : LayoutComponentBase
     {
+        #region Injeções de Serviços Compartilhados
         [Inject] public NavigationManager? navigationManager { get; set; }
         [Inject] public LayoutService? LayoutService { get; set; }
+        #endregion
 
+        #region Variáveis compartilhadas
         public bool isMobile { get; set; } = false;
         public string CorFundo { get; set; } = string.Empty;
         public string CorTexto { get; set; } = string.Empty;
         public bool ThemeChange { get; set; } = false;
+        #endregion
 
+        #region Métodos
         protected override void OnInitialized()
         {
             // Define o layout inicial
@@ -43,5 +48,6 @@ namespace eTasks.View.Layouts
             if (LayoutService != null)
                 LayoutService.OnLayoutChanged -= HandleLayoutChanged;
         }
+        #endregion
     }
 }
