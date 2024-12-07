@@ -19,10 +19,10 @@ namespace eTasks.View.Pages
         #endregion
 
         #region Métodos
-        protected override void OnInitialized()
+        protected override async Task OnInitializedAsync()
         {         
             // Define o layout inicial
-            isMobile = LayoutService?.IsMobileLayout ?? false;
+            isMobile = (await LayoutService?.IsMobileLayout()) ?? false;
 
             if (isMobile)
                 TipoLayout = typeof(Layouts.PageLayout);

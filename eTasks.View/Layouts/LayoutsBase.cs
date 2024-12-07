@@ -19,10 +19,11 @@ namespace eTasks.View.Layouts
         #endregion
 
         #region Métodos
-        protected override void OnInitialized()
+        protected override async Task OnInitializedAsync()
         {
             // Define o layout inicial
-            isMobile = LayoutService?.IsMobileLayout ?? false;
+            isMobile = (await LayoutService?.IsMobileLayout()) ?? false;
+            HandleLayoutChanged(isMobile);
 
             // Inscreve-se para ouvir mudanças no layout
             if (LayoutService != null)
