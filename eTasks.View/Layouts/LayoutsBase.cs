@@ -1,5 +1,6 @@
 ﻿using eTasks.Components;
 using eTasks.Shared.Services;
+using eTasks.Shared.Services.Interfaces;
 using Microsoft.AspNetCore.Components;
 
 namespace eTasks.View.Layouts
@@ -9,6 +10,7 @@ namespace eTasks.View.Layouts
         #region Injeções de Serviços Compartilhados
         [Inject] public NavigationManager? navigationManager { get; set; }
         [Inject] public LayoutService? LayoutService { get; set; }
+        [Inject] public IThemeService? ThemeService { get; set; }
         #endregion
 
         #region Variáveis compartilhadas
@@ -34,8 +36,8 @@ namespace eTasks.View.Layouts
 
         public virtual void ChangeTheme()
         {
-            CorFundo = ColorPallete.GetColor(Cor.Background, ThemeChange);
-            CorTexto = ColorPallete.GetColor(Cor.Text, ThemeChange);
+            CorFundo = ColorPallete.GetColor(Cor.Background, ThemeService?.IsDarkTheme() ?? false);
+            CorTexto = ColorPallete.GetColor(Cor.Text, ThemeService?.IsDarkTheme() ?? false);
         }
 
         private void HandleLayoutChanged(bool isMobileLayout)

@@ -1,4 +1,6 @@
-﻿using eTasks.Shared.Services;
+﻿using eTasks.Components;
+using eTasks.Shared.Services;
+using eTasks.Shared.Services.Interfaces;
 using Microsoft.AspNetCore.Components;
 
 namespace eTasks.View.Pages
@@ -11,11 +13,14 @@ namespace eTasks.View.Pages
         #region Serviços injetados necessários às páginas
         [Inject] public LayoutService? LayoutService { get; set; }
         [Inject] protected NavigationManager? NavigationManager { get; set; }
+        [Inject] protected IThemeService? ThemeService { get; set; }
         #endregion
 
         #region Variáveis públicas compartilhadas entre telas
         public Type TipoLayout { get; set; } = typeof(Layouts.MainLayout);
         public bool isMobile { get; set; } = false;
+        public string CorFundo { get; set; } = string.Empty;
+        public string CorTexto { get; set; } = string.Empty;
         #endregion
 
         #region Métodos
@@ -33,7 +38,15 @@ namespace eTasks.View.Pages
             if (LayoutService != null)
                 LayoutService.OnLayoutChanged += HandleLayoutChanged;
 
+            ChangeTheme();
+
             base.OnInitialized();
+        }
+
+        public virtual void ChangeTheme()
+        {
+            CorFundo = ColorPallete.GetColor(Cor.Background, ThemeService?.IsDarkTheme() ?? false);
+            CorTexto = ColorPallete.GetColor(Cor.Text, ThemeService?.IsDarkTheme() ?? false);
         }
 
         //Método responsáevl por lidar com os layouts

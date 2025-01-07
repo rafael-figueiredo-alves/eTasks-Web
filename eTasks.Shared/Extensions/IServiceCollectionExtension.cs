@@ -1,6 +1,7 @@
 ﻿using eFirebase4CSharp.Classes;
 using eFirebase4CSharp.Interfaces;
 using eTasks.Shared.Services;
+using eTasks.Shared.Services.Interfaces;
 using eTranslate;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -27,6 +28,7 @@ namespace eTasks.Shared.Extensions
         {
             Services.AddeTranslateSingletonService(TranslationFileFullPath: _baseURL + "translate.json");
             Services.AddSingleton<LayoutService>();
+            Services.AddSingleton<IThemeService, ThemeService>();
         }
     }
 }

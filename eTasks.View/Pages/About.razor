@@ -1,8 +1,22 @@
 ﻿@page "/about"
 @inherits AboutBase
 
+<style>
+    html {
+        background-color: @CorFundo;
+        color: @CorTexto;
+    }
+
+    .LayoutView {
+        background-color: @CorFundo;
+        color: @CorTexto;
+    }
+</style>
+
 <LayoutView Layout="TipoLayout">
-<NavBar IsMobile="@isMobile" Title="Novo Lançamento" OnBackButtonClick="Voltar" />
+<div class="LayoutView">
+    <NavBar IsMobile="@isMobile" Title="Novo Lançamento" OnBackButtonClick="Voltar" IsDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" />
 <h3>About @Versao</h3>
 <Teste2></Teste2>
+ </div>
 </LayoutView>
