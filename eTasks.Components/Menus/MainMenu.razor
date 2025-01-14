@@ -9,6 +9,14 @@
     </div>
     <div style="@($"border: 2px solid {Components.ColorPallete.GetColor(Components.Cor.Primary, IsDarkMode)}; box-shadow: 2px 4px 4px rgba(100,100,100,0.5); height: 1px; margin-left: 5%; margin-right: 5%")" />
 
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="false" ItemName="Inicio" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="false" ItemType="MainMenuItemType.Tasks" ItemName="Tarefas" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="true" ItemType="MainMenuItemType.Goals" ItemName="Metas" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="false" ItemType="MainMenuItemType.Shopping" ItemName="Compras" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="false" ItemType="MainMenuItemType.Readings" ItemName="Leituras" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="false" ItemType="MainMenuItemType.Notes" ItemName="Anotações" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="false" ItemType="MainMenuItemType.Finance" ItemName="Finanças" />
+
    @*  <div class="offcanvas-body @Theme!.ColorClass" style="color: @Theme!.ColorFontStyle" data-bs-theme="@Theme.DataBsTheme">
         <ul class="list-unstyled ps-0">
             <li class="mb-1">

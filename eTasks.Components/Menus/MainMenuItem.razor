@@ -1,0 +1,19 @@
+﻿@inherits MainMenuItemBase
+
+<div class="user-select-none" style="display: flex;align-items: center;height:40px;margin-top:10px;cursor: pointer;" data-bs-dismiss="offcanvas" @onclick="OnClick">
+    @if(Selected)
+    {
+        <div class="user-select-none" style="background-color: @Components.ColorPallete.GetColor(Components.Cor.Primary, IsDarkMode);height: 40px;width:5px;margin-right:20px;" />
+    }
+    else
+    {
+        <div class="user-select-none" style="height: 40px;width:5px;margin-right:20px;" />
+    }
+
+    <div class="user-select-none" style="height:40px;width:40px;margin-right:10px;" data-bs-dismiss="offcanvas">
+        <img class="user-select-none" src="@ImageIcon" height="40" width="40" style="cursor: pointer;" data-bs-dismiss="offcanvas" title="@ItemName" />
+    </div>
+    <div class="user-select-none" style="display:flex;justify-content: center;" data-bs-dismiss="offcanvas">
+        <p class="user-select-none" style="font-size: 20px; margin: 0px; color: @Components.ColorPallete.GetColor(Components.Cor.Primary, IsDarkMode)" data-bs-dismiss="offcanvas">@ItemName</p>
+    </div>
+</div>
