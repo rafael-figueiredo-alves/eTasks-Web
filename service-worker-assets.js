@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "PPEmAXoZ",
+  "version": "93zC4pEc",
   "assets": [
     {
       "hash": "sha256-u4RFkSIRF4ZUGYO82nwVMd1LgN3gD0UfON+fEiUH/rM=",
@@ -82,8 +82,8 @@ self.assetsManifest = {
       "url": "_framework/System.ComponentModel.28u698euyz.wasm"
     },
     {
-      "hash": "sha256-xf8N4wb3OmF9s5LbMTvSzi5FfAtaTmburnd73he5WVI=",
-      "url": "_framework/System.Console.15d9h9yj9z.wasm"
+      "hash": "sha256-bLaPE4siZpi2BMpxYHg+FXVObOesCgKUu0HCOCJQhSE=",
+      "url": "_framework/System.Console.kgw56smcu9.wasm"
     },
     {
       "hash": "sha256-YTehIkjj9kB9fbNoLXwyBlCiojgkBMD7GT8tC+gedkc=",
@@ -146,7 +146,7 @@ self.assetsManifest = {
       "url": "_framework/System.Threading.cjrcei28ym.wasm"
     },
     {
-      "hash": "sha256-iq05buOaqsMxCah4OA6uj8YZKECQPGJQ2WbhkmnDRiU=",
+      "hash": "sha256-sh8kmKFxWtnt9ep5hRobckPsdK+auC+VMGgp0Yjhvns=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -174,20 +174,20 @@ self.assetsManifest = {
       "url": "_framework/eFirebase4CSharp.frv3mfveo7.wasm"
     },
     {
-      "hash": "sha256-aCkwDvKMUyVNPiOTW19OvtshAwLfUYsf9pwlHIck5E4=",
-      "url": "_framework/eTasks.Components.o8zox8k1kn.wasm"
+      "hash": "sha256-lQ0T1AntLXI1EmNtJFlF6FbYn2rxCbkLwprHTGgGFSc=",
+      "url": "_framework/eTasks.Components.h9s2u5kbpy.wasm"
     },
     {
-      "hash": "sha256-1/E80FAgPyIQTirs9BjXwQ4BxmL4HWopSLAGneQ6dvE=",
-      "url": "_framework/eTasks.Shared.7kcdhg8ko6.wasm"
+      "hash": "sha256-Y0zaB0rNe1qWE7sqW2MNFXz8rgcAuNPs8Uig7Pn2JxQ=",
+      "url": "_framework/eTasks.Shared.la2spw0670.wasm"
     },
     {
-      "hash": "sha256-WZMViTsk5A+zNXRy9MPXyYJ9sYu4ffabZlH0T4EO52M=",
-      "url": "_framework/eTasks.View.zhupeap9at.wasm"
+      "hash": "sha256-gWBwd7Pkf+MqIlx7hwUGbp/IfIK9b5g6yVZiLtF/rWU=",
+      "url": "_framework/eTasks.View.hsg2rlvhy1.wasm"
     },
     {
-      "hash": "sha256-WduqT6vh1o7soGIqOtEUPip2cenDtMHON1oD25Dm3Is=",
-      "url": "_framework/eTasks.v6jyblfdwm.wasm"
+      "hash": "sha256-hwbKTdKTLKjAG+xvspoUtZHRc4J5QN4E8P79++QwzRY=",
+      "url": "_framework/eTasks.tjf30el9yg.wasm"
     },
     {
       "hash": "sha256-b92TqmflNPQ8z4Gmjzubtkj4KOCh4KmQTlumC7jFeaU=",
@@ -226,6 +226,26 @@ self.assetsManifest = {
       "url": "assets/UI/avatar/dark/Logout.png"
     },
     {
+      "hash": "sha256-wrYUlIsdtosbLUZ0qctPpXCSn+7zNgJIJFhGPcc8dOk=",
+      "url": "assets/UI/avatar/dark/menu/config.png"
+    },
+    {
+      "hash": "sha256-XHnafJuJgEASuvYDySJfv+4vCwfJ7UW5EyABRGKbiEk=",
+      "url": "assets/UI/avatar/dark/menu/conquista.png"
+    },
+    {
+      "hash": "sha256-u57Uru7+qSLnr1fiex5pkravpJLMPVj5X7zjJtxzQZQ=",
+      "url": "assets/UI/avatar/dark/menu/idioma.png"
+    },
+    {
+      "hash": "sha256-j6ngmkN6olzdk1+HMKtW4NyCgWx7HOUzDgUkMN6RXcA=",
+      "url": "assets/UI/avatar/dark/menu/sobre.png"
+    },
+    {
+      "hash": "sha256-TzFaG29Qu9BLApnzEO5ir2+KuOqJiSlIO8AmqwFVD2U=",
+      "url": "assets/UI/avatar/dark/menu/tema.png"
+    },
+    {
       "hash": "sha256-VMErV7SKCP0+98uIPzAD9kSVoamLbu20L/vvnyJvBaQ=",
       "url": "assets/UI/avatar/light/Avatar.png"
     },
@@ -240,6 +260,26 @@ self.assetsManifest = {
     {
       "hash": "sha256-F9/m5mhG+4U5FAuDEaBMaA2DAU0s2OaLiPQGU6outho=",
       "url": "assets/UI/avatar/light/Logout.png"
+    },
+    {
+      "hash": "sha256-faxcSsxU5MG6OXD6RTpezKtqoeT09cA41cv8W6ruLTo=",
+      "url": "assets/UI/avatar/light/menu/config.png"
+    },
+    {
+      "hash": "sha256-P5yrRwG2laF9R/S+1UlRcM3p8NgI8X+zfv/YrBcYHm8=",
+      "url": "assets/UI/avatar/light/menu/conquista.png"
+    },
+    {
+      "hash": "sha256-8Cgoz3qEGUOw8J4Vj8wn0fMx1rYeBj//JKAhbN/WSDI=",
+      "url": "assets/UI/avatar/light/menu/idioma.png"
+    },
+    {
+      "hash": "sha256-XKllgfaz5mN05Us1LHDrx3lyzGgG0AhKaUP0G1U7xW8=",
+      "url": "assets/UI/avatar/light/menu/sobre.png"
+    },
+    {
+      "hash": "sha256-GUP4Lrl62WcdU6kUpSY4Q0LEes/eGjtaZAf+hQUJjns=",
+      "url": "assets/UI/avatar/light/menu/tema.png"
     },
     {
       "hash": "sha256-ZeJ5C2l8nLBEX7+frY8JJTtR+BE36H5ERwrgAkP9Jck=",
