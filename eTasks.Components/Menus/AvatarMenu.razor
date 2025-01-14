@@ -19,6 +19,12 @@
     </div>
     <div style="@($"border: 2px solid {Components.ColorPallete.GetColor(Components.Cor.Primary, IsDarkMode)}; box-shadow: 2px 4px 4px rgba(100,100,100,0.5); height: 1px; margin-left: 5%; margin-right: 5%; margin-top: 5px;")" />
 
+    <AvatarMenuItem IsDarkMode="@IsDarkMode" ItemType="AvatarMenuItemType.Conquer" ItemName="Conquista" OnClick="CloseMenu" />
+    <AvatarMenuItem IsDarkMode="@IsDarkMode" ItemType="AvatarMenuItemType.Setup" ItemName="Configurações" />
+    <AvatarMenuItem IsDarkMode="@IsDarkMode" ItemType="AvatarMenuItemType.Theme" ItemName="Tema" OnClick="@OnChangeThemeClick" />
+    <AvatarMenuItem IsDarkMode="@IsDarkMode" ItemType="AvatarMenuItemType.Language" ItemName="Idioma" />
+    <AvatarMenuItem IsDarkMode="@IsDarkMode" ItemType="AvatarMenuItemType.About" ItemName="Sobre" />
+
    @*  <div class="offcanvas-body @Theme!.ColorClass" style="color: @Theme!.ColorFontStyle" data-bs-theme="@Theme.DataBsTheme">
         <ul class="list-unstyled ps-0">
             <li class="mb-1">

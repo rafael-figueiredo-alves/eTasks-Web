@@ -7,6 +7,7 @@ namespace eTasks.Components.Menus
         #region Parametros
         [Parameter] public bool IsDarkMode { get; set; } = false;
         [Parameter] public string? AvatarPath { get; set; } = string.Empty;
+        [Parameter] public EventCallback OnChangeThemeClick { get; set; }
         #endregion
 
         #region Variáveis
@@ -19,20 +20,22 @@ namespace eTasks.Components.Menus
         #region Métodos
         protected override void OnParametersSet()
         {
+            var ThemePath = "light";
+
             if (IsDarkMode)
             {
-                CloseButton          = "assets/UI/offcanvas/dark/Close.png";
-                ProfileButton        = "assets/UI/avatar/dark/EditProfile.png";
-                ChangePasswordButton = "assets/UI/avatar/dark/ChangePassword.png";
-                LogoutButton         = "assets/UI/avatar/dark/Logout.png";
+                ThemePath = "dark";
             }
-            else
-            {
-                CloseButton          = "assets/UI/offcanvas/light/Close.png";
-                ProfileButton        = "assets/UI/avatar/light/EditProfile.png";
-                ChangePasswordButton = "assets/UI/avatar/light/ChangePassword.png";
-                LogoutButton         = "assets/UI/avatar/light/Logout.png";
-            }
+
+            CloseButton          = $"assets/UI/offcanvas/{ThemePath}/Close.png";
+            ProfileButton        = $"assets/UI/avatar/{ThemePath}/EditProfile.png";
+            ChangePasswordButton = $"assets/UI/avatar/{ThemePath}/ChangePassword.png";
+            LogoutButton         = $"assets/UI/avatar/{ThemePath}/Logout.png";
+        }
+
+        protected void CloseMenu()
+        {
+            Console.WriteLine("Menu fechado");
         }
         #endregion
     }
