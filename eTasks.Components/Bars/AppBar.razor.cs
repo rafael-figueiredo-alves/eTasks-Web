@@ -7,7 +7,15 @@ namespace eTasks.Components.Bars
         [Parameter] public bool IsDarkMode { get; set; } = false;
         [Parameter] public string AppName { get; set; } = string.Empty;
         [Parameter] public string PageTitle { get; set; } = string.Empty;
-        [Parameter] public Action? OnChangeThemeButtonClick { get; set; }
+        [Parameter] public EventCallback OnShowProfileClick { get; set; }
+        [Parameter] public EventCallback OnChangePasswordClick { get; set; }
+        [Parameter] public EventCallback OnLogoutClick { get; set; }
+        [Parameter] public EventCallback OnChangeThemeClick { get; set; }
+        [Parameter] public EventCallback<Task> OnChangeThemeButtonClick { get; set; }
+        [Parameter] public EventCallback OnConquerClick { get; set; }
+        [Parameter] public EventCallback OnSetupClick { get; set; }
+        [Parameter] public EventCallback OnChangeLanguageClick { get; set; }
+        [Parameter] public EventCallback OnShowAboutClick { get; set; }
         [Parameter] public string ChangeThemeButtonTip { get; set; } = "Tema escuro";
         [Parameter] public string MenuButtonTip { get; set; } = "Menu";
 

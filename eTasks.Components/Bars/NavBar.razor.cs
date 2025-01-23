@@ -47,9 +47,9 @@ namespace eTasks.Components.Bars
         private void RebuildNavBar()
         {
             Botoes.Clear();
-            Botoes.Add(new BarButton() { DicaTela = "Ajuda", Imagem = "Help.png", Visible = NavBarButtonsKind == NavBarButtonsKind.OnlyHelp ? true : false, OnClick = async () => await OnHelpButtonClick.InvokeAsync() });
-            Botoes.Add(new BarButton() { DicaTela = "Apagar", Imagem = "Delete.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck ? true : false, OnClick = async () => await OnDeleteButtonClick.InvokeAsync() });
-            Botoes.Add(new BarButton() { DicaTela = "Salvar", Imagem = "Accept.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck || NavBarButtonsKind == NavBarButtonsKind.OnlyCheck ? true : false, OnClick = async () => await OnCheckButtonClick.InvokeAsync() });
+            Botoes.Add(new BarButton() { DicaTela = "Ajuda", Imagem = "Help.png", Visible = NavBarButtonsKind == NavBarButtonsKind.OnlyHelp ? true : false, OnClick = OnHelpButtonClick });
+            Botoes.Add(new BarButton() { DicaTela = "Apagar", Imagem = "Delete.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck ? true : false, OnClick = OnDeleteButtonClick });
+            Botoes.Add(new BarButton() { DicaTela = "Salvar", Imagem = "Accept.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck || NavBarButtonsKind == NavBarButtonsKind.OnlyCheck ? true : false, OnClick = OnCheckButtonClick });
         }
     }
 

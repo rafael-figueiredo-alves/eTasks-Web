@@ -9,7 +9,7 @@
 
 <div class="page" style="background-color: @CorFundo; color: @CorTexto; height: 100vh; display: flex; flex-direction: column;">
     <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
-        <AppBar isDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" OnChangeThemeButtonClick="TesteClick" AppName="eTasks" PageTitle="@Title" ChangeThemeButtonTip="@Dica" />
+        <AppBar isDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" OnChangeThemeClick="TesteClick" OnChangeThemeButtonClick="TesteClick" AppName="eTasks" PageTitle="@Title" ChangeThemeButtonTip="@Dica" />
 
 
         <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">

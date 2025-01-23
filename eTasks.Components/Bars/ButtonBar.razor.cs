@@ -37,7 +37,7 @@ namespace eTasks.Components.Bars
     {
         public string Imagem {  get; set; } = string.Empty;
         public string DicaTela { get; set; } = string.Empty;
-        public Action? OnClick { get; set; }
+        public EventCallback<Task> OnClick { get; set; }
         public string OffcanvasMenuID { get; set; } = string.Empty;
         public bool Visible { get; set; } = true;
     }

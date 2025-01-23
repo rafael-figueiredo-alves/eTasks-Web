@@ -12,7 +12,7 @@
                 }
                 else
                 {
-                    <img src="@(basePath + Botao.Imagem)" height="40" width="40" style="margin-top: 2px;margin-right: 10px;cursor:pointer;" title="@Botao.DicaTela" @onclick=@Botao.OnClick />
+                    <img src="@(basePath + Botao.Imagem)" height="40" width="40" style="margin-top: 2px;margin-right: 10px;cursor:pointer;" title="@Botao.DicaTela" @onclick="async () => await Botao.OnClick.InvokeAsync()" />
                 }
             }
         }

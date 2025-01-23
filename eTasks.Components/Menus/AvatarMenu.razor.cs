@@ -7,7 +7,14 @@ namespace eTasks.Components.Menus
         #region Parametros
         [Parameter] public bool IsDarkMode { get; set; } = false;
         [Parameter] public string? AvatarPath { get; set; } = string.Empty;
+        [Parameter] public EventCallback OnShowProfileClick { get; set; }
+        [Parameter] public EventCallback OnChangePasswordClick { get; set; }
+        [Parameter] public EventCallback OnLogoutClick { get; set; }
         [Parameter] public EventCallback OnChangeThemeClick { get; set; }
+        [Parameter] public EventCallback OnConquerClick { get; set; }
+        [Parameter] public EventCallback OnSetupClick { get; set; }
+        [Parameter] public EventCallback OnChangeLanguageClick { get; set; }
+        [Parameter] public EventCallback OnShowAboutClick { get; set; }
         #endregion
 
         #region Variáveis
