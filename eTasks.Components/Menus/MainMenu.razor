@@ -9,51 +9,11 @@
     </div>
     <div style="@($"border: 2px solid {Components.ColorPallete.GetColor(Components.Cor.Primary, IsDarkMode)}; box-shadow: 2px 4px 4px rgba(100,100,100,0.5); height: 1px; margin-left: 5%; margin-right: 5%")" />
 
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="false" ItemName="Inicio" />
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="false" ItemType="MainMenuItemType.Tasks" ItemName="Tarefas" />
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="true" ItemType="MainMenuItemType.Goals" ItemName="Metas" />
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="false" ItemType="MainMenuItemType.Shopping" ItemName="Compras" />
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="false" ItemType="MainMenuItemType.Readings" ItemName="Leituras" />
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="false" ItemType="MainMenuItemType.Notes" ItemName="Anotações" />
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="false" ItemType="MainMenuItemType.Finance" ItemName="Finanças" />
-
-   @*  <div class="offcanvas-body @Theme!.ColorClass" style="color: @Theme!.ColorFontStyle" data-bs-theme="@Theme.DataBsTheme">
-        <ul class="list-unstyled ps-0">
-            <li class="mb-1">
-                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#cadastros-collapse" aria-expanded="false">
-                    Cadastros
-                </button>
-                <div class="collapse" id="cadastros-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="CadastrarClientes">Clientes</a></li>
-                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="CadastrarVendedores">Vendedores</a></li>
-                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="CadastrarProdutos">Produtos</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="mb-1">
-                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#pedidos-collapse" aria-expanded="false">
-                    Pedidos
-                </button>
-                <div class="collapse" id="pedidos-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="CriarNovoPedido">Novo Pedido</a></li>
-                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="VerificarPedidos">Verificar Pedidos</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="mb-1">
-                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#ajuda-collapse" aria-expanded="false">
-                    Ajuda
-                </button>
-                <div class="collapse" id="ajuda-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="ConsultarManual">Manual do Usuário</a></li>
-                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="VerPagina404">Página 404</a></li>
-                        <li><a style="cursor: pointer" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1 mt-1" data-bs-dismiss="offcanvas" @onclick="VerSobre">Sobre</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </div> *@
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@InicioSelected" ItemName="Inicio" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@TarefasSelected" ItemType="MainMenuItemType.Tasks" ItemName="Tarefas" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@MetasSelected" ItemType="MainMenuItemType.Goals" ItemName="Metas" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@ComprasSelected" ItemType="MainMenuItemType.Shopping" ItemName="Compras" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@LeiturasSelected" ItemType="MainMenuItemType.Readings" ItemName="Leituras" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@AnotacoesSelected" ItemType="MainMenuItemType.Notes" ItemName="Anotações" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@FinancasSelected" ItemType="MainMenuItemType.Finance" ItemName="Finanças" />
 </Offcanvas>
