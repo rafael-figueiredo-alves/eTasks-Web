@@ -1,0 +1,17 @@
+﻿<h3>ListsContainer</h3>
+@switch(ListType)
+{
+    case 0:
+        <ListFinances />
+        break;
+    case 1:
+        <ListAccount />
+        break;
+    default:
+        <h3>Invalid ListType</h3>
+        break;
+})
+
+@code {
+    [Parameter] public int ListType { get; set; } = 0;
+}
