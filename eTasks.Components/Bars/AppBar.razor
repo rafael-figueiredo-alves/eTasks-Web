@@ -6,14 +6,7 @@
     <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" AvatarPath="" isDarkMode="@IsDarkMode" />
 </TopBar>
 
-<MainMenu IsDarkMode="@IsDarkMode" />
-<AvatarMenu IsDarkMode="@IsDarkMode" OnChangeThemeClick="OnChangeThemeClick" 
-                                     OnChangeLanguageClick="OnChangeLanguageClick"
-                                     OnConquerClick="OnConquerClick"
-                                     OnLogoutClick="OnLogoutClick"
-                                     OnChangePasswordClick="OnChangePasswordClick"
-                                     OnSetupClick="OnSetupClick"
-                                     OnShowAboutClick="OnShowAboutClick"
-                                     OnShowProfileClick="OnShowProfileClick"/>
+<MainMenu IsDarkMode="@IsDarkMode" OnMainMenuItemClick="OnMainMenuItemClick" />
+<AvatarMenu IsDarkMode="@IsDarkMode" OnAvatarMenuClick="OnAvatarMenuClick" />
 
 <PageTitleBar isDarkMode="@IsDarkMode" Title="@PageTitle" />

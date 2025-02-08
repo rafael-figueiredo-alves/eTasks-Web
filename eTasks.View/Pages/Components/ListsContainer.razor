@@ -1,17 +1,15 @@
-﻿<h3>ListsContainer</h3>
-@switch(ListType)
+﻿@inherits ListsContainerBase
+
+<h3>ListsContainer</h3>
+@switch (SelectedMenuItem)
 {
-    case 0:
+    case MainMenuItemType.Home:
         <ListFinances />
         break;
-    case 1:
+    case MainMenuItemType.Tasks:
         <ListAccount />
         break;
     default:
         <h3>Invalid ListType</h3>
         break;
-})
-
-@code {
-    [Parameter] public int ListType { get; set; } = 0;
 }

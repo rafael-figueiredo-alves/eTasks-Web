@@ -10,11 +10,7 @@ namespace eTasks.Components.Menus
         [Parameter] public EventCallback OnShowProfileClick { get; set; }
         [Parameter] public EventCallback OnChangePasswordClick { get; set; }
         [Parameter] public EventCallback OnLogoutClick { get; set; }
-        [Parameter] public EventCallback OnChangeThemeClick { get; set; }
-        [Parameter] public EventCallback OnConquerClick { get; set; }
-        [Parameter] public EventCallback OnSetupClick { get; set; }
-        [Parameter] public EventCallback OnChangeLanguageClick { get; set; }
-        [Parameter] public EventCallback OnShowAboutClick { get; set; }
+        [Parameter] public EventCallback<AvatarMenuItemType> OnAvatarMenuClick { get; set; }
         #endregion
 
         #region Variáveis
@@ -40,9 +36,10 @@ namespace eTasks.Components.Menus
             LogoutButton         = $"assets/UI/avatar/{ThemePath}/Logout.png";
         }
 
-        protected void CloseMenu()
+        protected async Task AvatarMenuItemClick(AvatarMenuItemType avatarMenuItemType)
         {
-            Console.WriteLine("Menu fechado");
+            if(OnAvatarMenuClick.HasDelegate)
+                await OnAvatarMenuClick.InvokeAsync(avatarMenuItemType);
         }
         #endregion
     }

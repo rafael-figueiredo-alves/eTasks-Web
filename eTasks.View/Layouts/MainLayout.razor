@@ -9,7 +9,13 @@
 
 <div class="page" style="background-color: @CorFundo; color: @CorTexto; height: 100vh; display: flex; flex-direction: column;">
     <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
-        <AppBar isDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" OnChangeThemeClick="TesteClick" OnChangeThemeButtonClick="TesteClick" AppName="eTasks" PageTitle="@Title" ChangeThemeButtonTip="@Dica" />
+        <AppBar isDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" 
+                OnAvatarMenuClick="OnAvatarMenuItemClick" 
+                OnChangeThemeButtonClick="TesteClick" 
+                AppName="eTasks" 
+                PageTitle="@Title" 
+                ChangeThemeButtonTip="@Dica" 
+                OnMainMenuItemClick="OnMainMenuItemClick" />
 
 
         <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">
@@ -17,7 +23,7 @@
             {
                 <div class="row">
                     <div class="col-6">
-                        @* <ListsContainer ListType="1" /> *@
+                        <ListsContainer SelectedMenuItem="SelectedMainMenuItem" />
                         <button @onclick="GoAbout">About</button>
                     </div>
                     <div class="col-6">
@@ -29,7 +35,7 @@
             {
                 <div class="row">
                     <div class="col-12">
-                        @* <ListsContainer /> *@
+                        <ListsContainer SelectedMenuItem="SelectedMainMenuItem" />
                         <button @onclick="GoAbout">About</button>
                     </div>
                 </div>
@@ -44,6 +50,7 @@
 
     protected string Title { get; set; } = "Minhas Tarefas";
     protected string Dica { get; set; } = "Tema escuro";
+    protected MainMenuItemType SelectedMainMenuItem { get; set; } = MainMenuItemType.Home;
 
     protected void GoAbout()
     {
@@ -60,5 +67,65 @@
     protected void GoGoogle()
     {
         navigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
+    }
+
+    protected async Task OnMainMenuItemClick(MainMenuItemType mainMenuItemType)
+    {
+        await Task.CompletedTask;
+        switch (mainMenuItemType)
+        {
+            case MainMenuItemType.Home:
+                navigationManager?.NavigateTo("/");
+                break;
+            case MainMenuItemType.Tasks:
+                Console.WriteLine("Tarefas");
+                break;
+            case MainMenuItemType.Goals:
+                Console.WriteLine("Metas");
+                break;
+            case MainMenuItemType.Shopping:
+                Console.WriteLine("Compras");
+                break;
+            case MainMenuItemType.Readings:
+                Console.WriteLine("Leituras");
+                break;
+            case MainMenuItemType.Notes:
+                Console.WriteLine("Anotações");
+                break;
+            case MainMenuItemType.Finance:
+                Console.WriteLine("Finanças");
+                break;
+            default:
+                navigationManager?.NavigateTo("/");
+                break;
+        }
+
+        SelectedMainMenuItem = mainMenuItemType;
+    }
+
+    protected async Task OnAvatarMenuItemClick(AvatarMenuItemType avatarMenuItemType)
+    {
+        await Task.CompletedTask;
+        switch (avatarMenuItemType)
+        {
+            case AvatarMenuItemType.Conquer:
+                
+                break;
+            case AvatarMenuItemType.About:
+                navigationManager?.GoTo("about");
+                break;
+            case AvatarMenuItemType.Setup:
+                
+                break;
+            case AvatarMenuItemType.Language:
+
+                break;
+            case AvatarMenuItemType.Theme:
+                TesteClick();
+                break;
+            default:
+                navigationManager?.NavigateTo("/");
+                break;
+        }
     }
 }

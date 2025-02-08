@@ -9,11 +9,11 @@
     </div>
     <div style="@($"border: 2px solid {Components.ColorPallete.GetColor(Components.Cor.Primary, IsDarkMode)}; box-shadow: 2px 4px 4px rgba(100,100,100,0.5); height: 1px; margin-left: 5%; margin-right: 5%")" />
 
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@InicioSelected" ItemName="Inicio" />
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@TarefasSelected" ItemType="MainMenuItemType.Tasks" ItemName="Tarefas" />
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@MetasSelected" ItemType="MainMenuItemType.Goals" ItemName="Metas" />
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@ComprasSelected" ItemType="MainMenuItemType.Shopping" ItemName="Compras" />
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@LeiturasSelected" ItemType="MainMenuItemType.Readings" ItemName="Leituras" />
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@AnotacoesSelected" ItemType="MainMenuItemType.Notes" ItemName="Anotações" />
-    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@FinancasSelected" ItemType="MainMenuItemType.Finance" ItemName="Finanças" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@InicioSelected" ItemName="Inicio" OnClick="async () => await MainMenuItemClick(MainMenuItemType.Home)" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@TarefasSelected" ItemType="MainMenuItemType.Tasks" ItemName="Tarefas" OnClick="async () => await MainMenuItemClick(MainMenuItemType.Tasks)" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@MetasSelected" ItemType="MainMenuItemType.Goals" ItemName="Metas" OnClick="async () => await MainMenuItemClick(MainMenuItemType.Goals)" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@ComprasSelected" ItemType="MainMenuItemType.Shopping" ItemName="Compras" OnClick="async () => await MainMenuItemClick(MainMenuItemType.Shopping)" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@LeiturasSelected" ItemType="MainMenuItemType.Readings" ItemName="Leituras" OnClick="async () => await MainMenuItemClick(MainMenuItemType.Readings)" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@AnotacoesSelected" ItemType="MainMenuItemType.Notes" ItemName="Anotações" OnClick="async () => await MainMenuItemClick(MainMenuItemType.Notes)" />
+    <MainMenuItem IsDarkMode="@IsDarkMode" Selected="@FinancasSelected" ItemType="MainMenuItemType.Finance" ItemName="Finanças" OnClick="async () => await MainMenuItemClick(MainMenuItemType.Finance)" />
 </Offcanvas>
