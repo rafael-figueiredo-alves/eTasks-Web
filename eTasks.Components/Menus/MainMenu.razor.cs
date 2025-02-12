@@ -17,13 +17,13 @@ namespace eTasks.Components.Menus
         protected bool AnotacoesSelected { get; set; } = false;
         protected bool FinancasSelected { get; set; }  = false;
 
-        protected override async Task OnAfterRenderAsync(bool firstRender)
-        {
-            //if(firstRender)
-            //{
-            //    await SetSelected(MainMenuItemType.Home);
-            //}
-        }
+        //protected override async Task OnAfterRenderAsync(bool firstRender)
+        //{
+        //    //if(firstRender)
+        //    //{
+        //    //    await SetSelected(MainMenuItemType.Home);
+        //    //}
+        //}
 
         protected override void OnParametersSet()
         {

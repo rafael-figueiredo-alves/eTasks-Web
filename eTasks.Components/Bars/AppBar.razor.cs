@@ -17,7 +17,7 @@ namespace eTasks.Components.Bars
         [Parameter] public string ChangeThemeButtonTip { get; set; } = "Tema escuro";
         [Parameter] public string MenuButtonTip { get; set; } = "Menu";
 
-        protected List<BarButton> Botoes { get; set; } = new();
+        protected List<BarButton> Botoes { get; set; } = [];
 
         protected override void OnInitialized()
         {

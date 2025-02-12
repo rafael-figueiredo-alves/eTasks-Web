@@ -2,12 +2,12 @@
 
 <style>
     html{
-    background-color: @CorFundo;
-    color: @CorTexto;
+        background-color: @(!string.IsNullOrEmpty(CorFundo) ? CorFundo : "white");
+        color: @(!string.IsNullOrEmpty(CorTexto) ? CorTexto : "white");
     }
 </style>
 
-<div class="page" style="background-color: @CorFundo; color: @CorTexto; height: 100vh; display: flex; flex-direction: column;">
+<div class="page" style="@($"background-color: {CorFundo}; color: {CorTexto}; height: 100vh; display: flex; flex-direction: column;")">
     <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
         <AppBar isDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" 
                 OnAvatarMenuClick="OnAvatarMenuItemClick" 
