@@ -1,13 +1,13 @@
 {
   "mainAssemblyName": "eTasks",
   "resources": {
-    "hash": "sha256-ICN3l2M8gu1EKvTYOQTDC1aNyVAdseXmoKI0G47RMFE=",
+    "hash": "sha256-0FNPtPxvTlxNzhrTeyycOuoGl73g27Na4O2Wxp8VRVA=",
     "fingerprinting": {
       "eFirebase4CSharp.frv3mfveo7.wasm": "eFirebase4CSharp.wasm",
-      "eTasks.Components.ph6dlpfqv8.wasm": "eTasks.Components.wasm",
-      "eTasks.Shared.vzxtwkw357.wasm": "eTasks.Shared.wasm",
-      "eTasks.View.8jwb7dlgf2.wasm": "eTasks.View.wasm",
-      "eTasks.n1fdeqk5en.wasm": "eTasks.wasm",
+      "eTasks.Components.8tt052apap.wasm": "eTasks.Components.wasm",
+      "eTasks.Shared.lxf04utlx6.wasm": "eTasks.Shared.wasm",
+      "eTasks.View.nc83b4jv3q.wasm": "eTasks.View.wasm",
+      "eTasks.vm8dsuedp5.wasm": "eTasks.wasm",
       "eTranslate.m750dy0r6n.wasm": "eTranslate.wasm",
       "Microsoft.AspNetCore.Components.3xrgwaw2dp.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.tx885whulx.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -71,10 +71,10 @@
     },
     "assembly": {
       "eFirebase4CSharp.frv3mfveo7.wasm": "sha256-i6VkYA8dL5JnzJZy7zT7pR+w3+fpRjDSkiVhBpXiVrU=",
-      "eTasks.Components.ph6dlpfqv8.wasm": "sha256-4/QOOx8EJJvxGrInzT1w6m/ZL6eI5IjDxnpe0ub16bU=",
-      "eTasks.Shared.vzxtwkw357.wasm": "sha256-WwGs2v6kWGsETezvMAVyW0y4v2Hau+Jg2AHCstPrKok=",
-      "eTasks.View.8jwb7dlgf2.wasm": "sha256-dITdfWl2QNhIwtS8dZbpHaXySP9NhmbhaaZPLT1qDmg=",
-      "eTasks.n1fdeqk5en.wasm": "sha256-lXysTFCyAbXcqL1TsSwImOwUgYxX8UFeJPjMdbbWe5U=",
+      "eTasks.Components.8tt052apap.wasm": "sha256-7OO+LKkT8FAtZ37egbJPrKxzG5hP3Qj9jxnkLNodxcE=",
+      "eTasks.Shared.lxf04utlx6.wasm": "sha256-qRzPaxP8gpo70/wh6WHC0mgOvKAaQ+geWni7I6ZOGbA=",
+      "eTasks.View.nc83b4jv3q.wasm": "sha256-+UfWXwgdFxHB01DlXBBQ+cyo1eeNIZafu/bgBz4juZ8=",
+      "eTasks.vm8dsuedp5.wasm": "sha256-92B/1RvAQQYPNQYEV2EAaxr1cDyOLzzKmdsFIkkxt5A=",
       "eTranslate.m750dy0r6n.wasm": "sha256-Ys/5ICwGLiR1NuhuMSAtDaRH3a6FnwLX4TT+/ctn9Kw=",
       "Microsoft.AspNetCore.Components.3xrgwaw2dp.wasm": "sha256-V/lZB5qS645SIk40rNBSDGmgjxjMNB4Vn5xGM7DhcsM=",
       "Microsoft.AspNetCore.Components.Web.tx885whulx.wasm": "sha256-v+uwBWlsF4iCHG6B9ZA8x3jlos/84zEJCWdcqZNu3Sk=",
