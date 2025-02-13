@@ -16,6 +16,7 @@ namespace eTasks.Components.Bars
         [Parameter] public EventCallback<MainMenuItemType> OnMainMenuItemClick { get; set; }
         [Parameter] public string ChangeThemeButtonTip { get; set; } = "Tema escuro";
         [Parameter] public string MenuButtonTip { get; set; } = "Menu";
+        [Parameter] public MainMenuItemType SelectedMenuItem { get; set; }
 
         protected List<BarButton> Botoes { get; set; } = [];
 

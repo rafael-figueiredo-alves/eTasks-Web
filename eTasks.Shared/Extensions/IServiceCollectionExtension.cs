@@ -29,6 +29,7 @@ namespace eTasks.Shared.Extensions
             Services.AddeTranslateSingletonService(TranslationFileFullPath: _baseURL + "translate.json");
             Services.AddSingleton<LayoutService>();
             Services.AddSingleton<IThemeService, ThemeService>();
+            Services.AddSingleton<MenuTeste>();
         }
     }
 }

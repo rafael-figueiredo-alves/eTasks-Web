@@ -5,6 +5,7 @@ namespace eTasks.Components.Menus
     public class MainMenuBase : ComponentBase
     {
         [Parameter] public bool IsDarkMode { get; set; } = false;
+        [Parameter] public MainMenuItemType SelectedItem { get; set; }
         [Parameter] public EventCallback<MainMenuItemType> OnMainMenuItemClick { get; set; }
 
 
@@ -31,6 +32,8 @@ namespace eTasks.Components.Menus
                 CloseButton = "assets/UI/offcanvas/dark/Close.png";
             else
                 CloseButton = "assets/UI/offcanvas/light/Close.png";
+
+            Task.Run(async () => await SetSelected(SelectedItem));
         }
 
         private async Task SetSelected(MainMenuItemType itemType)

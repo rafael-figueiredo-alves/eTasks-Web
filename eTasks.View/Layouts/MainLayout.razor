@@ -15,7 +15,8 @@
                 AppName="eTasks" 
                 PageTitle="@Title" 
                 ChangeThemeButtonTip="@Dica" 
-                OnMainMenuItemClick="OnMainMenuItemClick" />
+                OnMainMenuItemClick="OnMainMenuItemClick"
+                SelectedMenuItem="@((MainMenuItemType)menuTeste!.MenuSelected)" />
 
 
         <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">
@@ -23,7 +24,7 @@
             {
                 <div class="row">
                     <div class="col-6">
-                        <ListsContainer SelectedMenuItem="SelectedMainMenuItem" />
+                        <ListsContainer SelectedMenuItem="@((MainMenuItemType)menuTeste!.MenuSelected)" />
                         <button @onclick="GoAbout">About</button>
                     </div>
                     <div class="col-6">
@@ -35,7 +36,7 @@
             {
                 <div class="row">
                     <div class="col-12">
-                        <ListsContainer SelectedMenuItem="SelectedMainMenuItem" />
+                        <ListsContainer SelectedMenuItem="@((MainMenuItemType)menuTeste!.MenuSelected)" />
                         <button @onclick="GoAbout">About</button>
                     </div>
                 </div>
@@ -48,9 +49,11 @@
 
 @code {
 
+    [Inject] public MenuTeste? menuTeste { get; set; }
+
     protected string Title { get; set; } = "Minhas Tarefas";
     protected string Dica { get; set; } = "Tema escuro";
-    protected MainMenuItemType SelectedMainMenuItem { get; set; } = MainMenuItemType.Home;
+    protected MainMenuItemType SelectedMainMenuItem { get; set; }
 
     protected void GoAbout()
     {
@@ -75,32 +78,41 @@
         switch (mainMenuItemType)
         {
             case MainMenuItemType.Home:
+                Title = "Visão geral";
                 navigationManager?.NavigateTo("/");
                 break;
             case MainMenuItemType.Tasks:
+                Title = "Minhas Tarefas";
                 Console.WriteLine("Tarefas");
                 break;
             case MainMenuItemType.Goals:
+                Title = "Minhas metas";
                 Console.WriteLine("Metas");
                 break;
             case MainMenuItemType.Shopping:
+                Title = "Listas de Compras";
                 Console.WriteLine("Compras");
                 break;
             case MainMenuItemType.Readings:
+                Title = "Minhas Leituras";
                 Console.WriteLine("Leituras");
                 break;
             case MainMenuItemType.Notes:
+                Title = "Minhas anotações";
                 Console.WriteLine("Anotações");
                 break;
             case MainMenuItemType.Finance:
+                Title = "Gerenciamento de Finanças";
                 Console.WriteLine("Finanças");
                 break;
             default:
+                Title = "Visão geral";
                 navigationManager?.NavigateTo("/");
                 break;
         }
 
-        SelectedMainMenuItem = mainMenuItemType;
+        //SelectedMainMenuItem = mainMenuItemType;
+        menuTeste?.SetSelected((int)mainMenuItemType);
     }
 
     protected async Task OnAvatarMenuItemClick(AvatarMenuItemType avatarMenuItemType)
