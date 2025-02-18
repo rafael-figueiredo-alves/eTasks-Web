@@ -5,6 +5,7 @@ namespace eTasks.Components.Bars
 {
     public class AppBarBase : ComponentBase
     {
+        #region Parâmetros
         [Parameter] public bool IsDarkMode { get; set; } = false;
         [Parameter] public string AppName { get; set; } = string.Empty;
         [Parameter] public string PageTitle { get; set; } = string.Empty;
@@ -21,9 +22,13 @@ namespace eTasks.Components.Bars
         [Parameter] public Dictionary<AvatarMenuTextsEnum, string>? AvatarMenuTexts { get; set; }
         [Parameter] public string AvatarPath { get; set; } = string.Empty;
         [Parameter] public string UserName { get; set; } = string.Empty;
+        #endregion
 
+        #region Variáveis
         protected List<BarButton> Botoes { get; set; } = [];
+        #endregion
 
+        #region Métodos
         protected override void OnInitialized()
         {
             RebuildAppBar();
@@ -40,5 +45,6 @@ namespace eTasks.Components.Bars
             Botoes.Add(new BarButton() { DicaTela = ChangeThemeButtonTip, Imagem = "ThemeChanger.png", OnClick = OnChangeThemeButtonClick });
             Botoes.Add(new BarButton() { DicaTela = MenuButtonTip, Imagem = "MainMenu.png", OffcanvasMenuID = "#MainMenu" });
         }
+        #endregion
     }
 }
