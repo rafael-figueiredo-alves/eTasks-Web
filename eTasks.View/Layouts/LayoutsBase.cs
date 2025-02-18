@@ -1,4 +1,5 @@
 ﻿using eTasks.Components;
+using eTasks.Components.Menus;
 using eTasks.Shared.Services;
 using eTasks.Shared.Services.Interfaces;
 using Microsoft.AspNetCore.Components;
@@ -18,6 +19,8 @@ namespace eTasks.View.Layouts
         public string CorFundo { get; set; } = string.Empty;
         public string CorTexto { get; set; } = string.Empty;
         public bool ThemeChange { get; set; } = false;
+        public Dictionary<MainMenuTextsEnum, string>? MenuTexts { get; set; }
+        public Dictionary<AvatarMenuTextsEnum, string>? AvatarMenuTexts { get; set; }
         #endregion
 
         #region Métodos
@@ -32,12 +35,89 @@ namespace eTasks.View.Layouts
                 LayoutService.OnLayoutChanged += HandleLayoutChanged;
 
             ChangeTheme();
+
+            MenuTexts = new Dictionary<MainMenuTextsEnum, string>
+            {
+                { MainMenuTextsEnum.Home, "Início_1" },
+                { MainMenuTextsEnum.Tasks, "Tarefas" },
+                { MainMenuTextsEnum.Goals, "Metas" },
+                { MainMenuTextsEnum.Readings, "Leituras" },
+                { MainMenuTextsEnum.Shopping, "Compras" },
+                { MainMenuTextsEnum.Notes, "Anotações" },
+                { MainMenuTextsEnum.Finance, "Finanças" },
+                { MainMenuTextsEnum.Title, "Opçoes" },
+            };
+
+            AvatarMenuTexts = new Dictionary<AvatarMenuTextsEnum, string>
+            {
+                { AvatarMenuTextsEnum.EditProfile, "Editar Perfil" },
+                { AvatarMenuTextsEnum.ChangePassword, "Alterar senha" },
+                { AvatarMenuTextsEnum.About, "Sobre o eTasks" },
+                { AvatarMenuTextsEnum.Settings, "Configurações" },
+                { AvatarMenuTextsEnum.Conquers, "Conquistas" },
+                { AvatarMenuTextsEnum.ChangeLanguage, "Trocar idioma" },
+                { AvatarMenuTextsEnum.ChangeTheme, "Trocar tema" },
+                { AvatarMenuTextsEnum.Logout, "Sair" },
+            };
         }
 
         public virtual void ChangeTheme()
         {
             CorFundo = ColorPallete.GetColor(Cor.Background, ThemeService?.IsDarkTheme() ?? false);
             CorTexto = ColorPallete.GetColor(Cor.Text, ThemeService?.IsDarkTheme() ?? false);
+
+            if(ThemeService?.IsDarkTheme() ?? false)
+            {
+                MenuTexts = new Dictionary<MainMenuTextsEnum, string>
+                {
+                { MainMenuTextsEnum.Home, "Home" },
+                { MainMenuTextsEnum.Tasks, "Tasks" },
+                { MainMenuTextsEnum.Goals, "Goals" },
+                { MainMenuTextsEnum.Readings, "Readings" },
+                { MainMenuTextsEnum.Shopping, "Shopping" },
+                { MainMenuTextsEnum.Notes, "Notes" },
+                { MainMenuTextsEnum.Finance, "Finances" },
+                { MainMenuTextsEnum.Title, "Menu" },
+                };
+
+                AvatarMenuTexts = new Dictionary<AvatarMenuTextsEnum, string>
+                {
+                { AvatarMenuTextsEnum.EditProfile, "Edit Profile" },
+                { AvatarMenuTextsEnum.ChangePassword, "Change Password" },
+                { AvatarMenuTextsEnum.About, "About eTasks" },
+                { AvatarMenuTextsEnum.Settings, "Settings" },
+                { AvatarMenuTextsEnum.Conquers, "Conquers" },
+                { AvatarMenuTextsEnum.ChangeLanguage, "Change Language" },
+                { AvatarMenuTextsEnum.ChangeTheme, "Change Theme" },
+                { AvatarMenuTextsEnum.Logout, "Logout" },
+                };
+            }
+            else
+            {
+                MenuTexts = new Dictionary<MainMenuTextsEnum, string>
+                {
+                { MainMenuTextsEnum.Home, "Início_1" },
+                { MainMenuTextsEnum.Tasks, "Tarefas" },
+                { MainMenuTextsEnum.Goals, "Metas" },
+                { MainMenuTextsEnum.Readings, "Leituras" },
+                { MainMenuTextsEnum.Shopping, "Compras" },
+                { MainMenuTextsEnum.Notes, "Anotações" },
+                { MainMenuTextsEnum.Finance, "Finanças" },
+                { MainMenuTextsEnum.Title, "Opçoes" },
+                };
+
+                AvatarMenuTexts = new Dictionary<AvatarMenuTextsEnum, string>
+                {
+                { AvatarMenuTextsEnum.EditProfile, "Editar Perfil" },
+                { AvatarMenuTextsEnum.ChangePassword, "Alterar senha" },
+                { AvatarMenuTextsEnum.About, "Sobre o eTasks" },
+                { AvatarMenuTextsEnum.Settings, "Configurações" },
+                { AvatarMenuTextsEnum.Conquers, "Conquistas" },
+                { AvatarMenuTextsEnum.ChangeLanguage, "Trocar idioma" },
+                { AvatarMenuTextsEnum.ChangeTheme, "Trocar tema" },
+                { AvatarMenuTextsEnum.Logout, "Sair" },
+                };
+            }
         }
 
         private void HandleLayoutChanged(bool isMobileLayout)

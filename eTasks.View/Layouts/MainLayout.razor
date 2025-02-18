@@ -7,7 +7,7 @@
     }
 </style>
 
-<div class="page" style="@($"background-color: {CorFundo}; color: {CorTexto}; height: 100vh; display: flex; flex-direction: column;")">
+<div class="page" style="@($"background-color: {CorFundo}; color: {CorTexto}; height: 100dvh; display: flex; flex-direction: column;")">
     <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
         <AppBar isDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" 
                 OnAvatarMenuClick="OnAvatarMenuItemClick" 
@@ -16,7 +16,7 @@
                 PageTitle="@Title" 
                 ChangeThemeButtonTip="@Dica" 
                 OnMainMenuItemClick="OnMainMenuItemClick"
-                SelectedMenuItem="@((MainMenuItemType)menuTeste!.MenuSelected)" />
+                SelectedMenuItem="@((MainMenuItemType)menuTeste!.MenuSelected)" MenuTexts="MenuTexts" AvatarMenuTexts="AvatarMenuTexts" UserName="Anônimo" AvatarPath="" />
 
 
         <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">

@@ -7,6 +7,7 @@ namespace eTasks.Components.Menus
         [Parameter] public bool IsDarkMode { get; set; } = false;
         [Parameter] public MainMenuItemType SelectedItem { get; set; }
         [Parameter] public EventCallback<MainMenuItemType> OnMainMenuItemClick { get; set; }
+        [Parameter] public Dictionary<MainMenuTextsEnum, string>? MenuTexts { get; set; }
 
 
         protected string CloseButton { get; set; }    = "assets/UI/offcanvas/light/Close.png";
@@ -18,13 +19,48 @@ namespace eTasks.Components.Menus
         protected bool AnotacoesSelected { get; set; } = false;
         protected bool FinancasSelected { get; set; }  = false;
 
-        //protected override async Task OnAfterRenderAsync(bool firstRender)
-        //{
-        //    //if(firstRender)
-        //    //{
-        //    //    await SetSelected(MainMenuItemType.Home);
-        //    //}
-        //}
+        protected string GetMenuText(MainMenuTextsEnum text)
+        {
+            if (MenuTexts == null)
+                return DefaultMenuText(text);
+            return MenuTexts[text];
+        }
+
+        protected string DefaultMenuText(MainMenuTextsEnum text)
+        {
+            var TextToReturn = string.Empty;
+
+            switch(text)
+            {
+                case MainMenuTextsEnum.Title:
+                    TextToReturn = "Menu";
+                    break;
+                case MainMenuTextsEnum.Home:
+                    TextToReturn = "Início";
+                    break;
+                case MainMenuTextsEnum.Tasks:
+                    TextToReturn = "Tarefas";
+                    break;
+                case MainMenuTextsEnum.Goals:
+                    TextToReturn = "Metas";
+                    break;
+                case MainMenuTextsEnum.Shopping:
+                    TextToReturn = "Compras";
+                    break;
+                case MainMenuTextsEnum.Readings:
+                    TextToReturn = "Leituras";
+                    break;
+                case MainMenuTextsEnum.Notes:
+                    TextToReturn = "Anotações";
+                    break;
+                case MainMenuTextsEnum.Finance:
+                    TextToReturn = "Finanças";
+                    break;
+            }
+
+            return TextToReturn;
+        }
+
 
         protected override void OnParametersSet()
         {

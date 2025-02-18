@@ -12,6 +12,7 @@ namespace eTasks.Components.Bars
         [Parameter] public EventCallback<Task> OnHelpButtonClick { get; set; }
         [Parameter] public EventCallback<Task> OnDeleteButtonClick { get; set; }
         [Parameter] public EventCallback<Task> OnCheckButtonClick { get; set; }
+        [Parameter] public string BackButtonText { get; set; } = "Voltar";
 
         protected TopBarPosition BarPosition { get; set; } = TopBarPosition.FixedTop;
         protected List<BarButton> Botoes { get; set; } = new();

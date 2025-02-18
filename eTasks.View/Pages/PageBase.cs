@@ -21,6 +21,7 @@ namespace eTasks.View.Pages
         public bool isMobile { get; set; } = false;
         public string CorFundo { get; set; } = string.Empty;
         public string CorTexto { get; set; } = string.Empty;
+        public string BackButtonHint { get; set; } = "Voltar";
         #endregion
 
         #region Métodos

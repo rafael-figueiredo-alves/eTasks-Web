@@ -17,6 +17,10 @@ namespace eTasks.Components.Bars
         [Parameter] public string ChangeThemeButtonTip { get; set; } = "Tema escuro";
         [Parameter] public string MenuButtonTip { get; set; } = "Menu";
         [Parameter] public MainMenuItemType SelectedMenuItem { get; set; }
+        [Parameter] public Dictionary<MainMenuTextsEnum, string>? MenuTexts { get; set; }
+        [Parameter] public Dictionary<AvatarMenuTextsEnum, string>? AvatarMenuTexts { get; set; }
+        [Parameter] public string AvatarPath { get; set; } = string.Empty;
+        [Parameter] public string UserName { get; set; } = string.Empty;
 
         protected List<BarButton> Botoes { get; set; } = [];
 
