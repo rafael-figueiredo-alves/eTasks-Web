@@ -35,6 +35,11 @@
     <script src="js/ResizeCore.js"></script>
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script>
+        window.OpenLanguageMenu = function (elementID) {
+            (new bootstrap.Offcanvas(document.getElementById(elementID))).show();
+        }
+    </script>
 </body>
 
 </html>
