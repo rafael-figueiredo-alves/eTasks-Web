@@ -1,23 +1,25 @@
-﻿@inherits LayoutsBase
+﻿@using Microsoft.JSInterop
+@inherits LayoutsBase
 
 <style>
     html{
-        background-color: @(!string.IsNullOrEmpty(CorFundo) ? CorFundo : "white");
-        color: @(!string.IsNullOrEmpty(CorTexto) ? CorTexto : "white");
+    background-color: @(!string.IsNullOrEmpty(CorFundo) ? CorFundo : "white");
+    color: @(!string.IsNullOrEmpty(CorTexto) ? CorTexto : "white");
     }
 </style>
 
 <div class="page" style="@($"background-color: {CorFundo}; color: {CorTexto}; height: 100dvh; display: flex; flex-direction: column;")">
     <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
         <AppBar isDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" 
-                OnAvatarMenuClick="OnAvatarMenuItemClick" 
-                OnChangeThemeButtonClick="TesteClick" 
-                AppName="eTasks" 
-                PageTitle="@Title" 
-                ChangeThemeButtonTip="@Dica" 
-                OnMainMenuItemClick="OnMainMenuItemClick"
-                SelectedMenuItem="@((MainMenuItemType)menuTeste!.MenuSelected)" MenuTexts="MenuTexts" AvatarMenuTexts="AvatarMenuTexts" UserName="Anônimo" AvatarPath="" />
+        OnAvatarMenuClick="OnAvatarMenuItemClick" 
+        OnChangeThemeButtonClick="TesteClick" 
+        AppName="eTasks" 
+        PageTitle="@Title" 
+        ChangeThemeButtonTip="@Dica" 
+        OnMainMenuItemClick="OnMainMenuItemClick"
+        SelectedMenuItem="@((MainMenuItemType)menuTeste!.MenuSelected)" MenuTexts="MenuTexts" AvatarMenuTexts="AvatarMenuTexts" UserName="Anônimo" AvatarPath="" />
 
+        <LanguageMenu IsDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" />
 
         <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">
             @if(!isMobile)
@@ -50,6 +52,7 @@
 @code {
 
     [Inject] public MenuTeste? menuTeste { get; set; }
+    [Inject] public IJSRuntime? iJSRuntime { get; set; }
 
     protected string Title { get; set; } = "Minhas Tarefas";
     protected string Dica { get; set; } = "Tema escuro";
@@ -121,16 +124,20 @@
         switch (avatarMenuItemType)
         {
             case AvatarMenuItemType.Conquer:
-                
+
                 break;
             case AvatarMenuItemType.About:
                 navigationManager?.GoTo("about");
                 break;
             case AvatarMenuItemType.Setup:
-                
+
                 break;
             case AvatarMenuItemType.Language:
-
+                if (iJSRuntime != null)
+                {
+                    var task = iJSRuntime.InvokeVoidAsync("OpenLanguageMenu", "LanguageMenu");
+                    if (task != null) await task;
+                }
                 break;
             case AvatarMenuItemType.Theme:
                 TesteClick();

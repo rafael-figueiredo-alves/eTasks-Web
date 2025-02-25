@@ -4,11 +4,14 @@ namespace eTasks.Shared.Services
 {
     public class LayoutService(IJSRuntime jsRuntime) : IAsyncDisposable
     {
+        #region Variáveis
         private readonly IJSRuntime _jsRuntime = jsRuntime;
         private DotNetObjectReference<LayoutService>? _objRef;
         public event Action<bool>? OnLayoutChanged;
         private bool _IsMobileLayout { get; set; }
+        #endregion
 
+        #region Métodos
         public async Task InitializeAsync()
         {
             _objRef = DotNetObjectReference.Create(this);
@@ -42,5 +45,6 @@ namespace eTasks.Shared.Services
                 _objRef.Dispose();
             }
         }
+        #endregion
     }
 }

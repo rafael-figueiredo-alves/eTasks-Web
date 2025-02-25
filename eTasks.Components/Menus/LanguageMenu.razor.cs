@@ -5,6 +5,7 @@ namespace eTasks.Components.Menus
     public class LanguageMenuBase : ComponentBase
     {
         [Parameter] public bool IsDarkMode { get; set; } = false;
+        [Parameter] public string LanguageMenuTitle { get; set; } = "Idioma";
 
         protected string CloseButton { get; set; } = "assets/UI/offcanvas/light/Close.png";
 

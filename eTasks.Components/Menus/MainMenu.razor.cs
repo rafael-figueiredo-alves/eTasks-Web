@@ -4,12 +4,14 @@ namespace eTasks.Components.Menus
 {
     public class MainMenuBase : ComponentBase
     {
+        #region ParÂmetros
         [Parameter] public bool IsDarkMode { get; set; } = false;
         [Parameter] public MainMenuItemType SelectedItem { get; set; }
         [Parameter] public EventCallback<MainMenuItemType> OnMainMenuItemClick { get; set; }
         [Parameter] public Dictionary<MainMenuTextsEnum, string>? MenuTexts { get; set; }
+        #endregion
 
-
+        #region Variáveis
         protected string CloseButton { get; set; }    = "assets/UI/offcanvas/light/Close.png";
         protected bool InicioSelected { get; set; }   = true;
         protected bool TarefasSelected { get; set; }  = false;
@@ -18,7 +20,9 @@ namespace eTasks.Components.Menus
         protected bool LeiturasSelected { get; set; }  = false;
         protected bool AnotacoesSelected { get; set; } = false;
         protected bool FinancasSelected { get; set; }  = false;
+        #endregion
 
+        #region Métodos
         protected string GetMenuText(MainMenuTextsEnum text)
         {
             if (MenuTexts == null)
@@ -60,7 +64,6 @@ namespace eTasks.Components.Menus
 
             return TextToReturn;
         }
-
 
         protected override void OnParametersSet()
         {
@@ -115,5 +118,6 @@ namespace eTasks.Components.Menus
             if(OnMainMenuItemClick.HasDelegate)
                 await OnMainMenuItemClick.InvokeAsync(itemType);
         }
+        #endregion
     }
 }

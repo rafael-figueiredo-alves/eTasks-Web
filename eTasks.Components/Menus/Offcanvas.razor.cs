@@ -4,6 +4,7 @@ namespace eTasks.Components.Menus
 {
     public class OffcanvasBase : ComponentBase
     {
+        #region Enums
         public enum DirecaoOffCanvas
         {
             Esquerda, direita
@@ -16,20 +17,25 @@ namespace eTasks.Components.Menus
             Topo,
             Inferior
         }
+        #endregion
 
+        #region Parâmetros
         [Parameter] public PosicaoOffCanvas Posicao { get; set; } = PosicaoOffCanvas.Direita;
         [Parameter] public string OffcanvasID { get; set; } = string.Empty;
         [Parameter] public DirecaoOffCanvas direcaoOffCanvas { get; set; } = Offcanvas.DirecaoOffCanvas.direita;
         [Parameter] public bool EOffcanvasPerfil { get; set; } = false;
         [Parameter] public bool isDarkMode { get; set; } = false;
         [Parameter] public RenderFragment? ChildContent { get; set; }
+        #endregion
 
-
+        #region Variáveis
         protected string borderRadius = "0px 25px 25px 0px";
         protected string Position { get; set; } = "offcanvas-end";
         protected string Width { get; set; } = "350px";
-        protected string Shadow { get; set; } = "-4px 2px 4px rgba(0, 0, 0, 0.2)"; 
+        protected string Shadow { get; set; } = "-4px 2px 4px rgba(0, 0, 0, 0.2)";
+        #endregion
 
+        #region Métodos
         protected override void OnParametersSet()
         {
             if (direcaoOffCanvas == DirecaoOffCanvas.Esquerda)
@@ -87,5 +93,6 @@ namespace eTasks.Components.Menus
                 Shadow = isDarkMode ? "-4px 2px 4px rgba(100,100,100,0.1)" : "-4px 2px 4px rgba(0, 0, 0, 0.2)";
             }
         }
+        #endregion
     }
 }
