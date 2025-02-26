@@ -1,5 +1,5 @@
 ﻿@using Microsoft.JSInterop
-@inherits LayoutsBase
+@inherits MainLayoutBase
 
 <style>
     html{
@@ -19,7 +19,7 @@
         OnMainMenuItemClick="OnMainMenuItemClick"
         SelectedMenuItem="@((MainMenuItemType)menuTeste!.MenuSelected)" MenuTexts="MenuTexts" AvatarMenuTexts="AvatarMenuTexts" UserName="Anônimo" AvatarPath="" />
 
-        <LanguageMenu IsDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" />
+        <LanguageMenu IsDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" OnSelectLanguage="OnSelectedLanguage" SelectedLanguage="@Idioma" />
 
         <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">
             @if(!isMobile)
@@ -48,103 +48,3 @@
         <ActionButton IsDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" OnClick="GoGoogle" />
     </main>
 </div>
-
-@code {
-
-    [Inject] public MenuTeste? menuTeste { get; set; }
-    [Inject] public IJSRuntime? iJSRuntime { get; set; }
-
-    protected string Title { get; set; } = "Minhas Tarefas";
-    protected string Dica { get; set; } = "Tema escuro";
-    protected MainMenuItemType SelectedMainMenuItem { get; set; }
-
-    protected void GoAbout()
-    {
-        navigationManager?.GoTo("about");
-    }
-
-    private void TesteClick()
-    {
-        ThemeService?.ChangeTheme();
-        ThemeChange = ThemeService?.IsDarkTheme() ?? false;
-        ChangeTheme();
-    }
-
-    protected void GoGoogle()
-    {
-        navigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
-    }
-
-    protected async Task OnMainMenuItemClick(MainMenuItemType mainMenuItemType)
-    {
-        await Task.CompletedTask;
-        switch (mainMenuItemType)
-        {
-            case MainMenuItemType.Home:
-                Title = "Visão geral";
-                navigationManager?.GoHome();
-                break;
-            case MainMenuItemType.Tasks:
-                Title = "Minhas Tarefas";
-                Console.WriteLine("Tarefas");
-                break;
-            case MainMenuItemType.Goals:
-                Title = "Minhas metas";
-                Console.WriteLine("Metas");
-                break;
-            case MainMenuItemType.Shopping:
-                Title = "Listas de Compras";
-                Console.WriteLine("Compras");
-                break;
-            case MainMenuItemType.Readings:
-                Title = "Minhas Leituras";
-                Console.WriteLine("Leituras");
-                break;
-            case MainMenuItemType.Notes:
-                Title = "Minhas anotações";
-                Console.WriteLine("Anotações");
-                break;
-            case MainMenuItemType.Finance:
-                Title = "Gerenciamento de Finanças";
-                Console.WriteLine("Finanças");
-                break;
-            default:
-                Title = "Visão geral";
-                navigationManager?.NavigateTo("/");
-                break;
-        }
-
-        //SelectedMainMenuItem = mainMenuItemType;
-        menuTeste?.SetSelected((int)mainMenuItemType);
-    }
-
-    protected async Task OnAvatarMenuItemClick(AvatarMenuItemType avatarMenuItemType)
-    {
-        await Task.CompletedTask;
-        switch (avatarMenuItemType)
-        {
-            case AvatarMenuItemType.Conquer:
-
-                break;
-            case AvatarMenuItemType.About:
-                navigationManager?.GoTo("about");
-                break;
-            case AvatarMenuItemType.Setup:
-
-                break;
-            case AvatarMenuItemType.Language:
-                if (iJSRuntime != null)
-                {
-                    var task = iJSRuntime.InvokeVoidAsync("OpenLanguageMenu", "LanguageMenu");
-                    if (task != null) await task;
-                }
-                break;
-            case AvatarMenuItemType.Theme:
-                TesteClick();
-                break;
-            default:
-                navigationManager?.NavigateTo("/");
-                break;
-        }
-    }
-}

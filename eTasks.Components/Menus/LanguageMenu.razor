@@ -8,5 +8,11 @@
         <img class="user-select-none" src="@CloseButton" height="20" width="20" style="margin: 10px; margin-left: 5px; cursor: pointer;" data-bs-dismiss="offcanvas" />
     </div>
     <div style="@($"border: 2px solid {Components.ColorPallete.GetColor(Components.Cor.Primary, IsDarkMode)}; box-shadow: 2px 4px 4px rgba(100,100,100,0.5); height: 1px; margin-left: 5%; margin-right: 5%")" />
+    
     @* Implementar LanguageMenuItem e colocar aqui para cada idioma disponível *@
+    @foreach (var item in Enum.GetValues(typeof(SupportedLanguages)).Cast<SupportedLanguages>())
+    {
+        <LanguageMenuItem Language="@item" Selected="@(SelectedLanguageEnum == item)" OnSelectLanguage="@(() => OnSelectLanguageClick(item))" IsDarkMode="@IsDarkMode" />
+    }
+
 </Offcanvas>

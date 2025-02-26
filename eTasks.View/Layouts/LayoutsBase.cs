@@ -3,6 +3,7 @@ using eTasks.Components.Menus;
 using eTasks.Shared.Services;
 using eTasks.Shared.Services.Interfaces;
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 
 namespace eTasks.View.Layouts
 {
@@ -12,6 +13,7 @@ namespace eTasks.View.Layouts
         [Inject] public NavigationManager? navigationManager { get; set; }
         [Inject] public LayoutService? LayoutService { get; set; }
         [Inject] public IThemeService? ThemeService { get; set; }
+        [Inject] public IJSRuntime? iJSRuntime { get; set; }
         #endregion
 
         #region Variáveis compartilhadas
