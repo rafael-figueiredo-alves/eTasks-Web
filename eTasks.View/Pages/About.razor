@@ -2,7 +2,7 @@
 @inherits AboutBase
 
 <style>
-    html {
+    html, body {
         background-color: @CorFundo;
         color: @CorTexto;
     }
@@ -20,7 +20,7 @@
 
 <LayoutView Layout="TipoLayout">
     <div class="@(ThemeService!.IsDarkTheme() ? "LayoutView-dark" : "LayoutView")">
-    <NavBar IsMobile="@isMobile" Title="Novo Lançamento" OnBackButtonClick="Voltar" IsDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" BackButtonText="@BackButtonHint" />
+    <NavBar IsMobile="@IsMobile" Title="Novo Lançamento" OnBackButtonClick="Voltar" IsDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" BackButtonText="@BackButtonHint" />
 <h3>About @Versao</h3>
 <Teste2></Teste2>
  </div>

@@ -18,7 +18,7 @@ namespace eTasks.View.Pages
 
         #region Variáveis públicas compartilhadas entre telas
         public Type TipoLayout { get; set; } = typeof(Layouts.MainLayout);
-        public bool isMobile { get; set; } = false;
+        public bool IsMobile { get; set; } = false;
         public string CorFundo { get; set; } = string.Empty;
         public string CorTexto { get; set; } = string.Empty;
         public string BackButtonHint { get; set; } = "Voltar";
@@ -26,11 +26,14 @@ namespace eTasks.View.Pages
 
         #region Métodos
         protected override async Task OnInitializedAsync()
-        {         
-            // Define o layout inicial
-            isMobile = (await LayoutService?.IsMobileLayout()) ?? false;
+        {
+            IsMobile = false;
 
-            if (isMobile)
+            // Define o layout inicial
+            if(LayoutService != null)
+                IsMobile = await (LayoutService?.IsMobileLayout() ?? Task.FromResult<bool?>(false)) ?? false;
+
+            if (IsMobile)
                 TipoLayout = typeof(Layouts.PageLayout);
             else
                 TipoLayout = typeof(Layouts.MainLayout);
@@ -53,7 +56,7 @@ namespace eTasks.View.Pages
         //Método responsáevl por lidar com os layouts
         private void HandleLayoutChanged(bool isMobileLayout)
         {
-            isMobile = isMobileLayout;
+            IsMobile = isMobileLayout;
 
             if (isMobileLayout)
                 TipoLayout = typeof(Layouts.PageLayout);

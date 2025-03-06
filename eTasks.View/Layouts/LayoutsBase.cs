@@ -10,14 +10,14 @@ namespace eTasks.View.Layouts
     public class LayoutsBase : LayoutComponentBase
     {
         #region Injeções de Serviços Compartilhados
-        [Inject] public NavigationManager? navigationManager { get; set; }
+        [Inject] public NavigationManager? NavigationManager { get; set; }
         [Inject] public LayoutService? LayoutService { get; set; }
         [Inject] public IThemeService? ThemeService { get; set; }
-        [Inject] public IJSRuntime? iJSRuntime { get; set; }
+        [Inject] public IJSRuntime? IJSRuntime { get; set; }
         #endregion
 
         #region Variáveis compartilhadas
-        public bool isMobile { get; set; } = false;
+        public bool IsMobile { get; set; } = false;
         public string CorFundo { get; set; } = string.Empty;
         public string CorTexto { get; set; } = string.Empty;
         public bool ThemeChange { get; set; } = false;
@@ -28,9 +28,13 @@ namespace eTasks.View.Layouts
         #region Métodos
         protected override async Task OnInitializedAsync()
         {
+            IsMobile = false;
+
             // Define o layout inicial
-            isMobile = (await LayoutService?.IsMobileLayout()) ?? false;
-            HandleLayoutChanged(isMobile);
+            if (LayoutService != null)
+                IsMobile = await (LayoutService?.IsMobileLayout() ?? Task.FromResult<bool?>(false)) ?? false;
+
+            HandleLayoutChanged(IsMobile);
 
             // Inscreve-se para ouvir mudanças no layout
             if (LayoutService != null)
@@ -124,7 +128,7 @@ namespace eTasks.View.Layouts
 
         private void HandleLayoutChanged(bool isMobileLayout)
         {
-            isMobile = isMobileLayout;
+            IsMobile = isMobileLayout;
             InvokeAsync(StateHasChanged);
         }
 

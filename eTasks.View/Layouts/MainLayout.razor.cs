@@ -32,7 +32,7 @@ namespace eTasks.View.Layouts
 
         protected void GoAbout()
         {
-            navigationManager?.GoTo("about");
+            NavigationManager?.GoTo("about");
         }
 
         protected async Task OnSelectedLanguage(string languageCode)
@@ -51,7 +51,7 @@ namespace eTasks.View.Layouts
 
         protected void GoGoogle()
         {
-            navigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
+            NavigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
         }
 
         protected async Task OnMainMenuItemClick(MainMenuItemType mainMenuItemType)
@@ -61,7 +61,7 @@ namespace eTasks.View.Layouts
             {
                 case MainMenuItemType.Home:
                     Title = "Visão geral";
-                    navigationManager?.GoHome();
+                    NavigationManager?.GoHome();
                     break;
                 case MainMenuItemType.Tasks:
                     Title = "Minhas Tarefas";
@@ -89,7 +89,7 @@ namespace eTasks.View.Layouts
                     break;
                 default:
                     Title = "Visão geral";
-                    navigationManager?.NavigateTo("/");
+                    NavigationManager?.NavigateTo("/");
                     break;
             }
 
@@ -106,22 +106,22 @@ namespace eTasks.View.Layouts
 
                     break;
                 case AvatarMenuItemType.About:
-                    navigationManager?.GoTo("about");
+                    NavigationManager?.GoTo("about");
                     break;
                 case AvatarMenuItemType.Setup:
 
                     break;
                 case AvatarMenuItemType.Language:
-                    if (iJSRuntime != null)
+                    if (IJSRuntime != null)
                     {
-                        await iJSRuntime.InvokeVoidAsync("OpenLanguageMenu", "LanguageMenu");
+                        await IJSRuntime.InvokeVoidAsync("OpenLanguageMenu", "LanguageMenu");
                     }
                     break;
                 case AvatarMenuItemType.Theme:
                     TesteClick();
                     break;
                 default:
-                    navigationManager?.NavigateTo("/");
+                    NavigationManager?.NavigateTo("/");
                     break;
             }
         }

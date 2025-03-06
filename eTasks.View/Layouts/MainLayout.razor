@@ -22,7 +22,7 @@
         <LanguageMenu IsDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" OnSelectLanguage="OnSelectedLanguage" SelectedLanguage="@Idioma" />
 
         <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">
-            @if(!isMobile)
+            @if(!IsMobile)
             {
                 <div class="row">
                     <div class="col-6">
