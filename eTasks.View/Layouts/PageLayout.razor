@@ -11,10 +11,10 @@
         NavigationManager?.GoHome();
     }
 
-    private void TesteClick()
+    private async Task TesteClick()
     {
-        ThemeChange = !ThemeChange;
-        ChangeTheme();
+        ThemeChange = await ThemeService!.IsDarkTheme();
+        await ChangeTheme();
     }
 
     protected void GoGoogle()

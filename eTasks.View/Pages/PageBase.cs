@@ -8,7 +8,7 @@ namespace eTasks.View.Pages
     /// <summary>
     /// Classe base para Páginas
     /// </summary>
-    public class PageBase : ComponentBase
+    public class PageBase : ComponentBase, IDisposable
     {
         #region Serviços injetados necessários às páginas
         [Inject] public LayoutService? LayoutService { get; set; }
@@ -22,6 +22,7 @@ namespace eTasks.View.Pages
         public string CorFundo { get; set; } = string.Empty;
         public string CorTexto { get; set; } = string.Empty;
         public string BackButtonHint { get; set; } = "Voltar";
+        public bool ThemeChange { get; set; } = false;
         #endregion
 
         #region Métodos
@@ -41,16 +42,22 @@ namespace eTasks.View.Pages
             // Inscreve-se para ouvir mudanças no layout
             if (LayoutService != null)
                 LayoutService.OnLayoutChanged += HandleLayoutChanged;
+            
+            if(ThemeService != null)
+                ThemeService!.OnThemeChanged += ChangeTheme;
 
-            ChangeTheme();
+            await ChangeTheme();
 
             base.OnInitialized();
         }
 
-        public virtual void ChangeTheme()
+        public virtual async Task ChangeTheme()
         {
-            CorFundo = ColorPallete.GetColor(Cor.Background, ThemeService?.IsDarkTheme() ?? false);
-            CorTexto = ColorPallete.GetColor(Cor.Text, ThemeService?.IsDarkTheme() ?? false);
+            ThemeChange = await ThemeService!.IsDarkTheme();
+            CorFundo = ColorPallete.GetColor(Cor.Background, await ThemeService!.IsDarkTheme());
+            CorTexto = ColorPallete.GetColor(Cor.Text, await ThemeService!.IsDarkTheme());
+
+            await InvokeAsync(StateHasChanged);
         }
 
         //Método responsáevl por lidar com os layouts
@@ -64,6 +71,11 @@ namespace eTasks.View.Pages
                 TipoLayout = typeof(Layouts.MainLayout);
 
             InvokeAsync(StateHasChanged);
+        }
+
+        public void Dispose()
+        {
+            ThemeService!.OnThemeChanged -= ChangeTheme;
         }
         #endregion
     }

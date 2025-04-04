@@ -10,23 +10,23 @@
 
 <div class="page" style="@($"background-color: {CorFundo}; color: {CorTexto}; height: 100dvh; display: flex; flex-direction: column;")">
     <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
-        <AppBar isDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" 
-        OnAvatarMenuClick="OnAvatarMenuItemClick" 
+        <AppBar isDarkMode="@ThemeChange"
+                OnAvatarMenuClick="OnAvatarMenuItemClick" 
         OnChangeThemeButtonClick="TesteClick" 
         AppName="eTasks" 
         PageTitle="@Title" 
         ChangeThemeButtonTip="@Dica" 
         OnMainMenuItemClick="OnMainMenuItemClick"
-        SelectedMenuItem="@((MainMenuItemType)menuTeste!.MenuSelected)" MenuTexts="MenuTexts" AvatarMenuTexts="AvatarMenuTexts" UserName="Anônimo" AvatarPath="" />
+        SelectedMenuItem="@((MainMenuItemType)MenuTeste!.MenuSelected)" MenuTexts="MenuTexts" AvatarMenuTexts="AvatarMenuTexts" UserName="Anônimo" AvatarPath="" />
 
-        <LanguageMenu IsDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" OnSelectLanguage="OnSelectedLanguage" SelectedLanguage="@Idioma" />
+        <LanguageMenu IsDarkMode="@ThemeChange" OnSelectLanguage="OnSelectedLanguage" SelectedLanguage="@Idioma" />
 
         <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">
             @if(!IsMobile)
             {
                 <div class="row">
                     <div class="col-6">
-                        <ListsContainer SelectedMenuItem="@((MainMenuItemType)menuTeste!.MenuSelected)" />
+                        <ListsContainer SelectedMenuItem="@((MainMenuItemType)MenuTeste!.MenuSelected)" />
                         <button @onclick="GoAbout">About</button>
                     </div>
                     <div class="col-6">
@@ -38,13 +38,13 @@
             {
                 <div class="row">
                     <div class="col-12">
-                        <ListsContainer SelectedMenuItem="@((MainMenuItemType)menuTeste!.MenuSelected)" />
+                        <ListsContainer SelectedMenuItem="@((MainMenuItemType)MenuTeste!.MenuSelected)" />
                         <button @onclick="GoAbout">About</button>
                     </div>
                 </div>
             }
         </article>
 
-        <ActionButton IsDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" OnClick="GoGoogle" />
+        <ActionButton IsDarkMode="@ThemeChange" OnClick="GoGoogle" />
     </main>
 </div>

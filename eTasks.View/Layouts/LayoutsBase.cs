@@ -40,7 +40,7 @@ namespace eTasks.View.Layouts
             if (LayoutService != null)
                 LayoutService.OnLayoutChanged += HandleLayoutChanged;
 
-            ChangeTheme();
+            await ChangeTheme();
 
             MenuTexts = new Dictionary<MainMenuTextsEnum, string>
             {
@@ -67,12 +67,12 @@ namespace eTasks.View.Layouts
             };
         }
 
-        public virtual void ChangeTheme()
+        public virtual async Task ChangeTheme()
         {
-            CorFundo = ColorPallete.GetColor(Cor.Background, ThemeService?.IsDarkTheme() ?? false);
-            CorTexto = ColorPallete.GetColor(Cor.Text, ThemeService?.IsDarkTheme() ?? false);
+            CorFundo = ColorPallete.GetColor(Cor.Background, await ThemeService!.IsDarkTheme());
+            CorTexto = ColorPallete.GetColor(Cor.Text, await ThemeService!.IsDarkTheme());
 
-            if(ThemeService?.IsDarkTheme() ?? false)
+            if(await ThemeService!.IsDarkTheme())
             {
                 MenuTexts = new Dictionary<MainMenuTextsEnum, string>
                 {
@@ -124,6 +124,8 @@ namespace eTasks.View.Layouts
                 { AvatarMenuTextsEnum.Logout, "Sair" },
                 };
             }
+
+            await InvokeAsync(StateHasChanged);
         }
 
         private void HandleLayoutChanged(bool isMobileLayout)

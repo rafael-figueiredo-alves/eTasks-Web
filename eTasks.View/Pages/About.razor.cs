@@ -6,9 +6,9 @@ namespace eTasks.View.Pages
     {
         protected string Versao { get; set; } = string.Empty;
 
-        protected override void OnInitialized()
+        protected override async Task OnInitializedAsync()
         {
-            base.OnInitialized();
+            await base.OnInitializedAsync();
 
             Versao = "2.0.0";
         }

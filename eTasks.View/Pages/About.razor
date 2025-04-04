@@ -1,4 +1,5 @@
 ﻿@page "/about"
+@implements IDisposable
 @inherits AboutBase
 
 <style>
@@ -19,9 +20,9 @@
 </style>
 
 <LayoutView Layout="TipoLayout">
-    <div class="@(ThemeService!.IsDarkTheme() ? "LayoutView-dark" : "LayoutView")">
-    <NavBar IsMobile="@IsMobile" Title="Novo Lançamento" OnBackButtonClick="Voltar" IsDarkMode="@(ThemeService?.IsDarkTheme() ?? false)" BackButtonText="@BackButtonHint" />
-<h3>About @Versao</h3>
+    <div class="@(async () => await ThemeService!.IsDarkTheme() ? "LayoutView-dark" : "LayoutView")">
+        <NavBar IsMobile="@IsMobile" Title="Novo Lançamento" OnBackButtonClick="Voltar" IsDarkMode="@ThemeChange" BackButtonText="@BackButtonHint" />
+<h3>About @Versao @ThemeChange</h3>
 <Teste2></Teste2>
  </div>
 </LayoutView>

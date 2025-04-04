@@ -21,7 +21,7 @@
 <body>
     <div id="app">
 
-        <div class="d-flex justify-content-center align-items-center" style="height: 100vh; width: 100vw;">
+        <div id="SplashScreen" class="d-flex justify-content-center align-items-center" style="height: 100vh; width: 100vw;">
             <img src="assets/icon-192.png" />
         </div>
     </div>
@@ -39,6 +39,25 @@
         window.OpenLanguageMenu = function (elementID) {
             (new bootstrap.Offcanvas(document.getElementById(elementID))).show();
         }
+    </script>
+    <script>
+        function applyTheme() {
+            const targetDiv = document.querySelector('#SplashScreen');
+            const savedTheme = localStorage.getItem('ThemeIsDark');
+
+            // Verifica se existe um valor e aplica a cor correspondente
+            if (savedTheme !== null) {
+                // Converte string 'true'/'false' para booleano
+                const isDark = savedTheme === 'true';
+                targetDiv.style.backgroundColor = isDark ? '#212529' : '#ffffff';
+            } else {
+                // Tema padrão se não houver valor (light neste caso)
+                targetDiv.style.backgroundColor = '#ffffff';
+            }
+        }
+
+        // Executar quando a página carregar
+        document.addEventListener('DOMContentLoaded', applyTheme);
     </script>
 </body>
 

@@ -9,7 +9,7 @@ namespace eTasks.View.Layouts
     public class MainLayoutBase : LayoutsBase
     {
         #region Serviços
-        [Inject] public MenuTeste? menuTeste { get; set; }
+        [Inject] public MenuTeste? MenuTeste { get; set; }
         #endregion
 
         #region Variáveis
@@ -24,8 +24,9 @@ namespace eTasks.View.Layouts
         {
             if (firstRender)
             {
-                menuTeste?.SetSelected((int)MainMenuItemType.Tasks);
+                MenuTeste?.SetSelected((int)MainMenuItemType.Tasks);
                 Idioma = "pt-BR";
+                ThemeChange = await ThemeService!.IsDarkTheme();
             }
             await base.OnAfterRenderAsync(firstRender);
         }
@@ -42,11 +43,11 @@ namespace eTasks.View.Layouts
             Console.WriteLine(languageCode);
         }
 
-        protected void TesteClick()
+        protected async Task TesteClick()
         {
             ThemeService?.ChangeTheme();
-            ThemeChange = ThemeService?.IsDarkTheme() ?? false;
-            ChangeTheme();
+            ThemeChange = await ThemeService!.IsDarkTheme();
+            await ChangeTheme();
         }
 
         protected void GoGoogle()
@@ -94,7 +95,7 @@ namespace eTasks.View.Layouts
             }
 
             //SelectedMainMenuItem = mainMenuItemType;
-            menuTeste?.SetSelected((int)mainMenuItemType);
+            MenuTeste?.SetSelected((int)mainMenuItemType);
         }
 
         protected async Task OnAvatarMenuItemClick(AvatarMenuItemType avatarMenuItemType)
@@ -118,7 +119,7 @@ namespace eTasks.View.Layouts
                     }
                     break;
                 case AvatarMenuItemType.Theme:
-                    TesteClick();
+                    await TesteClick();
                     break;
                 default:
                     NavigationManager?.NavigateTo("/");

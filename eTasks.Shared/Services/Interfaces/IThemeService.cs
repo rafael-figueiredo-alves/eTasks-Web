@@ -2,8 +2,9 @@
 {
     public interface IThemeService
     {
-        public bool IsDarkTheme();
-        public IThemeService SetTheme(bool isDark);
-        public IThemeService ChangeTheme();
+        public event Func<Task>? OnThemeChanged;
+        public Task<bool> IsDarkTheme();
+        public Task<IThemeService> SetTheme(bool isDark);
+        public Task<IThemeService> ChangeTheme();
     }
 }
