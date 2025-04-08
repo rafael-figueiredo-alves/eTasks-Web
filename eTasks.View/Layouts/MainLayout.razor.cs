@@ -15,7 +15,6 @@ namespace eTasks.View.Layouts
         #region Variáveis
         protected string Title { get; set; } = "Minhas Tarefas";
         protected string Dica { get; set; } = "Tema escuro";
-        protected string Idioma { get; set; } = "en-US";
         protected MainMenuItemType SelectedMainMenuItem { get; set; }
         #endregion
 
@@ -25,7 +24,6 @@ namespace eTasks.View.Layouts
             if (firstRender)
             {
                 MenuTeste?.SetSelected((int)MainMenuItemType.Tasks);
-                Idioma = "pt-BR";
                 ThemeChange = await ThemeService!.IsDarkTheme();
             }
             await base.OnAfterRenderAsync(firstRender);
@@ -39,7 +37,7 @@ namespace eTasks.View.Layouts
         protected async Task OnSelectedLanguage(string languageCode)
         {
             await Task.CompletedTask;
-            Idioma = languageCode;
+            await LanguageService!.SetLanguage(languageCode);
             Console.WriteLine(languageCode);
         }
 

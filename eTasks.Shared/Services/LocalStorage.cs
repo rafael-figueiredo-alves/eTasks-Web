@@ -56,11 +56,17 @@ namespace eTasks.Shared.Services
         /// <returns>Valor em formato T (objeto)</returns>
         public async Task<T?> GetValue<T>(string key)
         {
-            string? Value = await GetValue(key);
-            if (!string.IsNullOrEmpty(Value))
-                return JsonSerializer.Deserialize<T>(Value);
-            else
+            string? value = await GetValue(key);
+
+            if (string.IsNullOrEmpty(value))
                 return default(T?);
+
+            // Se T é string, retorna o valor diretamente como T
+            if (typeof(T) == typeof(string))
+                return (T)(object)value;
+
+            // Para outros tipos, usa a desserialização JSON
+            return JsonSerializer.Deserialize<T>(value);
         }
         #endregion
 

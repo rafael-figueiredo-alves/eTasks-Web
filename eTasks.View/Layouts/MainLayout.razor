@@ -19,7 +19,7 @@
         OnMainMenuItemClick="OnMainMenuItemClick"
         SelectedMenuItem="@((MainMenuItemType)MenuTeste!.MenuSelected)" MenuTexts="MenuTexts" AvatarMenuTexts="AvatarMenuTexts" UserName="Anônimo" AvatarPath="" />
 
-        <LanguageMenu IsDarkMode="@ThemeChange" OnSelectLanguage="OnSelectedLanguage" SelectedLanguage="@Idioma" />
+        <LanguageMenu IsDarkMode="@ThemeChange" OnSelectLanguage="OnSelectedLanguage" SelectedLanguage="@CurrentLanguage" />
 
         <article class="content px-4 user-select-none" style="flex: 1; overflow-y: auto;">
             @if(!IsMobile)

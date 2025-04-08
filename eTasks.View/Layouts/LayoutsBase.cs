@@ -13,14 +13,16 @@ namespace eTasks.View.Layouts
         [Inject] public NavigationManager? NavigationManager { get; set; }
         [Inject] public LayoutService? LayoutService { get; set; }
         [Inject] public IThemeService? ThemeService { get; set; }
+        [Inject] public ILanguageService? LanguageService { get; set; }
         [Inject] public IJSRuntime? IJSRuntime { get; set; }
         #endregion
 
         #region Variáveis compartilhadas
         public bool IsMobile { get; set; } = false;
+        public bool ThemeChange { get; set; } = false;
         public string CorFundo { get; set; } = string.Empty;
         public string CorTexto { get; set; } = string.Empty;
-        public bool ThemeChange { get; set; } = false;
+        public string CurrentLanguage { get; set; } = "pt-BR";
         public Dictionary<MainMenuTextsEnum, string>? MenuTexts { get; set; }
         public Dictionary<AvatarMenuTextsEnum, string>? AvatarMenuTexts { get; set; }
         #endregion
@@ -40,39 +42,18 @@ namespace eTasks.View.Layouts
             if (LayoutService != null)
                 LayoutService.OnLayoutChanged += HandleLayoutChanged;
 
+            LanguageService.OnLanguageChanged += SetCurrentLanguage;
+            await LanguageService.SetLanguage(await LanguageService!.GetLanguage());
+
             await ChangeTheme();
-
-            MenuTexts = new Dictionary<MainMenuTextsEnum, string>
-            {
-                { MainMenuTextsEnum.Home, "Início_1" },
-                { MainMenuTextsEnum.Tasks, "Tarefas" },
-                { MainMenuTextsEnum.Goals, "Metas" },
-                { MainMenuTextsEnum.Readings, "Leituras" },
-                { MainMenuTextsEnum.Shopping, "Compras" },
-                { MainMenuTextsEnum.Notes, "Anotações" },
-                { MainMenuTextsEnum.Finance, "Finanças" },
-                { MainMenuTextsEnum.Title, "Opçoes" },
-            };
-
-            AvatarMenuTexts = new Dictionary<AvatarMenuTextsEnum, string>
-            {
-                { AvatarMenuTextsEnum.EditProfile, "Editar Perfil" },
-                { AvatarMenuTextsEnum.ChangePassword, "Alterar senha" },
-                { AvatarMenuTextsEnum.About, "Sobre o eTasks" },
-                { AvatarMenuTextsEnum.Settings, "Configurações" },
-                { AvatarMenuTextsEnum.Conquers, "Conquistas" },
-                { AvatarMenuTextsEnum.ChangeLanguage, "Trocar idioma" },
-                { AvatarMenuTextsEnum.ChangeTheme, "Trocar tema" },
-                { AvatarMenuTextsEnum.Logout, "Sair" },
-            };
         }
 
-        public virtual async Task ChangeTheme()
+        private async Task SetCurrentLanguage(string language)
         {
-            CorFundo = ColorPallete.GetColor(Cor.Background, await ThemeService!.IsDarkTheme());
-            CorTexto = ColorPallete.GetColor(Cor.Text, await ThemeService!.IsDarkTheme());
+            await Task.CompletedTask;
+            CurrentLanguage = language;
 
-            if(await ThemeService!.IsDarkTheme())
+            if (language == "en-US")
             {
                 MenuTexts = new Dictionary<MainMenuTextsEnum, string>
                 {
@@ -124,6 +105,12 @@ namespace eTasks.View.Layouts
                 { AvatarMenuTextsEnum.Logout, "Sair" },
                 };
             }
+        }
+
+        public virtual async Task ChangeTheme()
+        {
+            CorFundo = ColorPallete.GetColor(Cor.Background, await ThemeService!.IsDarkTheme());
+            CorTexto = ColorPallete.GetColor(Cor.Text, await ThemeService!.IsDarkTheme());
 
             await InvokeAsync(StateHasChanged);
         }
@@ -138,6 +125,9 @@ namespace eTasks.View.Layouts
         {
             if (LayoutService != null)
                 LayoutService.OnLayoutChanged -= HandleLayoutChanged;
+
+            if(LanguageService != null)
+                LanguageService.OnLanguageChanged -= SetCurrentLanguage;
         }
         #endregion
     }

@@ -4,13 +4,16 @@ namespace eTasks.Shared.Services
 {
     public class ThemeService : IThemeService
     {
+        #region Constante e Variáveis privadas
         const string ThemeStorageKey = "ThemeIsDark";
-
-        public event Func<Task>? OnThemeChanged = null;
 
         private bool _isDark = false;
 
         private LocalStorage LocalStorage { get; set; }
+        #endregion
+
+        #region Métodos
+        public event Func<Task>? OnThemeChanged = null;
 
         public ThemeService(LocalStorage localStorage)
         {
@@ -56,5 +59,6 @@ namespace eTasks.Shared.Services
 
             return this;
         }
+        #endregion
     }
 }

@@ -22,7 +22,7 @@ namespace eTasks.View.Pages
         public string CorFundo { get; set; } = string.Empty;
         public string CorTexto { get; set; } = string.Empty;
         public string BackButtonHint { get; set; } = "Voltar";
-        public bool ThemeChange { get; set; } = false;
+        public bool ThemeChange { get; set; } = false;       
         #endregion
 
         #region Métodos
