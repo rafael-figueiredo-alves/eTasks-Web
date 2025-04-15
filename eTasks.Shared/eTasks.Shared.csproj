@@ -14,4 +14,8 @@
     <PackageReference Include="Microsoft.JSInterop" Version="9.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\eTasks.Components\eTasks.Components.csproj" />
+  </ItemGroup>
+
 </Project>

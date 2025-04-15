@@ -1,12 +1,21 @@
-﻿<PageTitle>eTasks</PageTitle>
+﻿@inject IToastService ToastService;
+
+<PageTitle>eTasks</PageTitle>
 
 <h1>Seja bem vindo ao eTasks!</h1>
 <h1>Welcome to eTasks!</h1>
 
-<img src="assets/icon-192.png" />
+<img src="assets/icon-192.png" @onclick=TesteToast />
 
 <p>Este app está em fase de desenvolvimento...</p>
 <p>This app is still under development...</p>
 
 <p>Verifique o repositório oficial em <a href="https://github.com/rafael-figueiredo-alves/eTasks-Web" target="_blank">https://github.com/rafael-figueiredo-alves/eTasks-Web</a> </p>
 <p>Check out the official repository at <a href="https://github.com/rafael-figueiredo-alves/eTasks-Web" target="_blank">https://github.com/rafael-figueiredo-alves/eTasks-Web</a> </p>
+
+@code{
+    private void TesteToast()
+    {
+        ToastService.ShowSuccess("Teste de Sucesso!");
+    }
+}

@@ -1,5 +1,7 @@
 ﻿using eFirebase4CSharp.Classes;
 using eFirebase4CSharp.Interfaces;
+using eTasks.Components.Services;
+using eTasks.Components.Services.Interfaces;
 using eTasks.Shared.Services;
 using eTasks.Shared.Services.Interfaces;
 using eTranslate;
@@ -32,6 +34,7 @@ namespace eTasks.Shared.Extensions
             Services.AddSingleton<IThemeService, ThemeService>();
             Services.AddSingleton<ILanguageService, LanguageService>();
             Services.AddSingleton<MenuTeste>();
+            Services.AddSingleton<IToastService, ToastService>();
         }
     }
 }

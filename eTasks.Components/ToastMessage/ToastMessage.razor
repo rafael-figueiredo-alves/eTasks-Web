@@ -1,0 +1,17 @@
+﻿@using eTasks.Components.Enums
+@inherits ToastMessageBase
+
+<div class="toast @(Type == ToastType.Success ? "toast-success" : "toast-error")" style="display: @(IsVisible || _isFadingOut ? "flex" : "none"); opacity: @(IsVisible ? 1 : 0););">
+    <div class="toast-icon">
+        @if (Type == ToastType.Success)
+        {
+            <span>✔</span>
+        }
+        else
+        {
+            <span>✖</span>
+        }
+    </div>
+    <div class="toast-message">@Message</div>
+    <button class="toast-close" @onclick="HideToast">✖</button>
+</div>
