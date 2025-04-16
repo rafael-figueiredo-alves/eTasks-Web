@@ -7,14 +7,18 @@ namespace eTasks.Components.ToastMessage
 {
     public class ToastMessageBase : ComponentBase, IDisposable
     {
+        #region Serviços
         [Inject] protected IToastService? ToastService { get; set; }
         [Inject] protected IJSRuntime? JSRuntime { get; set; }
+        #endregion
+
+        [Parameter]
+        public int ShowingTime { get; set; } = 500000;
 
         protected string Message { get; set; } = string.Empty;
         protected ToastType Type { get; set; } = ToastType.Success;
         protected bool IsVisible { get; set; } = false;
-        protected bool _isFadingOut { get; set; } = false;
-        protected System.Timers.Timer? _timer;
+        protected bool _isTimerRunning { get; set; } = false;
 
         protected override void OnInitialized()
         {
@@ -22,42 +26,36 @@ namespace eTasks.Components.ToastMessage
             {
                 ToastService.OnShow += ShowToast;
                 ToastService.OnHide += HideToast;
-
-                _timer = new Timer(5000); // 5 seconds
-                _timer.Elapsed += async (sender, e) => await OnTimerElapsed();
-                _timer.AutoReset = false;
             }
         }
 
-        protected void ShowToast(string message, ToastType type)
+        protected async void ShowToast(string message, ToastType type)
         {
             Message = message;
             Type = type;
-            _isFadingOut = false;
-            IsVisible = true;
+            IsVisible = true; 
             StateHasChanged();
 
             // Start the timer for auto-hide
-            _timer?.Stop();
-            _timer?.Start();
+            if (!_isTimerRunning)
+            {
+                _isTimerRunning = true;
+                await Task.Delay(ShowingTime); // 5 seconds
+                if (_isTimerRunning)
+                {
+                    await HideToast();
+                }
+            }
         }
 
         protected async Task HideToast()
         {
-            _timer?.Stop();
-            _isFadingOut = true;
-            IsVisible = false;
+            _isTimerRunning = false;
+            IsVisible = false; // This triggers the fade-out
             StateHasChanged();
 
             // Wait for the fade-out animation to complete (300ms)
             await Task.Delay(300);
-            _isFadingOut = false;
-            StateHasChanged();
-        }
-
-        private async Task OnTimerElapsed()
-        {
-            await HideToast();
         }
 
         public void Dispose()
@@ -66,7 +64,6 @@ namespace eTasks.Components.ToastMessage
             {
                 ToastService.OnShow -= ShowToast;
                 ToastService.OnHide -= HideToast;
-                _timer?.Dispose();
             }
         }
     }
