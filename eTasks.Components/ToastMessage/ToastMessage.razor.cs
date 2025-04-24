@@ -12,14 +12,19 @@ namespace eTasks.Components.ToastMessage
         [Inject] protected IJSRuntime? JSRuntime { get; set; }
         #endregion
 
+        #region Parâmetros
         [Parameter]
         public int ShowingTime { get; set; } = 500000;
+        #endregion
 
+        #region Variáveis
         protected string Message { get; set; } = string.Empty;
         protected ToastType Type { get; set; } = ToastType.Success;
         protected bool IsVisible { get; set; } = false;
         protected bool _isTimerRunning { get; set; } = false;
+        #endregion
 
+        #region Métodos
         protected override void OnInitialized()
         {
             if(ToastService != null)
@@ -66,5 +71,6 @@ namespace eTasks.Components.ToastMessage
                 ToastService.OnHide -= HideToast;
             }
         }
+        #endregion
     }
 }
