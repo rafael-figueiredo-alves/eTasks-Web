@@ -10,7 +10,7 @@ window.mostrarModal = function (modalId) {
     // Se já existe uma instância, reutilize-a
     if (!window.modalInstance) {
         window.modalInstance = new bootstrap.Modal(modalElement, {
-            backdrop: true // Garante apenas um backdrop
+            backdrop: 'static' // Garante apenas um backdrop
         });
     }
 

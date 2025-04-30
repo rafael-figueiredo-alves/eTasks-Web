@@ -44,6 +44,38 @@
 .iconbutton:active[b-ic4utoi6x4] {
     transform: scale(0.95); /* Pequeno efeito de "aperto" ao clicar */
 }
+/* _content/eTasks.Components/Dialog/ModalDialog.razor.rz.scp.css */
+.ModalDialog-remove-bordas[b-tr5tbilv2q] {
+    border: none;
+}
+
+.HandPoint-cursor-button[b-tr5tbilv2q] {
+    cursor: pointer;
+}
+
+.Title-settings[b-tr5tbilv2q] {
+    font-family: Roboto;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.ModalDialog-Header-settings[b-tr5tbilv2q] {
+    padding: 0px;
+    padding-top: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.ModalDialog-DarkMode[b-tr5tbilv2q] {
+    background-color: #212529;
+    color: #FFFFFF;
+}
+
+.ModalDialog-LightMode[b-tr5tbilv2q] {
+    background-color: #FFFFFF;
+    color: #336699;
+}
 /* _content/eTasks.Components/ToastMessage/ToastMessage.razor.rz.scp.css */
 .toast[b-51weikrky8] {
     position: fixed;
