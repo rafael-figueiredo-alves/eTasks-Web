@@ -2,16 +2,5 @@
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <Teste />
-    <eTasks.Components.Dialog.ModalDialog @ref=Modal />
-    <button @onclick="btnClicked">Modal</button>
 </LayoutView>
-
-@code{
-    private eTasks.Components.Dialog.ModalDialog? Modal { get; set; }
-
-    private async Task btnClicked()
-    {
-        await Modal!.OpenDialog();
-    }
-}
 

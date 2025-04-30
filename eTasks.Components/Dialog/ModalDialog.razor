@@ -1,18 +1,18 @@
 ﻿@inherits ModalDialogBase
 
-<div class="modal fade" id="@ModalId" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">Título do Modal</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+<div class="modal fade" id="@ModalId" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")">
+            <div class="modal-header ModalDialog-remove-bordas ModalDialog-Header-settings @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")">
+                <img src="@DialogIcon" height="40" width="40" title="" />
+                <h5 class="modal-title Title-settings @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")" id="modalLabel">@Titulo.ToUpper()</h5>
             </div>
-            <div class="modal-body">
-                Conteúdo do modal aqui.
+            <div class="modal-body ModalDialog-remove-bordas @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")">
+                @Mensagem
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick=EscreveMsg>Salvar</button>
+            <div class="modal-footer ModalDialog-remove-bordas @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")">
+                <img src="@(basePath + "CancelBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" role="button" />
+                <img src="@(basePath + "OkBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" @onclick=EscreveMsg role="button" />
             </div>
         </div>
     </div>

@@ -35,6 +35,7 @@ namespace eTasks.Shared.Extensions
             Services.AddSingleton<ILanguageService, LanguageService>();
             Services.AddSingleton<MenuTeste>();
             Services.AddSingleton<IToastService, ToastService>();
+            Services.AddSingleton<IDialogService, DialogService>();
         }
     }
 }

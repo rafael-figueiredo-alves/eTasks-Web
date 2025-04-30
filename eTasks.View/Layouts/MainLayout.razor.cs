@@ -1,8 +1,10 @@
 ﻿using eTasks.Components.Menus;
+using eTasks.Components.Services.Interfaces;
 using eTasks.Shared.Extensions;
 using eTasks.Shared.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
+using System.Threading.Tasks;
 
 namespace eTasks.View.Layouts
 {
@@ -10,6 +12,7 @@ namespace eTasks.View.Layouts
     {
         #region Serviços
         [Inject] public MenuTeste? MenuTeste { get; set; }
+        [Inject] public IDialogService? DialogService { get; set; }
         #endregion
 
         #region Variáveis
@@ -48,7 +51,13 @@ namespace eTasks.View.Layouts
             await ChangeTheme();
         }
 
-        protected void GoGoogle()
+        protected async Task GoGoogle()
+        {
+            await DialogService!.Confirm("Teste", "Teste");
+            //NavigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
+        }
+
+        protected void testeIrGoogle()
         {
             NavigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
         }

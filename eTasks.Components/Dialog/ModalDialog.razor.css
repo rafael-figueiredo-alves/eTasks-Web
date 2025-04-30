@@ -1,0 +1,31 @@
+﻿.ModalDialog-remove-bordas {
+    border: none;
+}
+
+.HandPoint-cursor-button {
+    cursor: pointer;
+}
+
+.Title-settings {
+    font-family: Roboto;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.ModalDialog-Header-settings {
+    padding: 0px;
+    padding-top: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.ModalDialog-DarkMode {
+    background-color: #212529;
+    color: #FFFFFF;
+}
+
+.ModalDialog-LightMode {
+    background-color: #FFFFFF;
+    color: #336699;
+}
