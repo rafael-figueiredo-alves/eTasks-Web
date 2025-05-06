@@ -53,7 +53,7 @@ namespace eTasks.View.Layouts
 
         protected async Task GoGoogle()
         {
-            await DialogService!.Confirm("Teste", "Teste");
+            await DialogService!.ShowInfo("Teste", "Teste");
             //NavigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
         }
 

@@ -7,8 +7,8 @@
                 <img src="@DialogIcon" height="40" width="40" title="" />
                 <h5 class="modal-title Title-settings @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")" id="modalLabel">@Titulo.ToUpper()</h5>
             </div>
-            <div class="modal-body ModalDialog-remove-bordas @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")">
-                @Mensagem
+            <div class="modal-body ModalDialog-remove-bordas @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode") d-flex justify-content-center">
+                @((MarkupString)Mensagem)
             </div>
             <div class="modal-footer ModalDialog-remove-bordas @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")">
                 <img src="@(basePath + "CancelBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" role="button" />
