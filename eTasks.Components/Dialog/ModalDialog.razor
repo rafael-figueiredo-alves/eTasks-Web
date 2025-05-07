@@ -11,7 +11,7 @@
                 @((MarkupString)Mensagem)
             </div>
             <div class="modal-footer ModalDialog-remove-bordas @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")">
-                <img src="@(basePath + "CancelBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" role="button" />
+                <img src="@(basePath + "CancelBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" role="button" @onclick=HideModal />
                 <img src="@(basePath + "OkBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" @onclick=EscreveMsg role="button" />
             </div>
         </div>

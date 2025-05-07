@@ -5,7 +5,7 @@ using Microsoft.JSInterop;
 
 namespace eTasks.Components.Dialog
 {
-    public class ModalDialogBase : ComponentBase, IDisposable
+    public class ModalDialogBase : ComponentBase, IAsyncDisposable
     {
         #region Serviços Injetados
         [Inject] protected IJSRuntime? JSRuntime {  get; set; }
@@ -28,6 +28,7 @@ namespace eTasks.Components.Dialog
 
         protected EventCallback? OnConfirmClicked { get; set; }
         protected EventCallback? OnCancelClicked { get; set; }
+        protected DotNetObjectReference<ModalDialogBase>? objRef;
         #endregion
 
         protected override void OnInitialized()
@@ -85,25 +86,44 @@ namespace eTasks.Components.Dialog
             StateHasChanged();
 
             await JSRuntime!.InvokeVoidAsync("mostrarModal", ModalId);
+
+            objRef = DotNetObjectReference.Create(this);
+            await JSRuntime!.InvokeVoidAsync("modalInterop.pushStateForModal", objRef);
         }
 
         public async Task HideModal()
         {
             await JSRuntime!.InvokeVoidAsync("fecharModal", ModalId);
+
+            await JSRuntime!.InvokeVoidAsync("modalInterop.popState");
         }
 
         protected async Task EscreveMsg()
         {
             if (OnConfirmClicked.HasValue)
                 await OnConfirmClicked.Value.InvokeAsync();
+
+            await HideModal();
         }
 
-        public void Dispose()
+        [JSInvokable]
+        public async Task OnBrowserBack()
+        {
+            await HideModal(); // Fechar como se tivesse clicado em "cancelar"
+        }
+
+        public async ValueTask DisposeAsync()
         {
             if (DialogService != null)
             {
                 DialogService.OnShow -= ShowDialog;
                 DialogService.OnHide -= HideModal;
+            }
+
+            if (objRef != null)
+            {
+                objRef.Dispose();
+                await JSRuntime!.InvokeVoidAsync("modalInterop.clear");
             }
         }
     }
