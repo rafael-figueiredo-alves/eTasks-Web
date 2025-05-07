@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "zJHFe/UF",
+  "version": "2C1qBsgr",
   "assets": [
     {
       "hash": "sha256-5lhoRIVv3hyf8qeyxTn5hzQ+gZxbfPgLn5kWtNHu3aw=",
@@ -146,7 +146,7 @@ self.assetsManifest = {
       "url": "_framework/System.Threading.vuopdrx302.wasm"
     },
     {
-      "hash": "sha256-8D1KbQXnPoVkn24CMPOucTVSIVV3wCYo2qjNguhSaXA=",
+      "hash": "sha256-Gq5o2cdel+kMabutC+zdW+37i+4DG/j5ytpd5cQaO/o=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -174,20 +174,20 @@ self.assetsManifest = {
       "url": "_framework/eFirebase4CSharp.frv3mfveo7.wasm"
     },
     {
-      "hash": "sha256-hc69byiKEl8fzPzSBbty6cYhP6Y3YU9T9bo0cvytSLc=",
-      "url": "_framework/eTasks.Components.19ovqevsit.wasm"
+      "hash": "sha256-OKXXdBY5IKfGUFSGPhRjtxk4WofdXXuajNUJF2iOHr0=",
+      "url": "_framework/eTasks.Components.waorrb61js.wasm"
     },
     {
-      "hash": "sha256-WhIg9hKQeYrXVJIpBy55dVDMflI0LReV2l7cNO85iEs=",
-      "url": "_framework/eTasks.Shared.q3uhnlty5u.wasm"
+      "hash": "sha256-h4aaqkTogFUYyceDJeMq8j9vd0pHaBMzuH2ik+BYhZ8=",
+      "url": "_framework/eTasks.Shared.nsooj4fm4i.wasm"
     },
     {
-      "hash": "sha256-byzWCN+Xt/bpwHN5P3se5+T0jtEubzBBCoi/9yIBROQ=",
-      "url": "_framework/eTasks.View.d5xn8hekvi.wasm"
+      "hash": "sha256-joTXBe9zYzYekUqDb24BtrZ1CAcpREVFt/lRzXXgQhk=",
+      "url": "_framework/eTasks.View.2ntmtqi5xl.wasm"
     },
     {
-      "hash": "sha256-kykG+6V9lYywbO+AHXRNWTZeLcNhUOHoyPVqcYjWuPI=",
-      "url": "_framework/eTasks.p1vlave1vg.wasm"
+      "hash": "sha256-fmT0XohunrlcjMaQVnN7kb71ad/PCz04FGXKoc2pGvw=",
+      "url": "_framework/eTasks.iflcxryxo4.wasm"
     },
     {
       "hash": "sha256-Ys/5ICwGLiR1NuhuMSAtDaRH3a6FnwLX4TT+/ctn9Kw=",
@@ -530,12 +530,16 @@ self.assetsManifest = {
       "url": "eTasks.styles.css"
     },
     {
-      "hash": "sha256-fMx7bJ7khuL3P42YJIbGK3yfQe1f/76FQh4gdUlxsxI=",
+      "hash": "sha256-rb3fIxvQGYfd9QnyvHbgi2ffFgL3/5CWsULaE46QaDA=",
       "url": "index.html"
     },
     {
       "hash": "sha256-RPfbqzXGUrtg3yRs5heltK8yQTnC3jcpyrkzqAxQ9rk=",
       "url": "js/ModalDialog.js"
+    },
+    {
+      "hash": "sha256-8GpAPwJ9q5YHH3yZ0qor5MMFYBibcprC70ShBREJwOQ=",
+      "url": "js/ModalInterop.js"
     },
     {
       "hash": "sha256-SWymZFkT0BQM8ZU8SRDm0of7nkDOoBK2JiycBhTGeik=",
