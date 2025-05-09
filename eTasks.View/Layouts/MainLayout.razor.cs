@@ -53,7 +53,16 @@ namespace eTasks.View.Layouts
 
         protected async Task GoGoogle()
         {
-            await DialogService!.ShowInfo("Teste", "Teste");
+            try
+            {
+                var num1 = 24;
+                var num2 = 0;
+                var Teste = num1 / num2;
+            }
+            catch (Exception ex)
+            {
+                await DialogService!.ShowError("ERRO", ex);
+            }
             //NavigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
         }
 

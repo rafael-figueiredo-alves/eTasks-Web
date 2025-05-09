@@ -14,7 +14,7 @@ namespace eTasks.Components.ToastMessage
 
         #region Parâmetros
         [Parameter]
-        public int ShowingTime { get; set; } = 500000;
+        public int ShowingTime { get; set; } = 3000;
         #endregion
 
         #region Variáveis

@@ -1,0 +1,7 @@
+﻿@inherits AccordionBase
+
+<div class="accordion @(IsDarkMode ? "Accordion-DarkMode" : "Accordion-LightMode")" id="@AccordionID" style="@Style">
+    <CascadingValue Value="@IsDarkMode">
+        @ChildContent
+    </CascadingValue>
+</div>

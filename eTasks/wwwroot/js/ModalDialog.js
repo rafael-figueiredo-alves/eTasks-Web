@@ -32,3 +32,13 @@ window.fecharModal = function (modalId) {
         });
     }
 };
+
+window.copyToClipboard = async function (text) {
+    try {
+        await navigator.clipboard.writeText(text);
+        return true;
+    } catch (err) {
+        console.error("Erro ao copiar para a área de transferência: ", err);
+        return false;
+    }
+};

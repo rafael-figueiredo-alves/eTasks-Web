@@ -1,0 +1,24 @@
+﻿@inherits AccordionItemBase
+
+<style>
+    .accordion-button.collapsed::after {
+        background-image: url(@imagemSeta);
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        background-image: url( @imagemSeta );
+    }
+</style>
+
+<div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button AccordionItem-RemoveBorder @(IsDarkMode ? "AccordionItem-DarkMode" : "AccordionItem-LightMode") @(Expanded ? "" : "collapsed")" type="button" data-bs-toggle="collapse" data-bs-target="#@(ID)" aria-expanded="true" aria-controls="@(ID)">
+            @Title
+        </button>
+    </h2>
+    <div id="@(ID)" class="accordion-collapse collapse @(Expanded ? "show" : "")">
+        <div class="accordion-body AccordionItem-Container-Body @(IsDarkMode ? "AccordionItem-DarkMode" : "AccordionItem-LightMode")" style="@(BodyHeight != null ? $"height: {BodyHeight}" : "")">
+            @ChildContent
+        </div>
+    </div>
+</div>

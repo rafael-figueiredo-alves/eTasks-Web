@@ -1,4 +1,5 @@
-﻿@inherits ModalDialogBase
+﻿@using eTasks.Components.Containers
+@inherits ModalDialogBase
 
 <div class="modal fade" id="@ModalId" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -7,12 +8,28 @@
                 <img src="@DialogIcon" height="40" width="40" title="" />
                 <h5 class="modal-title Title-settings @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")" id="modalLabel">@Titulo.ToUpper()</h5>
             </div>
-            <div class="modal-body ModalDialog-remove-bordas @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode") d-flex justify-content-center">
+            <div class="modal-body ModalDialog-remove-bordas @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode") d-flex justify-content-center align-items-center" style="flex-direction: column">
                 @((MarkupString)Mensagem)
+
+                @if(DialogType == Enums.DialogType.Error && (!string.IsNullOrEmpty(MaisDetalhes)))
+                {
+                    <Accordion IsDarkMode=@IsDarkMode Style="margin-top: 10px; width: 100%">
+                        <AccordionItem Title="@TituloMaisDetalhes" BodyHeight="100px" Expanded=@DetalhesExpanded>
+                            @MaisDetalhes
+                        </AccordionItem>
+                    </Accordion>
+                }
             </div>
             <div class="modal-footer ModalDialog-remove-bordas @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")">
-                <img src="@(basePath + "CancelBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" role="button" @onclick=HideModal />
-                <img src="@(basePath + "OkBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" @onclick=EscreveMsg role="button" />
+                @if (DialogType == Enums.DialogType.Error)
+                {
+                    <img src="@(basePath + "CopyBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="Copiar/Copy" role="button" @onclick=OnCopyButtonClick />
+                }
+                else
+                {
+                    <img src="@(basePath + "CancelBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" role="button" @onclick=OnCancelButtonClick />
+                }
+                <img src="@(basePath + "OkBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" @onclick=OnConfirmButtonClick role="button" />
             </div>
         </div>
     </div>

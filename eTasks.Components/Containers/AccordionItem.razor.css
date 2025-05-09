@@ -1,0 +1,18 @@
+﻿.AccordionItem-DarkMode {
+    background-color: #212529;
+    color: #FFFFFF;
+}
+
+.AccordionItem-LightMode {
+    background-color: #FFFFFF;
+    color: #336699;
+}
+
+.AccordionItem-Container-Body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.AccordionItem-RemoveBorder {
+    box-shadow: none;
+}

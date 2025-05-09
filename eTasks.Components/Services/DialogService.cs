@@ -75,7 +75,7 @@ namespace eTasks.Components.Services
             {
                 Titulo = Title,
                 Mensagem = Message.Message,
-                TipoDeDialogo = Enums.DialogType.ConfirmDelete,
+                TipoDeDialogo = Enums.DialogType.Error,
                 ConfirmarClick = OnConfirm,
                 Stacktrace = Message.StackTrace
             });

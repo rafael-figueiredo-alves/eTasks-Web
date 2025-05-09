@@ -10,10 +10,12 @@ namespace eTasks.Components.Dialog
         #region Serviços Injetados
         [Inject] protected IJSRuntime? JSRuntime {  get; set; }
         [Inject] protected IDialogService? DialogService { get; set; }
+        [Inject] protected IToastService? ToastService { get; set; }
         #endregion
 
         #region Parâmetros
         [Parameter] public bool IsDarkMode { get; set; } = false;
+        [Parameter] public string TituloMaisDetalhes { get; set; } = "Mais detalhes";
         #endregion
 
         #region Variáveis
@@ -24,6 +26,8 @@ namespace eTasks.Components.Dialog
 
         protected string Titulo { get; set; } = "EXCLUIR TAREFA?";
         protected string Mensagem { get; set; } = "Tem certeza que deseja mesmo excluir a tarefa selecionada ?";
+        protected string? MaisDetalhes { get; set; } = null;
+        protected bool DetalhesExpanded { get; set; } = false;
         protected DialogType? DialogType { get; set; } = Enums.DialogType.ConfirmDelete;
 
         protected EventCallback? OnConfirmClicked { get; set; }
@@ -75,13 +79,15 @@ namespace eTasks.Components.Dialog
 
         public async Task ShowDialog(DialogOptions dialogOptions)
         {
+            DetalhesExpanded = false;
             DialogType = dialogOptions.TipoDeDialogo;
             GetDialogIcon();
 
             Titulo = dialogOptions.Titulo;
             Mensagem = dialogOptions.Mensagem;
-            OnConfirmClicked = OnConfirmClicked;
-            OnCancelClicked = OnCancelClicked;
+            OnConfirmClicked = dialogOptions.ConfirmarClick;
+            OnCancelClicked = dialogOptions.CancelarClick;
+            MaisDetalhes = dialogOptions.Stacktrace;
 
             StateHasChanged();
 
@@ -98,7 +104,7 @@ namespace eTasks.Components.Dialog
             await JSRuntime!.InvokeVoidAsync("modalInterop.popState");
         }
 
-        protected async Task EscreveMsg()
+        protected async Task OnConfirmButtonClick()
         {
             if (OnConfirmClicked.HasValue)
                 await OnConfirmClicked.Value.InvokeAsync();
@@ -106,10 +112,31 @@ namespace eTasks.Components.Dialog
             await HideModal();
         }
 
+        protected async Task OnCancelButtonClick()
+        {
+            if (OnCancelClicked.HasValue)
+                await OnCancelClicked.Value.InvokeAsync();
+
+            await HideModal();
+        }
+
+        protected async Task OnCopyButtonClick()
+        {
+            var TextoACopiar = $"{Mensagem}\n{MaisDetalhes}";
+            var retorno = await JSRuntime!.InvokeAsync<bool>("copyToClipboard", TextoACopiar);
+            if (retorno == true)
+                ToastService!.ShowSuccess("Msg. de Erro copiada com sucesso!");
+            else
+                ToastService!.ShowError("Não foi possível copiar erro!");
+        }
+
         [JSInvokable]
         public async Task OnBrowserBack()
         {
-            await HideModal(); // Fechar como se tivesse clicado em "cancelar"
+            if (DialogType == Enums.DialogType.Error)
+                await OnConfirmButtonClick();
+            else
+                await OnCancelButtonClick(); // Fechar como se tivesse clicado em "cancelar"
         }
 
         public async ValueTask DisposeAsync()
