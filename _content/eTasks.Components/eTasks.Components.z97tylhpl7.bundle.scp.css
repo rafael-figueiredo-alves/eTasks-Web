@@ -44,6 +44,35 @@
 .iconbutton:active[b-ic4utoi6x4] {
     transform: scale(0.95); /* Pequeno efeito de "aperto" ao clicar */
 }
+/* _content/eTasks.Components/Containers/Accordion.razor.rz.scp.css */
+.Accordion-DarkMode[b-uc9dnutpu8] {
+    background-color: #212529;
+    color: #FFFFFF;
+}
+
+.Accordion-LightMode[b-uc9dnutpu8] {
+    background-color: #FFFFFF;
+    color: #336699;
+}
+/* _content/eTasks.Components/Containers/AccordionItem.razor.rz.scp.css */
+.AccordionItem-DarkMode[b-bz5meijxf7] {
+    background-color: #212529;
+    color: #FFFFFF;
+}
+
+.AccordionItem-LightMode[b-bz5meijxf7] {
+    background-color: #FFFFFF;
+    color: #336699;
+}
+
+.AccordionItem-Container-Body[b-bz5meijxf7] {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.AccordionItem-RemoveBorder[b-bz5meijxf7] {
+    box-shadow: none;
+}
 /* _content/eTasks.Components/Dialog/ModalDialog.razor.rz.scp.css */
 .ModalDialog-remove-bordas[b-tr5tbilv2q] {
     border: none;
@@ -89,7 +118,7 @@
     color: white;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    z-index: 1050;
+    z-index: 9999;
     min-width: 340px;
     opacity: 0; /* Start with opacity 0 */
     transition: opacity 0.3s ease-in-out;
