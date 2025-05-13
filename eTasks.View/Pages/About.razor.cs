@@ -1,9 +1,14 @@
-﻿using eTasks.Shared.Extensions;
+﻿using eTasks.Components.Services;
+using eTasks.Components.Services.Interfaces;
+using eTasks.Shared.Extensions;
+using Microsoft.AspNetCore.Components;
 
 namespace eTasks.View.Pages
 {
     public class AboutBase : PageBase
     {
+        [Inject] protected IDialogService? DialogService { get; set; }
+
         protected string Versao { get; set; } = string.Empty;
 
         protected override async Task OnInitializedAsync()
@@ -16,6 +21,11 @@ namespace eTasks.View.Pages
         protected void Voltar()
         {
             NavigationManager?.GoHome();
+        }
+
+        protected async Task TesteMsg()
+        {
+            await DialogService!.ShowInfo("Fica a Dica", "<p>Testando caixas de mensagem no sistema inteiro</p>", null);
         }
     }
 }

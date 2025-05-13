@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 
 namespace eTasks.Components.Containers
 {
     public class AccordionItemBase : ComponentBase
     {
+        [Inject] public IJSRuntime? JSRuntime { get; set; }
+
         [CascadingParameter] public bool IsDarkMode { get; set; } = false;
         [Parameter] public bool Expanded { get; set; } = false;
         [Parameter] public RenderFragment? ChildContent { get; set; }
@@ -16,6 +19,12 @@ namespace eTasks.Components.Containers
         protected override void OnParametersSet()
         {
             imagemSeta = $"assets/UI/dialogs/{(IsDarkMode ? "dark" : "light")}/DetailsBtn.png";
+        }
+
+        public async Task CloseAccordionItem()
+        {
+            if(JSRuntime != null)
+                await JSRuntime.InvokeVoidAsync("CloseAccordionItem", ID);
         }
     }
 }

@@ -1,6 +1,11 @@
-﻿@inherits LayoutsBase
+﻿@using eTasks.Components.Dialog
+@inherits LayoutsBase
 
 @Body
+
+<ToastMessage />
+
+<ModalDialog IsDarkMode="@ThemeChange" />
 
 @code {
     protected string Title { get; set; } = "Minhas Tarefas";

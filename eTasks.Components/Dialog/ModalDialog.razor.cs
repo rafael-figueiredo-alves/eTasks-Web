@@ -1,4 +1,5 @@
-﻿using eTasks.Components.Enums;
+﻿using eTasks.Components.Containers;
+using eTasks.Components.Enums;
 using eTasks.Components.Services.Interfaces;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
@@ -33,6 +34,7 @@ namespace eTasks.Components.Dialog
         protected EventCallback? OnConfirmClicked { get; set; }
         protected EventCallback? OnCancelClicked { get; set; }
         protected DotNetObjectReference<ModalDialogBase>? objRef;
+        protected AccordionItem? ErrorDetailItem { get; set; }
         #endregion
 
         protected override void OnInitialized()
@@ -88,6 +90,9 @@ namespace eTasks.Components.Dialog
             OnConfirmClicked = dialogOptions.ConfirmarClick;
             OnCancelClicked = dialogOptions.CancelarClick;
             MaisDetalhes = dialogOptions.Stacktrace;
+
+            if(ErrorDetailItem != null)
+                await ErrorDetailItem.CloseAccordionItem();
 
             StateHasChanged();
 

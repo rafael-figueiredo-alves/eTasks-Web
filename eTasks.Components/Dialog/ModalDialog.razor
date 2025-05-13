@@ -14,7 +14,7 @@
                 @if(DialogType == Enums.DialogType.Error && (!string.IsNullOrEmpty(MaisDetalhes)))
                 {
                     <Accordion IsDarkMode=@IsDarkMode Style="margin-top: 10px; width: 100%">
-                        <AccordionItem Title="@TituloMaisDetalhes" BodyHeight="100px" Expanded=@DetalhesExpanded>
+                        <AccordionItem @ref=ErrorDetailItem Title="@TituloMaisDetalhes" BodyHeight="100px" Expanded=@DetalhesExpanded>
                             @MaisDetalhes
                         </AccordionItem>
                     </Accordion>

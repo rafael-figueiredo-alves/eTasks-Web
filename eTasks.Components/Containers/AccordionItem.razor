@@ -10,6 +10,22 @@
     }
 </style>
 
+<script>
+    window.CloseAccordionItem = function (itemId) {
+        const element = document.getElementById(itemId);
+            if (!element) {
+                console.error(`Accordion item with ID ${itemId} not found.`);
+                return;
+            }
+
+            const bsCollapse = new bootstrap.Collapse(element, {
+                toggle: false
+            });
+
+            bsCollapse.hide();
+    };
+</script>
+
 <div class="accordion-item">
     <h2 class="accordion-header">
         <button class="accordion-button AccordionItem-RemoveBorder @(IsDarkMode ? "AccordionItem-DarkMode" : "AccordionItem-LightMode") @(Expanded ? "" : "collapsed")" type="button" data-bs-toggle="collapse" data-bs-target="#@(ID)" aria-expanded="true" aria-controls="@(ID)">
