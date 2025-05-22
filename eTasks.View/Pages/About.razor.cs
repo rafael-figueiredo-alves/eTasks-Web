@@ -25,7 +25,7 @@ namespace eTasks.View.Pages
 
         protected async Task TesteMsg()
         {
-            await DialogService!.ShowInfo("Fica a Dica", "<p>Testando caixas de mensagem no sistema inteiro</p>", null);
+            await DialogService!.ShowInfo("Fica a Dica", "Testando caixas de mensagem no sistema inteiro", null);
         }
     }
 }
