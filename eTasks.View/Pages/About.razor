@@ -21,7 +21,7 @@
 
 <LayoutView Layout="TipoLayout">
     <div class="@(async () => await ThemeService!.IsDarkTheme() ? "LayoutView-dark" : "LayoutView")">
-        <NavBar IsMobile="@IsMobile" Title="Novo Lançamento" OnBackButtonClick="Voltar" OnCheckButtonClick="TesteMsg" IsDarkMode="@ThemeChange" BackButtonText="@BackButtonHint" />
+        <NavBar IsMobile="@IsMobile" Title="Novo Lançamento" OnBackButtonClick="Voltar" OnCheckButtonClick="TesteMsg" OnDeleteButtonClick="DelMsg" IsDarkMode="@ThemeChange" BackButtonText="@BackButtonHint" />
 <h3>About @Versao @ThemeChange</h3>
 <Teste2></Teste2>
  </div>

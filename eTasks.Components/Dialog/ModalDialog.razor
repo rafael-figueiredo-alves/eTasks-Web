@@ -27,7 +27,10 @@
                 }
                 else
                 {
-                    <img src="@(basePath + "CancelBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" role="button" @onclick=OnCancelButtonClick />
+                    if ((DialogType == Enums.DialogType.Confirm) || (DialogType == Enums.DialogType.ConfirmDelete))
+                    {
+                        <img src="@(basePath + "CancelBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" role="button" @onclick=OnCancelButtonClick />
+                    }
                 }
                 <img src="@(basePath + "OkBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" @onclick=OnConfirmButtonClick role="button" />
             </div>

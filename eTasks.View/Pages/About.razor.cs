@@ -27,5 +27,10 @@ namespace eTasks.View.Pages
         {
             await DialogService!.ShowInfo("Fica a Dica", "Testando caixas de mensagem no sistema inteiro", null);
         }
+
+        protected async Task DelMsg()
+        {
+            await DialogService!.ConfirmDelete("Deletar", "Apagar?");
+        }
     }
 }
