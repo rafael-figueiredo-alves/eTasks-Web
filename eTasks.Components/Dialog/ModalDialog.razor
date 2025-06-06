@@ -5,10 +5,10 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")">
             <div class="modal-header ModalDialog-remove-bordas ModalDialog-Header-settings @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")">
-                <img src="@DialogIcon" height="40" width="40" title="" />
-                <h5 class="modal-title Title-settings @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")" id="modalLabel">@Titulo.ToUpper()</h5>
+                <img class="user-select-none" src="@DialogIcon" height="40" width="40" title="" />
+                <h5 class="modal-title Title-settings user-select-none @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")" id="modalLabel">@Titulo.ToUpper()</h5>
             </div>
-            <div class="modal-body ModalDialog-remove-bordas @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode") d-flex justify-content-center align-items-center" style="flex-direction: column">
+            <div class="modal-body ModalDialog-remove-bordas user-select-none @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode") d-flex justify-content-center align-items-center" style="flex-direction: column">
                 @((MarkupString)Mensagem)
 
                 @if(DialogType == Enums.DialogType.Error && (!string.IsNullOrEmpty(MaisDetalhes)))
@@ -23,16 +23,16 @@
             <div class="modal-footer ModalDialog-remove-bordas @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")">
                 @if (DialogType == Enums.DialogType.Error)
                 {
-                    <img src="@(basePath + "CopyBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="Copiar/Copy" role="button" @onclick=OnCopyButtonClick />
+                    <img src="@(basePath + "CopyBtn.png")" height="40" width="40" class="HandPoint-cursor-button user-select-none" title="Copiar/Copy" role="button" @onclick=OnCopyButtonClick />
                 }
                 else
                 {
                     if ((DialogType == Enums.DialogType.Confirm) || (DialogType == Enums.DialogType.ConfirmDelete))
                     {
-                        <img src="@(basePath + "CancelBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" role="button" @onclick=OnCancelButtonClick />
+                        <img src="@(basePath + "CancelBtn.png")" height="40" width="40" class="HandPoint-cursor-button user-select-none" title="" data-bs-dismiss="modal" role="button" @onclick=OnCancelButtonClick />
                     }
                 }
-                <img src="@(basePath + "OkBtn.png")" height="40" width="40" class="HandPoint-cursor-button" title="" data-bs-dismiss="modal" @onclick=OnConfirmButtonClick role="button" />
+                <img src="@(basePath + "OkBtn.png")" height="40" width="40" class="HandPoint-cursor-button user-select-none" title="" data-bs-dismiss="modal" @onclick=OnConfirmButtonClick role="button" />
             </div>
         </div>
     </div>

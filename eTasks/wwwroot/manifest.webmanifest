@@ -1,22 +1,55 @@
 {
-  "name": "eTasks",
+  "name": "eTasks - Gerenciamento de Tarefas",
   "short_name": "eTasks",
-  "id": "./",
-  "start_url": "./",
+  "id": "https://rafael-figueiredo-alves.github.io/eTasks-Web/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "display_override": [ "window-controls-overlay" ],
   "background_color": "#ffffff",
   "theme_color": "#03173d",
+  "description": "eTasks é um aplicativo PWA simples e divertido para gerenciar tarefas, construído com Blazor WebAssembly.",
+  "orientation": "portrait",
   "prefer_related_applications": false,
   "icons": [
     {
       "src": "assets/icon-512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     },
     {
       "src": "assets/icon-192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     }
-  ]
+    //{
+    //  "src": "assets/icon-180.webp",
+    //  "type": "image/webp",
+    //  "sizes": "180x180",
+    //  "purpose": "any maskable"
+    //},
+    //{
+    //  "src": "assets/icon-144.webp",
+    //  "type": "image/webp",
+    //  "sizes": "144x144",
+    //  "purpose": "any maskable"
+    //}
+  ],
+  "categories": [ "productivity", "tools", "organization" ]
+  //"shortcuts": [
+  //  {
+  //    "name": "Nova Tarefa",
+  //    "url": "/new-task",
+  //    "description": "Criar uma nova tarefa rapidamente",
+  //    "icons": [
+  //      {
+  //        "src": "assets/shortcut-new-task-96.webp",
+  //        "type": "image/webp",
+  //        "sizes": "96x96"
+  //      }
+  //    ]
+  //  }
+  //]
 }

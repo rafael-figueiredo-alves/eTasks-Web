@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using eTasks.Components.Enums;
+using Microsoft.AspNetCore.Components;
 
 namespace eTasks.Components.Bars
 {
@@ -15,8 +16,8 @@ namespace eTasks.Components.Bars
         [Parameter] public string BackButtonText { get; set; } = "Voltar";
 
         protected TopBarPosition BarPosition { get; set; } = TopBarPosition.FixedTop;
-        protected List<BarButton> Botoes { get; set; } = new();
-        protected string basePath { get; set; } = "assets/UI/toolbar/light/";
+        protected List<BarButton> Botoes { get; set; } = [];
+        protected string BasePath { get; set; } = "assets/UI/toolbar/light/";
         protected string TextColor { get; set; } = "#336699";
         protected string Height { get; set; } = "60px";
         protected string DivHeight { get; set; } = "0px";
@@ -28,9 +29,9 @@ namespace eTasks.Components.Bars
             TextColor = ColorPallete.GetColor(Cor.Primary, IsDarkMode);
 
             if (IsDarkMode)
-                basePath = "assets/UI/toolbar/dark/";
+                BasePath = "assets/UI/toolbar/dark/";
             else
-                basePath = "assets/UI/toolbar/light/";
+                BasePath = "assets/UI/toolbar/light/";
 
             if (IsMobile)
                 BarPosition = TopBarPosition.FixedTop;
@@ -48,9 +49,9 @@ namespace eTasks.Components.Bars
         private void RebuildNavBar()
         {
             Botoes.Clear();
-            Botoes.Add(new BarButton() { DicaTela = "Ajuda", Imagem = "Help.png", Visible = NavBarButtonsKind == NavBarButtonsKind.OnlyHelp ? true : false, OnClick = OnHelpButtonClick });
-            Botoes.Add(new BarButton() { DicaTela = "Apagar", Imagem = "Delete.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck ? true : false, OnClick = OnDeleteButtonClick });
-            Botoes.Add(new BarButton() { DicaTela = "Salvar", Imagem = "Accept.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck || NavBarButtonsKind == NavBarButtonsKind.OnlyCheck ? true : false, OnClick = OnCheckButtonClick });
+            Botoes.Add(new BarButton() { DicaTela = "Ajuda", Imagem = "Help.png", Visible = NavBarButtonsKind == NavBarButtonsKind.OnlyHelp, OnClick = OnHelpButtonClick });
+            Botoes.Add(new BarButton() { DicaTela = "Apagar", Imagem = "Delete.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck, OnClick = OnDeleteButtonClick });
+            Botoes.Add(new BarButton() { DicaTela = "Salvar", Imagem = "Accept.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck || NavBarButtonsKind == NavBarButtonsKind.OnlyCheck, OnClick = OnCheckButtonClick });
         }
     }
 

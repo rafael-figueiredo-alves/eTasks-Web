@@ -1,5 +1,7 @@
 ﻿using eTasks.Components;
+using eTasks.Components.Enums;
 using eTasks.Components.Menus;
+using eTasks.Components.Services.Interfaces;
 using eTasks.Shared.Services;
 using eTasks.Shared.Services.Interfaces;
 using Microsoft.AspNetCore.Components;
@@ -14,6 +16,7 @@ namespace eTasks.View.Layouts
         [Inject] public LayoutService? LayoutService { get; set; }
         [Inject] public IThemeService? ThemeService { get; set; }
         [Inject] public ILanguageService? LanguageService { get; set; }
+        [Inject] public IDialogService? DialogService { get; set; }
         [Inject] public IJSRuntime? IJSRuntime { get; set; }
         #endregion
 
@@ -42,7 +45,7 @@ namespace eTasks.View.Layouts
             if (LayoutService != null)
                 LayoutService.OnLayoutChanged += HandleLayoutChanged;
 
-            LanguageService.OnLanguageChanged += SetCurrentLanguage;
+            LanguageService!.OnLanguageChanged += SetCurrentLanguage;
             await LanguageService.SetLanguage(await LanguageService!.GetLanguage());
 
             await ChangeTheme();

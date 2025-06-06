@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using eTasks.Components.Enums;
+using Microsoft.AspNetCore.Components;
 
 namespace eTasks.Components.Bars
 {

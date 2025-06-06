@@ -4,5 +4,6 @@
     {
         public const string PortuguesBrasil = "pt-BR";
         public const string English = "en-US";
+        public const string Espanol = "es";
     }
 }

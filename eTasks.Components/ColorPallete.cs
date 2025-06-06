@@ -1,4 +1,6 @@
-﻿namespace eTasks.Components
+﻿using eTasks.Components.Enums;
+
+namespace eTasks.Components
 {
     public static class ColorPallete
     {
@@ -26,17 +28,5 @@
                     return isDarkMode ? "#FFFFFF" : "#336699";
             }
         }
-    }
-
-    public enum Cor
-    {
-        Primary,
-        Secondary,
-        Background,
-        FabButton,
-        OkButton,
-        CancelButton,
-        Shadow,
-        Text
     }
 }

@@ -12,7 +12,6 @@ namespace eTasks.View.Layouts
     {
         #region Serviços
         [Inject] public MenuTeste? MenuTeste { get; set; }
-        [Inject] public IDialogService? DialogService { get; set; }
         #endregion
 
         #region Variáveis

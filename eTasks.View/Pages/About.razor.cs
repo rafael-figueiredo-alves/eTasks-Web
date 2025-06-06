@@ -1,16 +1,9 @@
-﻿using eTasks.Components.Services;
-using eTasks.Components.Services.Interfaces;
-using eTasks.Shared.Extensions;
-using eTranslate.Interfaces;
-using Microsoft.AspNetCore.Components;
+﻿using eTasks.Shared.Extensions;
 
 namespace eTasks.View.Pages
 {
     public class AboutBase : PageBase
-    {
-        [Inject] protected IDialogService? DialogService { get; set; }
-        [Inject] protected IeTranslate? IeTranslate { get; set; }
-
+    {   
         protected string Versao { get; set; } = string.Empty;
 
         protected override async Task OnInitializedAsync()

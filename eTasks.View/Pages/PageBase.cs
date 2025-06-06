@@ -1,6 +1,9 @@
 ﻿using eTasks.Components;
+using eTasks.Components.Enums;
+using eTasks.Components.Services.Interfaces;
 using eTasks.Shared.Services;
 using eTasks.Shared.Services.Interfaces;
+using eTranslate.Interfaces;
 using Microsoft.AspNetCore.Components;
 
 namespace eTasks.View.Pages
@@ -14,6 +17,8 @@ namespace eTasks.View.Pages
         [Inject] public LayoutService? LayoutService { get; set; }
         [Inject] protected NavigationManager? NavigationManager { get; set; }
         [Inject] protected IThemeService? ThemeService { get; set; }
+        [Inject] protected IDialogService? DialogService { get; set; }
+        [Inject] protected IeTranslate? IeTranslate { get; set; }
         #endregion
 
         #region Variáveis públicas compartilhadas entre telas
