@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "AVG/g2xK",
+  "version": "IUbeuFce",
   "assets": [
     {
       "hash": "sha256-6Q+vpvjUw/SwbZkyVNwTASHW6wXCMySZbEtYppOUWdQ=",
@@ -146,7 +146,7 @@ self.assetsManifest = {
       "url": "_framework/System.Threading.1zdcxdxxda.wasm"
     },
     {
-      "hash": "sha256-7lbBmZhaT1nUkNfEdiJ1rYmpJSrw9GSESbTl59not/w=",
+      "hash": "sha256-915jrNIcDt9MHi3O30Y/5e1W1tvB9ltetvxblogluc4=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -174,20 +174,20 @@ self.assetsManifest = {
       "url": "_framework/eFirebase4CSharp.frv3mfveo7.wasm"
     },
     {
-      "hash": "sha256-ZFy94MM+6N0iEwcgIrR5sRZBgbxOE5nYZ+qjTXdB1Vo=",
-      "url": "_framework/eTasks.Components.ksq7tbd7wp.wasm"
+      "hash": "sha256-xFO0qmbIaU6FJzdLjdgJv/A4puVlS6LI8rWX2hUrjyw=",
+      "url": "_framework/eTasks.Components.8hpdq4sxpi.wasm"
     },
     {
-      "hash": "sha256-yoIUmqwKSjF+0Iluc5TXvTdBN7s1mhIoCdLIfd/JdmI=",
-      "url": "_framework/eTasks.Shared.acd9jlz5pi.wasm"
+      "hash": "sha256-CvU2/qPaCiYJauAGiWh6/aFsYQy9bCEpi7q6HF6G/f8=",
+      "url": "_framework/eTasks.Shared.2amdz0c2n9.wasm"
     },
     {
-      "hash": "sha256-NlAorCVPJ5vrWfFdIL2CGCrSvJaBn6F9NhuO8pbB3bM=",
-      "url": "_framework/eTasks.View.mhl4yehcxb.wasm"
+      "hash": "sha256-E0gCbouVJzkH5OD9gyVY7w5fzzA/zUgSz7r5bmh27uM=",
+      "url": "_framework/eTasks.View.fxavzzhyu5.wasm"
     },
     {
-      "hash": "sha256-r7nYF1hPUKycRKzlDEGX4vJBh4vwzE06yfhZtv15z6U=",
-      "url": "_framework/eTasks.xohzepnzww.wasm"
+      "hash": "sha256-Vz6ue7lNFdxiVGHWc5ec7A9jzFTDw2C9ZJ1kCZeCQa4=",
+      "url": "_framework/eTasks.fep7isc7lp.wasm"
     },
     {
       "hash": "sha256-x45c61v6Qz3WbCQ3mNIFOMsMvKcQoX9HCiQERlB/hQQ=",
@@ -530,7 +530,7 @@ self.assetsManifest = {
       "url": "eTasks.styles.css"
     },
     {
-      "hash": "sha256-rb3fIxvQGYfd9QnyvHbgi2ffFgL3/5CWsULaE46QaDA=",
+      "hash": "sha256-XsdBAiuWaZ2m1x6PryrK7dptxWZFPzRtb/yRcJeMpyY=",
       "url": "index.html"
     },
     {
@@ -558,7 +558,7 @@ self.assetsManifest = {
       "url": "js/bootstrap.bundle.min.js.map"
     },
     {
-      "hash": "sha256-fjUoYYaEBY+/zOQfkJNlzDrtbi8xuK0gZlF8vsyx9Ws=",
+      "hash": "sha256-Xrkh7IvCFyhkj/2Swq+SfXKia+m3vt6G4HSJvSIzaLU=",
       "url": "manifest.webmanifest"
     },
     {
