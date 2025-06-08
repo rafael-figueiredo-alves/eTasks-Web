@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "IUbeuFce",
+  "version": "AWc0lfiJ",
   "assets": [
     {
       "hash": "sha256-6Q+vpvjUw/SwbZkyVNwTASHW6wXCMySZbEtYppOUWdQ=",
@@ -146,7 +146,7 @@ self.assetsManifest = {
       "url": "_framework/System.Threading.1zdcxdxxda.wasm"
     },
     {
-      "hash": "sha256-915jrNIcDt9MHi3O30Y/5e1W1tvB9ltetvxblogluc4=",
+      "hash": "sha256-n/PcmsAKBp2xPStKWgpHwAOWMv4LWcwnDuIsGWiNN08=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -174,20 +174,20 @@ self.assetsManifest = {
       "url": "_framework/eFirebase4CSharp.frv3mfveo7.wasm"
     },
     {
-      "hash": "sha256-xFO0qmbIaU6FJzdLjdgJv/A4puVlS6LI8rWX2hUrjyw=",
-      "url": "_framework/eTasks.Components.8hpdq4sxpi.wasm"
+      "hash": "sha256-w1NPxzAu03I+2FWKfjbCJrVBW7J/BWx4qOTW4IfY5z8=",
+      "url": "_framework/eTasks.Components.nz42yr2sy6.wasm"
     },
     {
-      "hash": "sha256-CvU2/qPaCiYJauAGiWh6/aFsYQy9bCEpi7q6HF6G/f8=",
-      "url": "_framework/eTasks.Shared.2amdz0c2n9.wasm"
+      "hash": "sha256-CzHLVmIHcHZ2g68GADZ34q/RBGbgYobZ0IA9CjWVHJ8=",
+      "url": "_framework/eTasks.Shared.jy7n1mjrs7.wasm"
     },
     {
-      "hash": "sha256-E0gCbouVJzkH5OD9gyVY7w5fzzA/zUgSz7r5bmh27uM=",
-      "url": "_framework/eTasks.View.fxavzzhyu5.wasm"
+      "hash": "sha256-XoRRoDvo47qCb34TatHSmmsULNnB6rjYbt3TMFRuP7w=",
+      "url": "_framework/eTasks.View.e9tukadbhr.wasm"
     },
     {
-      "hash": "sha256-Vz6ue7lNFdxiVGHWc5ec7A9jzFTDw2C9ZJ1kCZeCQa4=",
-      "url": "_framework/eTasks.fep7isc7lp.wasm"
+      "hash": "sha256-FnDcAy7EuY5n5AudM91Pry77ZQunt0aLomlocGOEQ1k=",
+      "url": "_framework/eTasks.uivig8lax1.wasm"
     },
     {
       "hash": "sha256-x45c61v6Qz3WbCQ3mNIFOMsMvKcQoX9HCiQERlB/hQQ=",
