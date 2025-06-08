@@ -16,7 +16,7 @@ namespace eTasks.Components.Dialog
 
         #region Parâmetros
         [Parameter] public bool IsDarkMode { get; set; } = false;
-        [Parameter] public string TituloMaisDetalhes { get; set; } = "Mais detalhes";
+        [Parameter] public Dictionary<DialogTextsEnum, string>? DialogTextsDict { get; set; }
         #endregion
 
         #region Variáveis
@@ -130,9 +130,45 @@ namespace eTasks.Components.Dialog
             var TextoACopiar = $"{Mensagem}\n{MaisDetalhes}";
             var retorno = await JSRuntime!.InvokeAsync<bool>("copyToClipboard", TextoACopiar);
             if (retorno == true)
-                ToastService!.ShowSuccess("Msg. de Erro copiada com sucesso!");
+                ToastService!.ShowSuccess(GetDialogText(DialogTextsEnum.CopySuccessMsg));
             else
-                ToastService!.ShowError("Não foi possível copiar erro!");
+                ToastService!.ShowError(GetDialogText(DialogTextsEnum.CopyErrorMsg));
+        }
+
+        protected string GetDialogText(DialogTextsEnum text)
+        {
+            if (DialogTextsDict == null)
+                return DefaultDialogText(text);
+            return DialogTextsDict[text];
+        }
+
+        protected string DefaultDialogText(DialogTextsEnum text)
+        {
+            var TextToReturn = string.Empty;
+
+            switch (text)
+            {
+                case DialogTextsEnum.MoreDetails:
+                    TextToReturn = "Mais Detalhes";
+                    break;
+                case DialogTextsEnum.CopyErrorMsg:
+                    TextToReturn = "Não foi possível copiar erro!";
+                    break;
+                case DialogTextsEnum.CopySuccessMsg:
+                    TextToReturn = "Msg. de Erro copiada com sucesso!";
+                    break;
+                case DialogTextsEnum.CancelButton:
+                    TextToReturn = "Cancelar";
+                    break;
+                case DialogTextsEnum.OkButton:
+                    TextToReturn = "Confirmar";
+                    break;
+                case DialogTextsEnum.CopyButton:
+                    TextToReturn = "Copiar";
+                    break;
+            }
+
+            return TextToReturn;
         }
 
         [JSInvokable]

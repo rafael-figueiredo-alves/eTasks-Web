@@ -2,8 +2,10 @@
 using eTasks.Components.Enums;
 using eTasks.Components.Menus;
 using eTasks.Components.Services.Interfaces;
+using eTasks.Shared.Constants;
 using eTasks.Shared.Services;
 using eTasks.Shared.Services.Interfaces;
+using eTranslate.Interfaces;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
@@ -18,6 +20,7 @@ namespace eTasks.View.Layouts
         [Inject] public ILanguageService? LanguageService { get; set; }
         [Inject] public IDialogService? DialogService { get; set; }
         [Inject] public IJSRuntime? IJSRuntime { get; set; }
+        [Inject] public IeTranslate? ETranslate { get; set; }
         #endregion
 
         #region Variáveis compartilhadas
@@ -28,6 +31,8 @@ namespace eTasks.View.Layouts
         public string CurrentLanguage { get; set; } = "pt-BR";
         public Dictionary<MainMenuTextsEnum, string>? MenuTexts { get; set; }
         public Dictionary<AvatarMenuTextsEnum, string>? AvatarMenuTexts { get; set; }
+        public Dictionary<DialogTextsEnum, string>? DialogTexts { get; set; }
+        public string? ActionButtonHint { get; set; } = "Adicionar";
         #endregion
 
         #region Métodos
@@ -53,61 +58,43 @@ namespace eTasks.View.Layouts
 
         private async Task SetCurrentLanguage(string language)
         {
-            await Task.CompletedTask;
             CurrentLanguage = language;
 
-            if (language == "en-US")
+            MenuTexts = new Dictionary<MainMenuTextsEnum, string>
             {
-                MenuTexts = new Dictionary<MainMenuTextsEnum, string>
-                {
-                { MainMenuTextsEnum.Home, "Home" },
-                { MainMenuTextsEnum.Tasks, "Tasks" },
-                { MainMenuTextsEnum.Goals, "Goals" },
-                { MainMenuTextsEnum.Readings, "Readings" },
-                { MainMenuTextsEnum.Shopping, "Shopping" },
-                { MainMenuTextsEnum.Notes, "Notes" },
-                { MainMenuTextsEnum.Finance, "Finances" },
-                { MainMenuTextsEnum.Title, "Menu" },
-                };
-
-                AvatarMenuTexts = new Dictionary<AvatarMenuTextsEnum, string>
-                {
-                { AvatarMenuTextsEnum.EditProfile, "Edit Profile" },
-                { AvatarMenuTextsEnum.ChangePassword, "Change Password" },
-                { AvatarMenuTextsEnum.About, "About eTasks" },
-                { AvatarMenuTextsEnum.Settings, "Settings" },
-                { AvatarMenuTextsEnum.Conquers, "Conquers" },
-                { AvatarMenuTextsEnum.ChangeLanguage, "Change Language" },
-                { AvatarMenuTextsEnum.ChangeTheme, "Change Theme" },
-                { AvatarMenuTextsEnum.Logout, "Logout" },
-                };
-            }
-            else
+                { MainMenuTextsEnum.Home, await ETranslate!.Translate(TranslateKeyConsts.MainMenu_Home, "Inicio") },
+                { MainMenuTextsEnum.Tasks, await ETranslate!.Translate(TranslateKeyConsts.MainMenu_Tasks, "Tarefas") },
+                { MainMenuTextsEnum.Goals, await ETranslate!.Translate(TranslateKeyConsts.MainMenu_Goals, "Metas") },
+                { MainMenuTextsEnum.Readings, await ETranslate!.Translate(TranslateKeyConsts.MainMenu_Readings, "Leituras") },
+                { MainMenuTextsEnum.Shopping, await ETranslate!.Translate(TranslateKeyConsts.MainMenu_Shopping, "Compras") },
+                { MainMenuTextsEnum.Notes, await ETranslate!.Translate(TranslateKeyConsts.MainMenu_Notes, "Anotações") },
+                { MainMenuTextsEnum.Finance, await ETranslate!.Translate(TranslateKeyConsts.MainMenu_Finances, "Finanças") },
+                { MainMenuTextsEnum.Title, await ETranslate!.Translate(TranslateKeyConsts.MainMenu_Title, "Menu") },
+            };
+ 
+            AvatarMenuTexts = new Dictionary<AvatarMenuTextsEnum, string>
             {
-                MenuTexts = new Dictionary<MainMenuTextsEnum, string>
-                {
-                { MainMenuTextsEnum.Home, "Início_1" },
-                { MainMenuTextsEnum.Tasks, "Tarefas" },
-                { MainMenuTextsEnum.Goals, "Metas" },
-                { MainMenuTextsEnum.Readings, "Leituras" },
-                { MainMenuTextsEnum.Shopping, "Compras" },
-                { MainMenuTextsEnum.Notes, "Anotações" },
-                { MainMenuTextsEnum.Finance, "Finanças" },
-                { MainMenuTextsEnum.Title, "Opçoes" },
-                };
+                { AvatarMenuTextsEnum.EditProfile, await ETranslate!.Translate(TranslateKeyConsts.AvatarMenu_EditProfile, "Editar Perfil") },
+                { AvatarMenuTextsEnum.ChangePassword, await ETranslate!.Translate(TranslateKeyConsts.AvatarMenu_ChangePassword, "Alterar senha") },
+                { AvatarMenuTextsEnum.About, await ETranslate!.Translate(TranslateKeyConsts.AvatarMenu_About, "Sobre o eTasks") },
+                { AvatarMenuTextsEnum.Settings, await ETranslate!.Translate(TranslateKeyConsts.AvatarMenu_Settings, "Configurações") },
+                { AvatarMenuTextsEnum.Conquers, await ETranslate!.Translate(TranslateKeyConsts.AvatarMenu_Conquers, "Conquistas") },
+                { AvatarMenuTextsEnum.ChangeLanguage, await ETranslate!.Translate(TranslateKeyConsts.AvatarMenu_ChangeLanguage, "Trocar idioma") },
+                { AvatarMenuTextsEnum.ChangeTheme, await ETranslate!.Translate(TranslateKeyConsts.AvatarMenu_ChangeTheme, "Trocar tema") },
+                { AvatarMenuTextsEnum.Logout, await ETranslate!.Translate(TranslateKeyConsts.AvatarMenu_Logout, "Sair") },
+            };
 
-                AvatarMenuTexts = new Dictionary<AvatarMenuTextsEnum, string>
-                {
-                { AvatarMenuTextsEnum.EditProfile, "Editar Perfil" },
-                { AvatarMenuTextsEnum.ChangePassword, "Alterar senha" },
-                { AvatarMenuTextsEnum.About, "Sobre o eTasks" },
-                { AvatarMenuTextsEnum.Settings, "Configurações" },
-                { AvatarMenuTextsEnum.Conquers, "Conquistas" },
-                { AvatarMenuTextsEnum.ChangeLanguage, "Trocar idioma" },
-                { AvatarMenuTextsEnum.ChangeTheme, "Trocar tema" },
-                { AvatarMenuTextsEnum.Logout, "Sair" },
-                };
-            }
+            DialogTexts = new Dictionary<DialogTextsEnum, string>
+            {
+                { DialogTextsEnum.CopyErrorMsg, await ETranslate!.Translate(TranslateKeyConsts.Dialog_CopyErrorMsg, "Não foi possível copiar erro!") },
+                { DialogTextsEnum.CopySuccessMsg, await ETranslate!.Translate(TranslateKeyConsts.Dialog_CopySuccessMsg, "Msg. de Erro copiada com sucesso!") },
+                { DialogTextsEnum.CopyButton, await ETranslate!.Translate(TranslateKeyConsts.Dialog_CopyButton, "Copiar") },
+                { DialogTextsEnum.OkButton, await ETranslate!.Translate(TranslateKeyConsts.Dialog_OkButton, "Confirmar") },
+                { DialogTextsEnum.CancelButton, await ETranslate!.Translate(TranslateKeyConsts.Dialog_CancelButton, "Cancelar") },
+                { DialogTextsEnum.MoreDetails, await ETranslate!.Translate(TranslateKeyConsts.Dialog_MoreDetails, "Mais detalhes") }
+            };
+
+            ActionButtonHint = await ETranslate!.Translate(TranslateKeyConsts.ActionButton_Hint, "Adicionar");
         }
 
         public virtual async Task ChangeTheme()

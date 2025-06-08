@@ -10,7 +10,7 @@
            <div class="user-select-none" style="text-align: center; height: 27px">
                 <h3 class="user-select-none" style="font-size: 16px; color: @Components.ColorPallete.GetColor(Cor.Primary, IsDarkMode); margin: 0px;">@UserName</h3>
            </div>
-           <div class="user-select-none" style="height: 30px; text-align: center; margin-top: 10px;">
+           <div class="user-select-none" style="height: 30px; text-align: center;">
                 <img class="user-select-none" src="@ProfileButton" height="30" width="30" style="margin-right: 20px; cursor: pointer;" data-bs-dismiss="offcanvas" title="@(GetAvatarMenuText(AvatarMenuTextsEnum.EditProfile))" @onclick="OnShowProfileClick" />
                 <img class="user-select-none" src="@ChangePasswordButton" height="30" width="30" style="margin-right: 20px; cursor: pointer;" data-bs-dismiss="offcanvas" title="@(GetAvatarMenuText(AvatarMenuTextsEnum.ChangePassword))" @onclick="OnChangePasswordClick" />
                 <img class="user-select-none" src="@LogoutButton" height="30" width="30" style="margin-right: 20px; cursor: pointer;" data-bs-dismiss="offcanvas" title="@(GetAvatarMenuText(AvatarMenuTextsEnum.Logout))" @onclick="OnLogoutClick" />

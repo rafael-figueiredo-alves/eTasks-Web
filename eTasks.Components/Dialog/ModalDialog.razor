@@ -14,7 +14,7 @@
                 @if(DialogType == Enums.DialogType.Error && (!string.IsNullOrEmpty(MaisDetalhes)))
                 {
                     <Accordion IsDarkMode=@IsDarkMode Style="margin-top: 10px; width: 100%">
-                        <AccordionItem @ref=ErrorDetailItem Title="@TituloMaisDetalhes" BodyHeight="100px" Expanded=@DetalhesExpanded>
+                        <AccordionItem @ref=ErrorDetailItem Title="@GetDialogText(DialogTextsEnum.MoreDetails)" BodyHeight="100px" Expanded=@DetalhesExpanded>
                             @MaisDetalhes
                         </AccordionItem>
                     </Accordion>
@@ -23,16 +23,16 @@
             <div class="modal-footer ModalDialog-remove-bordas @(IsDarkMode ? "ModalDialog-DarkMode" : "ModalDialog-LightMode")">
                 @if (DialogType == Enums.DialogType.Error)
                 {
-                    <img src="@(basePath + "CopyBtn.png")" height="40" width="40" class="HandPoint-cursor-button user-select-none" title="Copiar/Copy" role="button" @onclick=OnCopyButtonClick />
+                    <img src="@(basePath + "CopyBtn.png")" height="40" width="40" class="HandPoint-cursor-button user-select-none" title="@GetDialogText(DialogTextsEnum.CopyButton)" role="button" @onclick=OnCopyButtonClick />
                 }
                 else
                 {
                     if ((DialogType == Enums.DialogType.Confirm) || (DialogType == Enums.DialogType.ConfirmDelete))
                     {
-                        <img src="@(basePath + "CancelBtn.png")" height="40" width="40" class="HandPoint-cursor-button user-select-none" title="" data-bs-dismiss="modal" role="button" @onclick=OnCancelButtonClick />
+                        <img src="@(basePath + "CancelBtn.png")" height="40" width="40" class="HandPoint-cursor-button user-select-none" title="@GetDialogText(DialogTextsEnum.CancelButton)" data-bs-dismiss="modal" role="button" @onclick=OnCancelButtonClick />
                     }
                 }
-                <img src="@(basePath + "OkBtn.png")" height="40" width="40" class="HandPoint-cursor-button user-select-none" title="" data-bs-dismiss="modal" @onclick=OnConfirmButtonClick role="button" />
+                <img src="@(basePath + "OkBtn.png")" height="40" width="40" class="HandPoint-cursor-button user-select-none" title="@GetDialogText(DialogTextsEnum.OkButton)" data-bs-dismiss="modal" @onclick=OnConfirmButtonClick role="button" />
             </div>
         </div>
     </div>

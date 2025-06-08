@@ -11,7 +11,7 @@
 
 <ToastMessage />
 
-<ModalDialog IsDarkMode="@ThemeChange" />
+<ModalDialog IsDarkMode="@ThemeChange" DialogTextsDict="DialogTexts" />
 
 <div class="page" style="@($"background-color: {CorFundo}; color: {CorTexto}; height: 100dvh; display: flex; flex-direction: column;")">
     <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
@@ -50,6 +50,6 @@
             }
         </article>
 
-        <ActionButton IsDarkMode="@ThemeChange" OnClick="GoGoogle" />
+        <ActionButton IsDarkMode="@ThemeChange" OnClick="GoGoogle" Hint="@ActionButtonHint" />
     </main>
 </div>
