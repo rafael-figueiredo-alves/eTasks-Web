@@ -59,6 +59,7 @@ namespace eTasks.View.Layouts
         private async Task SetCurrentLanguage(string language)
         {
             CurrentLanguage = language;
+            ETranslate!.SetLanguage(CurrentLanguage);
 
             MenuTexts = new Dictionary<MainMenuTextsEnum, string>
             {

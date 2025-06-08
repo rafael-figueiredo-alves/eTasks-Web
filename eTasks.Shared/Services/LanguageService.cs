@@ -2,22 +2,15 @@
 
 namespace eTasks.Shared.Services
 {
-    public class LanguageService : ILanguageService
+    public class LanguageService(LocalStorage localStorage) : ILanguageService
     {
         #region Constante e Variáveis privadas
         const string LanguageStorageKey = "UILanguage";
 
         private string? _Language = "pt-BR";
-
-        private LocalStorage LocalStorage { get; set; }
         #endregion
-
+        
         #region Métodos
-        public LanguageService(LocalStorage localStorage)
-        {
-            LocalStorage = localStorage;
-        }
-
         private async Task CallOnLanguageChangedEvent()
         {
             if (OnLanguageChanged != null)
@@ -30,10 +23,10 @@ namespace eTasks.Shared.Services
 
         public async Task<string> GetLanguage()
         {
-            if (!await LocalStorage.KeyExists(LanguageStorageKey))
-                await LocalStorage.SetValue(LanguageStorageKey, _Language ?? "pt-BR");
+            if (!await localStorage.KeyExists(LanguageStorageKey))
+                await localStorage.SetValue(LanguageStorageKey, _Language ?? "pt-BR");
 
-            _Language = await LocalStorage.GetValue<string>(LanguageStorageKey);
+            _Language = await localStorage.GetValue<string>(LanguageStorageKey);
 
             return _Language ?? "pt-BR";
         }
@@ -42,7 +35,7 @@ namespace eTasks.Shared.Services
         {
             _Language = language;
 
-            await LocalStorage.SetValue(LanguageStorageKey, _Language);
+            await localStorage.SetValue(LanguageStorageKey, _Language);
 
             await CallOnLanguageChangedEvent();
 
