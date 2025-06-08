@@ -1,18 +1,26 @@
-{
-    "en-US" : {
-        "Main" : {
-            "Btn1" : "{0} from {1}",
-            "Btn2" : {
-		  "Text" : "Hello, World"
-		}
+﻿{
+    "en-US": {
+        "MainMenu": {
+            "Home": "Home",
+            "Tasks": "My Tasks",
+            "Goals": "My Goals",
+            "Readings": "My Readings",
+            "Shopping": "My Shopping",
+            "Notes": "My Notes",
+            "Finances": "My Finances",
+            "Title": "Menu"
         }
     },
-    "pt-BR" : {
-        "Main" : {
-            "Btn1" : "{0} de {1}",
-            "Btn2" : {
-		  "Text" : "Olá, Mundo"
-		}
+    "pt-BR": {
+        "MainMenu": {
+            "Home": "Inicio",
+            "Tasks": "Minhas Tarefas",
+            "Goals": "Minhas Metas",
+            "Readings": "Minhas Leituras",
+            "Shopping": "Minhas Compras",
+            "Notes": "Minhas Anotações",
+            "Finances": "Minhas Finanças",
+            "Title": "Menu"
         }
     }
 }
