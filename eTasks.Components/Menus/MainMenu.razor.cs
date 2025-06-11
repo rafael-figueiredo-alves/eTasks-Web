@@ -4,7 +4,7 @@ namespace eTasks.Components.Menus
 {
     public class MainMenuBase : ComponentBase
     {
-        #region ParÂmetros
+        #region Parâmetros
         [Parameter] public bool IsDarkMode { get; set; } = false;
         [Parameter] public MainMenuItemType SelectedItem { get; set; }
         [Parameter] public EventCallback<MainMenuItemType> OnMainMenuItemClick { get; set; }

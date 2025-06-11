@@ -26,6 +26,10 @@ namespace eTasks.Shared.Constants
         public static string AvatarMenu_Logout = "AvatarMenu.Logout";
         #endregion
 
+        #region LanguageMenu
+        public static string LanguageMenu_Title = "LanguageMenu.Title";
+        #endregion
+
         #region Dialog
         public static string Dialog_CopyButton = "Dialog.CopyButton";
         public static string Dialog_CopyErrorMsg = "Dialog.CopyErrorMsg";

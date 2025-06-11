@@ -12,7 +12,10 @@
     @* Implementar LanguageMenuItem e colocar aqui para cada idioma disponível *@
     @foreach (var item in Enum.GetValues(typeof(SupportedLanguages)).Cast<SupportedLanguages>())
     {
-        <LanguageMenuItem Language="@item" Selected="@(SelectedLanguageEnum == item)" OnSelectLanguage="@(() => OnSelectLanguageClick(item))" IsDarkMode="@IsDarkMode" />
+        @if(item != SupportedLanguages.Espanol) //Remover ao disponibilizar em inglês
+        {
+            <LanguageMenuItem Language="@item" Selected="@(SelectedLanguageEnum == item)" OnSelectLanguage="@(() => OnSelectLanguageClick(item))" IsDarkMode="@IsDarkMode" />
+        }
     }
 
 </Offcanvas>

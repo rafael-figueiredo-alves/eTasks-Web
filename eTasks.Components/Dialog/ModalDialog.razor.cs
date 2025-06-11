@@ -37,6 +37,7 @@ namespace eTasks.Components.Dialog
         protected AccordionItem? ErrorDetailItem { get; set; }
         #endregion
 
+        #region Métodos
         protected override void OnInitialized()
         {
             if(DialogService != null)
@@ -194,5 +195,6 @@ namespace eTasks.Components.Dialog
                 await JSRuntime!.InvokeVoidAsync("modalInterop.clear");
             }
         }
+        #endregion
     }
 }

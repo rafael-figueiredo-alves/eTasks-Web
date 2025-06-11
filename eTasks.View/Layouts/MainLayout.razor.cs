@@ -16,7 +16,6 @@ namespace eTasks.View.Layouts
 
         #region Variáveis
         protected string Title { get; set; } = "Minhas Tarefas";
-        protected string Dica { get; set; } = "Tema escuro";
         protected MainMenuItemType SelectedMainMenuItem { get; set; }
         #endregion
 

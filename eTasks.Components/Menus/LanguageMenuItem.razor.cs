@@ -33,7 +33,8 @@ namespace eTasks.Components.Menus
     public enum SupportedLanguages
     {
         Portugues,
-        English
+        English,
+        Espanol
     }
 
     public static class LanguageUtils
@@ -44,6 +45,7 @@ namespace eTasks.Components.Menus
             {
                 SupportedLanguages.Portugues => "Português",
                 SupportedLanguages.English => "English",
+                SupportedLanguages.Espanol => "Español",
                 _ => "Unknown"
             };
         }
@@ -54,6 +56,7 @@ namespace eTasks.Components.Menus
             {
                 SupportedLanguages.Portugues => "assets/UI/languages/pt.svg",
                 SupportedLanguages.English => "assets/UI/languages/en.svg",
+                SupportedLanguages.Espanol => "assets/UI/languages/es.svg",
                 _ => "assets/UI/languages/pt.svg"
             };
         }
@@ -64,6 +67,7 @@ namespace eTasks.Components.Menus
             {
                 SupportedLanguages.Portugues => "pt-BR",
                 SupportedLanguages.English => "en-US",
+                SupportedLanguages.Espanol => "es-ES",
                 _ => "pt-BR"
             };
         }
@@ -74,6 +78,7 @@ namespace eTasks.Components.Menus
             {
                 "pt-BR" => SupportedLanguages.Portugues,
                 "en-US" => SupportedLanguages.English,
+                "es-ES" => SupportedLanguages.Espanol,
                 _ => SupportedLanguages.Portugues
             };
         }

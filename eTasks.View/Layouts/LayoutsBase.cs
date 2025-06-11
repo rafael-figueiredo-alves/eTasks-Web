@@ -33,6 +33,8 @@ namespace eTasks.View.Layouts
         public Dictionary<AvatarMenuTextsEnum, string>? AvatarMenuTexts { get; set; }
         public Dictionary<DialogTextsEnum, string>? DialogTexts { get; set; }
         public string? ActionButtonHint { get; set; } = "Adicionar";
+        public string LangageMenuTitle { get; set; } = "Idioma";
+        public string DicaTrocarIdiomaMainNavBar { get; set; } = "Trocar tema";
         #endregion
 
         #region Métodos
@@ -96,6 +98,9 @@ namespace eTasks.View.Layouts
             };
 
             ActionButtonHint = await ETranslate!.Translate(TranslateKeyConsts.ActionButton_Hint, "Adicionar");
+
+            LangageMenuTitle = await ETranslate!.Translate(TranslateKeyConsts.LanguageMenu_Title, "Idioma");
+            DicaTrocarIdiomaMainNavBar = await ETranslate!.Translate(TranslateKeyConsts.AvatarMenu_ChangeTheme, "Trocar tema");
         }
 
         public virtual async Task ChangeTheme()

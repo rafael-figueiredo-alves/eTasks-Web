@@ -9,6 +9,7 @@ namespace eTasks.Components.Services
         public event Func<DialogOptions, Task>? OnShow;
         public event Func<Task>? OnHide;
 
+        #region Métodos
         private async Task ShowDialog(DialogOptions dialogOptions)
         {
             if (OnShow != null)
@@ -28,6 +29,7 @@ namespace eTasks.Components.Services
                 CancelarClick = OnCancel
             });
         }
+
         public async Task Confirm(string Title, string Message, EventCallback? OnConfirm, EventCallback? OnCancel)
         {
             await ShowDialog(new DialogOptions
@@ -39,6 +41,7 @@ namespace eTasks.Components.Services
                 CancelarClick = OnCancel
             });
         }
+
         public async Task ShowInfo(string Title, string Message, EventCallback? OnConfirm)
         {
             await ShowDialog(new DialogOptions
@@ -49,6 +52,7 @@ namespace eTasks.Components.Services
                 ConfirmarClick = OnConfirm
             });
         }
+
         public async Task Warn(string Title, string Message, EventCallback? OnConfirm)
         {
             await ShowDialog(new DialogOptions
@@ -59,6 +63,7 @@ namespace eTasks.Components.Services
                 ConfirmarClick = OnConfirm
             });
         }
+
         public async Task ShowError(string Title, string Message, EventCallback? OnConfirm)
         {
             await ShowDialog(new DialogOptions
@@ -69,6 +74,7 @@ namespace eTasks.Components.Services
                 ConfirmarClick = OnConfirm
             });
         }
+
         public async Task ShowError(string Title, Exception Message, EventCallback? OnConfirm)
         {
             await ShowDialog(new DialogOptions
@@ -83,8 +89,10 @@ namespace eTasks.Components.Services
 
         public async Task Hide()
         {
-            if(OnHide != null) 
+            if (OnHide != null)
                 await OnHide.Invoke();
         }
+
+        #endregion
     }
 }

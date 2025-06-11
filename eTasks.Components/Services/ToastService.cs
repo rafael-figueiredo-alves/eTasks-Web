@@ -8,6 +8,7 @@ namespace eTasks.Components.Services
         public event Action<string, ToastType>? OnShow;
         public event Func<Task>? OnHide;
 
+        #region Métodos
         public void ShowSuccess(string message)
         {
             OnShow?.Invoke(message, ToastType.Success);
@@ -22,5 +23,6 @@ namespace eTasks.Components.Services
         {
             await OnHide?.Invoke()!;
         }
+        #endregion
     }
 }
