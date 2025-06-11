@@ -9,6 +9,24 @@
             "Notes": "My Notes",
             "Finances": "My Finances",
             "Title": "Menu"
+        },
+        "LanguageMenu": {
+            "Title": "Language",
+            "ActionButton": {
+            }
+        },
+        "ActionButton": {
+            "Hint": "Add"
+        },
+        "AvatarMenu": {
+            "EditProfile": "Edit Profile",
+            "ChangePassword": "Change Password",
+            "About": "About eTasks",
+            "Settings": "Settings",
+            "Conquers": "My Conquers",
+            "ChangeLanguage": "Change Language",
+            "ChangeTheme": "Change Theme",
+            "Logout": "Log out"
         }
     },
     "pt-BR": {
@@ -21,6 +39,24 @@
             "Notes": "Minhas Anotações",
             "Finances": "Minhas Finanças",
             "Title": "Menu"
+        },
+        "LanguageMenu": {
+            "Title": "Idioma",
+            "ActionButton": {
+            }
+        },
+        "ActionButton": {
+            "Hint": "Adicionar"
+        },
+        "AvatarMenu": {
+            "EditProfile": "Editar Perfil",
+            "ChangePassword": "Mudar senha",
+            "About": "Sobre o eTasks",
+            "Settings": "Configurações",
+            "Conquers": "Minhas Conquistas",
+            "ChangeLanguage": "Trocar Idioma",
+            "ChangeTheme": "Trocar tema",
+            "Logout": "Sair"
         }
     }
 }
