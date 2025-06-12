@@ -11,9 +11,7 @@
             "Title": "Menu"
         },
         "LanguageMenu": {
-            "Title": "Language",
-            "ActionButton": {
-            }
+            "Title": "Language"
         },
         "ActionButton": {
             "Hint": "Add"
@@ -27,6 +25,15 @@
             "ChangeLanguage": "Change Language",
             "ChangeTheme": "Change Theme",
             "Logout": "Log out"
+        },
+        "Titles": {
+            "HomePage": "Welcome to eTasks",
+            "TasksPage": "My Tasks",
+            "GoalsPage": "My Goals",
+            "ShoppingPage": "My Shopping Lists",
+            "ReadingsPage": "My Readings",
+            "NotesPage": "My Notes",
+            "FinancePage": "My Finances"
         }
     },
     "pt-BR": {
@@ -41,9 +48,7 @@
             "Title": "Menu"
         },
         "LanguageMenu": {
-            "Title": "Idioma",
-            "ActionButton": {
-            }
+            "Title": "Idioma"
         },
         "ActionButton": {
             "Hint": "Adicionar"
@@ -57,6 +62,15 @@
             "ChangeLanguage": "Trocar Idioma",
             "ChangeTheme": "Trocar tema",
             "Logout": "Sair"
+        },
+        "Titles": {
+            "HomePage": "Bem vindo ao eTasks",
+            "TasksPage": "Minhas Tarefas",
+            "GoalsPage": "Minhas Metas",
+            "ShoppingPage": "Minhas Compras",
+            "ReadingsPage": "Minhas Leituras",
+            "NotesPage": "Minhas Anotações",
+            "FinancePage": "Minhas Finanças"
         }
     }
 }
