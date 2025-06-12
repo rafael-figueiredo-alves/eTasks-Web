@@ -58,7 +58,7 @@ namespace eTasks.View.Layouts
             await ChangeTheme();
         }
 
-        private async Task SetCurrentLanguage(string language)
+        protected virtual async Task SetCurrentLanguage(string language)
         {
             CurrentLanguage = language;
             ETranslate!.SetLanguage(CurrentLanguage);
@@ -103,7 +103,7 @@ namespace eTasks.View.Layouts
             DicaTrocarIdiomaMainNavBar = await ETranslate!.Translate(TranslateKeyConsts.AvatarMenu_ChangeTheme, "Trocar tema");
         }
 
-        public virtual async Task ChangeTheme()
+        protected virtual async Task ChangeTheme()
         {
             CorFundo = ColorPallete.GetColor(Cor.Background, await ThemeService!.IsDarkTheme());
             CorTexto = ColorPallete.GetColor(Cor.Text, await ThemeService!.IsDarkTheme());

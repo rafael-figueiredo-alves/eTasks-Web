@@ -1,29 +1,15 @@
 ﻿@using eTasks.Components.Dialog
 @inherits LayoutsBase
 
+<style>
+    html {
+        background-color: @(!string.IsNullOrEmpty(CorFundo) ? CorFundo : "white");
+        color: @(!string.IsNullOrEmpty(CorTexto) ? CorTexto : "white");
+    }
+</style>
+
 @Body
 
 <ToastMessage />
 
 <ModalDialog IsDarkMode="@ThemeChange" DialogTextsDict="DialogTexts" />
-
-@code {
-    protected string Title { get; set; } = "Minhas Tarefas";
-    protected string Dica { get; set; } = "Tema escuro";
-
-    protected void Voltar()
-    {
-        NavigationManager?.GoHome();
-    }
-
-    private async Task TesteClick()
-    {
-        ThemeChange = await ThemeService!.IsDarkTheme();
-        await ChangeTheme();
-    }
-
-    protected void GoGoogle()
-    {
-        NavigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
-    }
-}

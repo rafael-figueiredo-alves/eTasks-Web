@@ -1,10 +1,8 @@
 ﻿using eTasks.Components.Menus;
-using eTasks.Components.Services.Interfaces;
 using eTasks.Shared.Extensions;
 using eTasks.Shared.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using System.Threading.Tasks;
 
 namespace eTasks.View.Layouts
 {
@@ -20,6 +18,13 @@ namespace eTasks.View.Layouts
         #endregion
 
         #region Métodos
+        protected override async Task SetCurrentLanguage(string language)
+        {
+            await base.SetCurrentLanguage(language);
+
+            Title = language;
+        }
+
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             if (firstRender)
@@ -39,10 +44,9 @@ namespace eTasks.View.Layouts
         {
             await Task.CompletedTask;
             await LanguageService!.SetLanguage(languageCode);
-            Console.WriteLine(languageCode);
         }
 
-        protected async Task TesteClick()
+        protected async Task OnChangeTheme()
         {
             ThemeService?.ChangeTheme();
             ThemeChange = await ThemeService!.IsDarkTheme();
@@ -133,7 +137,7 @@ namespace eTasks.View.Layouts
                     }
                     break;
                 case AvatarMenuItemType.Theme:
-                    await TesteClick();
+                    await OnChangeTheme();
                     break;
                 default:
                     NavigationManager?.NavigateTo("/");
