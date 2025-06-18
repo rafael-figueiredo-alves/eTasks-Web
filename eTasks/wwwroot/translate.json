@@ -11,7 +11,7 @@
             "Title": "Menu"
         },
         "LanguageMenu": {
-            "Title": "Language"
+            "Title": "LANGUAGES"
         },
         "ActionButton": {
             "Hint": "Add"
@@ -34,6 +34,11 @@
             "ReadingsPage": "My Readings",
             "NotesPage": "My Notes",
             "FinancePage": "My Finances"
+        },
+        "AppBar": {
+            "BtnThemeChanger": "Change theme",
+            "BtnMainMenu": "Main Menu",
+            "BtnAvatarMenu": "User's Menu"
         }
     },
     "pt-BR": {
@@ -48,7 +53,7 @@
             "Title": "Menu"
         },
         "LanguageMenu": {
-            "Title": "Idioma"
+            "Title": "IDIOMAS"
         },
         "ActionButton": {
             "Hint": "Adicionar"
@@ -71,6 +76,11 @@
             "ReadingsPage": "Minhas Leituras",
             "NotesPage": "Minhas Anotações",
             "FinancePage": "Minhas Finanças"
+        },
+        "AppBar": {
+            "BtnThemeChanger": "Trocar Tema",
+            "BtnMainMenu": "Menu Principal",
+            "BtnAvatarMenu": "Menu do Usuário"
         }
     }
 }
