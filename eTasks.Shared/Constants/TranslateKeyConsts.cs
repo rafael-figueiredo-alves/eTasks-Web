@@ -1,6 +1,4 @@
-﻿using eTasks.Components.Menus;
-
-namespace eTasks.Shared.Constants
+﻿namespace eTasks.Shared.Constants
 {
     public static class TranslateKeyConsts
     {
@@ -40,5 +38,21 @@ namespace eTasks.Shared.Constants
         #endregion
 
         public static string ActionButton_Hint = "ActionButton.Hint";
+
+        #region Titles
+        public static string Titles_HomePage     = "Titles.HomePage";
+        public static string Titles_TasksPage    = "Titles.TasksPage";
+        public static string Titles_GoalsPage    = "Titles.GoalsPage";
+        public static string Titles_ShoppingPage = "Titles.ShoppingPage";
+        public static string Titles_ReadingsPage = "Titles.ReadingsPage";
+        public static string Titles_NotesPage    = "Titles.NotesPage";
+        public static string Titles_FinancePage  = "Titles.FinancePage";
+        #endregion
+
+        #region AppBar
+        public static string AppBar_BtnThemeChanger = "AppBar.BtnThemeChanger";
+        public static string AppBar_BtnMainMenu     = "AppBar.BtnMainMenu";
+        public static string AppBar_BtnAvatarMenu   = "AppBar.BtnAvatarMenu";
+        #endregion
     }
 }

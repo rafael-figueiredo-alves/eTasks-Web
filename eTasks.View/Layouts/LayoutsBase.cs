@@ -35,6 +35,8 @@ namespace eTasks.View.Layouts
         public string? ActionButtonHint { get; set; } = "Adicionar";
         public string LangageMenuTitle { get; set; } = "Idioma";
         public string DicaTrocarIdiomaMainNavBar { get; set; } = "Trocar tema";
+        public string AvatarMenuHint { get; set; } = "Menu do usuário";
+        public string MenuButtonTip { get; set; } = "Menu";
         #endregion
 
         #region Métodos
@@ -101,6 +103,8 @@ namespace eTasks.View.Layouts
 
             LangageMenuTitle = await ETranslate!.Translate(TranslateKeyConsts.LanguageMenu_Title, "Idioma");
             DicaTrocarIdiomaMainNavBar = await ETranslate!.Translate(TranslateKeyConsts.AvatarMenu_ChangeTheme, "Trocar tema");
+            AvatarMenuHint = await ETranslate!.Translate(TranslateKeyConsts.AppBar_BtnAvatarMenu, "Menu do Usuário");
+            MenuButtonTip = await ETranslate!.Translate(TranslateKeyConsts.AppBar_BtnMainMenu, "Menu");
         }
 
         protected virtual async Task ChangeTheme()

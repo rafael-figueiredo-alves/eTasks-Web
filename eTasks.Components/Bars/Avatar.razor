@@ -2,9 +2,9 @@
 
 @if(!string.IsNullOrEmpty(OffcanvasMenuID))
 {
-    <img class="user-select-none" src="@AvatarImagePath" height="@AvatarHeight" width="@AvatarWidth" style="@($"border-radius: 50%; {(IsAbleToClick ? "cursor: pointer" : "cursor: default")}; {AvatarMarginStyles}; {AvatarExtraStyle};")" data-bs-toggle="offcanvas" href="@OffcanvasMenuID" role="button" />
+    <img title="@AvatarHint" class="user-select-none" src="@AvatarImagePath" height="@AvatarHeight" width="@AvatarWidth" style="@($"border-radius: 50%; {(IsAbleToClick ? "cursor: pointer" : "cursor: default")}; {AvatarMarginStyles}; {AvatarExtraStyle};")" data-bs-toggle="offcanvas" href="@OffcanvasMenuID" role="button" />
 }
 else
 {
-    <img class="user-select-none" src="@AvatarImagePath" height="@AvatarHeight" width="@AvatarWidth" style="@($"border-radius: 50%; {(IsAbleToClick ? "cursor: pointer" : "cursor: default")}; {AvatarMarginStyles}; {AvatarExtraStyle};")" @onclick=OnClick />
+    <img title="@AvatarHint" class="user-select-none" src="@AvatarImagePath" height="@AvatarHeight" width="@AvatarWidth" style="@($"border-radius: 50%; {(IsAbleToClick ? "cursor: pointer" : "cursor: default")}; {AvatarMarginStyles}; {AvatarExtraStyle};")" @onclick=OnClick />
 }

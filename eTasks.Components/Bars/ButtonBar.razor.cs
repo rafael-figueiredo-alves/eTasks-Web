@@ -15,6 +15,7 @@ namespace eTasks.Components.Bars
         [Parameter] public EventCallback AvatarOnClick { get; set; }
         [Parameter] public bool isDarkMode { get; set; } = false;
         [Parameter] public bool ShowAvatar { get; set; } = true;
+        [Parameter] public string AvatarHint { get; set; } = "Menu do usuário";
         #endregion
 
         #region Variables

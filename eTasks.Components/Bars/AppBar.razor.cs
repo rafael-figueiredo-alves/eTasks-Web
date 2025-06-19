@@ -15,8 +15,9 @@ namespace eTasks.Components.Bars
         [Parameter] public EventCallback<Task> OnChangeThemeButtonClick { get; set; }
         [Parameter] public EventCallback<AvatarMenuItemType> OnAvatarMenuClick { get; set; }
         [Parameter] public EventCallback<MainMenuItemType> OnMainMenuItemClick { get; set; }
-        [Parameter] public string ChangeThemeButtonTip { get; set; } = "Tema escuro";
+        [Parameter] public string ChangeThemeButtonTip { get; set; } = "Trocar tema";
         [Parameter] public string MenuButtonTip { get; set; } = "Menu";
+        [Parameter] public string AvatarMenuButtonTip { get; set; } = "Menu do Usuário";
         [Parameter] public MainMenuItemType SelectedMenuItem { get; set; }
         [Parameter] public Dictionary<MainMenuTextsEnum, string>? MenuTexts { get; set; }
         [Parameter] public Dictionary<AvatarMenuTextsEnum, string>? AvatarMenuTexts { get; set; }

@@ -3,7 +3,7 @@
 <TopBar isDarkMode="@IsDarkMode" >
     <Brand ColorAppName="@Components.ColorPallete.GetColor(Cor.Primary, IsDarkMode)" AppName="@AppName" />
     <TitleBar isDarkMode="@IsDarkMode" Title="@PageTitle" />
-    <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" AvatarPath="@AvatarPath" isDarkMode="@IsDarkMode" />
+    <ButtonBar Botoes="Botoes" AvatarOffcanvasMenuID="#AvatarMenu" AvatarPath="@AvatarPath" isDarkMode="@IsDarkMode" AvatarHint="@AvatarMenuButtonTip" />
 </TopBar>
 
 <MainMenu IsDarkMode="@IsDarkMode" OnMainMenuItemClick="OnMainMenuItemClick" SelectedItem="@SelectedMenuItem" MenuTexts="MenuTexts" />

@@ -14,6 +14,7 @@ namespace eTasks.Components.Bars
         [Parameter] public string AvatarExtraStyle { get; set; } = string.Empty;
         [Parameter] public string AvatarMarginStyles { get; set; } = "margin-top: 2px;margin-right: 10px;";
         [Parameter] public bool IsAbleToClick { get; set; } = true;
+        [Parameter] public string AvatarHint {  get; set; } = "Menu do Usuário";
         #endregion
 
         #region Variáveis
