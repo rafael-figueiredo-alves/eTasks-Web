@@ -1,4 +1,5 @@
 ﻿using eTasks.Components.Menus;
+using eTasks.Shared.Constants;
 using eTasks.Shared.Extensions;
 using eTasks.Shared.Services;
 using Microsoft.AspNetCore.Components;
@@ -21,8 +22,7 @@ namespace eTasks.View.Layouts
         protected override async Task SetCurrentLanguage(string language)
         {
             await base.SetCurrentLanguage(language);
-
-            Title = language;
+            await SetTitleBar();
         }
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -73,46 +73,70 @@ namespace eTasks.View.Layouts
             NavigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
         }
 
+        private async Task SetTitleBar()
+        {
+            switch (SelectedMainMenuItem)
+            {
+                case MainMenuItemType.Home:
+                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_HomePage, "Seja bem vindo ao eTasks");
+                    break;
+                case MainMenuItemType.Tasks:
+                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_TasksPage, "Minhas Tarefas");
+                    break;
+                case MainMenuItemType.Goals:
+                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_GoalsPage, "Minhas Metas");
+                    break;
+                case MainMenuItemType.Shopping:
+                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_ShoppingPage, "Minhas Compras");
+                    break;
+                case MainMenuItemType.Readings:
+                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_ReadingsPage, "Minhas Leituras");
+                    break;
+                case MainMenuItemType.Notes:
+                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_NotesPage, "Minhas Anotações");
+                    break;
+                case MainMenuItemType.Finance:
+                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_FinancePage, "Minhas Finanças");
+                    break;
+                default:
+                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_HomePage, "Seja bem vindo ao eTasks");
+                    break;
+            }
+        }
+
         protected async Task OnMainMenuItemClick(MainMenuItemType mainMenuItemType)
         {
             await Task.CompletedTask;
             switch (mainMenuItemType)
             {
                 case MainMenuItemType.Home:
-                    Title = "Visão geral";
                     NavigationManager?.GoHome();
                     break;
                 case MainMenuItemType.Tasks:
-                    Title = "Minhas Tarefas";
                     Console.WriteLine("Tarefas");
                     break;
                 case MainMenuItemType.Goals:
-                    Title = "Minhas metas";
                     Console.WriteLine("Metas");
                     break;
                 case MainMenuItemType.Shopping:
-                    Title = "Listas de Compras";
                     Console.WriteLine("Compras");
                     break;
                 case MainMenuItemType.Readings:
-                    Title = "Minhas Leituras";
                     Console.WriteLine("Leituras");
                     break;
                 case MainMenuItemType.Notes:
-                    Title = "Minhas anotações";
                     Console.WriteLine("Anotações");
                     break;
                 case MainMenuItemType.Finance:
-                    Title = "Gerenciamento de Finanças";
                     Console.WriteLine("Finanças");
                     break;
                 default:
-                    Title = "Visão geral";
                     NavigationManager?.NavigateTo("/");
                     break;
             }
 
-            //SelectedMainMenuItem = mainMenuItemType;
+            SelectedMainMenuItem = mainMenuItemType;
+            await SetTitleBar();
             MenuTeste?.SetSelected((int)mainMenuItemType);
         }
 
