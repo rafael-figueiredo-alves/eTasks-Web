@@ -39,6 +39,14 @@
             "BtnThemeChanger": "Change theme",
             "BtnMainMenu": "Main Menu",
             "BtnAvatarMenu": "User's Menu"
+        },
+        "Dialog": {
+            "CopyButton": "Copy",
+            "CopyErrorMsg": "Failed to copy the detais.",
+            "CopySuccessMsg": "Copied the details successfully!",
+            "CancelButton": "Cancel",
+            "OkButton": "Confirm",
+            "MoreDetails": "More details"
         }
     },
     "pt-BR": {
@@ -81,6 +89,14 @@
             "BtnThemeChanger": "Trocar Tema",
             "BtnMainMenu": "Menu Principal",
             "BtnAvatarMenu": "Menu do Usuário"
+        },
+        "Dialog": {
+            "CopyButton": "Copiar",
+            "CopyErrorMsg": "Falhou ao copiar detalhes",
+            "CopySuccessMsg": "Detalhes copiados com sucesso!",
+            "CancelButton": "Cancelar",
+            "OkButton": "Confirmar",
+            "MoreDetails": "Mais detalhes"
         }
     }
 }
