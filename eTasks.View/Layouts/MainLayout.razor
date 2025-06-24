@@ -24,7 +24,7 @@
                 MenuButtonTip="@MenuButtonTip"
                 AvatarMenuButtonTip="@AvatarMenuHint"
                 OnMainMenuItemClick="OnMainMenuItemClick"
-                SelectedMenuItem="@((MainMenuItemType)MenuTeste!.MenuSelected)" 
+                SelectedMenuItem="@MainMenuService!.MainMenuItemSelected" 
                 MenuTexts="MenuTexts" 
                 AvatarMenuTexts="AvatarMenuTexts" 
                 UserName="Anônimo" 
@@ -40,8 +40,7 @@
             {
                 <div class="row">
                     <div class="col-6">
-                        <ListsContainer SelectedMenuItem="@((MainMenuItemType)MenuTeste!.MenuSelected)" />
-                        <button @onclick="GoAbout">About</button>
+                        <ListsContainer SelectedMenuItem="@MainMenuService!.MainMenuItemSelected" />
                     </div>
                     <div class="col-6">
                         @Body
@@ -52,8 +51,7 @@
             {
                 <div class="row">
                     <div class="col-12">
-                        <ListsContainer SelectedMenuItem="@((MainMenuItemType)MenuTeste!.MenuSelected)" />
-                        <button @onclick="GoAbout">About</button>
+                        <ListsContainer SelectedMenuItem="@MainMenuService!.MainMenuItemSelected" />
                     </div>
                 </div>
             }

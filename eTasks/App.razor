@@ -1,6 +1,6 @@
 ﻿@inherits AppBase
 
-<Router AppAssembly="@typeof(eTasks.View.Pages.Home).Assembly">
+<Router AppAssembly="@typeof(eTasks.View.Layouts.LayoutsBase).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" />
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />

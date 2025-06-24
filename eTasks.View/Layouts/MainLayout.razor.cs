@@ -10,7 +10,7 @@ namespace eTasks.View.Layouts
     public class MainLayoutBase : LayoutsBase
     {
         #region Serviços
-        [Inject] public MenuTeste? MenuTeste { get; set; }
+        [Inject] public MainMenuService? MainMenuService { get; set; }
         #endregion
 
         #region Variáveis
@@ -29,7 +29,7 @@ namespace eTasks.View.Layouts
         {
             if (firstRender)
             {
-                MenuTeste?.SetSelected((int)MainMenuItemType.Tasks);
+                MainMenuService?.GetSelected();
                 ThemeChange = await ThemeService!.IsDarkTheme();
             }
             await base.OnAfterRenderAsync(firstRender);
@@ -112,24 +112,31 @@ namespace eTasks.View.Layouts
                 case MainMenuItemType.Home:
                     NavigationManager?.GoHome();
                     break;
+
                 case MainMenuItemType.Tasks:
-                    Console.WriteLine("Tarefas");
+                    NavigationManager?.GoTasks();
                     break;
+
                 case MainMenuItemType.Goals:
-                    Console.WriteLine("Metas");
+                    NavigationManager?.GoGoals();
                     break;
+
                 case MainMenuItemType.Shopping:
-                    Console.WriteLine("Compras");
+                    NavigationManager?.GoShopping();
                     break;
+
                 case MainMenuItemType.Readings:
-                    Console.WriteLine("Leituras");
+                    NavigationManager?.GoReadings();
                     break;
+
                 case MainMenuItemType.Notes:
-                    Console.WriteLine("Anotações");
+                    NavigationManager?.GoNotes();
                     break;
+
                 case MainMenuItemType.Finance:
-                    Console.WriteLine("Finanças");
+                    NavigationManager?.GoFinances();
                     break;
+
                 default:
                     NavigationManager?.NavigateTo("/");
                     break;
@@ -137,7 +144,7 @@ namespace eTasks.View.Layouts
 
             SelectedMainMenuItem = mainMenuItemType;
             await SetTitleBar();
-            MenuTeste?.SetSelected((int)mainMenuItemType);
+            MainMenuService?.SetSelected(mainMenuItemType);
         }
 
         protected async Task OnAvatarMenuItemClick(AvatarMenuItemType avatarMenuItemType)

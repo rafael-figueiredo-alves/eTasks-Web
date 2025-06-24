@@ -33,7 +33,7 @@ namespace eTasks.Shared.Extensions
             Services.AddSingleton<LocalStorage>();
             Services.AddSingleton<IThemeService, ThemeService>();
             Services.AddSingleton<ILanguageService, LanguageService>();
-            Services.AddSingleton<MenuTeste>();
+            Services.AddSingleton<MainMenuService>();
             Services.AddSingleton<IToastService, ToastService>();
             Services.AddSingleton<IDialogService, DialogService>();
         }

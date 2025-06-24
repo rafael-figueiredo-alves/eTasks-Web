@@ -1,14 +1,35 @@
 ﻿@inherits ListsContainerBase
 
-<h3>ListsContainer</h3>
 @switch (SelectedMenuItem)
 {
     case MainMenuItemType.Home:
+        <ListHome />
+        break;
+
+    case MainMenuItemType.Tasks:
+        <ListTasks />
+        break;
+
+    case MainMenuItemType.Finance:
         <ListFinances />
         break;
-    case MainMenuItemType.Tasks:
-        <ListAccount />
+
+    case MainMenuItemType.Readings:
+        <ListReadings />
         break;
+
+    case MainMenuItemType.Notes:
+        <ListNotes />
+        break;
+
+    case MainMenuItemType.Goals:
+        <ListGoals />
+        break;
+
+    case MainMenuItemType.Shopping:
+        <ListShopping />
+        break;
+
     default:
         <h3>Invalid ListType</h3>
         break;
