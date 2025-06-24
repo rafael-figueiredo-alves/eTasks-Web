@@ -16,37 +16,37 @@ namespace eTasks.Shared.Extensions
 
         public static void GoHome(this NavigationManager navigationManager)
         {
-            navigationManager.Go(BaseURL(navigationManager));
+            navigationManager.GoTo("");
         }
 
         public static void GoFinances(this NavigationManager navigationManager)
         {
-            navigationManager.Go("/finances");
+            navigationManager.GoTo("/finances");
         }
 
         public static void GoTasks(this NavigationManager navigationManager)
         {
-            navigationManager.Go("/tasks");
+            navigationManager.GoTo("/tasks");
         }
 
         public static void GoNotes(this NavigationManager navigationManager)
         {
-            navigationManager.Go("/notes");
+            navigationManager.GoTo("/notes");
         }
 
         public static void GoShopping(this NavigationManager navigationManager)
         {
-            navigationManager.Go("/shopping");
+            navigationManager.GoTo("/shopping");
         }
 
         public static void GoGoals(this NavigationManager navigationManager)
         {
-            navigationManager.Go("/goals");
+            navigationManager.GoTo("/goals");
         }
 
         public static void GoReadings(this NavigationManager navigationManager)
         {
-            navigationManager.Go("/readings");
+            navigationManager.GoTo("/readings");
         }
 
         public static void GoTo(this NavigationManager navigationManager, string URL)
@@ -54,7 +54,7 @@ namespace eTasks.Shared.Extensions
             string URI = new Uri(BaseURL(navigationManager)).ToString();
 
             if(URI.EndsWith("/"))
-                URI = URL.StartsWith("/") ? URI + URL.Remove(1) : URI + URL;
+                URI = URL.StartsWith("/") ? URI + URL.TrimStart('/') : URI + URL;
             else
                 URI = URL.StartsWith("/") ? URI + URL : URI + "/" + URL;
 
