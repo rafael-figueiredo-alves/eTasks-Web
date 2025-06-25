@@ -17,15 +17,5 @@ namespace eTasks.View.Pages
         {
             NavigationManager?.GoHome();
         }
-
-        protected async Task TesteMsg()
-        {
-            await DialogService!.ShowInfo("Fica a Dica", "Testando caixas de mensagem no sistema inteiro", null);
-        }
-
-        protected async Task DelMsg()
-        {
-            await DialogService!.ConfirmDelete("Deletar", await IeTranslate!.Translate("Teste", "Desejas apagar este arquivo?"));
-        }
     }
 }

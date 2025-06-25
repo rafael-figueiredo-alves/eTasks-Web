@@ -29,7 +29,8 @@ namespace eTasks.View.Layouts
         {
             if (firstRender)
             {
-                MainMenuService?.GetSelected();
+                SelectedMainMenuItem = (MainMenuItemType)MainMenuService?.GetSelected()!;
+                //await OnMainMenuItemClick(SelectedMainMenuItem);
                 ThemeChange = await ThemeService!.IsDarkTheme();
             }
             await base.OnAfterRenderAsync(firstRender);
@@ -37,7 +38,7 @@ namespace eTasks.View.Layouts
 
         protected void GoAbout()
         {
-            NavigationManager?.GoTo("about");
+            NavigationManager?.NavigateTo("about");
         }
 
         protected async Task OnSelectedLanguage(string languageCode)
@@ -68,40 +69,19 @@ namespace eTasks.View.Layouts
             //NavigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
         }
 
-        protected void testeIrGoogle()
-        {
-            NavigationManager?.NavigateTo("https://github.com/rafael-figueiredo-alves");
-        }
-
         private async Task SetTitleBar()
         {
-            switch (SelectedMainMenuItem)
+            Title = SelectedMainMenuItem switch
             {
-                case MainMenuItemType.Home:
-                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_HomePage, "Seja bem vindo ao eTasks");
-                    break;
-                case MainMenuItemType.Tasks:
-                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_TasksPage, "Minhas Tarefas");
-                    break;
-                case MainMenuItemType.Goals:
-                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_GoalsPage, "Minhas Metas");
-                    break;
-                case MainMenuItemType.Shopping:
-                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_ShoppingPage, "Minhas Compras");
-                    break;
-                case MainMenuItemType.Readings:
-                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_ReadingsPage, "Minhas Leituras");
-                    break;
-                case MainMenuItemType.Notes:
-                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_NotesPage, "Minhas Anotações");
-                    break;
-                case MainMenuItemType.Finance:
-                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_FinancePage, "Minhas Finanças");
-                    break;
-                default:
-                    Title = await ETranslate!.Translate(TranslateKeyConsts.Titles_HomePage, "Seja bem vindo ao eTasks");
-                    break;
-            }
+                MainMenuItemType.Home => await ETranslate!.Translate(TranslateKeyConsts.Titles_HomePage, "Seja bem vindo ao eTasks"),
+                MainMenuItemType.Tasks => await ETranslate!.Translate(TranslateKeyConsts.Titles_TasksPage, "Minhas Tarefas"),
+                MainMenuItemType.Goals => await ETranslate!.Translate(TranslateKeyConsts.Titles_GoalsPage, "Minhas Metas"),
+                MainMenuItemType.Shopping => await ETranslate!.Translate(TranslateKeyConsts.Titles_ShoppingPage, "Minhas Compras"),
+                MainMenuItemType.Readings => await ETranslate!.Translate(TranslateKeyConsts.Titles_ReadingsPage, "Minhas Leituras"),
+                MainMenuItemType.Notes => await ETranslate!.Translate(TranslateKeyConsts.Titles_NotesPage, "Minhas Anotações"),
+                MainMenuItemType.Finance => await ETranslate!.Translate(TranslateKeyConsts.Titles_FinancePage, "Minhas Finanças"),
+                _ => await ETranslate!.Translate(TranslateKeyConsts.Titles_HomePage, "Seja bem vindo ao eTasks"),
+            };
         }
 
         protected async Task OnMainMenuItemClick(MainMenuItemType mainMenuItemType)
@@ -156,7 +136,7 @@ namespace eTasks.View.Layouts
 
                     break;
                 case AvatarMenuItemType.About:
-                    NavigationManager?.GoTo("about");
+                    GoAbout();
                     break;
                 case AvatarMenuItemType.Setup:
 

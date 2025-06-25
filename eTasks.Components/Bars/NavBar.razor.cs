@@ -14,6 +14,7 @@ namespace eTasks.Components.Bars
         [Parameter] public EventCallback<Task> OnHelpButtonClick { get; set; }
         [Parameter] public EventCallback<Task> OnDeleteButtonClick { get; set; }
         [Parameter] public EventCallback<Task> OnCheckButtonClick { get; set; }
+        [Parameter] public EventCallback<Task> OnUpdateButtonClick { get; set; }
         [Parameter] public string BackButtonText { get; set; } = "Voltar";
         [Parameter] public Dictionary<NavBarHintTextsEnum, string>? HintTexts { get; set; }
         #endregion
@@ -58,26 +59,31 @@ namespace eTasks.Components.Bars
             {
                 HintTexts = new()
                 {
+                    { NavBarHintTextsEnum.Update, "Atualizar" },
                     { NavBarHintTextsEnum.Save, "Salvar" },
                     { NavBarHintTextsEnum.Delete, "Apagar" },
                     { NavBarHintTextsEnum.Help, "Ajuda" }
                 };
             }
 
+            if (!HintTexts.ContainsKey(NavBarHintTextsEnum.Update))
+                HintTexts.TryAdd(NavBarHintTextsEnum.Update, "Atualizar");
+
             if (!HintTexts.ContainsKey(NavBarHintTextsEnum.Save))
-                HintTexts.Add(NavBarHintTextsEnum.Save, "Salvar");
+                HintTexts.TryAdd(NavBarHintTextsEnum.Save, "Salvar");
 
             if (!HintTexts.ContainsKey(NavBarHintTextsEnum.Help))
-                HintTexts.Add(NavBarHintTextsEnum.Help, "Ajuda");
+                HintTexts.TryAdd(NavBarHintTextsEnum.Help, "Ajuda");
 
             if (!HintTexts.ContainsKey(NavBarHintTextsEnum.Delete))
-                HintTexts.Add(NavBarHintTextsEnum.Delete, "Apagar");
+                HintTexts.TryAdd(NavBarHintTextsEnum.Delete, "Apagar");
         }
 
         private void RebuildNavBar()
         {
             SetHintValues();
             Botoes.Clear();
+            Botoes.Add(new BarButton() { DicaTela = HintTexts![NavBarHintTextsEnum.Update], Imagem = "Update.png", Visible = NavBarButtonsKind == NavBarButtonsKind.OnlyUpdate, OnClick = OnUpdateButtonClick });
             Botoes.Add(new BarButton() { DicaTela = HintTexts![NavBarHintTextsEnum.Help], Imagem = "Help.png", Visible = NavBarButtonsKind == NavBarButtonsKind.OnlyHelp, OnClick = OnHelpButtonClick });
             Botoes.Add(new BarButton() { DicaTela = HintTexts![NavBarHintTextsEnum.Delete], Imagem = "Delete.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck, OnClick = OnDeleteButtonClick });
             Botoes.Add(new BarButton() { DicaTela = HintTexts![NavBarHintTextsEnum.Save], Imagem = "Accept.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck || NavBarButtonsKind == NavBarButtonsKind.OnlyCheck, OnClick = OnCheckButtonClick });
@@ -87,6 +93,7 @@ namespace eTasks.Components.Bars
 
     public enum NavBarButtonsKind
     {
+        OnlyUpdate,
         OnlyCheck,
         OnlyHelp,
         DeleteCheck

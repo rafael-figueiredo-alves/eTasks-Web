@@ -53,10 +53,10 @@ namespace eTasks.Shared.Extensions
         {
             string URI = new Uri(BaseURL(navigationManager)).ToString();
 
-            if(URI.EndsWith("/"))
-                URI = URL.StartsWith("/") ? URI + URL.TrimStart('/') : URI + URL;
+            if(URI.EndsWith('/'))
+                URI = URL.StartsWith('/') ? URI + URL.TrimStart('/') : URI + URL;
             else
-                URI = URL.StartsWith("/") ? URI + URL : URI + "/" + URL;
+                URI = URL.StartsWith('/') ? URI + URL : URI + '/' + URL;
 
             navigationManager.Go(URI);
         }

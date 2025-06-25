@@ -2,6 +2,7 @@
 {
     public enum NavBarHintTextsEnum
     {
+        Update,
         Help,
         Delete,
         Save
