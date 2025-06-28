@@ -1,0 +1,28 @@
+﻿@page "/settings"
+@using eTasks.Components.Enums
+@implements IDisposable
+@inherits SettingsBase
+
+<style>
+    html, body {
+        background-color: @CorFundo;
+        color: @CorTexto;
+    }
+
+    .LayoutView {
+        background-color: @ColorPallete.GetColor(Cor.Background,false);
+        color: @ColorPallete.GetColor(Cor.Text,false);
+    }
+
+    .LayoutView-dark {
+        background-color: @ColorPallete.GetColor(Cor.Background, true);
+        color: @ColorPallete.GetColor(Cor.Text, true);
+    }
+</style>
+
+<LayoutView Layout="TipoLayout">
+    <div class="@(async () => await ThemeService!.IsDarkTheme() ? "LayoutView-dark" : "LayoutView")">
+        <NavBar IsMobile="@IsMobile" Title="Configurações" OnBackButtonClick="Voltar" NavBarButtonsKind="@NavBarButtonsKind.OnlyCheck" IsDarkMode="@ThemeChange" BackButtonText="@BackButtonHint" />
+<h3>SETTINGS</h3>
+ </div>
+</LayoutView>

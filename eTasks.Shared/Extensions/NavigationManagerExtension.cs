@@ -4,8 +4,11 @@ namespace eTasks.Shared.Extensions
 {
     public static class NavigationManagerExtension
     {
+        private static string? PreviousURL;
+
         private static void Go(this NavigationManager navigationManager, string Route)
         {
+            PreviousURL = Route;
             navigationManager.NavigateTo(Route, replace: true);
         }
 
@@ -59,6 +62,14 @@ namespace eTasks.Shared.Extensions
                 URI = URL.StartsWith('/') ? URI + URL : URI + '/' + URL;
 
             navigationManager.Go(URI);
+        }
+
+        public static void GoBack(this NavigationManager navigationManager)
+        {
+            if(!string.IsNullOrEmpty(PreviousURL))
+                navigationManager.Go(PreviousURL);
+            else
+                navigationManager.Go(BaseURL(navigationManager));
         }
     }
 }

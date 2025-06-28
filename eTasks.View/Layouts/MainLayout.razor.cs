@@ -30,7 +30,6 @@ namespace eTasks.View.Layouts
             if (firstRender)
             {
                 SelectedMainMenuItem = (MainMenuItemType)MainMenuService?.GetSelected()!;
-                //await OnMainMenuItemClick(SelectedMainMenuItem);
                 ThemeChange = await ThemeService!.IsDarkTheme();
             }
             await base.OnAfterRenderAsync(firstRender);
@@ -39,6 +38,21 @@ namespace eTasks.View.Layouts
         protected void GoAbout()
         {
             NavigationManager?.NavigateTo("about");
+        }
+
+        protected void GoSettings()
+        {
+            NavigationManager?.NavigateTo("settings");
+        }
+
+        protected void ShowProfile()
+        {
+            NavigationManager?.NavigateTo("profile");
+        }
+
+        protected void GoConquers()
+        {
+            NavigationManager?.NavigateTo("conquers");
         }
 
         protected async Task OnSelectedLanguage(string languageCode)
@@ -133,13 +147,13 @@ namespace eTasks.View.Layouts
             switch (avatarMenuItemType)
             {
                 case AvatarMenuItemType.Conquer:
-
+                    GoConquers();
                     break;
                 case AvatarMenuItemType.About:
                     GoAbout();
                     break;
                 case AvatarMenuItemType.Setup:
-
+                    GoSettings();
                     break;
                 case AvatarMenuItemType.Language:
                     if (IJSRuntime != null)
