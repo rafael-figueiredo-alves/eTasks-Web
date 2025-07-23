@@ -83,7 +83,7 @@ namespace eTasks.Components.Bars
         {
             SetHintValues();
             Botoes.Clear();
-            Botoes.Add(new BarButton() { DicaTela = HintTexts![NavBarHintTextsEnum.Update], Imagem = "Update.png", Visible = NavBarButtonsKind == NavBarButtonsKind.OnlyUpdate, OnClick = OnUpdateButtonClick });
+            Botoes.Add(new BarButton() { DicaTela = HintTexts![NavBarHintTextsEnum.Update], Imagem = "Update.png", Visible = NavBarButtonsKind == NavBarButtonsKind.OnlyUpdate, OnClick = OnUpdateButtonClick, Animate = true });
             Botoes.Add(new BarButton() { DicaTela = HintTexts![NavBarHintTextsEnum.Help], Imagem = "Help.png", Visible = NavBarButtonsKind == NavBarButtonsKind.OnlyHelp, OnClick = OnHelpButtonClick });
             Botoes.Add(new BarButton() { DicaTela = HintTexts![NavBarHintTextsEnum.Delete], Imagem = "Delete.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck, OnClick = OnDeleteButtonClick });
             Botoes.Add(new BarButton() { DicaTela = HintTexts![NavBarHintTextsEnum.Save], Imagem = "Accept.png", Visible = NavBarButtonsKind == NavBarButtonsKind.DeleteCheck || NavBarButtonsKind == NavBarButtonsKind.OnlyCheck, OnClick = OnCheckButtonClick });

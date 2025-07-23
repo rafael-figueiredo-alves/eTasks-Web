@@ -20,9 +20,24 @@ namespace eTasks.Components.Bars
 
         #region Variables
         protected string basePath { get; set; } = "assets/UI/toolbar/light/";
+        protected int rotation = 0;
+        protected string rotationDeg => $"{rotation}deg";
         #endregion
 
         #region Methods
+        private void GirarImagem()
+        {
+            rotation += 360;
+        }
+
+        protected async Task OnClick(BarButton button)
+        {
+            if(button.Animate)
+                GirarImagem();
+
+            await button.OnClick.InvokeAsync();
+        }
+
         protected override void OnParametersSet()
         {
             if (isDarkMode)
@@ -41,5 +56,6 @@ namespace eTasks.Components.Bars
         public EventCallback<Task> OnClick { get; set; }
         public string OffcanvasMenuID { get; set; } = string.Empty;
         public bool Visible { get; set; } = true;
+        public bool Animate { get; set; } = false;
     }
 }
