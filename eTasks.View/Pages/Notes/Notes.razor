@@ -1,6 +1,17 @@
 ﻿@page "/notes"
+@inject NavigationManager NavigationManager;
+@inject MainMenuService MainMenuService;
 
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <h3>My notes</h3>
+    <button @onclick="ClickMe">Finances</button>
 </LayoutView>
+
+@code {
+    void ClickMe()
+    {
+        NavigationManager?.GoFinances();
+        MainMenuService.SetSelected(MainMenuItemType.Finance);
+    }
+}
