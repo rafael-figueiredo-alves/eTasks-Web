@@ -14,7 +14,7 @@ namespace eTasks.Components.Bars
         #region Parâmetros
         [Parameter] public string AppName { get; set; } = "eTasks";
         [Parameter] public string ColorAppName { get; set; } = "#336699";
-        [Parameter] public string LogoPath { get; set; } = "/assets/favicon.png";
+        [Parameter] public string LogoPath { get; set; } = "/assets/favicon.webp";
         #endregion
 
         #region Variáveis
