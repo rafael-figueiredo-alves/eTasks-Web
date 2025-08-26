@@ -1,9 +1,9 @@
 self.assetsManifest = {
-  "version": "GMB0YD76",
+  "version": "rIZBjhCB",
   "assets": [
     {
-      "hash": "sha256-6Q+vpvjUw/SwbZkyVNwTASHW6wXCMySZbEtYppOUWdQ=",
-      "url": "_content/eTasks.Components/eTasks.Components.z97tylhpl7.bundle.scp.css"
+      "hash": "sha256-2uOqRUiHrrlpDHAOc55O3dGgMlYtBavxJDHaoOlAo2I=",
+      "url": "_content/eTasks.Components/eTasks.Components.229cbc5dof.bundle.scp.css"
     },
     {
       "hash": "sha256-uh3bYKVz13422gDK5Htg6k/cakr5oMgBTZC+QD9qiBY=",
@@ -146,7 +146,7 @@ self.assetsManifest = {
       "url": "_framework/System.Threading.cy526l72bt.wasm"
     },
     {
-      "hash": "sha256-uja9OKa6sxSjrNqCawbBfG9wtn4gq3lx8wacgoN1Czk=",
+      "hash": "sha256-tKz+Y0lKwFbqb/kaaZCXWT4SMC4BmZqim22OR076PKQ=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -174,20 +174,20 @@ self.assetsManifest = {
       "url": "_framework/eFirebase4CSharp.frv3mfveo7.wasm"
     },
     {
-      "hash": "sha256-wird1WmG2NfVamu9XugrLuzn8iiOVSW/QJbmITYPAvE=",
-      "url": "_framework/eTasks.2jxe40r8xq.wasm"
+      "hash": "sha256-tuTbX6wvT8rIsQJz/3c1eKe8jZtiVrwz/6Y8JKzZCl0=",
+      "url": "_framework/eTasks.Components.e74o4v59jl.wasm"
     },
     {
-      "hash": "sha256-Y9Gyp1CZwEI9JsJT3LLA+9rDTu/DwSqh/m6B6n/5Wpo=",
-      "url": "_framework/eTasks.Components.nzydneb32d.wasm"
+      "hash": "sha256-ajxotfC13IUovPne/zvT6srBw0AY8/tH02rRCXNY3j4=",
+      "url": "_framework/eTasks.Shared.ezvm9aifet.wasm"
     },
     {
-      "hash": "sha256-XlQOOHx5p8o/u0q6zwTAwOn/MSmxXTLpjtWvcb8o+aY=",
-      "url": "_framework/eTasks.Shared.m6zpuif6kk.wasm"
+      "hash": "sha256-qHiWw0W0GccqtetR7I9nYRn3uM/svSGLaMKsRfDamf4=",
+      "url": "_framework/eTasks.View.8wmrcgomic.wasm"
     },
     {
-      "hash": "sha256-2Ln6FViDZpcwlcsOH7PDcM+oI2w+tE7zcXrtQXEIELQ=",
-      "url": "_framework/eTasks.View.giof08no6l.wasm"
+      "hash": "sha256-Sn7Jn6D3bhcY7NBtQq9gL7SicgZX+fZK3MQzvhANlZU=",
+      "url": "_framework/eTasks.ezxtxbazw6.wasm"
     },
     {
       "hash": "sha256-x45c61v6Qz3WbCQ3mNIFOMsMvKcQoX9HCiQERlB/hQQ=",
@@ -426,6 +426,30 @@ self.assetsManifest = {
       "url": "assets/UI/offcanvas/light/Close.png"
     },
     {
+      "hash": "sha256-To39GA9De1DiwMYBHdVlsvIw2CReVwCS0LPa032hjhQ=",
+      "url": "assets/UI/resources/Anotacoes.webp"
+    },
+    {
+      "hash": "sha256-gU7tEYtSK57Y8YszDJbFEOdPRBfGNF8xAqoLgpbjQo8=",
+      "url": "assets/UI/resources/Compras.webp"
+    },
+    {
+      "hash": "sha256-O6VySYP90U8I5zJHaEhGzMkqCuBnZxPUobmg9ZVAfaI=",
+      "url": "assets/UI/resources/Financas.webp"
+    },
+    {
+      "hash": "sha256-x8CX/HtGTA0A3HvKV4eHggC3SoYNmklVGLHuAOq4LD4=",
+      "url": "assets/UI/resources/Leituras.webp"
+    },
+    {
+      "hash": "sha256-l5xA/3LjAYZcZYE1UO8qPh6u+iYpEnX2unbRhdyjxco=",
+      "url": "assets/UI/resources/Metas.webp"
+    },
+    {
+      "hash": "sha256-/SxHA5TIY0t+0m/66Vu4gwPcFDaHfqvTvDQxBbxN6co=",
+      "url": "assets/UI/resources/Tarefas.webp"
+    },
+    {
       "hash": "sha256-+yMHY8yFXm7zw8Of4P5dkLz4sZGy4ePTo2vUS5dThko=",
       "url": "assets/UI/toast/CloseBtn.png"
     },
@@ -542,7 +566,7 @@ self.assetsManifest = {
       "url": "css/bootstrap/bootstrap.min.css.map"
     },
     {
-      "hash": "sha256-32WfsjP9+pxmCUQPlPCx1dcVvsUWlb6TGWNM9H/Jl8s=",
+      "hash": "sha256-YoBDeDMJEk2hpfln5k5+eD847sB4zfNM9uJryq7+41U=",
       "url": "eTasks.styles.css"
     },
     {

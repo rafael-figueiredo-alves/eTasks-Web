@@ -73,6 +73,30 @@
 .AccordionItem-RemoveBorder[b-bz5meijxf7] {
     box-shadow: none;
 }
+/* _content/eTasks.Components/Containers/InfoCard.razor.rz.scp.css */
+.info-card-container[b-a7abp9ilz8] {
+    width: 365px;
+    min-height: 327px;
+    margin: auto;
+    margin-top: 10vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-card-image[b-a7abp9ilz8] {
+    width: 365px;
+    height: 256px;
+    object-fit: contain;
+}
+
+.info-card-text[b-a7abp9ilz8] {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #336699; /* pode trocar por var(--bs-body-color) se usar Bootstrap */
+    line-height: 1.4em;
+}
 /* _content/eTasks.Components/Dialog/ModalDialog.razor.rz.scp.css */
 .ModalDialog-remove-bordas[b-tr5tbilv2q] {
     border: none;
