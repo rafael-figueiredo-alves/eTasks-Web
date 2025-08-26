@@ -1,0 +1,12 @@
+﻿<div class="info-card-container">
+    <img src="@Image" alt="Info image" class="info-card-image" />
+
+    <p class="info-card-text">
+        @Text
+    </p>
+</div>
+
+@code {
+    [Parameter] public string Image { get; set; } = string.Empty;
+    [Parameter] public string Text { get; set; } = string.Empty;
+}

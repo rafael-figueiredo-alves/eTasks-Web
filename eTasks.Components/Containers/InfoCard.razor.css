@@ -1,0 +1,23 @@
+﻿.info-card-container {
+    width: 365px;
+    min-height: 327px;
+    margin: auto;
+    margin-top: 10vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-card-image {
+    width: 365px;
+    height: 256px;
+    object-fit: contain;
+}
+
+.info-card-text {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #336699; /* pode trocar por var(--bs-body-color) se usar Bootstrap */
+    line-height: 1.4em;
+}
