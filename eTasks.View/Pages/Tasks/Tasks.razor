@@ -1,6 +1,14 @@
 ﻿@page "/tasks"
-
+@inject IActionButtonVisibleService? ActionButtonVisibleService
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
-    <h3>Tasks - What's next?</h3>
+    <InfoCard Image="assets/UI/resources/Tarefas.webp"
+              Text="Gerencie as tarefas do seu dia em poucos cliques. Inicie adicionando uma tarefa tocando no Mais no canto inferior direito." />
 </LayoutView>
+
+@code {
+    protected override void OnInitialized()
+    {
+        ActionButtonVisibleService!.Visible = true;
+    }
+}

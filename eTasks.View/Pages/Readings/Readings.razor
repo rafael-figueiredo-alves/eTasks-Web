@@ -1,7 +1,15 @@
 ﻿@page "/readings"
+@inject IActionButtonVisibleService? ActionButtonVisibleService
 
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
-    <h3>These are the books I've read or the ones I' reading</h3>
+    <InfoCard Image="assets/UI/resources/Leituras.webp"
+              Text="Registre suas leituras de forma simples e digital. O eTasks permite manter tracking das suas leituras, basta pressionar o botão Mais e adicionar um novo registro." />
 </LayoutView>
+
+@code {
+    protected override void OnInitialized()
+    {
+        ActionButtonVisibleService!.Visible = true;
+    }
 }

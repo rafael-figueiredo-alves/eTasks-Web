@@ -1,6 +1,14 @@
 ﻿@page "/"
+@inject IActionButtonVisibleService? ActionButtonVisibleService
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <Teste />
 </LayoutView>
+
+@code {
+    protected override void OnInitialized()
+    {
+        ActionButtonVisibleService!.Visible = false;
+    }
+}
 

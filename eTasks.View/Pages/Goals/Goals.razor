@@ -1,6 +1,15 @@
 ﻿@page "/goals"
+@inject IActionButtonVisibleService? ActionButtonVisibleService
 
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
-    <h3>My goals</h3>
+    <InfoCard Image="assets/UI/resources/Metas.webp"
+              Text="Mantenha suas metas organizadas e com gerencimento simplificado para alcançar mais rapidamente seus objetivos. Basta clicar no Mais para adicionar uma nova meta." />
 </LayoutView>
+
+@code {
+    protected override void OnInitialized()
+    {
+        ActionButtonVisibleService!.Visible = true;
+    }
+}

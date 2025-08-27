@@ -36,6 +36,7 @@ namespace eTasks.Shared.Extensions
             Services.AddSingleton<MainMenuService>();
             Services.AddSingleton<IToastService, ToastService>();
             Services.AddSingleton<IDialogService, DialogService>();
+            Services.AddSingleton<IActionButtonVisibleService, ActionButtonVisibleService>();
         }
     }
 }

@@ -1,17 +1,15 @@
 ﻿@page "/notes"
-@inject NavigationManager NavigationManager;
-@inject MainMenuService MainMenuService;
+@inject IActionButtonVisibleService? ActionButtonVisibleService
 
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
-    <h3>My notes</h3>
-    <button @onclick="ClickMe">Finances</button>
+    <InfoCard Image="assets/UI/resources/Anotacoes.webp"
+              Text="Tome nota de aulas ou do trabalho usando o botão Mais abaixo. É simples e você vai ter suas anotações sempre por perto e não precisará mais andar com caderno ou monte de papéis." />
 </LayoutView>
 
 @code {
-    void ClickMe()
+    protected override void OnInitialized()
     {
-        NavigationManager?.GoFinances();
-        MainMenuService.SetSelected(MainMenuItemType.Finance);
+        ActionButtonVisibleService!.Visible = true;
     }
 }

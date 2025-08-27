@@ -1,6 +1,14 @@
 ﻿@page "/shopping"
-
+@inject IActionButtonVisibleService? ActionButtonVisibleService
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
-    <h3>Here are the shopping lists</h3>
+    <InfoCard Image="assets/UI/resources/Compras.webp"
+              Text="Nunca mais esqueça aquele ingrediente. Monte suas listas de compras com o eTasks. É fácil, basta pressionar o botão Mais para incluir listas e itens de Compras." />
 </LayoutView>
+
+@code {
+    protected override void OnInitialized()
+    {
+        ActionButtonVisibleService!.Visible = true;
+    }
+}

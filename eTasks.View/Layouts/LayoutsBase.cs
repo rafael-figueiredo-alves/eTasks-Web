@@ -21,6 +21,7 @@ namespace eTasks.View.Layouts
         [Inject] public IDialogService? DialogService { get; set; }
         [Inject] public IJSRuntime? IJSRuntime { get; set; }
         [Inject] public IeTranslate? ETranslate { get; set; }
+        [Inject] public IActionButtonVisibleService? ActionButtonVisibleService { get; set; }
         #endregion
 
         #region Variáveis compartilhadas

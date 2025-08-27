@@ -1,9 +1,15 @@
 ﻿@page "/finances"
+@inject IActionButtonVisibleService? ActionButtonVisibleService
 
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
-    <div style="height: 100%;width: 100%">
     <InfoCard Image="assets/UI/resources/Financas.webp"
-              Text="Tome nota de aulas ou do trabalho usando o botão Mais abaixo. É simples e você vai ter suas anotações sempre por perto e não precisará mais andar com caderno ou monte de papéis." />
-    </div>
+              Text="Sua carteira com mais dinheiro o mês inteiro? O eTasks te  ajuda. Adicione um lançamento financeiro pressionando o botão Mais." />
 </LayoutView>
+
+@code {
+    protected override void OnInitialized()
+    {
+        ActionButtonVisibleService!.Visible = true;
+    }
+}
