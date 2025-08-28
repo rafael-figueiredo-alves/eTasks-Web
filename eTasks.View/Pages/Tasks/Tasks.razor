@@ -1,9 +1,10 @@
 ﻿@page "/tasks"
-@inject IActionButtonVisibleService? ActionButtonVisibleService
+@inherits LayoutsBase
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <InfoCard Image="assets/UI/resources/Tarefas.webp"
-              Text="Gerencie as tarefas do seu dia em poucos cliques. Inicie adicionando uma tarefa tocando no Mais no canto inferior direito." />
+              Text="Gerencie as tarefas do seu dia em poucos cliques. Inicie adicionando uma tarefa tocando no Mais no canto inferior direito."
+              isDarkMode="@ThemeChange" />
 </LayoutView>
 
 @code {

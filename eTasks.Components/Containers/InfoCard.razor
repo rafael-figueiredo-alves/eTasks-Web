@@ -1,7 +1,7 @@
 ﻿<div class="info-card-container">
     <img src="@Image" alt="Info image" class="info-card-image" />
 
-    <p class="info-card-text">
+    <p class="info-card-text" style="color: @TextColor">
         @Text
     </p>
 </div>
@@ -9,4 +9,12 @@
 @code {
     [Parameter] public string Image { get; set; } = string.Empty;
     [Parameter] public string Text { get; set; } = string.Empty;
+    [Parameter] public bool isDarkMode { get; set; }
+
+    private string TextColor { get; set; } = "#336699";
+
+    protected override void OnParametersSet()
+    {
+        TextColor = ColorPallete.GetColor(Cor.Primary, isDarkMode);
+    }
 }

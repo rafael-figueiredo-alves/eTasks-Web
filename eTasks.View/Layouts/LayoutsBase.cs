@@ -112,6 +112,7 @@ namespace eTasks.View.Layouts
         {
             CorFundo = ColorPallete.GetColor(Cor.Background, await ThemeService!.IsDarkTheme());
             CorTexto = ColorPallete.GetColor(Cor.Text, await ThemeService!.IsDarkTheme());
+            ThemeChange = await ThemeService!.IsDarkTheme();
 
             await InvokeAsync(StateHasChanged);
         }
