@@ -1,15 +1,34 @@
 ﻿@page "/goals"
-@inject IActionButtonVisibleService? ActionButtonVisibleService
+@inherits LayoutsBase
+@implements IDisposable
 
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <InfoCard Image="assets/UI/resources/Metas.webp"
-              Text="Mantenha suas metas organizadas e com gerencimento simplificado para alcançar mais rapidamente seus objetivos. Basta clicar no Mais para adicionar uma nova meta." />
+              Text="Mantenha suas metas organizadas e com gerencimento simplificado para alcançar mais rapidamente seus objetivos. Basta clicar no Mais para adicionar uma nova meta."
+              isDarkMode="@UseDarkTheme" />
 </LayoutView>
 
 @code {
-    protected override void OnInitialized()
+    protected bool UseDarkTheme { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
     {
+        UseDarkTheme = await ThemeService!.IsDarkTheme();
+        ThemeService.OnThemeChanged += ChangeTheme;
         ActionButtonVisibleService!.Visible = true;
+    }
+
+    protected override async Task ChangeTheme()
+    {
+        await base.ChangeTheme();
+        UseDarkTheme = await ThemeService!.IsDarkTheme();
+        StateHasChanged();
+    }
+
+    void IDisposable.Dispose()
+    {
+        ThemeService!.OnThemeChanged -= ChangeTheme;
+        Dispose();
     }
 }

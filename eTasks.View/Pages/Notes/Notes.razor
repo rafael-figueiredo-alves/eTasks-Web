@@ -1,15 +1,34 @@
 ﻿@page "/notes"
-@inject IActionButtonVisibleService? ActionButtonVisibleService
+@inherits LayoutsBase
+@implements IDisposable
 
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <InfoCard Image="assets/UI/resources/Anotacoes.webp"
-              Text="Tome nota de aulas ou do trabalho usando o botão Mais abaixo. É simples e você vai ter suas anotações sempre por perto e não precisará mais andar com caderno ou monte de papéis." />
+              Text="Tome nota de aulas ou do trabalho usando o botão Mais abaixo. É simples e você vai ter suas anotações sempre por perto e não precisará mais andar com caderno ou monte de papéis."
+              isDarkMode="@UseDarkTheme" />
 </LayoutView>
 
 @code {
-    protected override void OnInitialized()
+    protected bool UseDarkTheme { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
     {
+        UseDarkTheme = await ThemeService!.IsDarkTheme();
+        ThemeService.OnThemeChanged += ChangeTheme;
         ActionButtonVisibleService!.Visible = true;
+    }
+
+    protected override async Task ChangeTheme()
+    {
+        await base.ChangeTheme();
+        UseDarkTheme = await ThemeService!.IsDarkTheme();
+        StateHasChanged();
+    }
+
+    void IDisposable.Dispose()
+    {
+        ThemeService!.OnThemeChanged -= ChangeTheme;
+        Dispose();
     }
 }

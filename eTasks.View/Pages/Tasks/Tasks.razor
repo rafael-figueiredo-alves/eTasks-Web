@@ -1,15 +1,33 @@
 ﻿@page "/tasks"
 @inherits LayoutsBase
+@implements IDisposable
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <InfoCard Image="assets/UI/resources/Tarefas.webp"
               Text="Gerencie as tarefas do seu dia em poucos cliques. Inicie adicionando uma tarefa tocando no Mais no canto inferior direito."
-              isDarkMode="@ThemeChange" />
+              isDarkMode="@UseDarkTheme" />
 </LayoutView>
 
 @code {
-    protected override void OnInitialized()
+    protected bool UseDarkTheme { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
     {
+        UseDarkTheme = await ThemeService!.IsDarkTheme();
+        ThemeService.OnThemeChanged += ChangeTheme;
         ActionButtonVisibleService!.Visible = true;
+    }
+
+    protected override async Task ChangeTheme()
+    {
+        await base.ChangeTheme();
+        UseDarkTheme = await ThemeService!.IsDarkTheme();
+        StateHasChanged();
+    }
+
+    void IDisposable.Dispose()
+    {
+        ThemeService!.OnThemeChanged -= ChangeTheme;
+        Dispose();
     }
 }

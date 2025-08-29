@@ -1,14 +1,33 @@
 ﻿@page "/shopping"
-@inject IActionButtonVisibleService? ActionButtonVisibleService
+@inherits LayoutsBase
+@implements IDisposable
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <InfoCard Image="assets/UI/resources/Compras.webp"
-              Text="Nunca mais esqueça aquele ingrediente. Monte suas listas de compras com o eTasks. É fácil, basta pressionar o botão Mais para incluir listas e itens de Compras." />
+              Text="Nunca mais esqueça aquele ingrediente. Monte suas listas de compras com o eTasks. É fácil, basta pressionar o botão Mais para incluir listas e itens de Compras."
+              isDarkMode="@UseDarkTheme" />
 </LayoutView>
 
 @code {
-    protected override void OnInitialized()
+    protected bool UseDarkTheme { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
     {
+        UseDarkTheme = await ThemeService!.IsDarkTheme();
+        ThemeService.OnThemeChanged += ChangeTheme;
         ActionButtonVisibleService!.Visible = true;
+    }
+
+    protected override async Task ChangeTheme()
+    {
+        await base.ChangeTheme();
+        UseDarkTheme = await ThemeService!.IsDarkTheme();
+        StateHasChanged();
+    }
+
+    void IDisposable.Dispose()
+    {
+        ThemeService!.OnThemeChanged -= ChangeTheme;
+        Dispose();
     }
 }

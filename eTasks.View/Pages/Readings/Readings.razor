@@ -1,15 +1,34 @@
 ﻿@page "/readings"
-@inject IActionButtonVisibleService? ActionButtonVisibleService
+@inherits LayoutsBase
+@implements IDisposable
 
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <InfoCard Image="assets/UI/resources/Leituras.webp"
-              Text="Registre suas leituras de forma simples e digital. O eTasks permite manter tracking das suas leituras, basta pressionar o botão Mais e adicionar um novo registro." />
+              Text="Registre suas leituras de forma simples e digital. O eTasks permite manter tracking das suas leituras, basta pressionar o botão Mais e adicionar um novo registro."
+              isDarkMode="@UseDarkTheme" />
 </LayoutView>
 
 @code {
-    protected override void OnInitialized()
+    protected bool UseDarkTheme { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
     {
+        UseDarkTheme = await ThemeService!.IsDarkTheme();
+        ThemeService.OnThemeChanged += ChangeTheme;
         ActionButtonVisibleService!.Visible = true;
+    }
+
+    protected override async Task ChangeTheme()
+    {
+        await base.ChangeTheme();
+        UseDarkTheme = await ThemeService!.IsDarkTheme();
+        StateHasChanged();
+    }
+
+    void IDisposable.Dispose()
+    {
+        ThemeService!.OnThemeChanged -= ChangeTheme;
+        Dispose();
     }
 }
