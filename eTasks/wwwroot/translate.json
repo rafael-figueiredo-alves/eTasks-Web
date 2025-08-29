@@ -47,6 +47,14 @@
             "CancelButton": "Cancel",
             "OkButton": "Confirm",
             "MoreDetails": "More details"
+        },
+        "ResourcePages": {
+            "Tasks_ResourcePage": "Manage your daily tasks with a few clicks. Start by adding a task touching the Plus button on the right bottom side.",
+            "Goals_ResourcePage": "Keep your goals organized and a simple management to reach your objectives fast. Just click the Plus button to add a new goal.",
+            "Finances_ResourcePage": "More money in your wallet the whole month? eTasks can help you. Add a financial release by pressing the Plus button.",
+            "Notes_ResourcePage": "Take school or work notes using the Plus button bellow. It's simple and you're going to have your notes near you and you won't need your paper notepad anymore.",
+            "Shopping_ResourcePage": "Never forget that ingredient anymore. Build your shopping lists with eTasks. It's easy, just press the Plus button to add lists or items you need to buy.",
+            "Readings_ResourcePage": "Keep a track on your readings in a easy and simple way. eTasks let you keep a track on your readings, just press the Plus button and add a new record."
         }
     },
     "pt-BR": {
@@ -97,6 +105,14 @@
             "CancelButton": "Cancelar",
             "OkButton": "Confirmar",
             "MoreDetails": "Mais detalhes"
+        },
+        "ResourcePages": {
+            "Tasks_ResourcePage": "Gerencie as tarefas do seu dia em poucos cliques. Inicie adicionando uma tarefa tocando no Mais no canto inferior direito.",
+            "Goals_ResourcePage": "Mantenha suas metas organizadas e com gerencimento simplificado para alcançar mais rapidamente seus objetivos. Basta clicar no Mais para adicionar uma nova meta.",
+            "Finances_ResourcePage": "Sua carteira com mais dinheiro o mês inteiro? O eTasks te  ajuda. Adicione um lançamento financeiro pressionando o botão Mais.",
+            "Notes_ResourcePage": "Tome nota de aulas ou do trabalho usando o botão Mais abaixo. É simples e você vai ter suas anotações sempre por perto e não precisará mais andar com caderno ou monte de papéis.",
+            "Shopping_ResourcePage": "Nunca mais esqueça aquele ingrediente. Monte suas listas de compras com o eTasks. É fácil, basta pressionar o botão Mais para incluir listas e itens de Compras.",
+            "Readings_ResourcePage": "Registre suas leituras de forma simples e digital. O eTasks permite manter tracking das suas leituras, basta pressionar o botão Mais e adicionar um novo registro."
         }
     }
 }
