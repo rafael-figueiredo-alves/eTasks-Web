@@ -57,7 +57,6 @@ namespace eTasks.View.Layouts
 
         protected async Task OnSelectedLanguage(string languageCode)
         {
-            await Task.CompletedTask;
             await LanguageService!.SetLanguage(languageCode);
         }
 

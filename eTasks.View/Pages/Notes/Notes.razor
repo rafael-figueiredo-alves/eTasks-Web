@@ -5,18 +5,26 @@
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <InfoCard Image="assets/UI/resources/Anotacoes.webp"
-              Text="Tome nota de aulas ou do trabalho usando o botão Mais abaixo. É simples e você vai ter suas anotações sempre por perto e não precisará mais andar com caderno ou monte de papéis."
+              Text="@CardText"
               isDarkMode="@UseDarkTheme" />
 </LayoutView>
 
 @code {
     protected bool UseDarkTheme { get; set; } = false;
+    protected string CardText { get; set; } = "Tome nota de aulas ou do trabalho usando o botão Mais abaixo. É simples e você vai ter suas anotações sempre por perto e não precisará mais andar com caderno ou monte de papéis.";
 
     protected override async Task OnInitializedAsync()
     {
         UseDarkTheme = await ThemeService!.IsDarkTheme();
         ThemeService.OnThemeChanged += ChangeTheme;
+        LanguageService!.OnLanguageChanged += SetCurrentLanguage;
         ActionButtonVisibleService!.Visible = true;
+    }
+
+    protected override async Task SetCurrentLanguage(string language)
+    {
+        await base.SetCurrentLanguage(language);
+        CardText = await ETranslate!.Translate(TranslateKeyConsts.ResourcePages_Notes_ResourcePage, "Tome nota de aulas ou do trabalho usando o botão Mais abaixo. É simples e você vai ter suas anotações sempre por perto e não precisará mais andar com caderno ou monte de papéis.");
     }
 
     protected override async Task ChangeTheme()

@@ -5,18 +5,26 @@
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <InfoCard Image="assets/UI/resources/Financas.webp"
-              Text="Sua carteira com mais dinheiro o mês inteiro? O eTasks te  ajuda. Adicione um lançamento financeiro pressionando o botão Mais."
+              Text="@CardText"
               isDarkMode="@UseDarkTheme" />
 </LayoutView>
 
 @code {
     protected bool UseDarkTheme { get; set; } = false;
+    protected string CardText { get; set; } = "Sua carteira com mais dinheiro o mês inteiro? O eTasks te  ajuda. Adicione um lançamento financeiro pressionando o botão Mais.";
 
     protected override async Task OnInitializedAsync()
     {
         UseDarkTheme = await ThemeService!.IsDarkTheme();
         ThemeService.OnThemeChanged += ChangeTheme;
+        LanguageService!.OnLanguageChanged += SetCurrentLanguage;
         ActionButtonVisibleService!.Visible = true;
+    }
+
+    protected override async Task SetCurrentLanguage(string language)
+    {
+        await base.SetCurrentLanguage(language);
+        CardText = await ETranslate!.Translate(TranslateKeyConsts.ResourcePages_Finances_ResourcePage, "Sua carteira com mais dinheiro o mês inteiro? O eTasks te  ajuda. Adicione um lançamento financeiro pressionando o botão Mais.");
     }
 
     protected override async Task ChangeTheme()

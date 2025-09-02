@@ -4,18 +4,26 @@
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <InfoCard Image="assets/UI/resources/Tarefas.webp"
-              Text="Gerencie as tarefas do seu dia em poucos cliques. Inicie adicionando uma tarefa tocando no Mais no canto inferior direito."
+              Text="@CardText"
               isDarkMode="@UseDarkTheme" />
 </LayoutView>
 
 @code {
     protected bool UseDarkTheme { get; set; } = false;
+    protected string CardText { get; set; } = "Gerencie as tarefas do seu dia em poucos cliques. Inicie adicionando uma tarefa tocando no Mais no canto inferior direito.";
 
     protected override async Task OnInitializedAsync()
     {
         UseDarkTheme = await ThemeService!.IsDarkTheme();
         ThemeService.OnThemeChanged += ChangeTheme;
+        LanguageService!.OnLanguageChanged += SetCurrentLanguage;
         ActionButtonVisibleService!.Visible = true;
+    }
+
+    protected override async Task SetCurrentLanguage(string language)
+    {
+        await base.SetCurrentLanguage(language);
+        CardText = await ETranslate!.Translate(TranslateKeyConsts.ResourcePages_Tasks_ResourcePage, "Gerencie as tarefas do seu dia em poucos cliques. Inicie adicionando uma tarefa tocando no Mais no canto inferior direito.");
     }
 
     protected override async Task ChangeTheme()

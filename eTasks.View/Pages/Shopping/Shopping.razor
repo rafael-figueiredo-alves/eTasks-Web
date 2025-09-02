@@ -4,18 +4,26 @@
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <InfoCard Image="assets/UI/resources/Compras.webp"
-              Text="Nunca mais esqueça aquele ingrediente. Monte suas listas de compras com o eTasks. É fácil, basta pressionar o botão Mais para incluir listas e itens de Compras."
+              Text="@CardText"
               isDarkMode="@UseDarkTheme" />
 </LayoutView>
 
 @code {
     protected bool UseDarkTheme { get; set; } = false;
+    protected string CardText { get; set; } = "Nunca mais esqueça aquele ingrediente. Monte suas listas de compras com o eTasks. É fácil, basta pressionar o botão Mais para incluir listas e itens de Compras.";
 
     protected override async Task OnInitializedAsync()
     {
         UseDarkTheme = await ThemeService!.IsDarkTheme();
         ThemeService.OnThemeChanged += ChangeTheme;
+        LanguageService!.OnLanguageChanged += SetCurrentLanguage;
         ActionButtonVisibleService!.Visible = true;
+    }
+
+    protected override async Task SetCurrentLanguage(string language)
+    {
+        await base.SetCurrentLanguage(language);
+        CardText = await ETranslate!.Translate(TranslateKeyConsts.ResourcePages_Shopping_ResourcePage, "Nunca mais esqueça aquele ingrediente. Monte suas listas de compras com o eTasks. É fácil, basta pressionar o botão Mais para incluir listas e itens de Compras.");
     }
 
     protected override async Task ChangeTheme()

@@ -5,18 +5,26 @@
 
 <LayoutView Layout="@typeof(eTasks.View.Layouts.MainLayout)">
     <InfoCard Image="assets/UI/resources/Leituras.webp"
-              Text="Registre suas leituras de forma simples e digital. O eTasks permite manter tracking das suas leituras, basta pressionar o botão Mais e adicionar um novo registro."
+              Text="@CardText"
               isDarkMode="@UseDarkTheme" />
 </LayoutView>
 
 @code {
     protected bool UseDarkTheme { get; set; } = false;
+    protected string CardText { get; set; } = "Registre suas leituras de forma simples e digital. O eTasks permite manter tracking das suas leituras, basta pressionar o botão Mais e adicionar um novo registro.";
 
     protected override async Task OnInitializedAsync()
     {
         UseDarkTheme = await ThemeService!.IsDarkTheme();
         ThemeService.OnThemeChanged += ChangeTheme;
+        LanguageService!.OnLanguageChanged += SetCurrentLanguage;
         ActionButtonVisibleService!.Visible = true;
+    }
+
+    protected override async Task SetCurrentLanguage(string language)
+    {
+        await base.SetCurrentLanguage(language);
+        CardText = await ETranslate!.Translate(TranslateKeyConsts.ResourcePages_Readings_ResourcePage, "Registre suas leituras de forma simples e digital. O eTasks permite manter tracking das suas leituras, basta pressionar o botão Mais e adicionar um novo registro.");
     }
 
     protected override async Task ChangeTheme()
