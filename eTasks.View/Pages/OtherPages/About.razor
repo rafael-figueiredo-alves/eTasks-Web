@@ -24,11 +24,15 @@
     <div class="@(async () => await ThemeService!.IsDarkTheme() ? "LayoutView-dark" : "LayoutView")">
         <NavBar IsMobile="@IsMobile" Title="Sobre o eTasks" OnBackButtonClick="Voltar" NavBarButtonsKind="@NavBarButtonsKind.OnlyUpdate" IsDarkMode="@ThemeChange" BackButtonText="@BackButtonHint" />
         <div class="d-flex justify-content-center align-items-center">
-            <img src="assets/icon-192.webp" />
-        <div class="d-blox">
-            <h3>eTasks</h3>
-            <h6>@Versao</h6>
-            </div>
+            <img src="assets/icon-192.webp" width="160" height="160" />
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <h1 style="font-family: Roboto; font-size: 36px; color: #336699">eTasks</h1>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="d-flex" style="width: 110px; justify-content: end; color: #B8CADB;">
+                <sup>versão @Versao</sup>
+            </div>         
         </div>
  </div>
 </LayoutView>
