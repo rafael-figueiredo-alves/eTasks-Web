@@ -1,13 +1,13 @@
 self.assetsManifest = {
-  "version": "4DOA4NfS",
+  "version": "w/7kjVzW",
   "assets": [
     {
       "hash": "sha256-2uOqRUiHrrlpDHAOc55O3dGgMlYtBavxJDHaoOlAo2I=",
       "url": "_content/eTasks.Components/eTasks.Components.229cbc5dof.bundle.scp.css"
     },
     {
-      "hash": "sha256-uh3bYKVz13422gDK5Htg6k/cakr5oMgBTZC+QD9qiBY=",
-      "url": "_content/eTasks.View/eTasks.View.2ekmdsv4ow.bundle.scp.css"
+      "hash": "sha256-Ti5okz1t/8tdG5xLfG1kp55GfNGO+Ro4jQJqRA21v3A=",
+      "url": "_content/eTasks.View/eTasks.View.a9gk3jhqoq.bundle.scp.css"
     },
     {
       "hash": "sha256-1dlLfKlX5dGAWW49GAv91c5w/rB5E3a1UCwVaoY9WXo=",
@@ -146,7 +146,7 @@ self.assetsManifest = {
       "url": "_framework/System.Threading.cy526l72bt.wasm"
     },
     {
-      "hash": "sha256-GdFnybnTPDCCC8vRPu5j4rGw999sno8lm4ZK56byGzo=",
+      "hash": "sha256-VJ9sA412l0aBWpZ1R1DLY5RrAPolHDFXQBkqS+sx19g=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -174,20 +174,20 @@ self.assetsManifest = {
       "url": "_framework/eFirebase4CSharp.frv3mfveo7.wasm"
     },
     {
-      "hash": "sha256-TC147ek0TFrJ4kLY89aIYPCdUGDuK7vdQTUl5D7xKTw=",
-      "url": "_framework/eTasks.Components.kg2xwufgns.wasm"
+      "hash": "sha256-tYk+30yKWnTQo1rRmM7qyKlQwUcJjELgJuOg/bjNTUQ=",
+      "url": "_framework/eTasks.Components.fj9we8lpij.wasm"
     },
     {
-      "hash": "sha256-WjwFQXWlKKVxVDHCZBA5my9TFSS4dc1spd4QmKPtidY=",
-      "url": "_framework/eTasks.Shared.yewhqp6vo2.wasm"
+      "hash": "sha256-U/eO1BrZbHR4L2GgLdbnBos0pkO43qFme7RxMeUcuF4=",
+      "url": "_framework/eTasks.Shared.budhbz4w0c.wasm"
     },
     {
-      "hash": "sha256-ba2ZdrlJRrmk9WtwQHdEzP7kdEqhtHWVanH+ioU3J8M=",
-      "url": "_framework/eTasks.View.v54uetczuc.wasm"
+      "hash": "sha256-pFZMVtyPXjzQjE9aXNEeIuF94UhjdwAlU+PZcDNGzu4=",
+      "url": "_framework/eTasks.View.s432175ftw.wasm"
     },
     {
-      "hash": "sha256-N4Sr/NgqNfUpxlx/esSWD8BUrgh+2fBLmPNrjJQen9s=",
-      "url": "_framework/eTasks.jlr2wfluyn.wasm"
+      "hash": "sha256-nvf3VJ3OwlgUJP/RvLOu6VCD8hFyC22XcqL3zsfiI88=",
+      "url": "_framework/eTasks.ivb2jrdh65.wasm"
     },
     {
       "hash": "sha256-x45c61v6Qz3WbCQ3mNIFOMsMvKcQoX9HCiQERlB/hQQ=",
@@ -566,7 +566,7 @@ self.assetsManifest = {
       "url": "css/bootstrap/bootstrap.min.css.map"
     },
     {
-      "hash": "sha256-YoBDeDMJEk2hpfln5k5+eD847sB4zfNM9uJryq7+41U=",
+      "hash": "sha256-Re5EfEzjWI0k7eBPLq5W0ycpGE24QrYrtjqAtBMsLLY=",
       "url": "eTasks.styles.css"
     },
     {
