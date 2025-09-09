@@ -22,7 +22,7 @@
 
 <LayoutView Layout="TipoLayout">
     <div class="@(async () => await ThemeService!.IsDarkTheme() ? "LayoutView-dark" : "LayoutView")">
-        <NavBar IsMobile="@IsMobile" Title="Sobre o eTasks" OnBackButtonClick="Voltar" NavBarButtonsKind="@NavBarButtonsKind.OnlyUpdate" IsDarkMode="@ThemeChange" BackButtonText="@BackButtonHint" />
+        <NavBar IsMobile="@IsMobile" Title="About eTasks" OnBackButtonClick="Voltar" NavBarButtonsKind="@NavBarButtonsKind.OnlyUpdate" IsDarkMode="@ThemeChange" BackButtonText="@BackButtonHint" />
         <div class="d-flex justify-content-center align-items-center">
             <img src="assets/icon-192.webp" width="160" height="160" />
         </div>
@@ -31,8 +31,22 @@
         </div>
         <div class="d-flex justify-content-center align-items-center">
             <div class="d-flex" style="width: 110px; justify-content: end; color: #B8CADB;">
-                <sup>versão @Versao</sup>
+                <sup>version @Versao</sup>
             </div>         
         </div>
+
+        <div class="Changelog" style="flex:1;">
+            <!-- Conteúdo principal da página -->
+            <p>teste</p>
+            <p>teste</p>
+        </div>
+
+        <footer>
+            <span class="author">© 2020 - 2025 by Rafael de Figueiredo Alves</span>
+            <span class="dedication">
+                "Dedico este software aos grandes amores da minha vida que sempre me apoiaram neste projeto:
+                Minha esposa Jailza, minha filha Rafaela e meu filho Davi."
+            </span>
+        </footer>
  </div>
 </LayoutView>

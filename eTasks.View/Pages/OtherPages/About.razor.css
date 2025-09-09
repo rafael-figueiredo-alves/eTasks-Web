@@ -1,0 +1,38 @@
+﻿footer {
+    margin-top: auto;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    padding: 10px 15px;
+    border-top: 3px solid #336699;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+    footer .author {
+        font-weight: bold;
+        color: #336699;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    footer .dedication {
+        font-size: 13px;
+        color: #808080;
+        font-style: italic;
+        line-height: 1.4em;
+    }
+
+.Changelog {
+    border: 2px solid #336699;
+    height: 25vh;
+    border: 2px solid #336699;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #444;
+    overflow-y: auto;
+    margin: 15px;
+}
