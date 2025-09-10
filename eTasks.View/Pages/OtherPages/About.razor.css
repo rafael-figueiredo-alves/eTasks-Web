@@ -23,7 +23,7 @@
         line-height: 1.4em;
     }
 
-.Changelog {
+/*.Changelog {
     border: 2px solid #336699;
     height: 25vh;
     border: 2px solid #336699;
@@ -35,4 +35,27 @@
     color: #444;
     overflow-y: auto;
     margin: 15px;
+}*/
+
+.changelog-container {
+    margin: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.changelog-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #336699;
+    margin-left: 20px;
+}
+
+.changelog {
+    border: 2px solid #336699;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 14px;
+    color: #B8CADB;
+    height: 25vh; /* altura fixa */
+    overflow-y: auto; /* rolagem */
 }
