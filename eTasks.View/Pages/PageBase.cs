@@ -19,6 +19,7 @@ namespace eTasks.View.Pages
         [Inject] protected IThemeService? ThemeService { get; set; }
         [Inject] protected IDialogService? DialogService { get; set; }
         [Inject] protected IeTranslate? IeTranslate { get; set; }
+        [Inject] protected ILanguageService? LanguageService { get; set; }
         #endregion
 
         #region Variáveis públicas compartilhadas entre telas

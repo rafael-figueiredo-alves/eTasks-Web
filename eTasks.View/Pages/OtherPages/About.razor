@@ -23,44 +23,40 @@
 <LayoutView Layout="TipoLayout">
     <div class="@(async () => await ThemeService!.IsDarkTheme() ? "LayoutView-dark" : "LayoutView")">
         <NavBar IsMobile="@IsMobile" Title="About eTasks" OnBackButtonClick="Voltar" NavBarButtonsKind="@NavBarButtonsKind.OnlyUpdate" IsDarkMode="@ThemeChange" BackButtonText="@BackButtonHint" />
+        
         <div class="d-flex justify-content-center align-items-center">
             <img src="assets/icon-192.webp" width="160" height="160" />
         </div>
+
         <div class="d-flex justify-content-center align-items-center">
-            <h1 style="font-family: Roboto; font-size: 36px; color: #336699">eTasks</h1>
+            <h1 style="font-family: Roboto; font-size: 36px; color: @CorDestaques">eTasks</h1>
         </div>
+
         <div class="d-flex justify-content-center align-items-center">
-            <div class="d-flex" style="width: 110px; justify-content: end; color: #B8CADB;">
+            <div class="d-flex" style="width: 110px; justify-content: end; color: @CorNormal;">
                 <sup>version @Versao</sup>
             </div>         
         </div>
 
-@*         <h5>Histórico de versão</h5>
-        <div class="Changelog" style="flex:1;">
-            <!-- Conteúdo principal da página -->
-            <p>teste</p>
-            <p>teste</p>
-        </div> *@
-
         <div class="changelog-container">
-            <h3 class="changelog-title">Histórico de versão</h3>
-            <div class="changelog">
-                <p style="color: #B8CADB;">
-                    <strong style="color: #336699">14/07/2025 - versão 2.0.1</strong><br />
+            <h3 class="changelog-title" style="color: @CorDestaques">Histórico de versão</h3>
+            <div class="changelog" style="border: 2px solid @CorDestaques;">
+                <p style="color: @CorNormal;">
+                    <strong style="color: @CorDestaques">14/07/2025 - versão 2.0.1</strong><br />
                     - Implementado recurso Minha Leitura<br />
                     - Realizados ajustes gráficos na interface<br />
                     - Solucionados bugs no login
                 </p>
-                <p style="color: #B8CADB;">
-                    <strong style="color: #336699">25/12/2024 - versão 2.0.0</strong><br />
+                <p style="color: @CorNormal;">
+                    <strong style="color: @CorDestaques">25/12/2024 - versão 2.0.0</strong><br />
                     - Lançamento da versão 2.
                 </p>
             </div>
         </div>
 
-        <footer>
-            <span class="author">© 2020 - 2025 by Rafael de Figueiredo Alves</span>
-            <span class="dedication">
+        <footer style="border-top: 3px solid @CorDestaques">
+            <span class="author" style="color: @CorDestaques">© 2020 - @DateTime.Now.Year by Rafael de Figueiredo Alves</span>
+            <span class="dedication" style="color: @CorNormal">
                 "Dedico este software aos grandes amores da minha vida que sempre me apoiaram neste projeto:
                 Minha esposa Jailza, minha filha Rafaela e meu filho Davi."
             </span>
