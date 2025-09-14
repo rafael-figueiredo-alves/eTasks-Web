@@ -56,6 +56,6 @@
     padding: 10px;
     font-size: 14px;
     color: #B8CADB;
-    height: 25vh; /* altura fixa */
+    height: 20vh; /* altura fixa */
     overflow-y: auto; /* rolagem */
 }
