@@ -1,0 +1,32 @@
+﻿@using eTasks.Components.Enums
+@using eTranslate.Interfaces
+
+<footer style="border-top: 3px solid @CorLine">
+    <span class="author" style="color: @CorAuthor">© 2020 - @DateTime.Now.Year by Rafael de Figueiredo Alves</span>
+    <span class="dedication" style="color: @CorDedication">
+        @Dedicatoria
+    </span>
+</footer>
+
+@code{
+    #region Serviço injetado
+    [Inject] public IeTranslate? ETranslate { get; set; }
+    #endregion
+
+    [Parameter]
+    public bool isDarkTheme { get; set; } = false;
+
+    private string CorLine { get; set; } = string.Empty;
+    private string CorAuthor { get; set; } = string.Empty;
+    private string CorDedication { get; set; } = string.Empty;
+    private string Dedicatoria { get; set; } = "Dedico este software aos grandes amores da minha vida que sempre me apoiaram neste projeto: Minha esposa Jailza, minha filha Rafaela e meu filho Davi.";
+
+    protected override async Task OnParametersSetAsync()
+    {
+        CorLine       = ColorPallete.GetColor(Cor.Primary, isDarkTheme);
+        CorAuthor     = ColorPallete.GetColor(Cor.Primary, isDarkTheme);
+        CorDedication = ColorPallete.GetColor(Cor.Secondary, isDarkTheme);
+
+        //Dedicatoria = $"{await ETranslate!.Translate(TranslateKeyConsts.Titles_HomePage)} {AppVersion}";
+    }
+}

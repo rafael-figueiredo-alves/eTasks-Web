@@ -1,5 +1,6 @@
 ﻿@page "/about"
 @using eTasks.Components.Enums
+@using eTasks.View.Pages.OtherPages.About.Components;
 @implements IDisposable
 @inherits AboutBase
 
@@ -24,19 +25,7 @@
     <div class="@(async () => await ThemeService!.IsDarkTheme() ? "LayoutView-dark" : "LayoutView")">
         <NavBar IsMobile="@IsMobile" Title="About eTasks" OnBackButtonClick="Voltar" NavBarButtonsKind="@NavBarButtonsKind.OnlyUpdate" IsDarkMode="@ThemeChange" BackButtonText="@BackButtonHint" />
         
-        <div class="d-flex justify-content-center align-items-center">
-            <img src="assets/icon-192.webp" width="160" height="160" />
-        </div>
-
-        <div class="d-flex justify-content-center align-items-center">
-            <h1 style="font-family: Roboto; font-size: 36px; color: @CorDestaques">eTasks</h1>
-        </div>
-
-        <div class="d-flex justify-content-center align-items-center">
-            <div class="d-flex" style="width: 110px; justify-content: end; color: @CorNormal;">
-                <sup>version @Versao</sup>
-            </div>         
-        </div>
+        <About_Heading isDarkTheme=@ThemeChange AppVersion="@Versao" Language="@Language"  />
 
         <div class="changelog-container">
             <h3 class="changelog-title" style="color: @CorDestaques">Histórico de versão</h3>
@@ -54,12 +43,6 @@
             </div>
         </div>
 
-        <footer style="border-top: 3px solid @CorDestaques">
-            <span class="author" style="color: @CorDestaques">© 2020 - @DateTime.Now.Year by Rafael de Figueiredo Alves</span>
-            <span class="dedication" style="color: @CorNormal">
-                "Dedico este software aos grandes amores da minha vida que sempre me apoiaram neste projeto:
-                Minha esposa Jailza, minha filha Rafaela e meu filho Davi."
-            </span>
-        </footer>
+        <About_Footer isDarkTheme=@ThemeChange />
  </div>
 </LayoutView>

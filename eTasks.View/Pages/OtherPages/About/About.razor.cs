@@ -2,13 +2,14 @@
 using eTasks.Components.Enums;
 using eTasks.Shared.Extensions;
 
-namespace eTasks.View.Pages.OtherPages
+namespace eTasks.View.Pages.OtherPages.About
 {
     public class AboutBase : PageBase
     {   
         protected string Versao { get; set; } = string.Empty;
         protected string CorDestaques { get; set; } = string.Empty;
         protected string CorNormal {  get; set; } = string.Empty;
+        protected string Language { get; set; } = string.Empty;
 
         protected override async Task OnInitializedAsync()
         {
@@ -18,8 +19,8 @@ namespace eTasks.View.Pages.OtherPages
 
             Versao = "2.0.0";
 
-            LanguageService.OnLanguageChanged += SetCurrentLanguage;
-            ThemeService.OnThemeChanged += ChangeTheme;
+            LanguageService!.OnLanguageChanged += SetCurrentLanguage;
+            ThemeService!.OnThemeChanged += ChangeTheme;
         }
 
         public override async Task ChangeTheme()
@@ -31,10 +32,7 @@ namespace eTasks.View.Pages.OtherPages
 
         protected async Task SetCurrentLanguage(string language)
         {
-            if (Versao == "2.0.0")
-                Versao = language;
-            else
-                Versao = "2.0.0";
+            Language = language;
         }
 
         protected void Voltar()
