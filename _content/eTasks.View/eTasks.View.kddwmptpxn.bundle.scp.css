@@ -77,12 +77,13 @@ main[b-mnepepmmbw] {
     }
 }
 /* _content/eTasks.View/Pages/OtherPages/About/About.razor.rz.scp.css */
-.changelog-container[b-tfg6twlkpd] {
+/* _content/eTasks.View/Pages/OtherPages/About/Components/About.Changelog.razor.rz.scp.css */
+.changelog-container[b-57wcicyo92] {
     margin: 15px;
     font-family: Arial, sans-serif;
 }
 
-.changelog-title[b-tfg6twlkpd] {
+.changelog-title[b-57wcicyo92] {
     margin: 0;
     font-size: 14px;
     font-weight: bold;
@@ -90,7 +91,7 @@ main[b-mnepepmmbw] {
     margin-left: 20px;
 }
 
-.changelog[b-tfg6twlkpd] {
+.changelog[b-57wcicyo92] {
     border: 2px solid #336699;
     border-radius: 15px;
     padding: 10px;
