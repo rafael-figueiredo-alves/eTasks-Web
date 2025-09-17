@@ -27,7 +27,9 @@
         
         <About_Heading isDarkTheme=@ThemeChange AppVersion="@Versao" Language="@Language"  />
 
-        <div class="changelog-container">
+        <About_Changelog isDarkTheme=@ThemeChange />
+
+@*         <div class="changelog-container">
             <h3 class="changelog-title" style="color: @CorDestaques">Histórico de versão</h3>
             <div class="changelog" style="border: 2px solid @CorDestaques;">
                 <p style="color: @CorNormal;">
@@ -41,7 +43,7 @@
                     - Lançamento da versão 2.
                 </p>
             </div>
-        </div>
+        </div> *@
 
         <About_Footer isDarkTheme=@ThemeChange />
  </div>
