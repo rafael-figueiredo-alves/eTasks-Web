@@ -27,24 +27,8 @@
         
         <About_Heading isDarkTheme=@ThemeChange AppVersion="@Versao" Language="@Language"  />
 
-        <About_Changelog isDarkTheme=@ThemeChange />
+        <About_Changelog isDarkTheme=@ThemeChange Changelogs="@Changelogs" />
 
-@*         <div class="changelog-container">
-            <h3 class="changelog-title" style="color: @CorDestaques">Histórico de versão</h3>
-            <div class="changelog" style="border: 2px solid @CorDestaques;">
-                <p style="color: @CorNormal;">
-                    <strong style="color: @CorDestaques">14/07/2025 - versão 2.0.1</strong><br />
-                    - Implementado recurso Minha Leitura<br />
-                    - Realizados ajustes gráficos na interface<br />
-                    - Solucionados bugs no login
-                </p>
-                <p style="color: @CorNormal;">
-                    <strong style="color: @CorDestaques">25/12/2024 - versão 2.0.0</strong><br />
-                    - Lançamento da versão 2.
-                </p>
-            </div>
-        </div> *@
-
-        <About_Footer isDarkTheme=@ThemeChange />
+        <About_Footer isDarkTheme=@ThemeChange Language="@Language" />
  </div>
 </LayoutView>

@@ -15,6 +15,8 @@
 
     [Parameter]
     public bool isDarkTheme { get; set; } = false;
+    [Parameter]
+    public string Language { get; set; } = "pt-br";
 
     private string CorLine { get; set; } = string.Empty;
     private string CorAuthor { get; set; } = string.Empty;
@@ -23,10 +25,11 @@
 
     protected override async Task OnParametersSetAsync()
     {
+        await Task.CompletedTask;
         CorLine       = ColorPallete.GetColor(Cor.Primary, isDarkTheme);
         CorAuthor     = ColorPallete.GetColor(Cor.Primary, isDarkTheme);
         CorDedication = ColorPallete.GetColor(Cor.Secondary, isDarkTheme);
 
-        //Dedicatoria = $"{await ETranslate!.Translate(TranslateKeyConsts.Titles_HomePage)} {AppVersion}";
+        Dedicatoria = $"{await ETranslate!.Translate(TranslateKeyConsts.Titles_HomePage)}";
     }
 }

@@ -38,6 +38,7 @@
     #region Métodos
     protected override async Task OnParametersSetAsync()
     {
+        await Task.CompletedTask;
         CorAppTitle = ColorPallete.GetColor(Cor.Primary, isDarkTheme);
         CorVersao   = ColorPallete.GetColor(Cor.Secondary, isDarkTheme);
 
