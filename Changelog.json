@@ -1,0 +1,25 @@
+[
+  {
+    "Language": "pt-BR",
+    "Changelog": [
+      {
+        "VersionTitle": "14/07/2025 - versão 2.0.1",
+        "Features": [
+          "- Implementado recurso Minha Leitura",
+          "- Implementado recurso Minha Leitura"
+        ]
+      }
+    ]
+  },
+  {
+    "Language": "en-US",
+    "Changelog": [
+      {
+        "VersionTitle": "14/07/2025 - verion 2.0.1",
+        "Features": [
+          "- Implementado recurso Minha Leitura"
+        ]
+      }
+    ]
+  }
+]
