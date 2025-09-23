@@ -6,7 +6,14 @@
         "VersionTitle": "14/07/2025 - versão 2.0.1",
         "Features": [
           "- Implementado recurso Minha Leitura",
-          "- Implementado recurso Minha Leitura"
+          "- Realizados ajustes gráficos na interface",
+          "- Solucionados bugs no login"
+        ]
+      },
+      {
+        "VersionTitle": "25/12/2024 - versão 2.0.0",
+        "Features": [
+          "- Lançamento da versão 2."
         ]
       }
     ]
@@ -15,9 +22,17 @@
     "Language": "en-US",
     "Changelog": [
       {
-        "VersionTitle": "14/07/2025 - verion 2.0.1",
+        "VersionTitle": "14/07/2025 - version 2.0.1",
         "Features": [
-          "- Implementado recurso Minha Leitura"
+          "- New feature: Manage your Readings",
+          "- Adjustments on user interface",
+          "- Fixed some bugs on Login"
+        ]
+      },
+      {
+        "VersionTitle": "25/12/2024 - version 2.0.01",
+        "Features": [
+          "- Release of version 2."
         ]
       }
     ]
