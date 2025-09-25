@@ -55,6 +55,18 @@
             "Notes_ResourcePage": "Take school or work notes using the Plus button bellow. It's simple and you're going to have your notes near you and you won't need your paper notepad anymore.",
             "Shopping_ResourcePage": "Never forget that ingredient anymore. Build your shopping lists with eTasks. It's easy, just press the Plus button to add lists or items you need to buy.",
             "Readings_ResourcePage": "Keep a track on your readings in a easy and simple way. eTasks let you keep a track on your readings, just press the Plus button and add a new record."
+        },
+        "About": {
+            "About_Heading": {
+                "Version": "Version"
+            },
+            "About_Changelog": {
+                "Title": "Changelog history"
+            },
+            "About_Footer": {
+                "Dedication": "I dedicate this software to the great loves of my life who have always supported me in this project: My wife Jailza, my daughter Rafaela, and my son Davi."
+            },
+            "Title": "About eTasks"
         }
     },
     "pt-BR": {
@@ -113,6 +125,18 @@
             "Notes_ResourcePage": "Tome nota de aulas ou do trabalho usando o botão Mais abaixo. É simples e você vai ter suas anotações sempre por perto e não precisará mais andar com caderno ou monte de papéis.",
             "Shopping_ResourcePage": "Nunca mais esqueça aquele ingrediente. Monte suas listas de compras com o eTasks. É fácil, basta pressionar o botão Mais para incluir listas e itens de Compras.",
             "Readings_ResourcePage": "Registre suas leituras de forma simples e digital. O eTasks permite manter tracking das suas leituras, basta pressionar o botão Mais e adicionar um novo registro."
+        },
+        "About": {
+            "About_Heading": {
+                "Version": "Versão"
+            },
+            "About_Changelog": {
+                "Title": "Histórico de versão"
+            },
+            "About_Footer": {
+                "Dedication": "Dedico este software aos grandes amores da minha vida que sempre me apoiaram neste projeto: Minha esposa Jailza, minha filha Rafaela e meu filho Davi."
+            },
+            "Title": "Sobre o eTasks"
         }
     }
 }

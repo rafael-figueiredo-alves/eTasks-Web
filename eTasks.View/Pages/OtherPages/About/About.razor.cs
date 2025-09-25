@@ -1,8 +1,9 @@
 ﻿using eTasks.Components;
 using eTasks.Components.Enums;
-using eTasks.Shared.Enums;
+using eTasks.Shared.Constants;
 using eTasks.Shared.Extensions;
 using eTasks.View.Pages.OtherPages.About.Components;
+using eTranslate.Interfaces;
 using Microsoft.AspNetCore.Components;
 using System.Net.Http.Json;
 
@@ -10,19 +11,27 @@ namespace eTasks.View.Pages.OtherPages.About
 {
     public class AboutBase : PageBase
     {
-        [Inject]
-        protected HttpClient? Http { get; set; }
+        #region Serviços injetados
+        [Inject] protected HttpClient? Http { get; set; }
+        [Inject] public IeTranslate? ETranslate { get; set; }
+        #endregion
 
+        #region Variáveis
         protected string Versao { get; set; } = string.Empty;
+        protected string Titulo { get; set; } = "Sobre o eTasks";
         protected string CorDestaques { get; set; } = string.Empty;
         protected string CorNormal {  get; set; } = string.Empty;
         protected string Language { get; set; } = string.Empty;
         protected List<Changelog> Changelogs { get; set; } = new List<Changelog>();
         private List<ChangelogsByLanguage> ChangelogClasses { get; set; } = new List<ChangelogsByLanguage>();
+        #endregion
 
+        #region Métodos
         protected override async Task OnInitializedAsync()
         {
             await base.OnInitializedAsync();
+
+            Titulo = $"{await ETranslate!.Translate(TranslateKeyConsts.About_Title)}";
 
             ChangelogClasses = await Http!.GetFromJsonAsync<List<ChangelogsByLanguage>>("Changelog.json") ?? new List<ChangelogsByLanguage>();
 
@@ -30,7 +39,7 @@ namespace eTasks.View.Pages.OtherPages.About
 
             await ChangeTheme();
 
-            Versao = "2.0.0";
+            Versao = SystemConstants.AppVersion;
 
             LanguageService!.OnLanguageChanged += SetCurrentLanguage;
             ThemeService!.OnThemeChanged += ChangeTheme;
@@ -48,6 +57,7 @@ namespace eTasks.View.Pages.OtherPages.About
             await Task.CompletedTask;
             Language = language;
             Changelogs = GetChangeLog(language);
+            Titulo = $"{await ETranslate!.Translate(TranslateKeyConsts.About_Title)}";
         }
 
         protected void Voltar()
@@ -64,5 +74,6 @@ namespace eTasks.View.Pages.OtherPages.About
 
             return Result.Changelog;
         }
+        #endregion
     }
 }

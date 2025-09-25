@@ -63,5 +63,12 @@
         public const string ResourcePages_Shopping_ResourcePage = "ResourcePages.Shopping_ResourcePage";
         public const string ResourcePages_Readings_ResourcePage = "ResourcePages.Readings_ResourcePage";
         #endregion
+
+        #region Página Sobre
+        public const string About_Title = "About.Title";
+        public const string About_About_Heading_Version = "About.About_Heading.Version";
+        public const string About_About_Changelog_Title = "About.About_Changelog.Title";
+        public const string About_About_Footer_Dedication = "About.About_Footer.Dedication";
+        #endregion
     }
 }

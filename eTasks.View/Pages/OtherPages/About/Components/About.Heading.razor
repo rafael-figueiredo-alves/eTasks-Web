@@ -21,12 +21,9 @@
     #endregion
 
     #region Parâmetros
-    [Parameter]
-    public bool isDarkTheme { get; set; } = false;
-    [Parameter]
-    public string AppVersion { get; set; } = "2.0.0";
-    [Parameter]
-    public string Language { get; set; } = "Versão";
+    [Parameter] public bool isDarkTheme { get; set; } = false;
+    [Parameter] public string AppVersion { get; set; } = "2.0.0";
+    [Parameter] public string Language { get; set; } = "Versão";
     #endregion
 
     #region Variáveis
@@ -43,7 +40,7 @@
         CorVersao   = ColorPallete.GetColor(Cor.Secondary, isDarkTheme);
 
         TextoVersao = $"Versão {AppVersion}";
-        //TextoVersao = $"{await ETranslate!.Translate(TranslateKeyConsts.Titles_HomePage)} {AppVersion}";
+        TextoVersao = $"{await ETranslate!.Translate(TranslateKeyConsts.About_About_Heading_Version)} {AppVersion}";
     }
     #endregion
 }

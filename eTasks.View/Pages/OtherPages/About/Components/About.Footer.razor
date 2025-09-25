@@ -13,16 +13,19 @@
     [Inject] public IeTranslate? ETranslate { get; set; }
     #endregion
 
-    [Parameter]
-    public bool isDarkTheme { get; set; } = false;
-    [Parameter]
-    public string Language { get; set; } = "pt-br";
+    #region Parâmetros
+    [Parameter] public bool isDarkTheme { get; set; } = false;
+    [Parameter] public string Language { get; set; } = "pt-br";
+    #endregion
 
+    #region Variáveis
     private string CorLine { get; set; } = string.Empty;
     private string CorAuthor { get; set; } = string.Empty;
     private string CorDedication { get; set; } = string.Empty;
     private string Dedicatoria { get; set; } = "Dedico este software aos grandes amores da minha vida que sempre me apoiaram neste projeto: Minha esposa Jailza, minha filha Rafaela e meu filho Davi.";
+    #endregion
 
+    #region Métodos
     protected override async Task OnParametersSetAsync()
     {
         await Task.CompletedTask;
@@ -30,6 +33,7 @@
         CorAuthor     = ColorPallete.GetColor(Cor.Primary, isDarkTheme);
         CorDedication = ColorPallete.GetColor(Cor.Secondary, isDarkTheme);
 
-        Dedicatoria = $"{await ETranslate!.Translate(TranslateKeyConsts.Titles_HomePage)}";
+        Dedicatoria = $"{await ETranslate!.Translate(TranslateKeyConsts.About_About_Footer_Dedication)}";
     }
+    #endregion
 }

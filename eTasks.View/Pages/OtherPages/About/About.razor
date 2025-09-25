@@ -23,7 +23,7 @@
 
 <LayoutView Layout="TipoLayout">
     <div class="@(async () => await ThemeService!.IsDarkTheme() ? "LayoutView-dark" : "LayoutView")">
-        <NavBar IsMobile="@IsMobile" Title="About eTasks" OnBackButtonClick="Voltar" NavBarButtonsKind="@NavBarButtonsKind.OnlyUpdate" IsDarkMode="@ThemeChange" BackButtonText="@BackButtonHint" />
+        <NavBar IsMobile="@IsMobile" Title="@Titulo" OnBackButtonClick="Voltar" NavBarButtonsKind="@NavBarButtonsKind.OnlyUpdate" IsDarkMode="@ThemeChange" BackButtonText="@BackButtonHint" />
         
         <About_Heading isDarkTheme=@ThemeChange AppVersion="@Versao" Language="@Language"  />
 
