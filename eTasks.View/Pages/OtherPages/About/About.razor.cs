@@ -45,6 +45,11 @@ namespace eTasks.View.Pages.OtherPages.About
             ThemeService!.OnThemeChanged += ChangeTheme;
         }
 
+        public async Task UpdateClickAsync()
+        {
+            await DialogService!.Confirm("Atualização disponível", "Há uma nova versão. Deseja atualizar o sistema?");
+        }
+
         public override async Task ChangeTheme()
         {
             await base.ChangeTheme();
