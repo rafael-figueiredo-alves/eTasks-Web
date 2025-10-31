@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "3Fx1DyUf",
+  "version": "gwwUBvWv",
   "assets": [
     {
       "hash": "sha256-t0QBwr4pXAOaGeYu+NKanYeayYUhR4VuJPBDz3M+aOQ=",
@@ -150,7 +150,7 @@ self.assetsManifest = {
       "url": "_framework/System.Threading.6wxzpv4ki1.wasm"
     },
     {
-      "hash": "sha256-nuy3HABmRCrsk1iONSP5swt3Y5n5JDBKVX0LiSOvlUs=",
+      "hash": "sha256-sJVRRdyx5t+FyxY01RBO1RGFxcrmIlQ8fdnUUAPHNW0=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -178,20 +178,20 @@ self.assetsManifest = {
       "url": "_framework/eFirebase4CSharp.frv3mfveo7.wasm"
     },
     {
-      "hash": "sha256-d2XuQ6aMn/VJU6J2yI90WTCw8Hl7EWvBtLqXkuW/EJU=",
-      "url": "_framework/eTasks.Components.fi6qqag0qb.wasm"
+      "hash": "sha256-fcGK+b+NSuc8tKTJsNuR20E//z8BLHuLXdnHJTWgp7s=",
+      "url": "_framework/eTasks.Components.ph4bqb78os.wasm"
     },
     {
-      "hash": "sha256-L/jlNEGNaod8Wa8IV5acPJasHHUd1Q9XUEgblI3XkH4=",
-      "url": "_framework/eTasks.Shared.jfkz60ibf6.wasm"
+      "hash": "sha256-1thm1Z1yLIEDhGyyw+/3ZCFXE71zUpxysI3QyFVGanY=",
+      "url": "_framework/eTasks.Shared.ypfpp51nsz.wasm"
     },
     {
-      "hash": "sha256-rvxsd3qN6D+ifbNaNC+V+vX+U4iGT+tV3AXqeMezRSY=",
-      "url": "_framework/eTasks.View.qe8r86ky53.wasm"
+      "hash": "sha256-kv9GipR9Jg3WQeHaLlQmudbCfQ4t6kCnXHsQHoHDAN8=",
+      "url": "_framework/eTasks.View.uo3ny3g5x6.wasm"
     },
     {
-      "hash": "sha256-Hro5Sp4qEFtZtbMRUNXP4yFI+Yf8zWrHy8HPybYQ0sE=",
-      "url": "_framework/eTasks.q55wow0lke.wasm"
+      "hash": "sha256-iQx4z6euMfI369HVyGJmldWzItZqYFOsof/vAZ0J9gI=",
+      "url": "_framework/eTasks.t3cx9qgo6q.wasm"
     },
     {
       "hash": "sha256-x45c61v6Qz3WbCQ3mNIFOMsMvKcQoX9HCiQERlB/hQQ=",
@@ -208,6 +208,10 @@ self.assetsManifest = {
     {
       "hash": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs=",
       "url": "_framework/icudt_no_CJK.lfu7j35m59.dat"
+    },
+    {
+      "hash": "sha256-YgbPaGDko5FUFOnoqvcTT2eIxt9V1fTPhoDwpz2aAk0=",
+      "url": "appsettings.json"
     },
     {
       "hash": "sha256-2Go9Cdf6w5sym57hBt7ipc3vAsJ6DGx8WRFB0CI9mUA=",
