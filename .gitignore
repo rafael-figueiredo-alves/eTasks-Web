@@ -281,6 +281,6 @@ obj/
 /wwwroot/node_modules
 
 # Avoid appsettings for development to be commited
-/wwwroot/appsettings.Development.json
+/eTasks/wwwroot/appsettings.Development.json
 
 # End of https://www.toptal.com/developers/gitignore/api/dotnetcore,aspnetcore
