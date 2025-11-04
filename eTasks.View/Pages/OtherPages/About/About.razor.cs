@@ -1,5 +1,6 @@
 ﻿using eTasks.Components;
 using eTasks.Components.Enums;
+using eTasks.Controller.Interfaces;
 using eTasks.Shared.Constants;
 using eTasks.Shared.Extensions;
 using eTasks.View.Pages.OtherPages.About.Components;
@@ -14,6 +15,7 @@ namespace eTasks.View.Pages.OtherPages.About
         #region Serviços injetados
         [Inject] protected HttpClient? Http { get; set; }
         [Inject] public IeTranslate? ETranslate { get; set; }
+        [Inject] public IVersion? versionController { get; set; }
         #endregion
 
         #region Variáveis
@@ -47,7 +49,13 @@ namespace eTasks.View.Pages.OtherPages.About
 
         public async Task UpdateClickAsync()
         {
-            await DialogService!.Confirm("Atualização disponível", "Há uma nova versão. Deseja atualizar o sistema?");
+            var Teste = await versionController?.IsUpdateAvailable()!;
+
+            if(Teste.Item1)
+            {
+                await DialogService!.Confirm("Atualização disponível", $"Há uma nova versão {Teste.Item2}. Deseja atualizar o sistema?");
+            }
+            //await DialogService!.Confirm("Atualização disponível", "Há uma nova versão. Deseja atualizar o sistema?");
         }
 
         public override async Task ChangeTheme()

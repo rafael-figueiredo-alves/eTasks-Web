@@ -23,6 +23,7 @@ namespace eTasks.Shared.Extensions
         private static void AddScoppedServices(this IServiceCollection Services)
         {
             Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(_baseURL) });
+            Services.AddScoped<IAppConfig, AppConfig>();
             Services.AddScoped<IeFirebase, eFirebase>();
         }
 

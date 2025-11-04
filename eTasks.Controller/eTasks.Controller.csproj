@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\eTasks.Model\eTasks.Model.csproj" />
+    <ProjectReference Include="..\eTasks.Shared\eTasks.Shared.csproj" />
   </ItemGroup>
 
 </Project>

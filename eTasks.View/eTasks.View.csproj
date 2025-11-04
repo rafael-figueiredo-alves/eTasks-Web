@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\eTasks.Components\eTasks.Components.csproj" />
+    <ProjectReference Include="..\eTasks.Controller\eTasks.Controller.csproj" />
     <ProjectReference Include="..\eTasks.Shared\eTasks.Shared.csproj" />
   </ItemGroup>
 

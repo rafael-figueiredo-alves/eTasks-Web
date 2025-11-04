@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\eTasks.Controller\eTasks.Controller.csproj" />
     <ProjectReference Include="..\eTasks.Shared\eTasks.Shared.csproj" />
     <ProjectReference Include="..\eTasks.View\eTasks.View.csproj" />
   </ItemGroup>

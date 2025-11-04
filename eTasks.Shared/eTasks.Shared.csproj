@@ -10,12 +10,14 @@
     <PackageReference Include="eFirebase4CSharp" Version="1.1.0" />
     <PackageReference Include="eTranslate" Version="1.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="9.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.5" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.5" />
     <PackageReference Include="Microsoft.JSInterop" Version="9.0.5" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\eTasks.Components\eTasks.Components.csproj" />
+    <ProjectReference Include="..\eTasks.Model\eTasks.Model.csproj" />
   </ItemGroup>
 
 </Project>
