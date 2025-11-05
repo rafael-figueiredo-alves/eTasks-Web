@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "8+ZqEvNZ",
+  "version": "SW6SWToR",
   "assets": [
     {
       "hash": "sha256-t0QBwr4pXAOaGeYu+NKanYeayYUhR4VuJPBDz3M+aOQ=",
@@ -150,7 +150,7 @@ self.assetsManifest = {
       "url": "_framework/System.Threading.6wxzpv4ki1.wasm"
     },
     {
-      "hash": "sha256-8h/pqbGIxyMGUhoE+H3IMmgNjOtHndubpu3/UBMxOS0=",
+      "hash": "sha256-71gaD6G7MdSymuzitIFlRXXQm0R2mmQ8BgUaoqp38ds=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -178,28 +178,28 @@ self.assetsManifest = {
       "url": "_framework/eFirebase4CSharp.frv3mfveo7.wasm"
     },
     {
-      "hash": "sha256-G8o3j4wbzftkNzUj507bcVZveaNpRZXJVa0zY7AdQOY=",
-      "url": "_framework/eTasks.7d8vmug2tl.wasm"
+      "hash": "sha256-sO8x3g8UOMPpWmT0ypzrDmjX1dxVe2tgbu9/CFfweUo=",
+      "url": "_framework/eTasks.Components.knctrssu6h.wasm"
     },
     {
-      "hash": "sha256-yjJk0la8WF6zDWypKC1foH1HN+c3b2iaHRBnv948VrQ=",
-      "url": "_framework/eTasks.Components.ajowheyvik.wasm"
+      "hash": "sha256-wnUf8aaYGjJIVtPCBK0V4CjXsp1AfPe3eRaFSF/w6hg=",
+      "url": "_framework/eTasks.Controller.e9z5w1n06j.wasm"
     },
     {
-      "hash": "sha256-nj4uuyZj0OVSYUV+6qTDYCVu2w6FpK0gvWmtHcvcxWY=",
-      "url": "_framework/eTasks.Controller.2n25uhqh79.wasm"
+      "hash": "sha256-Ss70QJqdfJ4lSF7n4WaShqxrjC0TririLAAy87krCKg=",
+      "url": "_framework/eTasks.Model.ie4gcqqmoy.wasm"
     },
     {
-      "hash": "sha256-pnuqt9Lgxw/nFK2HxbBX+YW+VtstJIK37571y9g7rT8=",
-      "url": "_framework/eTasks.Model.mxaong4p4q.wasm"
+      "hash": "sha256-6fqAG5vHLtOwuhyOOATxI1Yl5mxs5IVuZUxdRfw3ecQ=",
+      "url": "_framework/eTasks.Shared.jdbat4mqg2.wasm"
     },
     {
-      "hash": "sha256-+44aGry70V/oCN6/vuC4LxXBn6WNGgEerHb2keRHOLA=",
-      "url": "_framework/eTasks.Shared.19wfct0k5w.wasm"
+      "hash": "sha256-z8+TrVxKAAzlrOvj9XkgRirPQNMdDsODHYlCVYlwkIk=",
+      "url": "_framework/eTasks.View.xk4ko51evz.wasm"
     },
     {
-      "hash": "sha256-t6W3vpd0EJNxXmN8Ze0bGNtK0bQ0h7Mx4hBoYiVwxVQ=",
-      "url": "_framework/eTasks.View.vmwq2zh3ig.wasm"
+      "hash": "sha256-wJW8e01ethPJ8ZoIm5CQssGjXVN2g1ZVdi2vcsCduEE=",
+      "url": "_framework/eTasks.c9nutn6hhx.wasm"
     },
     {
       "hash": "sha256-x45c61v6Qz3WbCQ3mNIFOMsMvKcQoX9HCiQERlB/hQQ=",
