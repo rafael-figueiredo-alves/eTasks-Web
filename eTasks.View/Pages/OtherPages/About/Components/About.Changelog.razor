@@ -3,11 +3,11 @@
 
 
 <div class="changelog-container">
-    <h3 class="changelog-title" style="color: @CorTitles">@Titulo</h3>
-    <div class="changelog" style="border: 2px solid @CorTitles;">
+    <h3 class="changelog-title user-select-none" style="color: @CorTitles">@Titulo</h3>
+    <div class="changelog user-select-none" style="border: 2px solid @CorTitles;">
         @foreach(Changelog change in Changelogs)
         {
-            <p style="color: @CorText;">
+            <p class="user-select-none" style="color: @CorText;">
                 <strong style="color: @CorTitles">@change.VersionTitle</strong><br />
                 @foreach(string feature in change.Features)
                 {

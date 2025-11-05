@@ -1,5 +1,6 @@
 ﻿using eTasks.Controller.Interfaces;
 using eTasks.Model;
+using eTasks.Shared.Constants;
 using eTasks.Shared.Services.Interfaces;
 using System.Net.Http.Json;
 
@@ -19,7 +20,7 @@ namespace eTasks.Controller
             Console.WriteLine(httpClient.BaseAddress);
             VersionInfo info = await httpClient.GetFromJsonAsync<VersionInfo>(Endpoint) ?? new VersionInfo();
 
-            return (true, info.DisplayVersion);
+            return (info.AppVersion > SystemConstants.Version, info.DisplayVersion);
         }
     }
 }
