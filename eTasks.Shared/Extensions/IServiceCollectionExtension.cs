@@ -25,6 +25,7 @@ namespace eTasks.Shared.Extensions
             Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(_baseURL) });
             Services.AddScoped<IAppConfig, AppConfig>();
             Services.AddScoped<IeFirebase, eFirebase>();
+            Services.AddScoped<INetworkCheckerService, NetworkCheckerService>();
         }
 
         private static void AddSingletonServices(this IServiceCollection Services)
@@ -37,7 +38,7 @@ namespace eTasks.Shared.Extensions
             Services.AddSingleton<MainMenuService>();
             Services.AddSingleton<IToastService, ToastService>();
             Services.AddSingleton<IDialogService, DialogService>();
-            Services.AddSingleton<IActionButtonVisibleService, ActionButtonVisibleService>();
+            Services.AddSingleton<IActionButtonVisibleService, ActionButtonVisibleService>();         
         }
     }
 }

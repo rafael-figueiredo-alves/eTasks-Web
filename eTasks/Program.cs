@@ -11,6 +11,6 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.LoadServices(builder.HostEnvironment.BaseAddress);
-builder.Services.AddScoped<IVersion, VersionController>();
+builder.Services.LoadControllerServices();
 
 await builder.Build().RunAsync();
