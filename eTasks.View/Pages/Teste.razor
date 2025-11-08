@@ -17,25 +17,25 @@
 @code{
     private async Task TesteToast()
     {
-        ToastService.ShowError("Teste de Sucesso!");
+        // ToastService.ShowError("Teste de Sucesso!");
 
-        if(await networkCheckerService.HasConnectionAsync())
-        {
-            ToastService.ShowSuccess("Com conexão");
-        }
-        else
-        {
-            ToastService.ShowError("Sem conexão");
-        }
+        // if(await networkCheckerService.HasConnectionAsync())
+        // {
+        //     ToastService.ShowSuccess("Com conexão");
+        // }
+        // else
+        // {
+        //     ToastService.ShowError("Sem conexão");
+        // }
 
-        if (await networkCheckerService.HasInternetConnectionAsync())
-        {
-            ToastService.ShowSuccess("Com Internet");
-        }
-        else
-        {
-            ToastService.ShowError("Sem Internet");
-        }
+        // if (await networkCheckerService.HasInternetConnectionAsync())
+        // {
+        //     ToastService.ShowSuccess("Com Internet");
+        // }
+        // else
+        // {
+        //     ToastService.ShowError("Sem Internet");
+        // }
 
         var Teste2 = await networkCheckerService.CheckConnectionAndSpeedAsync();
 
