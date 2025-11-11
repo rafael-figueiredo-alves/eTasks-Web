@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "eTasks",
   "resources": {
-    "hash": "sha256-U4iWuKyafEdAJY2cH+6MeCpse/jxuQw007yioXC1Q7Q=",
+    "hash": "sha256-hDcVpBo38d4A6gkTGYpVhGa5ZXomjN/Dy1uZ8QMeJ6Y=",
     "fingerprinting": {
       "eFirebase4CSharp.frv3mfveo7.wasm": "eFirebase4CSharp.wasm",
       "eTranslate.lxwawb4dtw.wasm": "eTranslate.wasm",
@@ -39,12 +39,12 @@
       "System.Text.RegularExpressions.5gjltihx5v.wasm": "System.Text.RegularExpressions.wasm",
       "System.Threading.6wxzpv4ki1.wasm": "System.Threading.wasm",
       "System.Private.CoreLib.tv10zasy6h.wasm": "System.Private.CoreLib.wasm",
-      "eTasks.Components.oztgmshql6.wasm": "eTasks.Components.wasm",
-      "eTasks.Controller.6muj817qwy.wasm": "eTasks.Controller.wasm",
-      "eTasks.Model.l2ge4xoifa.wasm": "eTasks.Model.wasm",
-      "eTasks.Shared.6b36js9egh.wasm": "eTasks.Shared.wasm",
-      "eTasks.View.5d9c3xbvxz.wasm": "eTasks.View.wasm",
-      "eTasks.fpqqcbwd6e.wasm": "eTasks.wasm",
+      "eTasks.Components.eo2s1ptauu.wasm": "eTasks.Components.wasm",
+      "eTasks.Controller.cr9dhyguf8.wasm": "eTasks.Controller.wasm",
+      "eTasks.Model.7prcur7duc.wasm": "eTasks.Model.wasm",
+      "eTasks.Shared.4avkpwardg.wasm": "eTasks.Shared.wasm",
+      "eTasks.View.p40dk7brn7.wasm": "eTasks.View.wasm",
+      "eTasks.tc22c6bh1l.wasm": "eTasks.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.l4ptthxatg.js": "dotnet.native.js",
       "dotnet.native.d2w7colv7e.wasm": "dotnet.native.wasm",
@@ -106,12 +106,12 @@
       "System.Text.Json.80p861x0yj.wasm": "sha256-mKrZYz7wTZFzvxY1BbvemzvMlR/hZRwlZWt0KlQRNjs=",
       "System.Text.RegularExpressions.5gjltihx5v.wasm": "sha256-tWq9vht0rY9iM6tvHI4CaV2Nogm0sR+EJEOy72TVrIk=",
       "System.Threading.6wxzpv4ki1.wasm": "sha256-qpTsdttgwFKu3sCPl9Qw0nYZISOGaHpAJFTWUzt9Xzw=",
-      "eTasks.Components.oztgmshql6.wasm": "sha256-1FH5sYBLPbdhC1XzTBTxvCLSNTaDFxdssFiNHHjsxDc=",
-      "eTasks.Controller.6muj817qwy.wasm": "sha256-vr1pHNBw+UsRaYMKPDmZxTDIwbH9SMe7iMtzAHupUx0=",
-      "eTasks.Model.l2ge4xoifa.wasm": "sha256-Iw/PWSvUM7v+j1vaRtMjZo4DjIEFN+oEVq5aUWuv8U8=",
-      "eTasks.Shared.6b36js9egh.wasm": "sha256-Qkk4DzncyJVJWwjM12g7qcS7Xxd8T8WayYxSQwEwfEg=",
-      "eTasks.View.5d9c3xbvxz.wasm": "sha256-l84Oqs7UVz7i5lUKoivhC/l9Svq0Q3OixqlIzR1UHds=",
-      "eTasks.fpqqcbwd6e.wasm": "sha256-TR7Ly1EiKyWFkLoHSFS6rnMYnGyOElMV4UySH6VWwGI="
+      "eTasks.Components.eo2s1ptauu.wasm": "sha256-cg6/+pm0vrq/AgYfH4wkAVRbwImFtPCrCZtLZirc56U=",
+      "eTasks.Controller.cr9dhyguf8.wasm": "sha256-qGsSarJFmmUUFV4lOG/O+PMt8uoCEDZAXswDEpZT5bQ=",
+      "eTasks.Model.7prcur7duc.wasm": "sha256-O/G5Y4z6HVhreCHEwZIUYFtTCfw/378g6T5u7aWLkuM=",
+      "eTasks.Shared.4avkpwardg.wasm": "sha256-pIsH73srN16WmRkdYL4r98m4lm3ctgOvi3BNmIvCqvg=",
+      "eTasks.View.p40dk7brn7.wasm": "sha256-6cHdYvWKx1t3Twoqnl/qdAJHYBiKHeJvRawkZmxltYk=",
+      "eTasks.tc22c6bh1l.wasm": "sha256-kzN++GeWD8y/kP4/fNVmr5P2PB5a/8SZHQ4h9eFiqcE="
     }
   },
   "cacheBootResources": true,
