@@ -17,45 +17,6 @@
 @code{
     private async Task TesteToast()
     {
-        // ToastService.ShowError("Teste de Sucesso!");
-
-        // if(await networkCheckerService.HasConnectionAsync())
-        // {
-        //     ToastService.ShowSuccess("Com conexão");
-        // }
-        // else
-        // {
-        //     ToastService.ShowError("Sem conexão");
-        // }
-
-        // if (await networkCheckerService.HasInternetConnectionAsync())
-        // {
-        //     ToastService.ShowSuccess("Com Internet");
-        // }
-        // else
-        // {
-        //     ToastService.ShowError("Sem Internet");
-        // }
-
-        var Teste2 = await networkCheckerService.CheckConnectionAndSpeedAsync();
-
-        if(Teste2.isConnected)
-        {
-            switch(Teste2.SpeedStatus)
-            {
-                case InternetSpeedStatus.Fast:
-                    ToastService.ShowSuccess($"Com Internet Rápida - {Teste2.LatencyMS}");
-                    break;
-                case InternetSpeedStatus.Regular:
-                    ToastService.ShowSuccess($"Com Internet Regular - {Teste2.LatencyMS}");
-                    break;
-                case InternetSpeedStatus.Slow:
-                    ToastService.ShowSuccess($"Com Internet lenta - {Teste2.LatencyMS}");
-                    break;
-                default:
-                    ToastService.ShowSuccess($"Sem conexão - {Teste2.LatencyMS}");
-                    break;
-            }
-        }
+        ToastService.ShowError("Teste de Sucesso!");
     }
 }

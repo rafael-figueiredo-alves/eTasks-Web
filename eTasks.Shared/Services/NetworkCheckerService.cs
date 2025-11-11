@@ -21,6 +21,7 @@ namespace eTasks.Shared.Services
             {
                 // Passo 1: Medir latência (RTT simples com HEAD)
                 var start = DateTime.UtcNow;
+                _httpClient.DefaultRequestHeaders.Add("Accept", "Image/jpeg");
                 var response = await _httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, URL)).TimeoutAfter(TimeSpan.FromSeconds(TimeOutInSeconds));               
                 var latencyMs = (DateTime.UtcNow - start).TotalMilliseconds;
 
