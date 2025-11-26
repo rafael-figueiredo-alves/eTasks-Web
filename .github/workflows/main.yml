@@ -12,11 +12,11 @@ jobs:
     # uses GitHub's checkout action to checkout code form the master branch
     - uses: actions/checkout@v2
     
-    # sets up .NET Core SDK 3.1
-    - name: Setup .NET Core SDK
+    # sets up .NET 10
+    - name: Setup .NET 10
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 9.0.x
+        dotnet-version: 10.0.x
 
     # cleans build before publishes
     - name: Cleans build before publishes
