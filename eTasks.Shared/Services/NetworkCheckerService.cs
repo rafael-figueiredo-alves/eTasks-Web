@@ -58,7 +58,7 @@ namespace eTasks.Shared.Services
                 var response = await _httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, URL)).TimeoutAfter(TimeSpan.FromSeconds(TimeOutInSeconds));
                 return response.IsSuccessStatusCode;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
