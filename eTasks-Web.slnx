@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="eTasks.Components/eTasks.Components.csproj" />
+  <Project Path="eTasks.Controller/eTasks.Controller.csproj" />
+  <Project Path="eTasks.Model/eTasks.Model.csproj" />
+  <Project Path="eTasks.Shared/eTasks.Shared.csproj" />
+  <Project Path="eTasks.View/eTasks.View.csproj" />
+  <Project Path="eTasks/eTasks.csproj" />
+</Solution>
