@@ -10,7 +10,7 @@ namespace eTasks.Controller
     {
         private HttpClient httpClient;
         private INetworkCheckerService _networkCheckerService;
-        private const string Endpoint = "version.json";
+        private const string Endpoint = "version";
         public VersionController(IAppConfig appConfig, INetworkCheckerService networkCheckerService) 
         {
             httpClient = new HttpClient { BaseAddress = new Uri(appConfig.BaseUrl + '/') };
