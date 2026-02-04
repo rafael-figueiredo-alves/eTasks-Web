@@ -37,7 +37,6 @@ jobs:
     - name: Substitute placeholders in appsettings.json
       run: |
         sed -i 's|\${BASE_URL_FIREBASE}|${{ secrets.BASE_URL_FIREBASE }}|g' release/wwwroot/appsettings.json  
-        sed -i 's|\${API_KEY_FIREBASE}|${{ secrets.API_KEY_FIREBASE }}|g' release/wwwroot/appsettings.json
 
     # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
     - name: Add .nojekyll file
