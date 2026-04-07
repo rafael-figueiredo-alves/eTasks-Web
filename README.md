@@ -8,12 +8,12 @@
 
 <br/>
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/rafael-figueiredo-alves/eTasks?color=%230d6efd&label=vers%C3%A3o&style=for-the-badge)](https://github.com/rafael-figueiredo-alves/eTasks/releases)
-[![GitHub Stars](https://img.shields.io/github/stars/rafael-figueiredo-alves/eTasks?color=yellow&style=for-the-badge)](https://github.com/rafael-figueiredo-alves/eTasks/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/rafael-figueiredo-alves/eTasks?color=%230d6efd&style=for-the-badge)](https://github.com/rafael-figueiredo-alves/eTasks/network/members)
-[![GitHub Issues](https://img.shields.io/github/issues/rafael-figueiredo-alves/eTasks?color=red&style=for-the-badge)](https://github.com/rafael-figueiredo-alves/eTasks/issues)
-[![GitHub License](https://img.shields.io/github/license/rafael-figueiredo-alves/eTasks?style=for-the-badge)](https://github.com/rafael-figueiredo-alves/eTasks/blob/main/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/rafael-figueiredo-alves/eTasks?style=for-the-badge)](https://github.com/rafael-figueiredo-alves/eTasks/commits)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/rafael-figueiredo-alves/eTasks?include_prereleases&color=%230d6efd&label=versão&style=for-the-badge)](https://github.com/rafael-figueiredo-alves/eTasks/releases)
+[![GitHub Stars](https://img.shields.io/github/stars/rafael-figueiredo-alves/eTasks-web?color=yellow&style=for-the-badge)](https://github.com/rafael-figueiredo-alves/eTasks/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/rafael-figueiredo-alves/eTasks-web?color=%230d6efd&style=for-the-badge)](https://github.com/rafael-figueiredo-alves/eTasks/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/rafael-figueiredo-alves/eTasks-web?color=red&style=for-the-badge)](https://github.com/rafael-figueiredo-alves/eTasks/issues)
+[![GitHub License](https://img.shields.io/github/license/rafael-figueiredo-alves/eTasks-web?style=for-the-badge)](https://github.com/rafael-figueiredo-alves/eTasks/blob/main/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/rafael-figueiredo-alves/eTasks-web?style=for-the-badge)](https://github.com/rafael-figueiredo-alves/eTasks/commits)
 
 <br/>
 
